@@ -178,56 +178,125 @@ const Home = () => {
         </section>
       </ScrollAnimation>
 
-      {/* Services Section */}
+      {/* Web Design Pricing Carousel */}
       <ScrollAnimation>
         <section className="py-24 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold font-rajdhani text-off-white mb-6">
-                Services
+                Web Design <span className="text-orange">Plans</span>
               </h2>
+              <p className="text-xl text-off-white/80">
+                Choose the payment option that works best for you
+              </p>
             </div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-              {services.map((service, index) => (
-                <ScrollAnimation key={index} delay={index * 100}>
-                  <Card className="h-full">
-                    <CardHeader>
-                      <div className="text-orange mb-4">
-                        {service.icon}
+            {/* Carousel Container */}
+            <div className="relative max-w-4xl mx-auto">
+              {/* Background Grid Pattern */}
+              <div className="absolute inset-0 opacity-10">
+                <div className="grid grid-cols-12 gap-1 h-full">
+                  {Array.from({ length: 144 }).map((_, i) => (
+                    <div key={i} className="bg-orange/20 rounded-sm"></div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Carousel Content */}
+              <div className="relative bg-near-black/80 backdrop-blur-sm rounded-2xl p-8 border border-slate/20">
+                <div className="text-center mb-8">
+                  <div className="flex justify-center mb-4">
+                    <div className={`w-16 h-16 rounded-2xl flex items-center justify-center bg-gradient-to-br ${webDesignPlans[currentPlan].gradient}`}>
+                      <div className="text-white">
+                        {webDesignPlans[currentPlan].icon}
                       </div>
-                      <CardTitle>{service.title}</CardTitle>
-                      <CardDescription className="text-lg">
-                        {service.summary}
-                      </CardDescription>
-                    </CardHeader>
-                    <CardContent>
+                    </div>
+                  </div>
+                  <h3 className="text-3xl font-bold font-rajdhani text-off-white mb-2">
+                    {webDesignPlans[currentPlan].name}
+                    {webDesignPlans[currentPlan].popular && (
+                      <span className="ml-3 text-sm bg-orange text-white px-3 py-1 rounded-full">
+                        Most Popular
+                      </span>
+                    )}
+                  </h3>
+                  <p className="text-off-white/70 text-lg">
+                    {webDesignPlans[currentPlan].subtitle}
+                  </p>
+                </div>
+
+                {/* Pricing Options */}
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+                  <div className="bg-slate/20 rounded-lg p-4 text-center">
+                    <div className="text-sm text-off-white/60 mb-1">Monthly to Ownership</div>
+                    <div className="text-2xl font-bold text-orange">
+                      {webDesignPlans[currentPlan].monthlyToOwnership}
+                      <span className="text-sm text-off-white/60">/mo</span>
+                    </div>
+                    <div className="text-xs text-off-white/50">12 months</div>
+                  </div>
+                  <div className="bg-slate/20 rounded-lg p-4 text-center">
+                    <div className="text-sm text-off-white/60 mb-1">Continuous Monthly</div>
+                    <div className="text-2xl font-bold text-blue-400">
+                      {webDesignPlans[currentPlan].continuousMonthly}
+                      <span className="text-sm text-off-white/60">/mo</span>
+                    </div>
+                    <div className="text-xs text-off-white/50">With buyout discounts</div>
+                  </div>
+                  <div className="bg-slate/20 rounded-lg p-4 text-center">
+                    <div className="text-sm text-off-white/60 mb-1">Buy Outright</div>
+                    <div className="text-2xl font-bold text-green-400">
+                      {webDesignPlans[currentPlan].outright}
+                    </div>
+                    <div className="text-xs text-off-white/50">One-time payment</div>
+                  </div>
+                </div>
+
+                {/* Features */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+                  {webDesignPlans[currentPlan].features.map((feature, index) => (
+                    <div key={index} className="flex items-start space-x-3">
+                      <Check className="w-5 h-5 text-orange mt-0.5 flex-shrink-0" />
+                      <span className="text-off-white/80 text-sm">{feature}</span>
+                    </div>
+                  ))}
+                </div>
+
+                {/* Navigation */}
+                <div className="flex items-center justify-between">
+                  <button
+                    onClick={prevPlan}
+                    className="p-3 rounded-full bg-slate/20 hover:bg-slate/40 transition-colors"
+                  >
+                    <ArrowLeft className="w-5 h-5 text-off-white" />
+                  </button>
+
+                  <div className="flex space-x-2">
+                    {webDesignPlans.map((_, index) => (
                       <button
-                        onClick={() => setExpandedService(expandedService === index ? null : index)}
-                        className="flex items-center text-orange hover:text-orange/80 transition-colors mb-4"
-                      >
-                        <span className="mr-2">See details</span>
-                        <ChevronDown 
-                          className={`w-4 h-4 transition-transform ${
-                            expandedService === index ? 'rotate-180' : ''
-                          }`} 
-                        />
-                      </button>
-                      
-                      {expandedService === index && (
-                        <div className="space-y-2 animate-fade-in">
-                          {service.bullets.map((bullet, bulletIndex) => (
-                            <div key={bulletIndex} className="flex items-start space-x-3">
-                              <div className="w-1.5 h-1.5 bg-orange rounded-full mt-2 flex-shrink-0"></div>
-                              <p className="text-off-white/80">{bullet}</p>
-                            </div>
-                          ))}
-                        </div>
-                      )}
-                    </CardContent>
-                  </Card>
-                </ScrollAnimation>
-              ))}
+                        key={index}
+                        onClick={() => setCurrentPlan(index)}
+                        className={`w-3 h-3 rounded-full transition-colors ${
+                          index === currentPlan ? 'bg-orange' : 'bg-slate/40'
+                        }`}
+                      />
+                    ))}
+                  </div>
+
+                  <button
+                    onClick={nextPlan}
+                    className="p-3 rounded-full bg-slate/20 hover:bg-slate/40 transition-colors"
+                  >
+                    <ArrowRight className="w-5 h-5 text-off-white" />
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div className="text-center mt-8">
+              <Button onClick={goToWebDesign} size="lg">
+                View All Plans & Pricing
+              </Button>
             </div>
           </div>
         </section>
