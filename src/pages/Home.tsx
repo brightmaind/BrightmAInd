@@ -17,7 +17,7 @@ const Home = () => {
       monthlyToOwnership: "£109",
       continuousMonthly: "£69",
       outright: "£700",
-      monthlyCredit: "£18",
+      monthlyCredit: "18",
       icon: <Zap className="w-8 h-8" />,
       features: [
         "Single-page website",
@@ -34,7 +34,7 @@ const Home = () => {
       monthlyToOwnership: "£229",
       continuousMonthly: "£149",
       outright: "£1,300",
-      monthlyCredit: "£28",
+      monthlyCredit: "28",
       icon: <TrendingUp className="w-8 h-8" />,
       features: [
         "Multi-page website (up to 5 pages)",
@@ -52,7 +52,7 @@ const Home = () => {
       monthlyToOwnership: "£399",
       continuousMonthly: "£259",
       outright: "£2,000",
-      monthlyCredit: "£26",
+      monthlyCredit: "26",
       icon: <Settings className="w-8 h-8" />,
       features: [
         "Multi-page website (up to 10 pages)",
