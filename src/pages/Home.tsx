@@ -12,14 +12,15 @@ const Home = () => {
     {
       name: "Starter",
       subtitle: "Single page",
-      price: "£129",
-      period: "month",
+      monthlyToOwnership: "£109",
+      continuousMonthly: "£69",
+      outright: "£700",
       icon: <Zap className="w-8 h-8" />,
       features: [
         "Single-page website",
         "1 custom logo at onboarding",
         "24/7 emergency support",
-        "Up to 10 site changes each month",
+        "Up to 3 hours of changes each month",
         "Hosting & security included"
       ],
       gradient: "from-blue-500 to-cyan-500"
@@ -27,14 +28,15 @@ const Home = () => {
     {
       name: "Growth",
       subtitle: "Multi-page (up to 5 pages)",
-      price: "£299",
-      period: "month",
+      monthlyToOwnership: "£229",
+      continuousMonthly: "£149",
+      outright: "£1,300",
       icon: <TrendingUp className="w-8 h-8" />,
       features: [
         "Multi-page website (up to 5 pages)",
         "1 marketing graphic each month",
         "24/7 emergency support",
-        "Up to 30 site changes each month",
+        "Up to 8 hours of changes each month",
         "Hosting & security included"
       ],
       gradient: "from-orange to-red-500",
@@ -43,14 +45,15 @@ const Home = () => {
     {
       name: "Pro",
       subtitle: "Multi-page (up to 10 pages)",
-      price: "£499",
-      period: "month",
+      monthlyToOwnership: "£399",
+      continuousMonthly: "£259",
+      outright: "£2,000",
       icon: <Settings className="w-8 h-8" />,
       features: [
         "Multi-page website (up to 10 pages)",
         "2 marketing graphics each month",
         "Priority response",
-        "Up to 100 site changes each month",
+        "Up to 20 hours of changes each month",
         "Hosting & security included"
       ],
       gradient: "from-purple-500 to-pink-500"
@@ -216,9 +219,25 @@ const Home = () => {
                           {service.bullets.map((bullet, bulletIndex) => (
                             <div key={bulletIndex} className="flex items-start space-x-3">
                               <div className="w-1.5 h-1.5 bg-orange rounded-full mt-2 flex-shrink-0"></div>
-                              <span className="text-off-white/80">{bullet}</span>
+                        <div className="mb-6 space-y-3">
+                          <div className="bg-white/10 rounded-lg p-3">
+                            <div className="flex justify-between items-center">
+                              <span className="text-sm text-white/80">Monthly to Ownership</span>
+                              <span className="text-lg font-bold text-white">{plan.monthlyToOwnership}/mo</span>
                             </div>
-                          ))}
+                          </div>
+                          <div className="bg-white/10 rounded-lg p-3">
+                            <div className="flex justify-between items-center">
+                              <span className="text-sm text-white/80">Continuous Monthly</span>
+                              <span className="text-lg font-bold text-white">{plan.continuousMonthly}/mo</span>
+                            </div>
+                          </div>
+                          <div className="bg-white/10 rounded-lg p-3">
+                            <div className="flex justify-between items-center">
+                              <span className="text-sm text-white/80">Buy Outright</span>
+                              <span className="text-lg font-bold text-white">{plan.outright}</span>
+                            </div>
+                          </div>
                         </div>
                       )}
                     </CardContent>

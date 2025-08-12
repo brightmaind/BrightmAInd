@@ -10,54 +10,60 @@ const WebDesign: React.FC = () => {
     {
       name: "Starter",
       subtitle: "Single page",
-      price: "£129",
-      period: "month",
+      monthlyToOwnership: "£109",
+      continuousMonthly: "£69", 
+      outright: "£700",
       features: [
         "Single-page website",
         "1 custom logo at onboarding",
         "24/7 emergency support; routine updates in 1–2 business days",
-        "Up to 10 site changes each month",
+        "Up to 3 hours of changes each month",
         "Hosting, security updates, and backups included"
       ],
-      footnote: "Minimum term: 6 months. \"Changes\" are small updates (≈30 minutes each). Fair-use applies.",
-      monthlyUrl: "/buy/web-starter-monthly",
-      outrightPrice: "£700",
-      outrightUrl: "/buy/web-starter-outright"
+      buyoutDiscounts: [
+        { months: 6, price: "£560", discount: "20%" },
+        { months: 12, price: "£420", discount: "40%" },
+        { months: 15, price: "£350", discount: "50%" }
+      ]
     },
     {
       name: "Growth",
       subtitle: "Multi-page (up to 5 pages)",
-      price: "£299",
-      period: "month",
+      monthlyToOwnership: "£229",
+      continuousMonthly: "£149",
+      outright: "£1,300",
       features: [
         "Multi-page website (up to 5 pages)",
         "1 marketing graphic each month",
         "24/7 emergency support; routine updates in 1–2 business days",
-        "Up to 30 site changes each month",
+        "Up to 8 hours of changes each month",
         "Hosting, security updates, and backups included"
       ],
-      footnote: "Minimum term: 6 months. \"Changes\" are small updates (≈30 minutes each). Fair-use applies.",
-      monthlyUrl: "/buy/web-growth-monthly",
-      outrightPrice: "£1,300",
-      outrightUrl: "/buy/web-growth-outright",
-      popular: true
+      popular: true,
+      buyoutDiscounts: [
+        { months: 6, price: "£1,040", discount: "20%" },
+        { months: 12, price: "£780", discount: "40%" },
+        { months: 15, price: "£650", discount: "50%" }
+      ]
     },
     {
       name: "Pro",
       subtitle: "Multi-page (up to 10 pages)",
-      price: "£499",
-      period: "month",
+      monthlyToOwnership: "£399",
+      continuousMonthly: "£259",
+      outright: "£2,000",
       features: [
         "Multi-page website (up to 10 pages)",
         "2 marketing graphics each month",
         "Priority response",
-        "Up to 100 site changes each month",
+        "Up to 20 hours of changes each month",
         "Hosting, security updates, and backups included"
       ],
-      footnote: "Minimum term: 6 months. \"Changes\" are small updates (≈30 minutes each). Fair-use applies.",
-      monthlyUrl: "/buy/web-pro-monthly",
-      outrightPrice: "£2,000",
-      outrightUrl: "/buy/web-pro-outright"
+      buyoutDiscounts: [
+        { months: 6, price: "£1,600", discount: "20%" },
+        { months: 12, price: "£1,200", discount: "40%" },
+        { months: 15, price: "£1,000", discount: "50%" }
+      ]
     }
   ];
 
@@ -147,12 +153,39 @@ const WebDesign: React.FC = () => {
                       <CardDescription className="text-lg">
                         {plan.subtitle}
                       </CardDescription>
-                      <div className="mt-4">
-                        <span className="text-4xl font-bold text-orange">{plan.price}</span>
-                        <span className="text-off-white/60 ml-2">/ {plan.period}</span>
-                      </div>
                     </CardHeader>
                     <CardContent className="flex-1 flex flex-col">
+                      {/* Pricing Options */}
+                      <div className="mb-6 space-y-4">
+                        <div className="bg-slate/20 rounded-lg p-4">
+                          <div className="flex justify-between items-center mb-2">
+                            <span className="text-sm font-medium text-off-white/80">Monthly to Ownership</span>
+                            <span className="text-xs bg-orange/20 text-orange px-2 py-1 rounded">12 months</span>
+                          </div>
+                          <div className="text-2xl font-bold text-orange">{plan.monthlyToOwnership}<span className="text-sm text-off-white/60">/mo</span></div>
+                          <p className="text-xs text-off-white/60 mt-1">Own your site after 12 months</p>
+                        </div>
+                        
+                        <div className="bg-slate/20 rounded-lg p-4">
+                          <div className="flex justify-between items-center mb-2">
+                            <span className="text-sm font-medium text-off-white/80">Continuous Monthly</span>
+                            <span className="text-xs bg-blue-500/20 text-blue-400 px-2 py-1 rounded">Ongoing</span>
+                          </div>
+                          <div className="text-2xl font-bold text-blue-400">{plan.continuousMonthly}<span className="text-sm text-off-white/60">/mo</span></div>
+                          <p className="text-xs text-off-white/60 mt-1">Optional buyout with discounts</p>
+                        </div>
+                        
+                        <div className="bg-slate/20 rounded-lg p-4">
+                          <div className="flex justify-between items-center mb-2">
+                            <span className="text-sm font-medium text-off-white/80">Buy Outright</span>
+                            <span className="text-xs bg-green-500/20 text-green-400 px-2 py-1 rounded">One-time</span>
+                          </div>
+                          <div className="text-2xl font-bold text-green-400">{plan.outright}</div>
+                          <p className="text-xs text-off-white/60 mt-1">Full ownership immediately</p>
+                        </div>
+                      </div>
+
+                      {/* Features */}
                       <ul className="space-y-3 mb-6 flex-1">
                         {plan.features.map((feature, featureIndex) => (
                           <li key={featureIndex} className="flex items-start space-x-3">
@@ -162,23 +195,26 @@ const WebDesign: React.FC = () => {
                         ))}
                       </ul>
                       
-                      <p className="text-xs text-off-white/60 mb-6 leading-relaxed">
-                        {plan.footnote}
-                      </p>
+                      {/* Buyout Discount Schedule */}
+                      <div className="mb-6 p-3 bg-near-black rounded-lg">
+                        <h4 className="text-sm font-medium text-off-white mb-2">Continuous Monthly Buyout Discounts:</h4>
+                        <div className="space-y-1">
+                          {plan.buyoutDiscounts.map((discount, discountIndex) => (
+                            <div key={discountIndex} className="flex justify-between text-xs">
+                              <span className="text-off-white/70">{discount.months}+ months:</span>
+                              <span className="text-orange">{discount.price} (−{discount.discount})</span>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
 
                       <div className="space-y-3">
-                        <Button 
-                          className="w-full" 
-                          onClick={() => window.location.href = plan.monthlyUrl}
-                        >
-                          Subscribe — {plan.price}/mo
+                        <Button className="w-full" onClick={() => window.location.href = '/contact?subject=Web%20Design%20Quote'}>
+                          Get Started
                         </Button>
-                        <button 
-                          onClick={() => window.location.href = plan.outrightUrl}
-                          className="w-full text-orange hover:text-orange/80 transition-colors text-sm underline"
-                        >
-                          Buy outright — {plan.outrightPrice}
-                        </button>
+                        <p className="text-xs text-off-white/60 text-center">
+                          Choose your preferred payment option during consultation
+                        </p>
                       </div>
                     </CardContent>
                   </Card>
