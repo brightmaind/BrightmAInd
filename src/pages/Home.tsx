@@ -150,8 +150,8 @@ const Home = () => {
       <section className="pt-8 pb-24 px-4 sm:px-6 lg:px-8 hero-gradient">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            {/* Left: Content */}
-            <div className="space-y-8">
+            {/* Mobile: Logo first, Desktop: Content first */}
+            <div className="space-y-8 text-center lg:text-left order-2 lg:order-1">
               <h1 className="text-5xl md:text-6xl font-bold font-rajdhani text-off-white leading-tight">
                 Professional websites on a simple monthly plan
               </h1>
@@ -171,8 +171,8 @@ const Home = () => {
               </div>
             </div>
 
-            {/* Right: Logo */}
-            <div className="flex justify-center lg:justify-end">
+            {/* Mobile: Logo first, Desktop: Logo second */}
+            <div className="flex justify-center lg:justify-end order-1 lg:order-2">
              <div className="w-125 h-125 lg:w-150 lg:h-150 flex flex-col items-center space-y-2">
                 <img 
                   src="/assets_task_01k2dvrpkbfntr573hm1h0p81k_1754959602_img_0.webp" 
