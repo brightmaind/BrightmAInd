@@ -47,7 +47,7 @@ const About: React.FC = () => {
             </h1>
             <div className="text-xl md:text-2xl text-off-white/80 leading-relaxed space-y-6">
               <p>
-                Hi, we're Stefan. We started mAInd because we were tired of seeing good businesses struggle with systems that should make their lives easier, not harder.
+                 We started mAInd because we were tired of seeing good businesses struggle with systems that should make their lives easier, not harder.
               </p>
               <p>
                 We help founders and small teams grow faster by combining smart marketing with practical automation. No buzzwords, no overcomplicated tech—just solutions that actually work.
