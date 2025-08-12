@@ -100,13 +100,23 @@ const WebDesign: React.FC = () => {
         <section className="py-24 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-5xl md:text-6xl font-bold font-rajdhani text-off-white mb-8">
-              Web design on a simple monthly plan
+              The only web design service that gives you <span className="text-orange">real choice</span>
             </h1>
-            <p className="text-xl text-off-white/80 mb-8 leading-relaxed">
-              Get a professional site, fast support, and updates included.
-            </p>
+            <div className="text-xl text-off-white/80 mb-8 leading-relaxed space-y-4">
+              <p>
+                Everyone else locks you into one payment model. We don't.
+              </p>
+              <p>
+                Want to own your site after 12 months? Choose monthly-to-ownership. 
+                Prefer lower monthly costs with buyout discounts? Go continuous. 
+                Need it built and handed over? Buy outright.
+              </p>
+              <p className="text-orange font-semibold">
+                No other web design service offers this flexibility.
+              </p>
+            </div>
             <Button onClick={scrollToPricing} size="lg">
-              Subscribe now
+              See all pricing options
               <ArrowRight className="w-5 h-5 ml-2" />
             </Button>
           </div>
