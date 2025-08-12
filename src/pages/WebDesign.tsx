@@ -347,10 +347,10 @@ const WebDesign: React.FC = () => {
             "@type": "Offer",
             "name": `${plan.name} Plan`,
             "description": plan.subtitle,
-            "price": plan.price.replace('£', ''),
+            "price": plan.monthlyToOwnership.replace('£', '').replace('/mo', ''),
             "priceCurrency": "GBP",
             "billingIncrement": "P1M",
-            "url": `https://maind.agency${plan.monthlyUrl}`
+            "url": "https://maind.agency/web-design"
           }))
         })}
       </script>
