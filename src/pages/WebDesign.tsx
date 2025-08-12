@@ -224,7 +224,7 @@ const WebDesign: React.FC = () => {
                       <div className="mb-6 p-3 bg-near-black rounded-lg">
                         <h4 className="text-sm font-medium text-off-white mb-2">Continuous Monthly Credit Examples:</h4>
                         <div className="text-xs text-off-white/60 mb-2">
-                          Earn £{plan.monthlyCredit}/month credit (max {plan.maxCredit})
+                          Earn {plan.monthlyCredit}/month credit (max {plan.maxCredit})
                         </div>
                         <div className="space-y-1">
                           {plan.buyoutExamples.slice(0, 3).map((example, exampleIndex) => (
