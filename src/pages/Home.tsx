@@ -1,0 +1,220 @@
+import React, { useState } from 'react';
+import { Bot, TrendingUp, Settings, ChevronDown, Calendar } from 'lucide-react';
+import ScrollAnimation from '../components/ScrollAnimation';
+import { Button } from '../components/ui/button';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../components/ui/card';
+
+const Home = () => {
+  const [expandedService, setExpandedService] = useState(null);
+
+  const services = [
+    {
+      icon: <Bot className="w-8 h-8" />,
+      title: "AI Automation",
+      summary: "We'll automate the repetitive stuff so you can focus on what matters.",
+      bullets: [
+        "Automatically sort and route your leads",
+        "Smart inbox management and auto-replies", 
+        "Clean up your data and create useful reports"
+      ]
+    },
+    {
+      icon: <TrendingUp className="w-8 h-8" />,
+      title: "Marketing That Actually Works",
+      summary: "We focus on getting you real customers, not just pretty numbers.",
+      bullets: [
+        "Design offers and funnels that convert",
+        "Run Google and Facebook ads that pay for themselves",
+        "Test and improve what's working"
+      ]
+    },
+    {
+      icon: <Settings className="w-8 h-8" />,
+      title: "Systems Integration",
+      summary: "We make your business tools work together like they should.",
+      bullets: [
+        "Connect your apps with Zapier or Make",
+        "Set up custom connections when needed",
+        "Integrate Stripe, Shopify, HubSpot, and more"
+      ]
+    }
+  ];
+
+  const clients = [
+    "FintechCo", "RetailFlow", "DocuHealth", "Orbit SaaS", "NorthBank"
+  ];
+
+  const processSteps = [
+    { step: "01", title: "Diagnose", description: "We'll map out your customer journey and find what's holding you back." },
+    { step: "02", title: "Design", description: "Create the simplest solution that gets you the biggest win." },
+    { step: "03", title: "Build", description: "Build reliable systems you can actually use and understand." },
+    { step: "04", title: "Scale", description: "Test, improve, and multiply your results." }
+  ];
+
+  const handleBookConsultation = () => {
+    // TODO: Open Calendly modal
+    console.log('Opening Calendly modal...');
+  };
+
+  return (
+    <div className="pt-20 bg-charcoal text-off-white">
+      {/* Hero Section */}
+      <section className="pt-8 pb-24 px-4 sm:px-6 lg:px-8 hero-gradient">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            {/* Left: Content */}
+            <div className="space-y-8">
+              <h1 className="text-5xl md:text-6xl font-bold font-rajdhani text-off-white leading-tight">
+                We help businesses grow faster by combining smart marketing with practical AI automation.
+              </h1>
+              
+              <p className="text-xl text-off-white/80 leading-relaxed max-w-2xl">
+                We build simple systems that bring in more customers, handle the boring stuff automatically, and help you make more money—without complicated tech that breaks.
+              </p>
+              
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Button onClick={handleBookConsultation} size="lg">
+                  <Calendar className="w-5 h-5 mr-2" />
+                  Book Consultation
+                </Button>
+              </div>
+            </div>
+
+            {/* Right: Logo */}
+            <div className="flex justify-center lg:justify-end">
+             <div className="w-125 h-125 lg:w-150 lg:h-150 flex flex-col items-center space-y-2">
+                <img 
+                  src="/assets_task_01k2dvrpkbfntr573hm1h0p81k_1754959602_img_0.webp" 
+                  alt="Bright mAInd Marketing Logo" 
+                 className="w-full h-3/4 object-contain rounded-2xl"
+                />
+               <div className="text-center">
+                 <h2 className="text-5xl lg:text-6xl font-bold font-rajdhani brand-text brand-text-glow mb-3">
+                   Bright m<span className="text-orange">AI</span>nd
+                 </h2>
+                 <p className="tech-subtitle text-base tracking-widest">Marketing</p>
+               </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Social Proof Strip */}
+      <ScrollAnimation>
+        <section className="py-16 bg-near-black">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 className="text-lg font-medium text-off-white/60 mb-8">
+              Trusted by founders who move fast
+            </h2>
+          </div>
+        </section>
+      </ScrollAnimation>
+
+      {/* Services Section */}
+      <ScrollAnimation>
+        <section className="py-24 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold font-rajdhani text-off-white mb-6">
+                Services
+              </h2>
+            </div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+              {services.map((service, index) => (
+                <ScrollAnimation key={index} delay={index * 100}>
+                  <Card className="h-full">
+                    <CardHeader>
+                      <div className="text-orange mb-4">
+                        {service.icon}
+                      </div>
+                      <CardTitle>{service.title}</CardTitle>
+                      <CardDescription className="text-lg">
+                        {service.summary}
+                      </CardDescription>
+                    </CardHeader>
+                    <CardContent>
+                      <button
+                        onClick={() => setExpandedService(expandedService === index ? null : index)}
+                        className="flex items-center text-orange hover:text-orange/80 transition-colors mb-4"
+                      >
+                        <span className="mr-2">See details</span>
+                        <ChevronDown 
+                          className={`w-4 h-4 transition-transform ${
+                            expandedService === index ? 'rotate-180' : ''
+                          }`} 
+                        />
+                      </button>
+                      
+                      {expandedService === index && (
+                        <div className="space-y-2 animate-fade-in">
+                          {service.bullets.map((bullet, bulletIndex) => (
+                            <div key={bulletIndex} className="flex items-start space-x-3">
+                              <div className="w-1.5 h-1.5 bg-orange rounded-full mt-2 flex-shrink-0"></div>
+                              <span className="text-off-white/80">{bullet}</span>
+                            </div>
+                          ))}
+                        </div>
+                      )}
+                    </CardContent>
+                  </Card>
+                </ScrollAnimation>
+              ))}
+            </div>
+          </div>
+        </section>
+      </ScrollAnimation>
+
+
+      {/* Process Section */}
+      <ScrollAnimation>
+        <section className="py-24 bg-near-black">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold font-rajdhani text-off-white mb-6">
+                Process
+              </h2>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+              {processSteps.map((step, index) => (
+                <ScrollAnimation key={index} delay={index * 100}>
+                  <div className="text-center">
+                    <div className="w-16 h-16 bg-orange text-white rounded-full flex items-center justify-center text-xl font-bold font-rajdhani mx-auto mb-6">
+                      {step.step}
+                    </div>
+                    <h3 className="text-xl font-semibold font-rajdhani text-off-white mb-4">{step.title}</h3>
+                    <p className="text-off-white/80">{step.description}</p>
+                  </div>
+                </ScrollAnimation>
+              ))}
+            </div>
+          </div>
+        </section>
+      </ScrollAnimation>
+
+      {/* CTA Footer */}
+      <ScrollAnimation>
+        <section className="py-24 bg-orange">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 className="text-4xl md:text-5xl font-bold font-rajdhani text-white mb-8">
+              Ready to grow without the headaches?
+            </h2>
+            <Button 
+              onClick={handleBookConsultation} 
+              size="lg" 
+              variant="secondary"
+              className="bg-white text-orange hover:bg-white/90"
+            >
+              <Calendar className="w-5 h-5 mr-2" />
+              Book Consultation
+            </Button>
+          </div>
+        </section>
+      </ScrollAnimation>
+    </div>
+  );
+};
+
+export default Home;
