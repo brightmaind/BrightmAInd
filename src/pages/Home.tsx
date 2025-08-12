@@ -1,11 +1,61 @@
 import React, { useState } from 'react';
-import { Bot, TrendingUp, Settings, ChevronDown, Calendar } from 'lucide-react';
+import { Bot, TrendingUp, Settings, ChevronDown, Calendar, ArrowLeft, ArrowRight, Check, Zap } from 'lucide-react';
 import ScrollAnimation from '../components/ScrollAnimation';
 import { Button } from '../components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../components/ui/card';
 
 const Home = () => {
   const [expandedService, setExpandedService] = useState(null);
+  const [currentPlan, setCurrentPlan] = useState(0);
+
+  const webDesignPlans = [
+    {
+      name: "Starter",
+      subtitle: "Single page",
+      price: "£129",
+      period: "month",
+      icon: <Zap className="w-8 h-8" />,
+      features: [
+        "Single-page website",
+        "1 custom logo at onboarding",
+        "24/7 emergency support",
+        "Up to 10 site changes each month",
+        "Hosting & security included"
+      ],
+      gradient: "from-blue-500 to-cyan-500"
+    },
+    {
+      name: "Growth",
+      subtitle: "Multi-page (up to 5 pages)",
+      price: "£299",
+      period: "month",
+      icon: <TrendingUp className="w-8 h-8" />,
+      features: [
+        "Multi-page website (up to 5 pages)",
+        "1 marketing graphic each month",
+        "24/7 emergency support",
+        "Up to 30 site changes each month",
+        "Hosting & security included"
+      ],
+      gradient: "from-orange to-red-500",
+      popular: true
+    },
+    {
+      name: "Pro",
+      subtitle: "Multi-page (up to 10 pages)",
+      price: "£499",
+      period: "month",
+      icon: <Settings className="w-8 h-8" />,
+      features: [
+        "Multi-page website (up to 10 pages)",
+        "2 marketing graphics each month",
+        "Priority response",
+        "Up to 100 site changes each month",
+        "Hosting & security included"
+      ],
+      gradient: "from-purple-500 to-pink-500"
+    }
+  ];
 
   const services = [
     {
@@ -39,7 +89,6 @@ const Home = () => {
       ]
     }
   ];
-
   const clients = [
     "FintechCo", "RetailFlow", "DocuHealth", "Orbit SaaS", "NorthBank"
   ];
@@ -56,6 +105,18 @@ const Home = () => {
     console.log('Opening Calendly modal...');
   };
 
+  const nextPlan = () => {
+    setCurrentPlan((prev) => (prev + 1) % webDesignPlans.length);
+  };
+
+  const prevPlan = () => {
+    setCurrentPlan((prev) => (prev - 1 + webDesignPlans.length) % webDesignPlans.length);
+  };
+
+  const goToWebDesign = () => {
+    window.location.href = '/web-design';
+  };
+
   return (
     <div className="pt-20 bg-charcoal text-off-white">
       {/* Hero Section */}
@@ -65,15 +126,18 @@ const Home = () => {
             {/* Left: Content */}
             <div className="space-y-8">
               <h1 className="text-5xl md:text-6xl font-bold font-rajdhani text-off-white leading-tight">
-                We help businesses grow faster by combining smart marketing with practical AI automation.
+                Professional websites on a simple monthly plan
               </h1>
               
               <p className="text-xl text-off-white/80 leading-relaxed max-w-2xl">
-                We build simple systems that bring in more customers, handle the boring stuff automatically, and help you make more money—without complicated tech that breaks.
+                Get a professional website with hosting, security, updates, and ongoing support included. No surprises, no hidden costs.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button onClick={handleBookConsultation} size="lg">
+                <Button onClick={goToWebDesign} size="lg">
+                  View Web Design Plans
+                </Button>
+                <Button onClick={handleBookConsultation} size="lg" variant="outline">
                   <Calendar className="w-5 h-5 mr-2" />
                   Book Consultation
                 </Button>
