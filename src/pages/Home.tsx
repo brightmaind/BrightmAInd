@@ -3,10 +3,12 @@ import { Bot, TrendingUp, Settings, ChevronDown, Calendar, ArrowLeft, ArrowRight
 import ScrollAnimation from '../components/ScrollAnimation';
 import { Button } from '../components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../components/ui/card';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const Home = () => {
   const [expandedService, setExpandedService] = useState(null);
   const [currentPlan, setCurrentPlan] = useState(0);
+  const [isTransitioning, setIsTransitioning] = useState(false);
 
   const webDesignPlans = [
     {
@@ -109,11 +111,30 @@ const Home = () => {
   };
 
   const nextPlan = () => {
-    setCurrentPlan((prev) => (prev + 1) % webDesignPlans.length);
+    if (isTransitioning) return;
+    setIsTransitioning(true);
+    setTimeout(() => {
+      setCurrentPlan((prev) => (prev + 1) % webDesignPlans.length);
+      setIsTransitioning(false);
+    }, 150);
   };
 
   const prevPlan = () => {
-    setCurrentPlan((prev) => (prev - 1 + webDesignPlans.length) % webDesignPlans.length);
+    if (isTransitioning) return;
+    setIsTransitioning(true);
+    setTimeout(() => {
+      setCurrentPlan((prev) => (prev - 1 + webDesignPlans.length) % webDesignPlans.length);
+      setIsTransitioning(false);
+    }, 150);
+  };
+
+  const goToPlan = (index) => {
+    if (isTransitioning || index === currentPlan) return;
+    setIsTransitioning(true);
+    setTimeout(() => {
+      setCurrentPlan(index);
+      setIsTransitioning(false);
+    }, 150);
   };
 
   const goToWebDesign = () => {
@@ -204,63 +225,78 @@ const Home = () => {
 
               {/* Carousel Content */}
               <div className="relative bg-near-black/80 backdrop-blur-sm rounded-2xl p-8 border border-slate/20">
-                <div className="text-center mb-8">
-                  <div className="flex justify-center mb-4">
-                    <div className={`w-16 h-16 rounded-2xl flex items-center justify-center bg-gradient-to-br ${webDesignPlans[currentPlan].gradient}`}>
-                      <div className="text-white">
-                        {webDesignPlans[currentPlan].icon}
+                <AnimatePresence mode="wait">
+                  <motion.div
+                    key={currentPlan}
+                    initial={{ x: 300, opacity: 0 }}
+                    animate={{ x: 0, opacity: 1 }}
+                    exit={{ x: -300, opacity: 0 }}
+                    transition={{ 
+                      type: "spring",
+                      stiffness: 300,
+                      damping: 30,
+                      duration: 0.3
+                    }}
+                  >
+                    <div className="text-center mb-8">
+                      <div className="flex justify-center mb-4">
+                        <div className={`w-16 h-16 rounded-2xl flex items-center justify-center bg-gradient-to-br ${webDesignPlans[currentPlan].gradient}`}>
+                          <div className="text-white">
+                            {webDesignPlans[currentPlan].icon}
+                          </div>
+                        </div>
+                      </div>
+                      <h3 className="text-3xl font-bold font-rajdhani text-off-white mb-2">
+                        {webDesignPlans[currentPlan].name}
+                        {webDesignPlans[currentPlan].popular && (
+                          <span className="ml-3 text-sm bg-orange text-white px-3 py-1 rounded-full">
+                            Most Popular
+                          </span>
+                        )}
+                      </h3>
+                      <p className="text-off-white/70 text-lg">
+                        {webDesignPlans[currentPlan].subtitle}
+                      </p>
+                    </div>
+
+                    {/* Pricing Options */}
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+                      <div className="bg-slate/20 rounded-lg p-4 text-center">
+                        <div className="text-sm text-off-white/60 mb-1">Monthly to Ownership</div>
+                        <div className="text-2xl font-bold text-orange">
+                          {webDesignPlans[currentPlan].monthlyToOwnership}
+                          <span className="text-sm text-off-white/60">/mo</span>
+                        </div>
+                        <div className="text-xs text-off-white/50">12 months</div>
+                      </div>
+                      <div className="bg-slate/20 rounded-lg p-4 text-center">
+                        <div className="text-sm text-off-white/60 mb-1">Continuous Monthly</div>
+                        <div className="text-2xl font-bold text-blue-400">
+                          {webDesignPlans[currentPlan].continuousMonthly}
+                          <span className="text-sm text-off-white/60">/mo</span>
+                        </div>
+                        <div className="text-xs text-off-white/50">With buyout discounts</div>
+                      </div>
+                      <div className="bg-slate/20 rounded-lg p-4 text-center">
+                        <div className="text-sm text-off-white/60 mb-1">Buy Outright</div>
+                        <div className="text-2xl font-bold text-green-400">
+                          {webDesignPlans[currentPlan].outright}
+                        </div>
+                        <div className="text-xs text-off-white/50">One-time payment</div>
                       </div>
                     </div>
-                  </div>
-                  <h3 className="text-3xl font-bold font-rajdhani text-off-white mb-2">
-                    {webDesignPlans[currentPlan].name}
-                    {webDesignPlans[currentPlan].popular && (
-                      <span className="ml-3 text-sm bg-orange text-white px-3 py-1 rounded-full">
-                        Most Popular
-                      </span>
-                    )}
-                  </h3>
-                  <p className="text-off-white/70 text-lg">
-                    {webDesignPlans[currentPlan].subtitle}
-                  </p>
-                </div>
 
-                {/* Pricing Options */}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
-                  <div className="bg-slate/20 rounded-lg p-4 text-center">
-                    <div className="text-sm text-off-white/60 mb-1">Monthly to Ownership</div>
-                    <div className="text-2xl font-bold text-orange">
-                      {webDesignPlans[currentPlan].monthlyToOwnership}
-                      <span className="text-sm text-off-white/60">/mo</span>
+                    {/* Features */}
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+                      {webDesignPlans[currentPlan].features.map((feature, index) => (
+                        <div key={index} className="flex items-start space-x-3">
+                          <Check className="w-5 h-5 text-orange mt-0.5 flex-shrink-0" />
+                          <span className="text-off-white/80 text-sm">{feature}</span>
+                        </div>
+                      ))}
                     </div>
-                    <div className="text-xs text-off-white/50">12 months</div>
-                  </div>
-                  <div className="bg-slate/20 rounded-lg p-4 text-center">
-                    <div className="text-sm text-off-white/60 mb-1">Continuous Monthly</div>
-                    <div className="text-2xl font-bold text-blue-400">
-                      {webDesignPlans[currentPlan].continuousMonthly}
-                      <span className="text-sm text-off-white/60">/mo</span>
-                    </div>
-                    <div className="text-xs text-off-white/50">With buyout discounts</div>
-                  </div>
-                  <div className="bg-slate/20 rounded-lg p-4 text-center">
-                    <div className="text-sm text-off-white/60 mb-1">Buy Outright</div>
-                    <div className="text-2xl font-bold text-green-400">
-                      {webDesignPlans[currentPlan].outright}
-                    </div>
-                    <div className="text-xs text-off-white/50">One-time payment</div>
-                  </div>
-                </div>
-
-                {/* Features */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
-                  {webDesignPlans[currentPlan].features.map((feature, index) => (
-                    <div key={index} className="flex items-start space-x-3">
-                      <Check className="w-5 h-5 text-orange mt-0.5 flex-shrink-0" />
-                      <span className="text-off-white/80 text-sm">{feature}</span>
-                    </div>
-                  ))}
-                </div>
+                  </motion.div>
+                </AnimatePresence>
 
                 {/* Navigation */}
                 <div className="flex items-center justify-between">
@@ -275,7 +311,7 @@ const Home = () => {
                     {webDesignPlans.map((_, index) => (
                       <button
                         key={index}
-                        onClick={() => setCurrentPlan(index)}
+                        onClick={() => goToPlan(index)}
                         className={`w-3 h-3 rounded-full transition-colors ${
                           index === currentPlan ? 'bg-orange' : 'bg-slate/40'
                         }`}
