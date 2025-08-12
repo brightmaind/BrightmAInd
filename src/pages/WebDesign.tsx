@@ -227,7 +227,7 @@ const WebDesign: React.FC = () => {
                           {plan.buyoutExamples.slice(0, 3).map((example, exampleIndex) => (
                             <div key={exampleIndex} className="flex justify-between text-xs">
                               <span className="text-off-white/70">{example.months} months:</span>
-                              <span className="text-blue-400">£{example.buyout} buyout</span>
+                              <span className="text-blue-400">{example.buyout} buyout</span>
                             </div>
                           ))}
                         </div>
