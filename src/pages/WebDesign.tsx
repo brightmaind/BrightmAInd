@@ -58,9 +58,9 @@ const WebDesign: React.FC = () => {
       name: "Pro",
       subtitle: "Multi-page (up to 10 pages)",
       monthlyToOwnership: "£399",
-      continuousMonthly: "£259",
+      continuousMonthly: "£261",
       outright: "£2,000",
-      monthlyCredit: "£26",
+      monthlyCredit: "£28",
       maxCredit: "£1,000",
       features: [
         "Multi-page website (up to 10 pages)",
@@ -71,10 +71,10 @@ const WebDesign: React.FC = () => {
         "Hosting, security updates, and backups included"
       ],
       buyoutExamples: [
-        { months: 6, credit: "£156", buyout: "£1,844", total: "£3,398" },
-        { months: 12, credit: "£312", buyout: "£1,688", total: "£4,796" },
-        { months: 18, credit: "£468", buyout: "£1,532", total: "£6,194" },
-        { months: 24, credit: "£624", buyout: "£1,376", total: "£7,592" }
+        { months: 6, credit: "£168", buyout: "£1,832", total: "£3,398" },
+        { months: 12, credit: "£336", buyout: "£1,664", total: "£4,796" },
+        { months: 18, credit: "£504", buyout: "£1,496", total: "£6,194" },
+        { months: 24, credit: "£672", buyout: "£1,328", total: "£7,592" }
       ]
     }
   ];

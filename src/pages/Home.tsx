@@ -50,9 +50,9 @@ const Home = () => {
       name: "Pro",
       subtitle: "Multi-page (up to 10 pages)",
       monthlyToOwnership: "£399",
-      continuousMonthly: "£259",
+      continuousMonthly: "£261",
       outright: "£2,000",
-      monthlyCredit: "26",
+      monthlyCredit: "28",
       icon: <Settings className="w-8 h-8" />,
       features: [
         "Multi-page website (up to 10 pages)",
