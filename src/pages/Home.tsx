@@ -219,25 +219,9 @@ const Home = () => {
                           {service.bullets.map((bullet, bulletIndex) => (
                             <div key={bulletIndex} className="flex items-start space-x-3">
                               <div className="w-1.5 h-1.5 bg-orange rounded-full mt-2 flex-shrink-0"></div>
-                        <div className="mb-6 space-y-3">
-                          <div className="bg-white/10 rounded-lg p-3">
-                            <div className="flex justify-between items-center">
-                              <span className="text-sm text-white/80">Monthly to Ownership</span>
-                              <span className="text-lg font-bold text-white">{plan.monthlyToOwnership}/mo</span>
+                              <p className="text-off-white/80">{bullet}</p>
                             </div>
-                          </div>
-                          <div className="bg-white/10 rounded-lg p-3">
-                            <div className="flex justify-between items-center">
-                              <span className="text-sm text-white/80">Continuous Monthly</span>
-                              <span className="text-lg font-bold text-white">{plan.continuousMonthly}/mo</span>
-                            </div>
-                          </div>
-                          <div className="bg-white/10 rounded-lg p-3">
-                            <div className="flex justify-between items-center">
-                              <span className="text-sm text-white/80">Buy Outright</span>
-                              <span className="text-lg font-bold text-white">{plan.outright}</span>
-                            </div>
-                          </div>
+                          ))}
                         </div>
                       )}
                     </CardContent>
