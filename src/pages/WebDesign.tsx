@@ -265,7 +265,7 @@ const WebDesign: React.FC = () => {
                   <div>
                     <div className="text-green-400 text-lg font-semibold mb-2">Buy Outright</div>
                     <p className="text-off-white/80 text-sm">One-time payment for immediate ownership. Add optional care plan later at continuous monthly rates.</p>
-                  </div>
+                  <span className="text-blue-400">{example.buyout} buyout</span>
                 </div>
               </div>
             </div>
