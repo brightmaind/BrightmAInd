@@ -20,7 +20,8 @@ const WebDesign: React.FC = () => {
         "1 custom logo at onboarding",
         "24/7 emergency support (site down, checkout broken, security incidents)",
         "Routine updates in 1–2 business days",
-        "Up to 2 hours of changes each month (£75/hour for overages)",
+        "3 change credits per month (45 minutes total)",
+        "Overage billed in 15-minute increments",
         "Hosting, security updates, and backups included"
       ],
       buyoutExamples: [
@@ -43,7 +44,8 @@ const WebDesign: React.FC = () => {
         "1 marketing graphic each month",
         "24/7 emergency support (site down, checkout broken, security incidents)",
         "Routine updates in 1–2 business days",
-        "Up to 6 hours of changes each month (£75/hour for overages)",
+        "8 change credits per month (2 hours total)",
+        "Overage billed in 15-minute increments",
         "Hosting, security updates, and backups included"
       ],
       popular: true,
@@ -67,7 +69,8 @@ const WebDesign: React.FC = () => {
         "2 marketing graphics each month",
         "24/7 emergency support (site down, checkout broken, security incidents)",
         "Priority response for routine updates",
-        "Up to 12 hours of changes each month (£75/hour for overages)",
+        "14 change credits per month (3.5 hours total)",
+        "Overage billed in 15-minute increments",
         "Hosting, security updates, and backups included"
       ],
       buyoutExamples: [
@@ -82,7 +85,7 @@ const WebDesign: React.FC = () => {
   const faqs = [
     {
       question: "What's a \"change\"?",
-      answer: "A change is a small update like editing text, swapping images, or adding a new section. Bigger features or redesigns are quoted separately."
+      answer: "Changes are tracked in 15-minute credits. Small updates like text edits or image swaps typically use 1 credit. Unused credits don't roll over to the next month."
     },
     {
       question: "Do I own the website?",

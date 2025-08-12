@@ -23,7 +23,7 @@ const Home = () => {
         "Single-page website",
         "1 custom logo at onboarding",
         "24/7 emergency support",
-        "Up to 2 hours of changes each month",
+        "3 change credits per month (45 min)",
         "Hosting & security included"
       ],
       gradient: "from-blue-500 to-cyan-500"
@@ -40,7 +40,7 @@ const Home = () => {
         "Multi-page website (up to 5 pages)",
         "1 marketing graphic each month",
         "24/7 emergency support",
-        "Up to 6 hours of changes each month",
+        "8 change credits per month (2 hours)",
         "Hosting & security included"
       ],
       gradient: "from-orange to-red-500",
@@ -58,7 +58,7 @@ const Home = () => {
         "Multi-page website (up to 10 pages)",
         "2 marketing graphics each month",
         "Priority response",
-        "Up to 12 hours of changes each month",
+        "14 change credits per month (3.5 hours)",
         "Hosting & security included"
       ],
       gradient: "from-purple-500 to-pink-500"
