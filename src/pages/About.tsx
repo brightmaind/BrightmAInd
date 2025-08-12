@@ -43,7 +43,7 @@ const About: React.FC = () => {
         <section className="py-24 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-5xl md:text-6xl font-bold font-rajdhani text-off-white mb-8">
-              About Me
+              About Us
             </h1>
             <div className="text-xl md:text-2xl text-off-white/80 leading-relaxed space-y-6">
               <p>
