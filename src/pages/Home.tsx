@@ -17,12 +17,13 @@ const Home = () => {
       monthlyToOwnership: "£109",
       continuousMonthly: "£69",
       outright: "£700",
+      monthlyCredit: "£18",
       icon: <Zap className="w-8 h-8" />,
       features: [
         "Single-page website",
         "1 custom logo at onboarding",
         "24/7 emergency support",
-        "Up to 3 hours of changes each month",
+        "Up to 2 hours of changes each month",
         "Hosting & security included"
       ],
       gradient: "from-blue-500 to-cyan-500"
@@ -33,12 +34,13 @@ const Home = () => {
       monthlyToOwnership: "£229",
       continuousMonthly: "£149",
       outright: "£1,300",
+      monthlyCredit: "£28",
       icon: <TrendingUp className="w-8 h-8" />,
       features: [
         "Multi-page website (up to 5 pages)",
         "1 marketing graphic each month",
         "24/7 emergency support",
-        "Up to 8 hours of changes each month",
+        "Up to 6 hours of changes each month",
         "Hosting & security included"
       ],
       gradient: "from-orange to-red-500",
@@ -50,12 +52,13 @@ const Home = () => {
       monthlyToOwnership: "£399",
       continuousMonthly: "£259",
       outright: "£2,000",
+      monthlyCredit: "£26",
       icon: <Settings className="w-8 h-8" />,
       features: [
         "Multi-page website (up to 10 pages)",
         "2 marketing graphics each month",
         "Priority response",
-        "Up to 20 hours of changes each month",
+        "Up to 12 hours of changes each month",
         "Hosting & security included"
       ],
       gradient: "from-purple-500 to-pink-500"
@@ -275,7 +278,7 @@ const Home = () => {
                           {webDesignPlans[currentPlan].continuousMonthly}
                           <span className="text-sm text-off-white/60">/mo</span>
                         </div>
-                        <div className="text-xs text-off-white/50">With buyout discounts</div>
+                        <div className="text-xs text-off-white/50">+£{webDesignPlans[currentPlan].monthlyCredit}/mo credit</div>
                       </div>
                       <div className="bg-slate/20 rounded-lg p-4 text-center">
                         <div className="text-sm text-off-white/60 mb-1">Buy Outright</div>

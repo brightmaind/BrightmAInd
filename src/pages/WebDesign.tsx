@@ -13,17 +13,21 @@ const WebDesign: React.FC = () => {
       monthlyToOwnership: "£109",
       continuousMonthly: "£69", 
       outright: "£700",
+      monthlyCredit: "£18",
+      maxCredit: "£350",
       features: [
         "Single-page website",
         "1 custom logo at onboarding",
-        "24/7 emergency support; routine updates in 1–2 business days",
-        "Up to 3 hours of changes each month",
+        "24/7 emergency support (site down, checkout broken, security incidents)",
+        "Routine updates in 1–2 business days",
+        "Up to 2 hours of changes each month (£75/hour for overages)",
         "Hosting, security updates, and backups included"
       ],
-      buyoutDiscounts: [
-        { months: 6, price: "£560", discount: "20%" },
-        { months: 12, price: "£420", discount: "40%" },
-        { months: 15, price: "£350", discount: "50%" }
+      buyoutExamples: [
+        { months: 6, credit: "£108", buyout: "£592", total: "£1,006" },
+        { months: 12, credit: "£216", buyout: "£484", total: "£1,312" },
+        { months: 18, credit: "£324", buyout: "£376", total: "£1,618" },
+        { months: 24, credit: "£350", buyout: "£350", total: "£2,006", note: "Max credit reached" }
       ]
     },
     {
@@ -32,18 +36,22 @@ const WebDesign: React.FC = () => {
       monthlyToOwnership: "£229",
       continuousMonthly: "£149",
       outright: "£1,300",
+      monthlyCredit: "£28",
+      maxCredit: "£650",
       features: [
         "Multi-page website (up to 5 pages)",
         "1 marketing graphic each month",
-        "24/7 emergency support; routine updates in 1–2 business days",
-        "Up to 8 hours of changes each month",
+        "24/7 emergency support (site down, checkout broken, security incidents)",
+        "Routine updates in 1–2 business days",
+        "Up to 6 hours of changes each month (£75/hour for overages)",
         "Hosting, security updates, and backups included"
       ],
       popular: true,
-      buyoutDiscounts: [
-        { months: 6, price: "£1,040", discount: "20%" },
-        { months: 12, price: "£780", discount: "40%" },
-        { months: 15, price: "£650", discount: "50%" }
+      buyoutExamples: [
+        { months: 6, credit: "£168", buyout: "£1,132", total: "£2,026" },
+        { months: 12, credit: "£336", buyout: "£964", total: "£2,752" },
+        { months: 18, credit: "£504", buyout: "£796", total: "£3,478" },
+        { months: 24, credit: "£650", buyout: "£650", total: "£4,226", note: "Max credit reached" }
       ]
     },
     {
@@ -52,17 +60,21 @@ const WebDesign: React.FC = () => {
       monthlyToOwnership: "£399",
       continuousMonthly: "£259",
       outright: "£2,000",
+      monthlyCredit: "£26",
+      maxCredit: "£1,000",
       features: [
         "Multi-page website (up to 10 pages)",
         "2 marketing graphics each month",
-        "Priority response",
-        "Up to 20 hours of changes each month",
+        "24/7 emergency support (site down, checkout broken, security incidents)",
+        "Priority response for routine updates",
+        "Up to 12 hours of changes each month (£75/hour for overages)",
         "Hosting, security updates, and backups included"
       ],
-      buyoutDiscounts: [
-        { months: 6, price: "£1,600", discount: "20%" },
-        { months: 12, price: "£1,200", discount: "40%" },
-        { months: 15, price: "£1,000", discount: "50%" }
+      buyoutExamples: [
+        { months: 6, credit: "£156", buyout: "£1,844", total: "£3,398" },
+        { months: 12, credit: "£312", buyout: "£1,688", total: "£4,796" },
+        { months: 18, credit: "£468", buyout: "£1,532", total: "£6,194" },
+        { months: 24, credit: "£624", buyout: "£1,376", total: "£7,592" }
       ]
     }
   ];
@@ -205,14 +217,17 @@ const WebDesign: React.FC = () => {
                         ))}
                       </ul>
                       
-                      {/* Buyout Discount Schedule */}
+                      {/* Buyout Credit Examples */}
                       <div className="mb-6 p-3 bg-near-black rounded-lg">
-                        <h4 className="text-sm font-medium text-off-white mb-2">Continuous Monthly Buyout Discounts:</h4>
+                        <h4 className="text-sm font-medium text-off-white mb-2">Continuous Monthly Credit Examples:</h4>
+                        <div className="text-xs text-off-white/60 mb-2">
+                          Earn £{plan.monthlyCredit}/month credit (max £{plan.maxCredit})
+                        </div>
                         <div className="space-y-1">
-                          {plan.buyoutDiscounts.map((discount, discountIndex) => (
-                            <div key={discountIndex} className="flex justify-between text-xs">
-                              <span className="text-off-white/70">{discount.months}+ months:</span>
-                              <span className="text-orange">{discount.price} (−{discount.discount})</span>
+                          {plan.buyoutExamples.slice(0, 3).map((example, exampleIndex) => (
+                            <div key={exampleIndex} className="flex justify-between text-xs">
+                              <span className="text-off-white/70">{example.months} months:</span>
+                              <span className="text-blue-400">£{example.buyout} buyout</span>
                             </div>
                           ))}
                         </div>
@@ -230,6 +245,29 @@ const WebDesign: React.FC = () => {
                   </Card>
                 </ScrollAnimation>
               ))}
+            </div>
+
+            {/* Pricing Explanation */}
+            <div className="mt-16 max-w-4xl mx-auto">
+              <div className="bg-near-black rounded-2xl p-8">
+                <h3 className="text-2xl font-bold font-rajdhani text-off-white mb-6 text-center">
+                  How the Credit System Works
+                </h3>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+                  <div>
+                    <div className="text-orange text-lg font-semibold mb-2">Monthly-to-Ownership</div>
+                    <p className="text-off-white/80 text-sm">Pay higher monthly rate, own your site after exactly 12 months. Always the best 12-month option.</p>
+                  </div>
+                  <div>
+                    <div className="text-blue-400 text-lg font-semibold mb-2">Continuous Monthly</div>
+                    <p className="text-off-white/80 text-sm">Lower monthly rate with flexibility. Earn credits each month that reduce your buyout price (max 50% of outright price).</p>
+                  </div>
+                  <div>
+                    <div className="text-green-400 text-lg font-semibold mb-2">Buy Outright</div>
+                    <p className="text-off-white/80 text-sm">One-time payment for immediate ownership. Add optional care plan later at continuous monthly rates.</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </section>
@@ -285,7 +323,7 @@ const WebDesign: React.FC = () => {
               Buying outright
             </h2>
             <p className="text-xl text-off-white/80 leading-relaxed">
-              One-off design and build with a 14-day snagging period. No ongoing management. You handle hosting, updates, and changes—or add an optional care plan later.
+              One-off design and build with a 14-day snagging period. No ongoing management. You handle hosting, updates, and changes—or add an optional care plan later at continuous monthly rates.
             </p>
           </div>
         </section>
