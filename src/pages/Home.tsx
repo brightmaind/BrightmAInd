@@ -263,17 +263,27 @@ const Home = () => {
         <section className="py-24 bg-orange">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-4xl md:text-5xl font-bold font-rajdhani text-white mb-8">
-              Ready to grow without the headaches?
+              Ready to get your professional website?
             </h2>
-            <Button 
-              onClick={handleBookConsultation} 
-              size="lg" 
-              variant="secondary"
-              className="bg-white text-orange hover:bg-white/90"
-            >
-              <Calendar className="w-5 h-5 mr-2" />
-              Book Consultation
-            </Button>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button 
+                onClick={goToWebDesign}
+                size="lg" 
+                variant="secondary"
+                className="bg-white text-orange hover:bg-white/90"
+              >
+                View Web Design Plans
+              </Button>
+              <Button 
+                onClick={handleBookConsultation} 
+                size="lg" 
+                variant="outline"
+                className="border-white text-white hover:bg-white hover:text-orange"
+              >
+                <Calendar className="w-5 h-5 mr-2" />
+                Book Consultation
+              </Button>
+            </div>
           </div>
         </section>
       </ScrollAnimation>
