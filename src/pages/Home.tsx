@@ -109,8 +109,14 @@ const Home = () => {
   ];
 
   const handleBookConsultation = () => {
-    // TODO: Open Calendly modal
-    console.log('Opening Calendly modal...');
+    if (window.Calendly) {
+      window.Calendly.initPopupWidget({
+        url: 'https://calendly.com/enquiries-brightmaind/30min'
+      });
+    } else {
+      // Fallback to direct link if Calendly widget isn't loaded
+      window.open('https://calendly.com/enquiries-brightmaind/30min', '_blank');
+    }
   };
 
   const nextPlan = () => {

@@ -3,6 +3,13 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { Menu, X, Calendar } from 'lucide-react';
 import { Button } from './ui/button';
 
+// Calendly integration
+declare global {
+  interface Window {
+    Calendly: any;
+  }
+}
+
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
@@ -19,8 +26,14 @@ const Navbar: React.FC = () => {
   ];
 
   const handleBookConsultation = () => {
-    // TODO: Open Calendly modal
-    console.log('Opening Calendly modal...');
+    if (window.Calendly) {
+      window.Calendly.initPopupWidget({
+        url: 'https://calendly.com/enquiries-brightmaind/30min'
+      });
+    } else {
+      // Fallback to direct link if Calendly widget isn't loaded
+      window.open('https://calendly.com/enquiries-brightmaind/30min', '_blank');
+    }
   };
 
   const handleNavigation = (href: string) => {
