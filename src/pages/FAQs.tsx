@@ -18,7 +18,7 @@ const FAQs: React.FC = () => {
     },
     {
       question: "Do I own my website?",
-      answer: "Yes, you always own your content and domain. With monthly plans, we handle hosting and management. With outright purchases, everything is handed over to you after the 14-day snagging period."
+      answer: "You own your website if you buy outright or after completing 12 months of monthly-to-ownership payments. With continuous monthly plans, we retain ownership but you can buy it anytime using your earned credits. You always own your content and domain regardless of the plan."
     },
     {
       question: "What's included in the monthly plans?",
