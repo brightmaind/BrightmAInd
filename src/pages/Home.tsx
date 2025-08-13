@@ -102,10 +102,10 @@ const Home = () => {
   ];
 
   const processSteps = [
-    { step: "01", title: "Diagnose", description: "We'll map out your customer journey and find what's holding you back." },
-    { step: "02", title: "Design", description: "Create the simplest solution that gets you the biggest win." },
-    { step: "03", title: "Build", description: "Build reliable systems you can actually use and understand." },
-    { step: "04", title: "Scale", description: "Test, improve, and multiply your results." }
+    { step: "01", title: "Discover", description: "We'll understand your business goals and design requirements." },
+    { step: "02", title: "Design", description: "Create a website that converts visitors into customers." },
+    { step: "03", title: "Build", description: "Develop your site with hosting, security, and updates included." },
+    { step: "04", title: "Support", description: "Ongoing maintenance, updates, and optional marketing services." }
   ];
 
   const handleBookConsultation = () => {
@@ -348,8 +348,11 @@ const Home = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold font-rajdhani text-off-white mb-6">
-                Process
+                How We Build Your <span className="text-orange">Website</span>
               </h2>
+              <p className="text-xl text-off-white/80 max-w-3xl mx-auto">
+                From initial consultation to ongoing support, we handle everything so you can focus on your business.
+              </p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
@@ -364,6 +367,34 @@ const Home = () => {
                   </div>
                 </ScrollAnimation>
               ))}
+            </div>
+
+            {/* Marketing Services Note */}
+            <div className="mt-16 max-w-4xl mx-auto text-center">
+              <div className="bg-near-black/60 rounded-2xl p-8 border border-slate/20">
+                <h3 className="text-2xl font-bold font-rajdhani text-off-white mb-4">
+                  Need Marketing Too?
+                </h3>
+                <p className="text-off-white/80 leading-relaxed mb-6">
+                  Our AI automation and growth marketing services are available at discounted rates for website clients. 
+                  We also work with businesses who have existing websites but want to supercharge their marketing.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <Button 
+                    onClick={() => window.location.href = '/services'}
+                    variant="outline"
+                  >
+                    View Marketing Services
+                  </Button>
+                  <Button 
+                    onClick={handleBookConsultation}
+                    variant="ghost"
+                  >
+                    <Calendar className="w-4 h-4 mr-2" />
+                    Discuss Your Needs
+                  </Button>
+                </div>
+              </div>
             </div>
           </div>
         </section>
