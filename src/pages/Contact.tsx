@@ -3,56 +3,6 @@ import { Mail, Phone, MapPin, Send } from 'lucide-react';
 import ScrollAnimation from '../components/ScrollAnimation';
 
 const Contact: React.FC = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    company: '',
-    message: ''
-  });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
-  };
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    setSubmitStatus('idle');
-
-    try {
-      // Submit to Netlify Forms
-      const response = await fetch('/', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/x-www-form-urlencoded',
-        },
-        body: new URLSearchParams({
-          'form-name': 'contact',
-          'name': formData.name,
-          'email': formData.email,
-          'company': formData.company,
-          'message': formData.message,
-        }).toString(),
-      });
-
-      if (response.ok) {
-        setSubmitStatus('success');
-        setFormData({ name: '', email: '', company: '', message: '' });
-      } else {
-        setSubmitStatus('error');
-      }
-    } catch (error) {
-      setSubmitStatus('error');
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
-
   return (
     <div className="pt-20">
       {/* Header Section */}
@@ -114,23 +64,16 @@ const Contact: React.FC = () => {
                 name="contact" 
                 method="POST" 
                 data-netlify="true" 
-                onSubmit={handleSubmit} 
+               netlify-honeypot="bot-field"
                 className="space-y-6"
               >
                 <input type="hidden" name="form-name" value="contact" />
+               <p className="hidden">
+                 <label>
+                   Don't fill this out if you're human: <input name="bot-field" />
+                 </label>
+               </p>
                 
-                {submitStatus === 'success' && (
-                  <div className="bg-green-50 border border-green-200 rounded-lg p-4 mb-6">
-                    <p className="text-green-800 font-medium">Thank you for your message! We'll get back to you within 4 hours.</p>
-                  </div>
-                )}
-                
-                {submitStatus === 'error' && (
-                  <div className="bg-red-50 border border-red-200 rounded-lg p-4 mb-6">
-                    <p className="text-red-800 font-medium">There was an error sending your message. Please try again or email us directly at <a href="mailto:enquiries@brightmaind.com" className="underline">enquiries@brightmaind.com</a></p>
-                  </div>
-                )}
-
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <label htmlFor="name" className="block text-sm font-medium text-charcoal mb-2">
@@ -140,8 +83,6 @@ const Contact: React.FC = () => {
                       type="text"
                       id="name"
                       name="name"
-                      value={formData.name}
-                      onChange={handleChange}
                       required
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange focus:border-transparent transition-colors"
                       placeholder="Your full name"
@@ -156,8 +97,6 @@ const Contact: React.FC = () => {
                       type="email"
                       id="email"
                       name="email"
-                      value={formData.email}
-                      onChange={handleChange}
                       required
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange focus:border-transparent transition-colors"
                       placeholder="your.email@company.com"
@@ -173,8 +112,6 @@ const Contact: React.FC = () => {
                     type="text"
                     id="company"
                     name="company"
-                    value={formData.company}
-                    onChange={handleChange}
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange focus:border-transparent transition-colors"
                     placeholder="Your company name (optional)"
                   />
@@ -187,8 +124,6 @@ const Contact: React.FC = () => {
                   <textarea
                     id="message"
                     name="message"
-                    value={formData.message}
-                    onChange={handleChange}
                     required
                     rows={6}
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange focus:border-transparent transition-colors resize-none"
@@ -198,11 +133,10 @@ const Contact: React.FC = () => {
 
                 <button
                   type="submit"
-                  disabled={isSubmitting}
                   className="w-full bg-orange text-white px-8 py-4 rounded-lg font-semibold text-lg btn-hover flex items-center justify-center space-x-2 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
-                  <span>{isSubmitting ? 'Sending...' : 'Send Message'}</span>
-                  {!isSubmitting && <Send size={20} />}
+                 <span>Send Message</span>
+                 <Send size={20} />
                 </button>
               </form>
             </div>
