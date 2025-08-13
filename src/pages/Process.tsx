@@ -215,8 +215,6 @@ const Process: React.FC = () => {
                 </Card>
               </ScrollAnimation>
             </div>
-              </div>
-            </div>
           </div>
         </section>
       </ScrollAnimation>
