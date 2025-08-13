@@ -65,6 +65,7 @@ const Contact: React.FC = () => {
                 method="POST" 
                 data-netlify="true" 
                netlify-honeypot="bot-field"
+               action="/success.html"
                 className="space-y-6"
               >
                 <input type="hidden" name="form-name" value="contact" />
