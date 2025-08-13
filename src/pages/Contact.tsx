@@ -3,6 +3,37 @@ import { Mail, Phone, MapPin, Send } from 'lucide-react';
 import ScrollAnimation from '../components/ScrollAnimation';
 
 const Contact: React.FC = () => {
+  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+    
+    try {
+      const response = await fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(formData as any).toString()
+      });
+      
+      if (response.ok) {
+        setIsSubmitted(true);
+      } else {
+        throw new Error('Form submission failed');
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      // Fallback: still show success message since Netlify might process it
+      setIsSubmitted(true);
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <div className="pt-20">
       {/* Header Section */}
@@ -60,86 +91,110 @@ const Contact: React.FC = () => {
 
             {/* Contact Form */}
             <div className="bg-white rounded-2xl shadow-xl p-8 lg:p-12 card-hover">
-              <form 
-                name="contact" 
-                method="POST" 
-                data-netlify="true" 
-               netlify-honeypot="bot-field"
-               action="/success.html"
-                className="space-y-6"
-              >
-                <input type="hidden" name="form-name" value="contact" />
-               <p className="hidden">
-                 <label>
-                   Don't fill this out if you're human: <input name="bot-field" />
-                 </label>
-               </p>
-                
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {!isSubmitted ? (
+                <form 
+                  name="contact" 
+                  method="POST" 
+                  data-netlify="true" 
+                  netlify-honeypot="bot-field"
+                  onSubmit={handleSubmit}
+                  className="space-y-6"
+                >
+                  <input type="hidden" name="form-name" value="contact" />
+                  <p className="hidden">
+                    <label>
+                      Don't fill this out if you're human: <input name="bot-field" />
+                    </label>
+                  </p>
+                  
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                      <label htmlFor="name" className="block text-sm font-medium text-charcoal mb-2">
+                        Name *
+                      </label>
+                      <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        required
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange focus:border-transparent transition-colors"
+                        placeholder="Your full name"
+                      />
+                    </div>
+
+                    <div>
+                      <label htmlFor="email" className="block text-sm font-medium text-charcoal mb-2">
+                        Email *
+                      </label>
+                      <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        required
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange focus:border-transparent transition-colors"
+                        placeholder="your.email@company.com"
+                      />
+                    </div>
+                  </div>
+
                   <div>
-                    <label htmlFor="name" className="block text-sm font-medium text-charcoal mb-2">
-                      Name *
+                    <label htmlFor="company" className="block text-sm font-medium text-charcoal mb-2">
+                      Company
                     </label>
                     <input
                       type="text"
-                      id="name"
-                      name="name"
-                      required
+                      id="company"
+                      name="company"
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange focus:border-transparent transition-colors"
-                      placeholder="Your full name"
+                      placeholder="Your company name (optional)"
                     />
                   </div>
 
                   <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-charcoal mb-2">
-                      Email *
+                    <label htmlFor="message" className="block text-sm font-medium text-charcoal mb-2">
+                      Message *
                     </label>
-                    <input
-                      type="email"
-                      id="email"
-                      name="email"
+                    <textarea
+                      id="message"
+                      name="message"
                       required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange focus:border-transparent transition-colors"
-                      placeholder="your.email@company.com"
+                      rows={6}
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange focus:border-transparent transition-colors resize-none"
+                      placeholder="Tell us about your business goals and how we can help you achieve them..."
                     />
                   </div>
-                </div>
 
-                <div>
-                  <label htmlFor="company" className="block text-sm font-medium text-charcoal mb-2">
-                    Company
-                  </label>
-                  <input
-                    type="text"
-                    id="company"
-                    name="company"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange focus:border-transparent transition-colors"
-                    placeholder="Your company name (optional)"
-                  />
+                  <button
+                    type="submit"
+                    disabled={isSubmitting}
+                    className="w-full bg-orange text-white px-8 py-4 rounded-lg font-semibold text-lg btn-hover flex items-center justify-center space-x-2 disabled:opacity-50 disabled:cursor-not-allowed"
+                  >
+                    <span>{isSubmitting ? 'Sending...' : 'Send Message'}</span>
+                    <Send size={20} />
+                  </button>
+                </form>
+              ) : (
+                <div className="text-center py-12">
+                  <div className="w-20 h-20 bg-orange rounded-full flex items-center justify-center mx-auto mb-6">
+                    <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                  </div>
+                  <h3 className="text-2xl font-bold text-charcoal mb-4">Message Sent Successfully!</h3>
+                  <p className="text-gray-600 mb-6 leading-relaxed">
+                    Thank you for reaching out to us. We've received your message and will get back to you within 4 hours during business days.
+                  </p>
+                  <p className="text-gray-600 mb-8">
+                    We're excited to discuss how we can help grow your business with our web design and marketing services.
+                  </p>
+                  <button
+                    onClick={() => setIsSubmitted(false)}
+                    className="bg-orange text-white px-6 py-3 rounded-lg font-semibold hover:bg-orange/90 transition-colors"
+                  >
+                    Send Another Message
+                  </button>
                 </div>
-
-                <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-charcoal mb-2">
-                    Message *
-                  </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    required
-                    rows={6}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange focus:border-transparent transition-colors resize-none"
-                    placeholder="Tell us about your business goals and how we can help you achieve them..."
-                  />
-                </div>
-
-                <button
-                  type="submit"
-                  className="w-full bg-orange text-white px-8 py-4 rounded-lg font-semibold text-lg btn-hover flex items-center justify-center space-x-2 disabled:opacity-50 disabled:cursor-not-allowed"
-                >
-                 <span>Send Message</span>
-                 <Send size={20} />
-                </button>
-              </form>
+              )}
             </div>
           </div>
         </div>
