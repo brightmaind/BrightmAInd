@@ -145,49 +145,6 @@ const Contact: React.FC = () => {
       </section>
       </ScrollAnimation>
 
-      {/* FAQ Section */}
-      <ScrollAnimation>
-        <section className="py-24 bg-gray-50">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-charcoal mb-6">
-              Common <span className="text-orange">Questions</span>
-            </h2>
-            <p className="text-xl text-gray-600">
-              Quick answers to help you understand our approach and services.
-            </p>
-          </div>
-
-          <div className="space-y-8">
-            {[
-              {
-                question: "What types of businesses do you work with?",
-                answer: "We work with businesses of all sizes across various industries, from startups looking to automate their first processes to enterprise companies seeking comprehensive AI integration. Our solutions are tailored to each client's specific needs and growth stage."
-              },
-              {
-                question: "How long does implementation typically take?",
-                answer: "Project timelines vary based on complexity and scope. Simple automation projects can be completed in 2-4 weeks, while comprehensive system integrations may take 8-12 weeks. We provide detailed timelines during our initial consultation."
-              },
-              {
-                question: "Do you provide ongoing support?",
-                answer: "Yes, we offer comprehensive support packages including system monitoring, performance optimization, and regular updates. Our team is available to ensure your solutions continue delivering optimal results as your business grows."
-              },
-              {
-                question: "How do you measure success?",
-                answer: "We establish clear KPIs and success metrics at the project outset, whether that's increased conversion rates, time savings, cost reduction, or revenue growth. Regular reporting ensures you can track ROI and performance improvements throughout our partnership."
-              }
-            ].map((faq, index) => (
-              <ScrollAnimation key={index} delay={index * 100}>
-                <div className="bg-white rounded-2xl p-8 shadow-sm card-hover">
-                <h3 className="text-xl font-semibold text-charcoal mb-4">{faq.question}</h3>
-                <p className="text-gray-600 leading-relaxed">{faq.answer}</p>
-              </div>
-              </ScrollAnimation>
-            ))}
-          </div>
-        </div>
-      </section>
-      </ScrollAnimation>
     </div>
   );
 };
