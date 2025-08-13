@@ -113,7 +113,10 @@ const Home = () => {
   const handleBookConsultation = () => {
     if (window.Calendly) {
       window.Calendly.initPopupWidget({
-        url: 'https://calendly.com/enquiries-brightmaind/30min'
+        url: 'https://calendly.com/enquiries-brightmaind/30min',
+        parentElement: document.body,
+        prefill: {},
+        utm: {}
       });
     } else {
       // Fallback to direct link if Calendly widget isn't loaded
