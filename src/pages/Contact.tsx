@@ -25,16 +25,15 @@ const Contact: React.FC = () => {
     setSubmitStatus('idle');
 
     try {
-      const response = await fetch('/', {
+      const response = await fetch('https://formspree.io/f/xdkogkva', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: new URLSearchParams({
-          'form-name': 'contact',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
           name: formData.name,
           email: formData.email,
           company: formData.company,
           message: formData.message,
-        }).toString(),
+        }),
       });
 
       if (response.ok) {
@@ -107,8 +106,7 @@ const Contact: React.FC = () => {
 
             {/* Contact Form */}
             <div className="bg-white rounded-2xl shadow-xl p-8 lg:p-12 card-hover">
-              <form onSubmit={handleSubmit} className="space-y-6" name="contact" method="POST" data-netlify="true">
-                <input type="hidden" name="form-name" value="contact" />
+              <form onSubmit={handleSubmit} className="space-y-6">
                 
                 {submitStatus === 'success' && (
                   <div className="bg-green-50 border border-green-200 rounded-lg p-4 mb-6">
