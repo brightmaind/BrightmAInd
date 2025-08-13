@@ -5,6 +5,13 @@ import { Button } from '../components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../components/ui/card';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '../components/ui/accordion';
 
+// Calendly integration
+declare global {
+  interface Window {
+    Calendly: any;
+  }
+}
+
 const WebDesign: React.FC = () => {
   const pricingPlans = [
     {
@@ -105,6 +112,29 @@ const WebDesign: React.FC = () => {
     const pricingSection = document.getElementById('pricing');
     if (pricingSection) {
       pricingSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  const handleWebDesignBooking = () => {
+    if (window.Calendly) {
+      window.Calendly.initPopupWidget({
+        url: 'https://calendly.com/enquiries-brightmaind/30min',
+        parentElement: document.body
+      });
+      
+      // Add custom text overlay for web design bookings
+      setTimeout(() => {
+        const popup = document.querySelector('.calendly-popup');
+        if (popup && !popup.querySelector('.calendly-text-overlay')) {
+          const textOverlay = document.createElement('div');
+          textOverlay.className = 'calendly-text-overlay';
+          textOverlay.innerHTML = '<span>We\'re excited to work with you! Schedule your call and we\'ll get you set up. No payment required until your website is complete.</span>';
+          popup.appendChild(textOverlay);
+        }
+      }, 100);
+    } else {
+      // Fallback to direct link if Calendly widget isn't loaded
+      window.open('https://calendly.com/enquiries-brightmaind/30min', '_blank');
     }
   };
 
@@ -237,7 +267,7 @@ const WebDesign: React.FC = () => {
                       </div>
 
                       <div className="space-y-3">
-                        <Button className="w-full" onClick={() => window.location.href = '/contact?subject=Web%20Design%20Quote'}>
+                        <Button className="w-full" onClick={handleWebDesignBooking}>
                           Get Started
                         </Button>
                         <p className="text-xs text-off-white/60 text-center">
@@ -372,7 +402,7 @@ const WebDesign: React.FC = () => {
                 variant="secondary"
                 className="bg-white text-orange hover:bg-white/90"
               >
-                Subscribe now
+                Get Started
               </Button>
               <Button 
                 onClick={() => window.location.href = '/contact'}

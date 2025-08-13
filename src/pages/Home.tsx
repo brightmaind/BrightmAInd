@@ -123,7 +123,30 @@ const Home = () => {
         if (popup && !popup.querySelector('.calendly-text-overlay')) {
           const textOverlay = document.createElement('div');
           textOverlay.className = 'calendly-text-overlay';
-          textOverlay.innerHTML = '<span>Please select a time and we will give you a call</span>';
+          textOverlay.innerHTML = '<span>Please select a convenient time for your consultation call</span>';
+          popup.appendChild(textOverlay);
+        }
+      }, 100);
+    } else {
+      // Fallback to direct link if Calendly widget isn't loaded
+      window.open('https://calendly.com/enquiries-brightmaind/30min', '_blank');
+    }
+  };
+
+  const handleWebDesignBooking = () => {
+    if (window.Calendly) {
+      window.Calendly.initPopupWidget({
+        url: 'https://calendly.com/enquiries-brightmaind/30min',
+        parentElement: document.body
+      });
+      
+      // Add custom text overlay for web design bookings
+      setTimeout(() => {
+        const popup = document.querySelector('.calendly-popup');
+        if (popup && !popup.querySelector('.calendly-text-overlay')) {
+          const textOverlay = document.createElement('div');
+          textOverlay.className = 'calendly-text-overlay';
+          textOverlay.innerHTML = '<span>We\'re excited to work with you! Schedule your call and we\'ll get you set up. No payment required until your website is complete.</span>';
           popup.appendChild(textOverlay);
         }
       }, 100);

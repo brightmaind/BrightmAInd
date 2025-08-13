@@ -38,7 +38,7 @@ const Navbar: React.FC = () => {
         if (popup && !popup.querySelector('.calendly-text-overlay')) {
           const textOverlay = document.createElement('div');
           textOverlay.className = 'calendly-text-overlay';
-          textOverlay.innerHTML = '<span>Please select a time and we will give you a call</span>';
+          textOverlay.innerHTML = '<span>Please select a convenient time for your consultation call</span>';
           popup.appendChild(textOverlay);
         }
       }, 100);
