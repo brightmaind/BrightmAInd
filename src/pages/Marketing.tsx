@@ -23,7 +23,7 @@ const Marketing: React.FC = () => {
         "Landing pages designed to convert visitors into customers",
         "A/B testing to improve performance continuously"
       ],
-      example: "We helped a local service business go from spending £2,000/month on ads with poor results to generating £15,000 in new revenue monthly with a £3,000 ad spend."
+      example: "For example, a local service business could go from spending £2,000/month on ads with poor results to generating £15,000 in new revenue monthly with a £3,000 ad spend through better targeting and landing page optimization."
     },
     {
       icon: <Users className="w-12 h-12" />,
@@ -35,7 +35,7 @@ const Marketing: React.FC = () => {
         "Design email sequences that nurture leads into customers",
         "Set up systems to win back customers who didn't buy initially"
       ],
-      example: "By optimizing a client's checkout process and adding abandoned cart emails, we increased their conversion rate from 2.1% to 4.8%, doubling their revenue without spending more on ads."
+      example: "By optimizing a business's checkout process and adding abandoned cart emails, we could help increase their conversion rate from 2.1% to 4.8%, potentially doubling revenue without spending more on ads."
     },
     {
       icon: <BarChart3 className="w-12 h-12" />,
@@ -47,7 +47,7 @@ const Marketing: React.FC = () => {
         "Identify your most profitable customer sources",
         "Regular reporting with actionable insights and recommendations"
       ],
-      example: "We discovered that one client's best customers came from LinkedIn, not Google Ads. By shifting budget to LinkedIn campaigns, we reduced their customer acquisition cost by 40%."
+      example: "We might discover that a business's best customers come from LinkedIn, not Google Ads. By shifting budget to LinkedIn campaigns, we could help reduce their customer acquisition cost by 40%."
     }
   ];
 
@@ -176,7 +176,7 @@ const Marketing: React.FC = () => {
                           </ul>
                         </div>
                         <div className="bg-slate/20 rounded-lg p-6">
-                          <h4 className="text-lg font-semibold text-orange mb-4">Success Story:</h4>
+                          <h4 className="text-lg font-semibold text-orange mb-4">How This Could Help:</h4>
                           <p className="text-off-white/80 leading-relaxed italic">
                             {service.example}
                           </p>
