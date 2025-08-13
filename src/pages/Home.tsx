@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Bot, TrendingUp, Settings, ChevronDown, Calendar, ArrowLeft, ArrowRight, Check, Zap } from 'lucide-react';
 import ScrollAnimation from '../components/ScrollAnimation';
 import { Button } from '../components/ui/button';
@@ -6,6 +7,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../co
 import { motion, AnimatePresence } from 'framer-motion';
 
 const Home = () => {
+  const navigate = useNavigate();
   const [expandedService, setExpandedService] = useState(null);
   const [currentPlan, setCurrentPlan] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
@@ -147,7 +149,8 @@ const Home = () => {
   };
 
   const goToWebDesign = () => {
-    window.location.href = '/web-design';
+    navigate('/web-design');
+    window.scrollTo(0, 0);
   };
 
   return (
