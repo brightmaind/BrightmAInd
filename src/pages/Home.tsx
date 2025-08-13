@@ -196,13 +196,29 @@ const Home = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Mobile: Logo first, Desktop: Content first */}
             <div className="space-y-8 text-center lg:text-left order-2 lg:order-1">
-              <h1 className="text-5xl md:text-6xl font-bold font-rajdhani text-off-white leading-tight">
+              <h1 className="text-4xl md:text-5xl font-bold font-rajdhani text-off-white leading-tight">
                 Professional websites on a simple monthly plan
               </h1>
               
-              <p className="text-xl text-off-white/80 leading-relaxed max-w-2xl">
+              <p className="text-lg text-off-white/80 leading-relaxed max-w-2xl">
                 Get a professional website with hosting, security, updates, and ongoing support included. No surprises, no hidden costs.
               </p>
+              
+              {/* Guarantee Section */}
+              <div className="bg-orange/10 border border-orange/20 rounded-2xl p-6 max-w-2xl mx-auto lg:mx-0">
+                <div className="flex items-center justify-center lg:justify-start mb-3">
+                  <div className="w-8 h-8 bg-orange rounded-full flex items-center justify-center mr-3">
+                    <span className="text-white font-bold text-sm">✓</span>
+                  </div>
+                  <h3 className="text-xl font-bold font-rajdhani text-orange">
+                    100% Risk-Free Guarantee
+                  </h3>
+                </div>
+                <p className="text-off-white/90 leading-relaxed">
+                  You won't pay a penny until your website is complete, deployed, and you're completely happy with it. 
+                  We only get paid when you love your new website.
+                </p>
+              </div>
               
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button onClick={goToWebDesign} size="lg">
@@ -217,17 +233,17 @@ const Home = () => {
 
             {/* Mobile: Logo first, Desktop: Logo second */}
             <div className="hidden lg:flex justify-end order-2">
-             <div className="w-125 h-125 lg:w-150 lg:h-150 flex flex-col items-center space-y-2">
+             <div className="w-104 h-104 lg:w-125 lg:h-125 flex flex-col items-center space-y-2">
                 <img 
                   src="/assets_task_01k2dvrpkbfntr573hm1h0p81k_1754959602_img_0.webp" 
                   alt="Bright mAInd Marketing Logo" 
                  className="w-full h-3/4 object-contain rounded-2xl"
                 />
                <div className="text-center">
-                 <h2 className="text-5xl lg:text-6xl font-bold font-rajdhani brand-text brand-text-glow mb-3">
+                 <h2 className="text-4xl lg:text-5xl font-bold font-rajdhani brand-text brand-text-glow mb-2">
                    Bright m<span className="text-orange">AI</span>nd
                  </h2>
-                 <p className="tech-subtitle text-base tracking-widest">Marketing</p>
+                 <p className="tech-subtitle text-sm tracking-widest">Marketing</p>
                </div>
               </div>
             </div>
