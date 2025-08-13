@@ -25,24 +25,56 @@ const Contact: React.FC = () => {
     setSubmitStatus('idle');
 
     try {
-      const response = await fetch('https://formspree.io/f/xdkogkva', {
+      // Create mailto link as fallback
+      const subject = encodeURIComponent('New Contact Form Submission');
+      const body = encodeURIComponent(
+        `Name: ${formData.name}\n` +
+        `Email: ${formData.email}\n` +
+        `Company: ${formData.company || 'Not provided'}\n\n` +
+        `Message:\n${formData.message}`
+      );
+      
+      const mailtoLink = `mailto:enquiries@brightmaind.com?subject=${subject}&body=${body}`;
+      
+      // Try to send via a simple fetch to a webhook service
+      const response = await fetch('https://api.web3forms.com/submit', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
         body: JSON.stringify({
+          access_key: 'YOUR_ACCESS_KEY_HERE', // This needs to be replaced with actual key
           name: formData.name,
           email: formData.email,
           company: formData.company,
           message: formData.message,
+          subject: 'New Contact Form Submission from Bright mAInd Website'
         }),
       });
 
-      if (response.ok) {
+      const result = await response.json();
+      
+      if (result.success) {
         setSubmitStatus('success');
         setFormData({ name: '', email: '', company: '', message: '' });
       } else {
+        // Fallback to mailto
+        window.location.href = mailtoLink;
         setSubmitStatus('error');
       }
     } catch (error) {
+      // Fallback to mailto on any error
+      const subject = encodeURIComponent('New Contact Form Submission');
+      const body = encodeURIComponent(
+        `Name: ${formData.name}\n` +
+        `Email: ${formData.email}\n` +
+        `Company: ${formData.company || 'Not provided'}\n\n` +
+        `Message:\n${formData.message}`
+      );
+      
+      const mailtoLink = `mailto:enquiries@brightmaind.com?subject=${subject}&body=${body}`;
+      window.location.href = mailtoLink;
       setSubmitStatus('error');
     } finally {
       setIsSubmitting(false);
@@ -116,7 +148,7 @@ const Contact: React.FC = () => {
                 
                 {submitStatus === 'error' && (
                   <div className="bg-red-50 border border-red-200 rounded-lg p-4 mb-6">
-                    <p className="text-red-800 font-medium">Sorry, there was an error sending your message. Please try again or email us directly at enquiries@brightmaind.com</p>
+                    <p className="text-red-800 font-medium">Your email client should have opened with your message. If not, please email us directly at <a href="mailto:enquiries@brightmaind.com" className="underline">enquiries@brightmaind.com</a></p>
                   </div>
                 )}
 
