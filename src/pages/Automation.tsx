@@ -14,8 +14,27 @@ declare global {
 const Automation: React.FC = () => {
   const automationServices = [
     {
+      icon: <Bot className="w-12 h-12" />,
+      title: "AI Voice & Chat Agents",
+      description: "Deploy intelligent agents that handle customer conversations 24/7. They can answer questions, book appointments, qualify leads, and provide support—just like your best team member.",
+      features: [
+        "AI phone agents that handle inbound calls and make outbound calls",
+        "Website chat agents that engage visitors and capture leads",
+        "WhatsApp and SMS agents for customer support and follow-ups",
+        "Appointment booking agents that sync with your calendar"
+      ],
+      example: "A dental practice uses our AI phone agent to handle appointment bookings. It answers calls 24/7, checks availability, books appointments, sends confirmations, and even handles rescheduling—reducing missed calls by 90% and freeing up front desk staff.",
+      useCases: [
+        "Restaurants: Take reservations and answer menu questions",
+        "Service businesses: Book appointments and provide quotes",
+        "E-commerce: Handle customer support and order inquiries",
+        "Real estate: Qualify leads and schedule property viewings",
+        "Healthcare: Manage appointments and answer basic questions"
+      ]
+    },
+    {
       icon: <MessageSquare className="w-12 h-12" />,
-      title: "Lead Management",
+      title: "Lead Management & CRM",
       description: "Stop manually sorting through leads and inquiries. We'll set up smart systems that automatically qualify, route, and respond to potential customers.",
       features: [
         "Automatically score and prioritize leads based on your criteria",
@@ -23,7 +42,13 @@ const Automation: React.FC = () => {
         "Send personalized follow-up sequences without lifting a finger",
         "Track lead sources and conversion rates automatically"
       ],
-      example: "When someone fills out your contact form, they're automatically added to your CRM, scored based on their responses, and receive a personalized email sequence while your sales team gets notified about high-priority leads."
+      example: "When someone fills out your contact form, they're automatically added to your CRM, scored based on their responses, and receive a personalized email sequence while your sales team gets notified about high-priority leads.",
+      useCases: [
+        "Automatically qualify leads from multiple sources",
+        "Send different follow-up sequences based on lead type",
+        "Alert sales team about hot prospects instantly",
+        "Track which marketing channels bring the best leads"
+      ]
     },
     {
       icon: <Database className="w-12 h-12" />,
@@ -35,7 +60,13 @@ const Automation: React.FC = () => {
         "Track key metrics that matter to your business",
         "Spot trends and opportunities you might miss manually"
       ],
-      example: "Instead of spending hours in spreadsheets, you'll get a weekly email with your key metrics, customer insights, and actionable recommendations based on your data."
+      example: "Instead of spending hours in spreadsheets, you'll get a weekly email with your key metrics, customer insights, and actionable recommendations based on your data.",
+      useCases: [
+        "Automatically generate monthly business reports",
+        "Track customer lifetime value and churn rates",
+        "Monitor inventory levels and reorder points",
+        "Analyze sales performance across different channels"
+      ]
     },
     {
       icon: <Zap className="w-12 h-12" />,
@@ -47,7 +78,13 @@ const Automation: React.FC = () => {
         "Set up smart notifications for important events",
         "Create approval workflows for your team"
       ],
-      example: "When a customer makes a purchase, their information automatically flows to your CRM, accounting software, and fulfillment system while triggering a personalized thank-you sequence."
+      example: "When a customer makes a purchase, their information automatically flows to your CRM, accounting software, and fulfillment system while triggering a personalized thank-you sequence.",
+      useCases: [
+        "Sync customer data between all your business tools",
+        "Automate invoice generation and payment reminders",
+        "Create approval workflows for expenses or content",
+        "Automatically backup important files to cloud storage"
+      ]
     }
   ];
 
@@ -182,10 +219,159 @@ const Automation: React.FC = () => {
                           </p>
                         </div>
                       </div>
+                      
+                      {/* Use Cases */}
+                      {service.useCases && (
+                        <div className="mt-6 bg-charcoal/40 rounded-lg p-6">
+                          <h4 className="text-lg font-semibold text-orange mb-4">Common Use Cases:</h4>
+                          <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                            {service.useCases.map((useCase, useCaseIndex) => (
+                              <div key={useCaseIndex} className="flex items-start space-x-3">
+                                <div className="w-2 h-2 bg-orange rounded-full mt-2 flex-shrink-0"></div>
+                                <span className="text-off-white/70 text-sm">{useCase}</span>
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+                      )}
                     </CardContent>
                   </Card>
                 </ScrollAnimation>
               ))}
+            </div>
+          </div>
+        </section>
+      </ScrollAnimation>
+
+      {/* AI Agents Deep Dive */}
+      <ScrollAnimation>
+        <section className="py-24">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold font-rajdhani text-off-white mb-6">
+                AI Agents That Actually <span className="text-orange">Work</span>
+              </h2>
+              <p className="text-xl text-off-white/80 max-w-3xl mx-auto">
+                Our AI agents don't just follow scripts—they understand context, handle complex conversations, and get smarter over time.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+              <ScrollAnimation delay={0}>
+                <Card className="h-full">
+                  <CardHeader>
+                    <div className="flex items-center space-x-4 mb-4">
+                      <div className="w-12 h-12 bg-orange rounded-lg flex items-center justify-center">
+                        <Bot className="w-6 h-6 text-white" />
+                      </div>
+                      <CardTitle className="text-2xl">Voice Agents</CardTitle>
+                    </div>
+                    <CardDescription className="text-lg">
+                      AI phone agents that sound natural and handle complex conversations
+                    </CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <div className="space-y-4">
+                      <div>
+                        <h4 className="font-semibold text-orange mb-2">What They Can Do:</h4>
+                        <ul className="space-y-2 text-off-white/80">
+                          <li>• Answer inbound calls and make outbound calls</li>
+                          <li>• Book appointments and check availability</li>
+                          <li>• Qualify leads and gather information</li>
+                          <li>• Handle customer support inquiries</li>
+                          <li>• Transfer complex calls to human agents</li>
+                        </ul>
+                      </div>
+                      <div className="bg-slate/20 rounded-lg p-4">
+                        <h4 className="font-semibold text-orange mb-2">Perfect For:</h4>
+                        <p className="text-off-white/80 text-sm">
+                          Businesses that get lots of phone calls but don't want to miss opportunities outside business hours or when staff are busy.
+                        </p>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </ScrollAnimation>
+
+              <ScrollAnimation delay={100}>
+                <Card className="h-full">
+                  <CardHeader>
+                    <div className="flex items-center space-x-4 mb-4">
+                      <div className="w-12 h-12 bg-orange rounded-lg flex items-center justify-center">
+                        <MessageSquare className="w-6 h-6 text-white" />
+                      </div>
+                      <CardTitle className="text-2xl">Chat Agents</CardTitle>
+                    </div>
+                    <CardDescription className="text-lg">
+                      Smart chat agents for your website, WhatsApp, and social media
+                    </CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <div className="space-y-4">
+                      <div>
+                        <h4 className="font-semibold text-orange mb-2">What They Can Do:</h4>
+                        <ul className="space-y-2 text-off-white/80">
+                          <li>• Engage website visitors and capture leads</li>
+                          <li>• Answer frequently asked questions</li>
+                          <li>• Guide customers through your services</li>
+                          <li>• Handle WhatsApp and social media messages</li>
+                          <li>• Escalate to humans when needed</li>
+                        </ul>
+                      </div>
+                      <div className="bg-slate/20 rounded-lg p-4">
+                        <h4 className="font-semibold text-orange mb-2">Perfect For:</h4>
+                        <p className="text-off-white/80 text-sm">
+                          Websites with lots of visitors, businesses that get messages on multiple platforms, or companies that want to capture more leads.
+                        </p>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </ScrollAnimation>
+            </div>
+
+            {/* Industry Examples */}
+            <div className="mt-16">
+              <h3 className="text-3xl font-bold font-rajdhani text-off-white mb-8 text-center">
+                Industry Examples
+              </h3>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <ScrollAnimation delay={0}>
+                  <div className="bg-near-black rounded-lg p-6">
+                    <h4 className="text-lg font-semibold text-orange mb-3">Healthcare</h4>
+                    <p className="text-off-white/80 text-sm mb-3">
+                      AI agents handle appointment bookings, answer basic health questions, and manage prescription refill requests.
+                    </p>
+                    <div className="text-xs text-off-white/60">
+                      Result: 70% reduction in admin calls, better patient experience
+                    </div>
+                  </div>
+                </ScrollAnimation>
+                
+                <ScrollAnimation delay={100}>
+                  <div className="bg-near-black rounded-lg p-6">
+                    <h4 className="text-lg font-semibold text-orange mb-3">E-commerce</h4>
+                    <p className="text-off-white/80 text-sm mb-3">
+                      Chat agents help customers find products, track orders, and handle returns while capturing abandoned cart leads.
+                    </p>
+                    <div className="text-xs text-off-white/60">
+                      Result: 25% increase in conversions, 50% faster support response
+                    </div>
+                  </div>
+                </ScrollAnimation>
+                
+                <ScrollAnimation delay={200}>
+                  <div className="bg-near-black rounded-lg p-6">
+                    <h4 className="text-lg font-semibold text-orange mb-3">Professional Services</h4>
+                    <p className="text-off-white/80 text-sm mb-3">
+                      Voice agents qualify leads, book consultations, and provide service information while you focus on client work.
+                    </p>
+                    <div className="text-xs text-off-white/60">
+                      Result: 3x more qualified leads, zero missed opportunities
+                    </div>
+                  </div>
+                </ScrollAnimation>
+              </div>
             </div>
           </div>
         </section>
