@@ -7,20 +7,20 @@ const Services: React.FC = () => {
     {
       icon: <Bot size={48} />,
       title: "AI Automation",
-      description: "Streamlining workflows with cutting-edge AI tools to eliminate repetitive tasks and boost productivity across your organization.",
-      features: ["Workflow Automation", "AI Chatbots", "Process Optimization", "Smart Integrations"]
+      description: "We'll automate the repetitive stuff so you can focus on what matters. No more manual data entry, sorting leads, or sending the same emails over and over.",
+      features: ["Automatically sort and route your leads", "Smart inbox management and auto-replies", "Clean up your data and create useful reports", "Connect your apps so they work together"]
     },
     {
       icon: <TrendingUp size={48} />,
-      title: "Marketing Strategy",
-      description: "Targeted campaigns designed for maximum impact, leveraging data-driven insights to reach your ideal customers effectively.",
-      features: ["Campaign Development", "Audience Targeting", "Performance Analytics", "Content Strategy"]
+      title: "Marketing That Actually Works",
+      description: "We focus on getting you real customers, not just pretty numbers. Our campaigns are designed to pay for themselves and grow your business.",
+      features: ["Design offers and funnels that convert", "Run Google and Facebook ads that pay for themselves", "Test and improve what's working", "Track real results, not vanity metrics"]
     },
     {
       icon: <Settings size={48} />,
       title: "System Integration",
-      description: "Seamlessly connect your business tools and platforms to create a unified, efficient ecosystem that works in harmony.",
-      features: ["API Connections", "Data Synchronization", "Platform Integration", "Custom Solutions"]
+      description: "We make your business tools work together like they should. No more switching between apps or manually copying data around.",
+      features: ["Connect your apps with Zapier or Make", "Set up custom connections when needed", "Integrate Stripe, Shopify, HubSpot, and more", "Make sure your data flows where it needs to go"]
     }
   ];
 
@@ -31,10 +31,10 @@ const Services: React.FC = () => {
         <section className="py-24 px-4 sm:px-6 lg:px-8 bg-gray-50">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-5xl md:text-6xl font-bold text-charcoal mb-8">
-            Our <span className="text-orange">Marketing</span>
+            Our <span className="text-orange">Services</span>
           </h1>
           <p className="text-xl md:text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-            Comprehensive AI-powered solutions designed to streamline your operations and amplify your marketing impact.
+            We help businesses grow by automating the boring stuff and making marketing that actually works.
           </p>
         </div>
       </section>
