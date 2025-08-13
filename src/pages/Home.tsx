@@ -251,13 +251,100 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Social Proof Strip */}
+      {/* Services Overview */}
       <ScrollAnimation>
-        <section className="py-16 bg-near-black">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-lg font-medium text-off-white/60 mb-8">
-              Trusted by founders who move fast
-            </h2>
+        <section className="py-24 bg-near-black">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold font-rajdhani text-off-white mb-6">
+                We Also Help With <span className="text-orange">Business Growth</span>
+              </h2>
+              <p className="text-xl text-off-white/80">
+                Beyond websites, we help businesses work smarter and grow faster
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
+              <ScrollAnimation delay={0}>
+                <Card className="h-full card-hover">
+                  <CardHeader>
+                    <div className="flex items-center space-x-4 mb-4">
+                      <div className="w-12 h-12 bg-orange rounded-lg flex items-center justify-center">
+                        <Bot className="w-6 h-6 text-white" />
+                      </div>
+                      <CardTitle className="text-2xl">AI Automation</CardTitle>
+                    </div>
+                    <CardDescription className="text-lg text-off-white/80">
+                      Stop doing the same tasks over and over. We'll automate the repetitive stuff so you can focus on what actually grows your business.
+                    </CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <div className="space-y-4 mb-6">
+                      <div className="flex items-start space-x-3">
+                        <div className="w-2 h-2 bg-orange rounded-full mt-2 flex-shrink-0"></div>
+                        <span className="text-off-white/80">AI phone and chat agents that handle customer conversations 24/7</span>
+                      </div>
+                      <div className="flex items-start space-x-3">
+                        <div className="w-2 h-2 bg-orange rounded-full mt-2 flex-shrink-0"></div>
+                        <span className="text-off-white/80">Automatically sort leads and send follow-up sequences</span>
+                      </div>
+                      <div className="flex items-start space-x-3">
+                        <div className="w-2 h-2 bg-orange rounded-full mt-2 flex-shrink-0"></div>
+                        <span className="text-off-white/80">Connect your business tools so they work together seamlessly</span>
+                      </div>
+                    </div>
+                    <Button 
+                      onClick={() => navigate('/automation')}
+                      variant="outline" 
+                      className="w-full"
+                    >
+                      Learn About Automation
+                      <ArrowRight className="w-4 h-4 ml-2" />
+                    </Button>
+                  </CardContent>
+                </Card>
+              </ScrollAnimation>
+
+              <ScrollAnimation delay={100}>
+                <Card className="h-full card-hover">
+                  <CardHeader>
+                    <div className="flex items-center space-x-4 mb-4">
+                      <div className="w-12 h-12 bg-orange rounded-lg flex items-center justify-center">
+                        <TrendingUp className="w-6 h-6 text-white" />
+                      </div>
+                      <CardTitle className="text-2xl">Growth Marketing</CardTitle>
+                    </div>
+                    <CardDescription className="text-lg text-off-white/80">
+                      Marketing that actually gets you customers. We focus on real results—more leads, more sales, and better ROI from every pound you spend.
+                    </CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <div className="space-y-4 mb-6">
+                      <div className="flex items-start space-x-3">
+                        <div className="w-2 h-2 bg-orange rounded-full mt-2 flex-shrink-0"></div>
+                        <span className="text-off-white/80">Google and Facebook ads that actually pay for themselves</span>
+                      </div>
+                      <div className="flex items-start space-x-3">
+                        <div className="w-2 h-2 bg-orange rounded-full mt-2 flex-shrink-0"></div>
+                        <span className="text-off-white/80">Optimize your customer journey to increase conversions</span>
+                      </div>
+                      <div className="flex items-start space-x-3">
+                        <div className="w-2 h-2 bg-orange rounded-full mt-2 flex-shrink-0"></div>
+                        <span className="text-off-white/80">Track what matters—revenue, not just vanity metrics</span>
+                      </div>
+                    </div>
+                    <Button 
+                      onClick={() => navigate('/marketing')}
+                      variant="outline" 
+                      className="w-full"
+                    >
+                      Learn About Marketing
+                      <ArrowRight className="w-4 h-4 ml-2" />
+                    </Button>
+                  </CardContent>
+                </Card>
+              </ScrollAnimation>
+            </div>
           </div>
         </section>
       </ScrollAnimation>
