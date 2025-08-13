@@ -29,9 +29,7 @@ const Navbar: React.FC = () => {
     if (window.Calendly) {
       window.Calendly.initPopupWidget({
         url: 'https://calendly.com/enquiries-brightmaind/30min',
-        parentElement: document.body,
-        prefill: {},
-        utm: {}
+        parentElement: document.body
       });
     } else {
       // Fallback to direct link if Calendly widget isn't loaded

@@ -163,3 +163,61 @@ h1, h2, h3, h4, h5, h6 {
 ::-webkit-scrollbar-thumb:hover {
   background: #ff7a00;
 }
+
+/* Calendly Popup Custom Styling */
+.calendly-overlay {
+  background: rgba(12, 12, 12, 0.95) !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+}
+
+.calendly-popup {
+  border-radius: 16px !important;
+  border: 2px solid #FF7A00 !important;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255, 122, 0, 0.2) !important;
+  overflow: hidden !important;
+  max-width: 90vw !important;
+  max-height: 90vh !important;
+}
+
+.calendly-popup-content {
+  border-radius: 14px !important;
+}
+
+.calendly-close-overlay {
+  background: rgba(255, 122, 0, 0.1) !important;
+  border-radius: 50% !important;
+  width: 40px !important;
+  height: 40px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  transition: all 0.3s ease !important;
+}
+
+.calendly-close-overlay:hover {
+  background: rgba(255, 122, 0, 0.2) !important;
+  transform: scale(1.1) !important;
+}
+
+.calendly-close-overlay svg {
+  color: #FF7A00 !important;
+  width: 20px !important;
+  height: 20px !important;
+}
+
+/* Animation for popup */
+.calendly-popup {
+  animation: calendlyFadeIn 0.3s ease-out !important;
+}
+
+@keyframes calendlyFadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95) translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
