@@ -19,8 +19,21 @@ const Contact: React.FC = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission here
-    console.log('Form submitted:', formData);
+    
+    // Create email content
+    const subject = encodeURIComponent('New Contact Form Submission');
+    const body = encodeURIComponent(
+      `Name: ${formData.name}\n` +
+      `Email: ${formData.email}\n` +
+      `Company: ${formData.company || 'Not provided'}\n\n` +
+      `Message:\n${formData.message}`
+    );
+    
+    // Open default email client
+    window.location.href = `mailto:enquiries@brightmaind.com?subject=${subject}&body=${body}`;
+    
+    // Optional: Show success message
+    alert('Thank you for your message! Your email client should open with the message pre-filled.');
   };
 
   return (
