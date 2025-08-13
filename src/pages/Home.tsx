@@ -172,7 +172,7 @@ const Home = () => {
             </div>
 
             {/* Mobile: Logo first, Desktop: Logo second */}
-            <div className="flex justify-center lg:justify-end order-1 lg:order-2">
+            <div className="hidden lg:flex justify-end order-2">
              <div className="w-125 h-125 lg:w-150 lg:h-150 flex flex-col items-center space-y-2">
                 <img 
                   src="/assets_task_01k2dvrpkbfntr573hm1h0p81k_1754959602_img_0.webp" 
