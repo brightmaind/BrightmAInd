@@ -31,7 +31,7 @@ const Services: React.FC = () => {
         <section className="py-24 px-4 sm:px-6 lg:px-8 bg-gray-50">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-5xl md:text-6xl font-bold text-charcoal mb-8">
-            Our <span className="text-orange">Services</span>
+            Our <span className="text-orange">Marketing</span>
           </h1>
           <p className="text-xl md:text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
             Comprehensive AI-powered solutions designed to streamline your operations and amplify your marketing impact.
@@ -83,10 +83,10 @@ const Services: React.FC = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             {[
-              { step: "01", title: "Discovery", description: "Understanding your business goals and current challenges." },
-              { step: "02", title: "Strategy", description: "Developing a customized roadmap for your success." },
-              { step: "03", title: "Implementation", description: "Executing solutions with precision and expertise." },
-              { step: "04", title: "Optimization", description: "Continuous improvement and performance monitoring." }
+              { step: "01", title: "Audit", description: "We'll look at your current setup and find what's actually slowing you down." },
+              { step: "02", title: "Plan", description: "Create a simple roadmap focusing on the changes that'll make the biggest difference." },
+              { step: "03", title: "Build", description: "Set up the automations and campaigns, then test everything works properly." },
+              { step: "04", title: "Improve", description: "Track what's working, fix what isn't, and scale up the winners." }
             ].map((process, index) => (
               <ScrollAnimation key={index} delay={index * 100}>
                 <div className="text-center">
