@@ -441,10 +441,10 @@ const Home = () => {
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Button 
-                    onClick={() => window.location.href = '/services'}
+                    onClick={() => window.location.href = '/automation'}
                     variant="outline"
                   >
-                    View Marketing Services
+                    View Automation Services
                   </Button>
                   <Button 
                     onClick={handleBookConsultation}
