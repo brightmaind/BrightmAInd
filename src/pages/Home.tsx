@@ -116,6 +116,17 @@ const Home = () => {
         url: 'https://calendly.com/enquiries-brightmaind/30min',
         parentElement: document.body
       });
+      
+      // Add custom text overlay after popup opens
+      setTimeout(() => {
+        const popup = document.querySelector('.calendly-popup');
+        if (popup && !popup.querySelector('.calendly-text-overlay')) {
+          const textOverlay = document.createElement('div');
+          textOverlay.className = 'calendly-text-overlay';
+          textOverlay.innerHTML = '<span>Please select a time and we will give you a call</span>';
+          popup.appendChild(textOverlay);
+        }
+      }, 100);
     } else {
       // Fallback to direct link if Calendly widget isn't loaded
       window.open('https://calendly.com/enquiries-brightmaind/30min', '_blank');
