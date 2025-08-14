@@ -16,9 +16,9 @@ const Home = () => {
     {
       name: "Starter",
       subtitle: "Single page",
-      monthlyToOwnership: "£109",
-      continuousMonthly: "£69",
-      outright: "£700",
+      monthlyToOwnership: "£131",
+      continuousMonthly: "£83",
+      outright: "£840",
       monthlyCredit: "18",
       icon: <Zap className="w-8 h-8" />,
       features: [
@@ -33,9 +33,9 @@ const Home = () => {
     {
       name: "Growth",
       subtitle: "Multi-page (up to 5 pages)",
-      monthlyToOwnership: "£229",
-      continuousMonthly: "£149",
-      outright: "£1,300",
+      monthlyToOwnership: "£275",
+      continuousMonthly: "£203",
+      outright: "£1,560",
       monthlyCredit: "28",
       icon: <TrendingUp className="w-8 h-8" />,
       features: [
@@ -51,9 +51,9 @@ const Home = () => {
     {
       name: "Pro",
       subtitle: "Multi-page (up to 10 pages)",
-      monthlyToOwnership: "£399",
-      continuousMonthly: "£261",
-      outright: "£2,000",
+      monthlyToOwnership: "£479",
+      continuousMonthly: "£359",
+      outright: "£2,400",
       monthlyCredit: "28",
       icon: <Settings className="w-8 h-8" />,
       features: [
@@ -483,6 +483,9 @@ const Home = () => {
               <Button onClick={goToWebDesign} size="lg">
                 View All Plans & Pricing
               </Button>
+            <p className="text-sm text-off-white/60 mt-4">
+              All prices are VAT inclusive. No hidden fees.
+            </p>
             </div>
           </div>
         </section>

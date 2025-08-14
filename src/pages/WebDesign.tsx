@@ -209,6 +209,9 @@ const WebDesign: React.FC = () => {
               <h2 className="text-4xl md:text-5xl font-bold font-rajdhani text-off-white mb-6">
                 Pricing
               </h2>
+              <p className="text-lg text-off-white/80">
+                All prices are VAT inclusive. No hidden fees.
+              </p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
