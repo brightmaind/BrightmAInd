@@ -1,7 +1,7 @@
 import React from 'react';
 import ScrollAnimation from '../components/ScrollAnimation';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../components/ui/card';
-import { Search, Lightbulb, Code, TrendingUp, Monitor, Target } from 'lucide-react';
+import { Search, Lightbulb, Code, TrendingUp, Monitor, Target, Bot, MessageSquare, Database, Zap } from 'lucide-react';
 
 const Process: React.FC = () => {
   const webDesignSteps = [
@@ -63,6 +63,37 @@ const Process: React.FC = () => {
       description: "We track results and improve what's working.",
       icon: <TrendingUp className="w-8 h-8" />,
       details: "Regular reporting and improvements. We double down on what's working and fix or remove what isn't."
+    }
+  ];
+
+  const automationSteps = [
+    {
+      step: "01",
+      title: "Look at What You're Doing",
+      description: "We'll see what tasks eat up your time and where things get stuck.",
+      icon: <Search className="w-8 h-8" />,
+      details: "No fancy audits—just a conversation about what's driving you crazy and taking too long each day."
+    },
+    {
+      step: "02", 
+      title: "Design Your Solution",
+      description: "We'll map out exactly what to automate and how it'll work.",
+      icon: <Lightbulb className="w-8 h-8" />,
+      details: "Simple plans that make sense. We'll show you exactly what will happen when someone calls, emails, or visits your site."
+    },
+    {
+      step: "03",
+      title: "Build & Connect", 
+      description: "We set up your AI agents and connect all your tools.",
+      icon: <Code className="w-8 h-8" />,
+      details: "Your phone agent, chat bot, and automated workflows get built and tested. Everything connects to your existing tools."
+    },
+    {
+      step: "04",
+      title: "Test & Improve",
+      description: "We make sure everything works perfectly and keeps getting better.",
+      icon: <TrendingUp className="w-8 h-8" />,
+      details: "We'll monitor how it's working and make tweaks. Your AI agents get smarter over time."
     }
   ];
 
@@ -168,7 +199,50 @@ const Process: React.FC = () => {
         </section>
       </ScrollAnimation>
 
-      {/* Timeline Visualization */}
+      {/* Automation Process */}
+      <ScrollAnimation>
+        <section className="py-24 bg-charcoal">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <div className="flex items-center justify-center mb-6">
+                <Bot className="w-12 h-12 text-orange mr-4" />
+                <h2 className="text-4xl md:text-5xl font-bold font-rajdhani text-off-white">
+                  Automation Process
+                </h2>
+              </div>
+              <p className="text-xl text-off-white/80">
+                How we automate your business operations
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-24">
+              {automationSteps.map((step, index) => (
+                <ScrollAnimation key={index} delay={index * 100}>
+                  <Card className="text-center h-full">
+                    <CardHeader>
+                      <div className="w-16 h-16 bg-orange text-white rounded-full flex items-center justify-center text-xl font-bold font-rajdhani mx-auto mb-4">
+                        {step.step}
+                      </div>
+                      <div className="text-orange mb-4 flex justify-center">
+                        {step.icon}
+                      </div>
+                      <CardTitle className="text-xl">{step.title}</CardTitle>
+                      <CardDescription className="text-lg">
+                        {step.description}
+                      </CardDescription>
+                    </CardHeader>
+                    <CardContent>
+                      <p className="text-off-white/70 text-sm">{step.details}</p>
+                    </CardContent>
+                  </Card>
+                </ScrollAnimation>
+              ))}
+            </div>
+          </div>
+        </section>
+      </ScrollAnimation>
+
+      {/* Why Choose Our Approach */}
       <ScrollAnimation>
         <section className="py-24">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
