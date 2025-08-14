@@ -237,10 +237,28 @@ const WebDesign: React.FC = () => {
               <p className="text-off-white/70">
                 Need more pages, custom features, or enterprise solutions? 
                 <Button 
-                  onClick={handleWebDesignBooking} 
-                  variant="ghost" 
+                  onClick={() => {
+                    if (window.Calendly) {
+                      window.Calendly.initPopupWidget({
+                        url: 'https://calendly.com/enquiries-brightmaind/30min?a1=Web%20Design%20Custom%20Plan',
+                        parentElement: document.body
+                      });
+                      
+                      setTimeout(() => {
+                        const popup = document.querySelector('.calendly-popup');
+                        if (popup && !popup.querySelector('.calendly-text-overlay')) {
+                          const textOverlay = document.createElement('div');
+                          textOverlay.className = 'calendly-text-overlay';
+                          textOverlay.innerHTML = '<span>Let\'s discuss your custom requirements and create a plan that fits perfectly</span>';
+                          popup.appendChild(textOverlay);
+                        }
+                      }, 100);
+                    } else {
+                      window.open('https://calendly.com/enquiries-brightmaind/30min?a1=Web%20Design%20Custom%20Plan', '_blank');
+                    }
+                  }}
                   size="sm" 
-                  className="ml-2 text-orange hover:text-orange hover:bg-orange/10 p-2 h-auto"
+                  className="ml-2 bg-orange/10 text-orange hover:bg-orange hover:text-white border border-orange/30 hover:border-orange"
                 >
                   Custom plans are easily available
                 </Button>
