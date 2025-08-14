@@ -195,7 +195,7 @@ const WebDesign: React.FC = () => {
               Why monthly?
             </h2>
             <p className="text-xl text-off-white/80 leading-relaxed">
-              You don't just get a website—you get ongoing management. We host it, keep it secure, back it up, and make your updates each month. If something breaks, we fix it.
+              It's like having your own personal web developer on retainer. We host your site, keep it secure, back it up, and make your updates each month. If something breaks, we fix it. You get professional web management without the full-time cost.
             </p>
           </div>
         </section>
