@@ -17,94 +17,93 @@ const WebDesign: React.FC = () => {
     {
       name: "Starter",
       subtitle: "Single page",
-      monthlyToOwnership: "£109",
-      continuousMonthly: "£69", 
-      outright: "£700",
-      monthlyCredit: "£18",
-      maxCredit: "£350",
+      monthlyToOwnership: "£109 ex VAT (£130.80 inc VAT)",
+      continuousMonthly: "£69 ex VAT (£82.80 inc VAT)", 
+      outright: "£700 ex VAT (£840 inc VAT)",
+      monthlyCredit: "18",
+      maxCredit: "350",
+      setupFee: "£49 ex VAT (£58.80 inc VAT)",
       features: [
         "Single-page website",
         "1 custom logo at onboarding",
-        "24/7 emergency support (site down, checkout broken, security incidents)",
+        "24/7 emergency support*",
         "Routine updates in 1–2 business days",
-        "3 change credits per month (45 minutes total)",
-        "Overage billed in 15-minute increments",
+        "3 change credits per month (45 min total)**",
+        "Overage: £75/hour (billed per 15 min)",
         "Hosting, security updates, and backups included"
       ],
       buyoutExamples: [
-        { months: 6, credit: "£108", buyout: "£592", total: "£1,006" },
-        { months: 12, credit: "£216", buyout: "£484", total: "£1,312" },
+        { months: 6, credit: "£108", buyout: "£592", total: "£1,006", note: "Fewer managed months" },
+        { months: 12, credit: "£216", buyout: "£484", total: "£1,312", note: "vs £1,308 ownership" },
         { months: 18, credit: "£324", buyout: "£376", total: "£1,618" },
-        { months: 24, credit: "£350", buyout: "£350", total: "£2,006", note: "Max credit reached" }
+        { months: 24, credit: "£350", buyout: "£350", total: "£2,006", note: "Max credit (50%)" }
       ]
     },
     {
       name: "Growth",
       subtitle: "Multi-page (up to 5 pages)",
-      monthlyToOwnership: "£229",
-      continuousMonthly: "£149",
-      outright: "£1,300",
-      monthlyCredit: "£28",
-      maxCredit: "£650",
+      monthlyToOwnership: "£229 ex VAT (£274.80 inc VAT)",
+      continuousMonthly: "£169 ex VAT (£202.80 inc VAT)",
+      outright: "£1,300 ex VAT (£1,560 inc VAT)",
+      monthlyCredit: "28",
+      maxCredit: "650",
+      setupFee: "£99 ex VAT (£118.80 inc VAT)",
       features: [
         "Multi-page website (up to 5 pages)",
         "1 marketing graphic each month",
-        "24/7 emergency support (site down, checkout broken, security incidents)",
+        "24/7 emergency support*",
         "Routine updates in 1–2 business days",
-        "8 change credits per month (2 hours total)",
-        "Overage billed in 15-minute increments",
+        "8 change credits per month (2 hours total)**",
+        "Overage: £80/hour (billed per 15 min)",
         "Hosting, security updates, and backups included"
       ],
       popular: true,
       buyoutExamples: [
-        { months: 6, credit: "£168", buyout: "£1,132", total: "£2,026" },
-        { months: 12, credit: "£336", buyout: "£964", total: "£2,752" },
-        { months: 18, credit: "£504", buyout: "£796", total: "£3,478" },
-        { months: 24, credit: "£650", buyout: "£650", total: "£4,226", note: "Max credit reached" }
+        { months: 6, credit: "£168", buyout: "£1,132", total: "£2,146", note: "Fewer managed months" },
+        { months: 12, credit: "£336", buyout: "£964", total: "£2,992", note: "vs £2,748 ownership" },
+        { months: 18, credit: "£504", buyout: "£796", total: "£3,838" },
+        { months: 24, credit: "£650", buyout: "£650", total: "£4,706", note: "Max credit (50%)" }
       ]
     },
     {
       name: "Pro",
       subtitle: "Multi-page (up to 10 pages)",
-      monthlyToOwnership: "£399",
-      continuousMonthly: "£261",
-      outright: "£2,000",
-      monthlyCredit: "£28",
-      maxCredit: "£1,000",
+      monthlyToOwnership: "£399 ex VAT (£478.80 inc VAT)",
+      continuousMonthly: "£299 ex VAT (£358.80 inc VAT)",
+      outright: "£2,000 ex VAT (£2,400 inc VAT)",
+      monthlyCredit: "35",
+      maxCredit: "1000",
+      setupFee: "£149 ex VAT (£178.80 inc VAT)",
       features: [
         "Multi-page website (up to 10 pages)",
         "2 marketing graphics each month",
-        "24/7 emergency support (site down, checkout broken, security incidents)",
+        "24/7 emergency support*",
         "Priority response for routine updates",
-        "14 change credits per month (3.5 hours total)",
-        "Overage billed in 15-minute increments",
+      answer: "Credits are cash-valued (£18/£28/£35 per month) and apply only to consecutive paid months. They're for small edits like copy swaps, image swaps, and minor layout tweaks. Credits are non-transferable, expire if you cancel, and cap at 50% of the outright price. One active request queue, batching allowed."
+        "Overage: £90/hour (billed per 15 min)",
         "Hosting, security updates, and backups included"
       ],
-      buyoutExamples: [
-        { months: 6, credit: "£168", buyout: "£1,832", total: "£3,398" },
-        { months: 12, credit: "£336", buyout: "£1,664", total: "£4,796" },
-        { months: 18, credit: "£504", buyout: "£1,496", total: "£6,194" },
-        { months: 24, credit: "£672", buyout: "£1,328", total: "£7,592" }
+      answer: "Overage work is billed at £75-£90/hour in 15-minute increments. This includes new pages beyond your plan, new templates, ecommerce, custom integrations, brand/UX redesigns, SEO projects, and copywriting beyond minor edits. We'll always check with you first."
+        { months: 6, credit: "£210", buyout: "£1,790", total: "£3,584", note: "Fewer managed months" },
+        { months: 12, credit: "£420", buyout: "£1,580", total: "£5,168", note: "vs £4,788 ownership" },
+      question: "What does 24/7 emergency support mean?",
+      answer: "Emergency support covers site down, checkout/contact form broken, or security incidents. Everything else is handled in 1-2 business days. This prevents midnight requests for routine content updates while ensuring critical issues get immediate attention."
       ]
     }
   ];
-
+      answer: "Everything: hosting, security updates, backups, SSL certificates, and your monthly change credits. Plus 24/7 emergency support for critical issues. All prices shown are ex VAT with inc VAT amounts in brackets."
   const faqs = [
     {
-      question: "What's a \"change\"?",
-      answer: "Changes are tracked in 15-minute credits. Small updates like text edits or image swaps typically use 1 credit. Unused credits don't roll over to the next month."
+      question: "Do I own my website?",
+      answer: "You own your website if you buy outright or after completing 12 months of monthly-to-ownership payments. With continuous monthly plans, we retain ownership but you can buy it anytime using your earned credits. You always own your content and domain regardless of the plan."
     },
     {
       question: "Do I own the website?",
-      answer: "Yes. Monthly plans include hosting and management. Outright builds are handed over for you to manage—or you can add a care plan."
+      answer: "Yes, you can upgrade or change plans. When switching, we carry forward the pound value of your accrued credits and apply the new monthly credit rate thereafter. If you're on continuous monthly and want to buy out, your earned credits reduce the buyout price."
     },
     {
       question: "How fast are updates?",
-      answer: "Most small changes are done within 1–2 business days. Emergencies are handled 24/7."
-    },
-    {
-      question: "Can I switch plans?",
-      answer: "Yes. You can upgrade or change plans. We'll help you choose what fits."
+      answer: "Monthly plans can be cancelled anytime with 30 days notice. If you've been on continuous monthly, you can buy out your site using any credits you've earned, or we can help transfer it to your own hosting. Credits expire upon cancellation."
     }
   ];
 
@@ -215,19 +214,18 @@ const WebDesign: React.FC = () => {
                         <div className="bg-slate/20 rounded-lg p-4">
                           <div className="flex justify-between items-center mb-2">
                             <span className="text-sm font-medium text-off-white/80">Monthly to Ownership</span>
-                            <span className="text-xs bg-orange/20 text-orange px-2 py-1 rounded">12 months</span>
+                            <span className="text-xs bg-orange/20 text-orange px-2 py-1 rounded">12 months + management</span>
                           </div>
                           <div className="text-2xl font-bold text-orange">{plan.monthlyToOwnership}<span className="text-sm text-off-white/60">/mo</span></div>
-                          <p className="text-xs text-off-white/60 mt-1">Own your site after 12 months</p>
+                          <p className="text-xs text-off-white/60 mt-1">Includes 12 months management</p>
                         </div>
                         
                         <div className="bg-slate/20 rounded-lg p-4">
                           <div className="flex justify-between items-center mb-2">
                             <span className="text-sm font-medium text-off-white/80">Continuous Monthly</span>
-                            <span className="text-xs bg-blue-500/20 text-blue-400 px-2 py-1 rounded">Ongoing</span>
                           </div>
-                          <div className="text-2xl font-bold text-blue-400">{plan.continuousMonthly}<span className="text-sm text-off-white/60">/mo</span></div>
-                          <p className="text-xs text-off-white/60 mt-1">Optional buyout with discounts</p>
+                          <div className="text-xl font-bold text-blue-400">{plan.continuousMonthly}<span className="text-sm text-off-white/60">/mo</span></div>
+                          <p className="text-xs text-off-white/60 mt-1">+£{plan.monthlyCredit}/mo credit toward buyout</p>
                         </div>
                         
                         <div className="bg-slate/20 rounded-lg p-4">
@@ -235,7 +233,7 @@ const WebDesign: React.FC = () => {
                             <span className="text-sm font-medium text-off-white/80">Buy Outright</span>
                             <span className="text-xs bg-green-500/20 text-green-400 px-2 py-1 rounded">One-time</span>
                           </div>
-                          <div className="text-2xl font-bold text-green-400">{plan.outright}</div>
+                          <div className="text-xl font-bold text-green-400">{plan.outright}</div>
                           <p className="text-xs text-off-white/60 mt-1">Full ownership immediately</p>
                         </div>
                       </div>
@@ -252,15 +250,15 @@ const WebDesign: React.FC = () => {
                       
                       {/* Buyout Credit Examples */}
                       <div className="mb-6 p-3 bg-near-black rounded-lg">
-                        <h4 className="text-sm font-medium text-off-white mb-2">Continuous Monthly Credit Examples:</h4>
+                        <h4 className="text-sm font-medium text-off-white mb-2">Continuous Monthly Buyout Examples:</h4>
                         <div className="text-xs text-off-white/60 mb-2">
-                          Earn {plan.monthlyCredit}/month credit (max {plan.maxCredit})
+                          Earn £{plan.monthlyCredit}/month credit (max £{plan.maxCredit})
                         </div>
                         <div className="space-y-1">
                           {plan.buyoutExamples.slice(0, 3).map((example, exampleIndex) => (
                             <div key={exampleIndex} className="flex justify-between text-xs">
-                              <span className="text-off-white/70">{example.months} months:</span>
-                              <span className="text-blue-400">{example.buyout} buyout</span>
+                              <span className="text-off-white/70">{example.months} months: {example.total}</span>
+                              <span className="text-blue-400 text-xs">{example.note}</span>
                             </div>
                           ))}
                         </div>
@@ -283,21 +281,55 @@ const WebDesign: React.FC = () => {
             {/* Pricing Explanation */}
             <div className="mt-16 max-w-4xl mx-auto">
               <div className="bg-near-black rounded-2xl p-8">
-                <h3 className="text-2xl font-bold font-rajdhani text-off-white mb-6 text-center">
-                  How the Credit System Works
+                <h3 className="text-2xl font-bold font-rajdhani text-off-white mb-8 text-center">
+                  Payment Options Explained
                 </h3>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center mb-8">
                   <div>
                     <div className="text-orange text-lg font-semibold mb-2">Monthly-to-Ownership</div>
-                    <p className="text-off-white/80 text-sm">Pay higher monthly rate, own your site after exactly 12 months. Always the best 12-month option.</p>
+                    <p className="text-off-white/80 text-sm">Pay higher monthly rate, own your site after exactly 12 months. Includes full 12 months of management.</p>
                   </div>
                   <div>
                     <div className="text-blue-400 text-lg font-semibold mb-2">Continuous Monthly</div>
-                    <p className="text-off-white/80 text-sm">Lower monthly rate with flexibility. Earn credits each month that reduce your buyout price (max 50% of outright price).</p>
+                    <p className="text-off-white/80 text-sm">Lower monthly rate with buyout option. Early buyout = fewer managed months = lower total cost. Credits cap at 50% of outright price.</p>
                   </div>
                   <div>
                     <div className="text-green-400 text-lg font-semibold mb-2">Buy Outright</div>
-                    <p className="text-off-white/80 text-sm">One-time payment for immediate ownership. Add optional care plan later at continuous monthly rates.</p>
+                    <p className="text-off-white/80 text-sm">One-time payment for immediate ownership. Optional care plan available post-purchase at continuous rates.</p>
+                  </div>
+                </div>
+                
+                {/* Credit System Details */}
+                <div className="border-t border-slate/20 pt-6">
+                  <h4 className="text-lg font-semibold text-orange mb-4">Credit System Details</h4>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm text-off-white/80">
+                    <div>
+                      <h5 className="font-medium text-off-white mb-2">How Credits Work:</h5>
+                      <ul className="space-y-1">
+                        <li>• Credits apply only to consecutive paid months</li>
+                        <li>• Cash-valued: £18/£28/£35 per paid month</li>
+                        <li>• Non-transferable, expire if plan cancelled</li>
+                        <li>• Cap at 50% of outright price</li>
+                        <li>• On plan changes: carry forward £ value</li>
+                      </ul>
+                    </div>
+                    <div>
+                      <h5 className="font-medium text-off-white mb-2">What's Included in "Changes":</h5>
+                      <ul className="space-y-1">
+                        <li>• Copy swaps, image swaps</li>
+                        <li>• Minor layout tweaks</li>
+                        <li>• One active request queue</li>
+                        <li>• Batching allowed, no parallel streams</li>
+                      </ul>
+                    </div>
+                  </div>
+                  
+                  <div className="mt-6 p-4 bg-slate/20 rounded-lg">
+                    <h5 className="font-medium text-off-white mb-2">Not Included (Overage Rates Apply):</h5>
+                    <p className="text-sm text-off-white/80">
+                      New pages beyond plan, new templates, ecommerce, custom integrations, brand/UX redesigns, 
+                      SEO projects, copywriting beyond minor edits.
+                    </p>
                   </div>
                 </div>
               </div>
@@ -356,7 +388,29 @@ const WebDesign: React.FC = () => {
               Buying outright
             </h2>
             <p className="text-xl text-off-white/80 leading-relaxed">
-              One-off design and build with a 14-day snagging period. No ongoing management. You handle hosting, updates, and changes—or add an optional care plan later at continuous monthly rates.
+              One-off design and build with a 14-day snagging period. No ongoing management. You handle hosting, updates, and changes—or add an optional care plan later.
+            </p>
+            <div className="mt-8 p-6 bg-charcoal/60 rounded-lg max-w-2xl mx-auto">
+              <h3 className="text-lg font-semibold text-orange mb-3">Optional Post-Ownership Care Plans</h3>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
+                <div className="text-center">
+                  <div className="font-medium text-off-white">Starter Care</div>
+                  <div className="text-orange">£69/mo ex VAT</div>
+                </div>
+                <div className="text-center">
+                  <div className="font-medium text-off-white">Growth Care</div>
+                  <div className="text-orange">£149/mo ex VAT</div>
+                </div>
+                <div className="text-center">
+                  <div className="font-medium text-off-white">Pro Care</div>
+                  <div className="text-orange">£261/mo ex VAT</div>
+                </div>
+              </div>
+              <p className="text-xs text-off-white/60 mt-3">Same features as continuous monthly plans</p>
+            </div>
+          </div>
+        </section>
+      </ScrollAnimation>
             </p>
           </div>
         </section>
