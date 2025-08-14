@@ -79,30 +79,50 @@ const WebDesign: React.FC = () => {
         "2 marketing graphics each month",
         "24/7 emergency support*",
         "Priority response for routine updates",
-      answer: "Credits are cash-valued (£18/£28/£35 per month) and apply only to consecutive paid months. They're for small edits like copy swaps, image swaps, and minor layout tweaks. Credits are non-transferable, expire if you cancel, and cap at 50% of the outright price. One active request queue, batching allowed."
+        "15 change credits per month (3.75 hours total)**",
         "Overage: £90/hour (billed per 15 min)",
         "Hosting, security updates, and backups included"
       ],
-      answer: "Overage work is billed at £75-£90/hour in 15-minute increments. This includes new pages beyond your plan, new templates, ecommerce, custom integrations, brand/UX redesigns, SEO projects, and copywriting beyond minor edits. We'll always check with you first."
+      buyoutExamples: [
         { months: 6, credit: "£210", buyout: "£1,790", total: "£3,584", note: "Fewer managed months" },
         { months: 12, credit: "£420", buyout: "£1,580", total: "£5,168", note: "vs £4,788 ownership" },
-      question: "What does 24/7 emergency support mean?",
-      answer: "Emergency support covers site down, checkout/contact form broken, or security incidents. Everything else is handled in 1-2 business days. This prevents midnight requests for routine content updates while ensuring critical issues get immediate attention."
+        { months: 18, credit: "£630", buyout: "£1,370", total: "£6,752" },
+        { months: 24, credit: "£840", buyout: "£1,000", total: "£8,176", note: "Max credit (50%)" }
       ]
     }
   ];
-      answer: "Everything: hosting, security updates, backups, SSL certificates, and your monthly change credits. Plus 24/7 emergency support for critical issues. All prices shown are ex VAT with inc VAT amounts in brackets."
+
   const faqs = [
     {
       question: "Do I own my website?",
       answer: "You own your website if you buy outright or after completing 12 months of monthly-to-ownership payments. With continuous monthly plans, we retain ownership but you can buy it anytime using your earned credits. You always own your content and domain regardless of the plan."
     },
     {
-      question: "Do I own the website?",
+      question: "Can I change plans?",
       answer: "Yes, you can upgrade or change plans. When switching, we carry forward the pound value of your accrued credits and apply the new monthly credit rate thereafter. If you're on continuous monthly and want to buy out, your earned credits reduce the buyout price."
     },
     {
+      question: "How do change credits work?",
+      answer: "Credits are cash-valued (£18/£28/£35 per month) and apply only to consecutive paid months. They're for small edits like copy swaps, image swaps, and minor layout tweaks. Credits are non-transferable, expire if you cancel, and cap at 50% of the outright price. One active request queue, batching allowed."
+    },
+    {
+      question: "What counts as overage work?",
+      answer: "Overage work is billed at £75-£90/hour in 15-minute increments. This includes new pages beyond your plan, new templates, ecommerce, custom integrations, brand/UX redesigns, SEO projects, and copywriting beyond minor edits. We'll always check with you first."
+    },
+    {
+      question: "What does 24/7 emergency support mean?",
+      answer: "Emergency support covers site down, checkout/contact form broken, or security incidents. Everything else is handled in 1-2 business days. This prevents midnight requests for routine content updates while ensuring critical issues get immediate attention."
+    },
+    {
+      question: "What's included in the monthly fee?",
+      answer: "Everything: hosting, security updates, backups, SSL certificates, and your monthly change credits. Plus 24/7 emergency support for critical issues. All prices shown are ex VAT with inc VAT amounts in brackets."
+    },
+    {
       question: "How fast are updates?",
+      answer: "Routine updates are completed within 1-2 business days. Emergency issues (site down, broken forms, security) get immediate attention 24/7. We maintain one active request queue per client to ensure quality and prevent confusion."
+    },
+    {
+      question: "Can I cancel my monthly plan?",
       answer: "Monthly plans can be cancelled anytime with 30 days notice. If you've been on continuous monthly, you can buy out your site using any credits you've earned, or we can help transfer it to your own hosting. Credits expire upon cancellation."
     }
   ];
@@ -408,10 +428,6 @@ const WebDesign: React.FC = () => {
               </div>
               <p className="text-xs text-off-white/60 mt-3">Same features as continuous monthly plans</p>
             </div>
-          </div>
-        </section>
-      </ScrollAnimation>
-            </p>
           </div>
         </section>
       </ScrollAnimation>
