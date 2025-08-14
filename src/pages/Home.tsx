@@ -15,14 +15,14 @@ const Home = () => {
   const webDesignPlans = [
     {
       name: "Starter",
-      subtitle: "Single page",
+      subtitle: "Up to 3 pages",
       monthlyToOwnership: "£131",
       continuousMonthly: "£83",
       outright: "£840",
       monthlyCredit: "18",
       icon: <Zap className="w-8 h-8" />,
       features: [
-        "Single-page website",
+        "Website with up to 3 pages",
         "1 custom logo at onboarding",
         "24/7 emergency support",
         "3 change credits per month (45 min)",
@@ -487,7 +487,15 @@ const Home = () => {
                 All prices are VAT inclusive. No hidden fees.
               </p>
               <p className="text-sm text-off-white/60 mt-2">
-                Need more pages or custom features? <button onClick={handleBookConsultation} className="text-orange hover:underline">Let's discuss your requirements</button>
+                Need more pages or custom features? 
+                <Button 
+                  onClick={handleBookConsultation} 
+                  variant="ghost" 
+                  size="sm" 
+                  className="ml-2 text-orange hover:text-orange hover:bg-orange/10 p-2 h-auto"
+                >
+                  Let's discuss your requirements
+                </Button>
               </p>
             </div>
           </div>

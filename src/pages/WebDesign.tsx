@@ -16,7 +16,7 @@ const WebDesign: React.FC = () => {
   const pricingPlans = [
     {
       name: "Starter",
-      subtitle: "Single page",
+      subtitle: "Up to 3 pages",
       monthlyToOwnership: "£131",
       continuousMonthly: "£83", 
       outright: "£840",
@@ -24,7 +24,7 @@ const WebDesign: React.FC = () => {
       maxCredit: "350",
       setupFee: "£59",
       features: [
-        "Single-page website",
+        "Website with up to 3 pages",
         "1 custom logo at onboarding",
         "24/7 emergency support*",
         "Routine updates in 1–2 business days",
@@ -214,9 +214,14 @@ const WebDesign: React.FC = () => {
               </p>
               <p className="text-off-white/70">
                 Need more pages, custom features, or enterprise solutions? 
-                <button onClick={handleWebDesignBooking} className="text-orange hover:underline ml-1">
+                <Button 
+                  onClick={handleWebDesignBooking} 
+                  variant="ghost" 
+                  size="sm" 
+                  className="ml-2 text-orange hover:text-orange hover:bg-orange/10 p-2 h-auto"
+                >
                   Custom plans are easily available
-                </button>
+                </Button>
               </p>
             </div>
 
