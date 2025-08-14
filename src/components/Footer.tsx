@@ -12,7 +12,7 @@ const Footer: React.FC = () => {
               <img 
                 src="/assets_task_01k2dvrpkbfntr573hm1h0p81k_1754959602_img_0.webp" 
                 alt="Bright mAInd Marketing" 
-                className="w-12 h-12 rounded-lg object-contain"
+                className="w-14 h-14 rounded-lg object-contain"
               />
               <h3 className="text-3xl font-bold font-rajdhani">
                 <span className="brand-text brand-text-glow">
