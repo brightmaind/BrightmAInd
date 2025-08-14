@@ -23,6 +23,7 @@ const WebDesign: React.FC = () => {
       monthlyCredit: "18",
       maxCredit: "350",
       setupFee: "£49 ex VAT (£58.80 inc VAT)",
+      setupFee: "£49 ex VAT (£58.80 inc VAT)",
       features: [
         "Single-page website",
         "1 custom logo at onboarding",
@@ -47,6 +48,7 @@ const WebDesign: React.FC = () => {
       outright: "£1,300 ex VAT (£1,560 inc VAT)",
       monthlyCredit: "28",
       maxCredit: "650",
+      setupFee: "£99 ex VAT (£118.80 inc VAT)",
       setupFee: "£99 ex VAT (£118.80 inc VAT)",
       features: [
         "Multi-page website (up to 5 pages)",
@@ -73,6 +75,7 @@ const WebDesign: React.FC = () => {
       outright: "£2,000 ex VAT (£2,400 inc VAT)",
       monthlyCredit: "35",
       maxCredit: "1000",
+      setupFee: "£149 ex VAT (£178.80 inc VAT)",
       setupFee: "£149 ex VAT (£178.80 inc VAT)",
       features: [
         "Multi-page website (up to 10 pages)",

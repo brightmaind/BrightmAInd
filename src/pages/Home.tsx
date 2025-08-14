@@ -1,135 +1,125 @@
-import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { Bot, TrendingUp, Settings, ChevronDown, Calendar, ArrowLeft, ArrowRight, Check, Zap } from 'lucide-react';
+import React from 'react';
+import { Check, ArrowRight, MessageCircle, Mail } from 'lucide-react';
 import ScrollAnimation from '../components/ScrollAnimation';
 import { Button } from '../components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../components/ui/card';
-import { motion, AnimatePresence } from 'framer-motion';
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '../components/ui/accordion';
 
-const Home = () => {
-  const navigate = useNavigate();
-  const [expandedService, setExpandedService] = useState(null);
-  const [currentPlan, setCurrentPlan] = useState(0);
-  const [isTransitioning, setIsTransitioning] = useState(false);
+// Calendly integration
+declare global {
+  interface Window {
+    Calendly: any;
+  }
+}
 
-  const webDesignPlans = [
+const WebDesign: React.FC = () => {
+  const pricingPlans = [
     {
       name: "Starter",
       subtitle: "Single page",
-      monthlyToOwnership: "£109",
-      continuousMonthly: "£69",
-      outright: "£700",
+      monthlyToOwnership: "£109 ex VAT (£130.80 inc VAT)",
+      continuousMonthly: "£69 ex VAT (£82.80 inc VAT)", 
+      outright: "£700 ex VAT (£840 inc VAT)",
       monthlyCredit: "18",
-      icon: <Zap className="w-8 h-8" />,
+      maxCredit: "350",
+      setupFee: "£49 ex VAT (£58.80 inc VAT)",
+      setupFee: "£49 ex VAT (£58.80 inc VAT)",
+      setupFee: "£49 ex VAT (£58.80 inc VAT)",
+      setupFee: "£49 ex VAT (£58.80 inc VAT)",
       features: [
         "Single-page website",
         "1 custom logo at onboarding",
-        "24/7 emergency support",
-        "3 change credits per month (45 min)",
-        "Hosting & security included"
+        "24/7 emergency support*",
+        "Routine updates in 1–2 business days",
+        "3 change credits per month (45 min total)**",
+        "Overage: £75/hour (billed per 15 min)",
+        "Hosting, security updates, and backups included"
       ],
-      gradient: "from-blue-500 to-cyan-500"
+      buyoutExamples: [
+        { months: 6, credit: "£108", buyout: "£592", total: "£1,006", note: "Fewer managed months" },
+        { months: 12, credit: "£216", buyout: "£484", total: "£1,312", note: "vs £1,308 ownership" },
+        { months: 18, credit: "£324", buyout: "£376", total: "£1,618" },
+        { months: 24, credit: "£350", buyout: "£350", total: "£2,006", note: "Max credit (50%)" }
+      ]
     },
     {
       name: "Growth",
       subtitle: "Multi-page (up to 5 pages)",
-      monthlyToOwnership: "£229",
-      continuousMonthly: "£149",
-      outright: "£1,300",
+      monthlyToOwnership: "£229 ex VAT (£274.80 inc VAT)",
+      continuousMonthly: "£169 ex VAT (£202.80 inc VAT)",
+      outright: "£1,300 ex VAT (£1,560 inc VAT)",
       monthlyCredit: "28",
-      icon: <TrendingUp className="w-8 h-8" />,
+      maxCredit: "650",
+      setupFee: "£99 ex VAT (£118.80 inc VAT)",
+      setupFee: "£99 ex VAT (£118.80 inc VAT)",
+      setupFee: "£99 ex VAT (£118.80 inc VAT)",
+      setupFee: "£99 ex VAT (£118.80 inc VAT)",
       features: [
         "Multi-page website (up to 5 pages)",
         "1 marketing graphic each month",
-        "24/7 emergency support",
-        "8 change credits per month (2 hours)",
-        "Hosting & security included"
+        "24/7 emergency support*",
+        "Routine updates in 1–2 business days",
+        "8 change credits per month (2 hours total)**",
+        "Overage: £80/hour (billed per 15 min)",
+        "Hosting, security updates, and backups included"
       ],
-      gradient: "from-orange to-red-500",
-      popular: true
+      popular: true,
+      buyoutExamples: [
+        { months: 6, credit: "£168", buyout: "£1,132", total: "£2,146", note: "Fewer managed months" },
+        { months: 12, credit: "£336", buyout: "£964", total: "£2,992", note: "vs £2,748 ownership" },
+        { months: 18, credit: "£504", buyout: "£796", total: "£3,838" },
+        { months: 24, credit: "£650", buyout: "£650", total: "£4,706", note: "Max credit (50%)" }
+      ]
     },
     {
       name: "Pro",
       subtitle: "Multi-page (up to 10 pages)",
-      monthlyToOwnership: "£399",
-      continuousMonthly: "£261",
-      outright: "£2,000",
-      monthlyCredit: "28",
-      icon: <Settings className="w-8 h-8" />,
+      monthlyToOwnership: "£399 ex VAT (£478.80 inc VAT)",
+      continuousMonthly: "£299 ex VAT (£358.80 inc VAT)",
+      outright: "£2,000 ex VAT (£2,400 inc VAT)",
+      monthlyCredit: "35",
+      maxCredit: "1000",
+      setupFee: "£149 ex VAT (£178.80 inc VAT)",
+      setupFee: "£149 ex VAT (£178.80 inc VAT)",
+      setupFee: "£149 ex VAT (£178.80 inc VAT)",
+      setupFee: "£149 ex VAT (£178.80 inc VAT)",
       features: [
         "Multi-page website (up to 10 pages)",
         "2 marketing graphics each month",
-        "Priority response",
-        "14 change credits per month (3.5 hours)",
-        "Hosting & security included"
+        "24/7 emergency support*",
+        "Priority response for routine updates",
+        "14 change credits per month (3.5 hours total)**",
+        "Overage: £90/hour (billed per 15 min)",
+        "Hosting, security updates, and backups included"
       ],
-      gradient: "from-purple-500 to-pink-500"
-    }
-  ];
-
-  const services = [
-    {
-      icon: <Bot className="w-8 h-8" />,
-      title: "AI Automation",
-      summary: "We'll automate the repetitive stuff so you can focus on what matters.",
-      bullets: [
-        "Automatically sort and route your leads",
-        "Smart inbox management and auto-replies", 
-        "Clean up your data and create useful reports"
-      ]
-    },
-    {
-      icon: <TrendingUp className="w-8 h-8" />,
-      title: "Marketing That Actually Works",
-      summary: "We focus on getting you real customers, not just pretty numbers.",
-      bullets: [
-        "Design offers and funnels that convert",
-        "Run Google and Facebook ads that pay for themselves",
-        "Test and improve what's working"
-      ]
-    },
-    {
-      icon: <Settings className="w-8 h-8" />,
-      title: "Systems Integration",
-      summary: "We make your business tools work together like they should.",
-      bullets: [
-        "Connect your apps with Zapier or Make",
-        "Set up custom connections when needed",
-        "Integrate Stripe, Shopify, HubSpot, and more"
+      answer: "Overage work is billed at £75-£90/hour in 15-minute increments. This includes new pages beyond your plan, new templates, ecommerce, custom integrations, brand/UX redesigns, SEO projects, and copywriting beyond minor edits. We'll always check with you first."
+        { months: 6, credit: "£210", buyout: "£1,790", total: "£3,584", note: "Fewer managed months" },
+        { months: 12, credit: "£420", buyout: "£1,580", total: "£5,168", note: "vs £4,788 ownership" },
+        { months: 18, credit: "£630", buyout: "£1,370", total: "£6,752" },
+        { months: 24, credit: "£840", buyout: "£1,160", total: "£8,336" }
       ]
     }
   ];
-  const clients = [
-    "FintechCo", "RetailFlow", "DocuHealth", "Orbit SaaS", "NorthBank"
+      answer: "Everything: hosting, security updates, backups, SSL certificates, and your monthly change credits. Plus 24/7 emergency support for critical issues. Setup fees apply to new projects. All prices include VAT."
+  const faqs = [
+    {
+      question: "Do I own my website?",
+      answer: "You own your website if you buy outright or after completing 12 months of monthly-to-ownership payments. With continuous monthly plans, we retain ownership but you can buy it anytime using your earned credits. You always own your content and domain regardless of the plan."
+    },
+    {
+      question: "Do I own the website?",
+      answer: "Yes, you can upgrade or change plans. When switching, we carry forward the pound value of your accrued credits and apply the new monthly credit rate thereafter. If you're on continuous monthly and want to buy out, your earned credits reduce the buyout price."
+    },
+    {
+      question: "How fast are updates?",
+      answer: "Monthly plans can be cancelled anytime with 30 days notice. If you've been on continuous monthly, you can buy out your site using any credits you've earned, or we can help transfer it to your own hosting. Credits expire upon cancellation."
+    }
   ];
 
-  const processSteps = [
-    { step: "01", title: "Discover", description: "We'll understand your business goals and design requirements." },
-    { step: "02", title: "Design", description: "Create a website that converts visitors into customers." },
-    { step: "03", title: "Build", description: "Develop your site with hosting, security, and updates included." },
-    { step: "04", title: "Support", description: "Ongoing maintenance, updates, and optional marketing services." }
-  ];
-
-  const handleBookConsultation = () => {
-    if (window.Calendly) {
-      window.Calendly.initPopupWidget({
-        url: 'https://calendly.com/enquiries-brightmaind/30min',
-        parentElement: document.body
-      });
-      
-      // Add custom text overlay after popup opens
-      setTimeout(() => {
-        const popup = document.querySelector('.calendly-popup');
-        if (popup && !popup.querySelector('.calendly-text-overlay')) {
-          const textOverlay = document.createElement('div');
-          textOverlay.className = 'calendly-text-overlay';
-          textOverlay.innerHTML = '<span>Please select a convenient time for your consultation call</span>';
-          popup.appendChild(textOverlay);
-        }
-      }, 100);
-    } else {
-      // Fallback to direct link if Calendly widget isn't loaded
-      window.open('https://calendly.com/enquiries-brightmaind/30min', '_blank');
+  const scrollToPricing = () => {
+    const pricingSection = document.getElementById('pricing');
+    if (pricingSection) {
+      pricingSection.scrollIntoView({ behavior: 'smooth' });
     }
   };
 
@@ -156,390 +146,205 @@ const Home = () => {
     }
   };
 
-  const nextPlan = () => {
-    if (isTransitioning) return;
-    setIsTransitioning(true);
-    setTimeout(() => {
-      setCurrentPlan((prev) => (prev + 1) % webDesignPlans.length);
-      setIsTransitioning(false);
-    }, 150);
-  };
-
-  const prevPlan = () => {
-    if (isTransitioning) return;
-    setIsTransitioning(true);
-    setTimeout(() => {
-      setCurrentPlan((prev) => (prev - 1 + webDesignPlans.length) % webDesignPlans.length);
-      setIsTransitioning(false);
-    }, 150);
-  };
-
-  const goToPlan = (index) => {
-    if (isTransitioning || index === currentPlan) return;
-    setIsTransitioning(true);
-    setTimeout(() => {
-      setCurrentPlan(index);
-      setIsTransitioning(false);
-    }, 150);
-  };
-
-  const goToWebDesign = () => {
-    navigate('/web-design');
-    window.scrollTo(0, 0);
-  };
-
   return (
     <div className="pt-20 bg-charcoal text-off-white">
       {/* Hero Section */}
-      <section className="pt-8 pb-24 px-4 sm:px-6 lg:px-8 hero-gradient">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            {/* Mobile: Logo first, Desktop: Content first */}
-            <div className="space-y-8 text-center lg:text-left order-2 lg:order-1">
-              <h1 className="text-4xl md:text-5xl font-bold font-rajdhani text-off-white leading-tight">
-                Professional websites on a simple monthly plan
-              </h1>
-              
-              <p className="text-lg text-off-white/80 leading-relaxed max-w-2xl">
-                Get a professional website with hosting, security, updates, and ongoing support included. No surprises, no hidden costs.
-              </p>
-              
-              {/* Guarantee Section */}
-              <div className="bg-orange/10 border border-orange/20 rounded-2xl p-6 max-w-2xl mx-auto lg:mx-0">
-                <div className="flex items-center justify-center lg:justify-start mb-3">
-                  <div className="w-8 h-8 bg-orange rounded-full flex items-center justify-center mr-3">
-                    <span className="text-white font-bold text-sm">✓</span>
-                  </div>
-                  <h3 className="text-xl font-bold font-rajdhani text-orange">
-                    100% Risk-Free Guarantee
-                  </h3>
-                </div>
-                <p className="text-off-white/90 leading-relaxed">
-                  You won't pay a penny until your website is complete, deployed, and you're completely happy with it. 
-                  We only get paid when you love your new website.
-                </p>
-              </div>
-              
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Button onClick={goToWebDesign} size="lg">
-                  View Web Design Plans
-                </Button>
-                <Button onClick={handleBookConsultation} size="lg" variant="outline">
-                  <Calendar className="w-5 h-5 mr-2" />
-                  Book Consultation
-                </Button>
-              </div>
-            </div>
-
-            {/* Mobile: Logo first, Desktop: Logo second */}
-            <div className="hidden lg:flex justify-end order-2">
-             <div className="w-104 h-104 lg:w-125 lg:h-125 flex flex-col items-center space-y-2">
-                <img 
-                  src="/assets_task_01k2dvrpkbfntr573hm1h0p81k_1754959602_img_0.webp" 
-                  alt="Bright mAInd Marketing Logo" 
-                 className="w-full h-3/4 object-contain rounded-2xl"
-                />
-               <div className="text-center">
-                 <h2 className="text-4xl lg:text-5xl font-bold font-rajdhani brand-text brand-text-glow mb-2">
-                   Bright m<span className="text-orange">AI</span>nd
-                 </h2>
-                 <p className="tech-subtitle text-sm tracking-widest">Marketing</p>
-               </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Services Overview */}
-      <ScrollAnimation>
-        <section className="py-24 bg-near-black">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold font-rajdhani text-off-white mb-6">
-                We Also Help With <span className="text-orange">Business Growth</span>
-              </h2>
-              <p className="text-xl text-off-white/80">
-                Beyond websites, we help businesses work smarter and grow faster
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
-              <ScrollAnimation delay={0}>
-                <Card className="h-full card-hover">
-                  <CardHeader>
-                    <div className="flex items-center space-x-4 mb-4">
-                      <div className="w-12 h-12 bg-orange rounded-lg flex items-center justify-center">
-                        <Bot className="w-6 h-6 text-white" />
-                      </div>
-                      <CardTitle className="text-2xl">AI Automation</CardTitle>
-                    </div>
-                    <CardDescription className="text-lg text-off-white/80">
-                      Stop doing the same tasks over and over. We'll automate the repetitive stuff so you can focus on what actually grows your business.
-                    </CardDescription>
-                  </CardHeader>
-                  <CardContent>
-                    <div className="space-y-4 mb-6">
-                      <div className="flex items-start space-x-3">
-                        <div className="w-2 h-2 bg-orange rounded-full mt-2 flex-shrink-0"></div>
-                        <span className="text-off-white/80">AI phone and chat agents that handle customer conversations 24/7</span>
-                      </div>
-                      <div className="flex items-start space-x-3">
-                        <div className="w-2 h-2 bg-orange rounded-full mt-2 flex-shrink-0"></div>
-                        <span className="text-off-white/80">Automatically sort leads and send follow-up sequences</span>
-                      </div>
-                      <div className="flex items-start space-x-3">
-                        <div className="w-2 h-2 bg-orange rounded-full mt-2 flex-shrink-0"></div>
-                        <span className="text-off-white/80">Connect your business tools so they work together seamlessly</span>
-                      </div>
-                    </div>
-                    <Button 
-                      onClick={() => navigate('/automation')}
-                      variant="outline" 
-                      className="w-full"
-                    >
-                      Learn About Automation
-                      <ArrowRight className="w-4 h-4 ml-2" />
-                    </Button>
-                  </CardContent>
-                </Card>
-              </ScrollAnimation>
-
-              <ScrollAnimation delay={100}>
-                <Card className="h-full card-hover">
-                  <CardHeader>
-                    <div className="flex items-center space-x-4 mb-4">
-                      <div className="w-12 h-12 bg-orange rounded-lg flex items-center justify-center">
-                        <TrendingUp className="w-6 h-6 text-white" />
-                      </div>
-                      <CardTitle className="text-2xl">Growth Marketing</CardTitle>
-                    </div>
-                    <CardDescription className="text-lg text-off-white/80">
-                      Marketing that actually gets you customers. We focus on real results—more leads, more sales, and better ROI from every pound you spend.
-                    </CardDescription>
-                  </CardHeader>
-                  <CardContent>
-                    <div className="space-y-4 mb-6">
-                      <div className="flex items-start space-x-3">
-                        <div className="w-2 h-2 bg-orange rounded-full mt-2 flex-shrink-0"></div>
-                        <span className="text-off-white/80">Google and Facebook ads that actually pay for themselves</span>
-                      </div>
-                      <div className="flex items-start space-x-3">
-                        <div className="w-2 h-2 bg-orange rounded-full mt-2 flex-shrink-0"></div>
-                        <span className="text-off-white/80">Optimize your customer journey to increase conversions</span>
-                      </div>
-                      <div className="flex items-start space-x-3">
-                        <div className="w-2 h-2 bg-orange rounded-full mt-2 flex-shrink-0"></div>
-                        <span className="text-off-white/80">Track what matters—revenue, not just vanity metrics</span>
-                      </div>
-                    </div>
-                    <Button 
-                      onClick={() => navigate('/marketing')}
-                      variant="outline" 
-                      className="w-full"
-                    >
-                      Learn About Marketing
-                      <ArrowRight className="w-4 h-4 ml-2" />
-                    </Button>
-                  </CardContent>
-                </Card>
-              </ScrollAnimation>
-            </div>
-          </div>
-        </section>
-      </ScrollAnimation>
-
-      {/* Web Design Pricing Carousel */}
       <ScrollAnimation>
         <section className="py-24 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold font-rajdhani text-off-white mb-6">
-                Web Design <span className="text-orange">Plans</span>
-              </h2>
-              <p className="text-xl text-off-white/80">
-                Choose the payment option that works best for you
+          <div className="max-w-4xl mx-auto text-center">
+            <h1 className="text-5xl md:text-6xl font-bold font-rajdhani text-off-white mb-8">
+              The only web design service that gives you <span className="text-orange">real choice</span>
+            </h1>
+            <div className="text-xl text-off-white/80 mb-8 leading-relaxed space-y-4">
+              <p>
+                Everyone else locks you into one payment model. We don't.
+              </p>
+              <p>
+                Want to own your site after 12 months? Choose monthly-to-ownership. 
+                Prefer lower monthly costs with buyout discounts? Go continuous. 
+                Need it built and handed over? Buy outright.
+              </p>
+              <p className="text-orange font-semibold">
+                No other web design service offers this flexibility.
               </p>
             </div>
-
-            {/* Carousel Container */}
-            <div className="relative max-w-4xl mx-auto">
-              {/* Background Grid Pattern */}
-              <div className="absolute inset-0 opacity-10">
-                <div className="grid grid-cols-12 gap-1 h-full">
-                  {Array.from({ length: 144 }).map((_, i) => (
-                    <div key={i} className="bg-orange/20 rounded-sm"></div>
-                  ))}
-                </div>
-              </div>
-
-              {/* Carousel Content */}
-              <div className="relative bg-near-black/80 backdrop-blur-sm rounded-2xl p-8 border border-slate/20">
-                <AnimatePresence mode="wait">
-                  <motion.div
-                    key={currentPlan}
-                    initial={{ x: 300, opacity: 0 }}
-                    animate={{ x: 0, opacity: 1 }}
-                    exit={{ x: -300, opacity: 0 }}
-                    transition={{ 
-                      type: "spring",
-                      stiffness: 300,
-                      damping: 30,
-                      duration: 0.3
-                    }}
-                  >
-                    <div className="text-center mb-8">
-                      <div className="flex justify-center mb-4">
-                        <div className={`w-16 h-16 rounded-2xl flex items-center justify-center bg-gradient-to-br ${webDesignPlans[currentPlan].gradient}`}>
-                          <div className="text-white">
-                            {webDesignPlans[currentPlan].icon}
-                          </div>
-                        </div>
-                      </div>
-                      <h3 className="text-3xl font-bold font-rajdhani text-off-white mb-2">
-                        {webDesignPlans[currentPlan].name}
-                        {webDesignPlans[currentPlan].popular && (
-                          <span className="ml-3 text-sm bg-orange text-white px-3 py-1 rounded-full">
-                            Most Popular
-                          </span>
-                        )}
-                      </h3>
-                      <p className="text-off-white/70 text-lg">
-                        {webDesignPlans[currentPlan].subtitle}
-                      </p>
-                    </div>
-
-                    {/* Pricing Options */}
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
-                      <div className="bg-slate/20 rounded-lg p-4 text-center">
-                        <div className="text-sm text-off-white/60 mb-1">Monthly to Ownership</div>
-                        <div className="text-2xl font-bold text-orange">
-                          {webDesignPlans[currentPlan].monthlyToOwnership}
-                          <span className="text-sm text-off-white/60">/mo</span>
-                        </div>
-                        <div className="text-xs text-off-white/50">12 months</div>
-                      </div>
-                      <div className="bg-slate/20 rounded-lg p-4 text-center">
-                        <div className="text-sm text-off-white/60 mb-1">Continuous Monthly</div>
-                        <div className="text-2xl font-bold text-blue-400">
-                          {webDesignPlans[currentPlan].continuousMonthly}
-                          <span className="text-sm text-off-white/60">/mo</span>
-                        </div>
-                        <div className="text-xs text-off-white/50">+£{webDesignPlans[currentPlan].monthlyCredit}/mo credit</div>
-                      </div>
-                      <div className="bg-slate/20 rounded-lg p-4 text-center">
-                        <div className="text-sm text-off-white/60 mb-1">Buy Outright</div>
-                        <div className="text-2xl font-bold text-green-400">
-                          {webDesignPlans[currentPlan].outright}
-                        </div>
-                        <div className="text-xs text-off-white/50">One-time payment</div>
-                      </div>
-                    </div>
-
-                    {/* Features */}
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
-                      {webDesignPlans[currentPlan].features.map((feature, index) => (
-                        <div key={index} className="flex items-start space-x-3">
-                          <Check className="w-5 h-5 text-orange mt-0.5 flex-shrink-0" />
-                          <span className="text-off-white/80 text-sm">{feature}</span>
-                        </div>
-                      ))}
-                    </div>
-                  </motion.div>
-                </AnimatePresence>
-
-                {/* Navigation */}
-                <div className="flex items-center justify-between">
-                  <button
-                    onClick={prevPlan}
-                    className="p-3 rounded-full bg-slate/20 hover:bg-slate/40 transition-colors"
-                  >
-                    <ArrowLeft className="w-5 h-5 text-off-white" />
-                  </button>
-
-                  <div className="flex space-x-2">
-                    {webDesignPlans.map((_, index) => (
-                      <button
-                        key={index}
-                        onClick={() => goToPlan(index)}
-                        className={`w-3 h-3 rounded-full transition-colors ${
-                          index === currentPlan ? 'bg-orange' : 'bg-slate/40'
-                        }`}
-                      />
-                    ))}
-                  </div>
-
-                  <button
-                    onClick={nextPlan}
-                    className="p-3 rounded-full bg-slate/20 hover:bg-slate/40 transition-colors"
-                  >
-                    <ArrowRight className="w-5 h-5 text-off-white" />
-                  </button>
-                </div>
-              </div>
-            </div>
-
-            <div className="text-center mt-8">
-              <Button onClick={goToWebDesign} size="lg">
-                View All Plans & Pricing
-              </Button>
-            </div>
+            <Button onClick={scrollToPricing} size="lg">
+              See all pricing options
+              <ArrowRight className="w-5 h-5 ml-2" />
+            </Button>
           </div>
         </section>
       </ScrollAnimation>
 
-
-      {/* Process Section */}
+      {/* Why Monthly Section */}
       <ScrollAnimation>
         <section className="py-24 bg-near-black">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 className="text-4xl md:text-5xl font-bold font-rajdhani text-off-white mb-8">
+              Why monthly?
+            </h2>
+            <p className="text-xl text-off-white/80 leading-relaxed">
+              You don't just get a website—you get ongoing management. We host it, keep it secure, back it up, and make your updates each month. If something breaks, we fix it.
+            </p>
+          </div>
+        </section>
+      </ScrollAnimation>
+
+      {/* Pricing Section */}
+      <ScrollAnimation>
+        <section id="pricing" className="py-24">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold font-rajdhani text-off-white mb-6">
-                How We Build Your <span className="text-orange">Website</span>
+                Pricing
               </h2>
-              <p className="text-xl text-off-white/80 max-w-3xl mx-auto">
-                From initial consultation to ongoing support, we handle everything so you can focus on your business.
-              </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-              {processSteps.map((step, index) => (
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {pricingPlans.map((plan, index) => (
                 <ScrollAnimation key={index} delay={index * 100}>
-                  <div className="text-center">
-                    <div className="w-16 h-16 bg-orange text-white rounded-full flex items-center justify-center text-xl font-bold font-rajdhani mx-auto mb-6">
-                      {step.step}
-                    </div>
-                    <h3 className="text-xl font-semibold font-rajdhani text-off-white mb-4">{step.title}</h3>
-                    <p className="text-off-white/80">{step.description}</p>
-                  </div>
+                  <Card className={`h-full relative ${plan.popular ? 'ring-2 ring-orange' : ''}`}>
+                    {plan.popular && (
+                      <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                        <span className="bg-orange text-white px-4 py-1 rounded-full text-sm font-medium">
+                          Popular
+                        </span>
+                      </div>
+                    )}
+                    <CardHeader className="text-center">
+                      <CardTitle className="text-2xl">{plan.name}</CardTitle>
+                      <CardDescription className="text-lg">
+                        {plan.subtitle}
+                      </CardDescription>
+                    </CardHeader>
+                    <CardContent className="flex-1 flex flex-col">
+                      {/* Pricing Options */}
+                      <div className="mb-6 space-y-4">
+                        <div className="bg-slate/20 rounded-lg p-4">
+                          <div className="flex justify-between items-center mb-2">
+                            <span className="text-sm font-medium text-off-white/80">Monthly to Ownership</span>
+                            <span className="text-xs bg-orange/20 text-orange px-2 py-1 rounded">12 months + management</span>
+                          </div>
+                          <div className="text-2xl font-bold text-orange">{plan.monthlyToOwnership}<span className="text-sm text-off-white/60">/mo</span></div>
+                          <p className="text-xs text-off-white/60 mt-1">Includes 12 months management</p>
+                        </div>
+                        
+                        <div className="bg-slate/20 rounded-lg p-4">
+                          <div className="flex justify-between items-center mb-2">
+                            <span className="text-sm font-medium text-off-white/80">Continuous Monthly</span>
+                          </div>
+                    <p className="text-off-white/80 text-sm">Pay higher monthly rate, own your site after exactly 12 months. Includes full 12 months of management. All prices include VAT.</p>
+                          <div className="text-xl font-bold text-blue-400">{plan.continuousMonthly}<span className="text-sm text-off-white/60">/mo</span></div>
+                          <p className="text-xs text-off-white/60 mt-1">+£{plan.monthlyCredit}/mo credit toward buyout</p>
+                        </div>
+                        
+                        <div className="bg-slate/20 rounded-lg p-4">
+                          <div className="flex justify-between items-center mb-2">
+                            <span className="text-sm font-medium text-off-white/80">Buy Outright</span>
+                            <span className="text-xs bg-green-500/20 text-green-400 px-2 py-1 rounded">One-time</span>
+                          </div>
+                          <div className="text-xl font-bold text-green-400">{plan.outright}</div>
+                
+                <div className="mt-4 text-xs text-off-white/60 text-center">
+                  All prices include VAT
+                </div>
+                          <p className="text-xs text-off-white/60 mt-1">Full ownership immediately</p>
+                        </div>
+                      </div>
+
+                      {/* Features */}
+                      <ul className="space-y-3 mb-6 flex-1">
+                        {plan.features.map((feature, featureIndex) => (
+                          <li key={featureIndex} className="flex items-start space-x-3">
+                            <Check className="w-5 h-5 text-orange mt-0.5 flex-shrink-0" />
+                            <span className="text-off-white/80 text-sm">{feature}</span>
+                          </li>
+                        ))}
+                      </ul>
+                      
+                      {/* Buyout Credit Examples */}
+                      <div className="mb-6 p-3 bg-near-black rounded-lg">
+                        <h4 className="text-sm font-medium text-off-white mb-2">Continuous Monthly Buyout Examples:</h4>
+                        <div className="text-xs text-off-white/60 mb-2">
+                          Earn £{plan.monthlyCredit}/month credit (max £{plan.maxCredit})
+                        </div>
+                        <div className="space-y-1">
+                          {plan.buyoutExamples.slice(0, 3).map((example, exampleIndex) => (
+                            <div key={exampleIndex} className="flex justify-between text-xs">
+                              <span className="text-off-white/70">{example.months} months: {example.total}</span>
+                              <span className="text-blue-400 text-xs">{example.note}</span>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+
+                      <div className="space-y-3">
+                        <Button className="w-full" onClick={handleWebDesignBooking}>
+                          Get Started
+                        </Button>
+                        <p className="text-xs text-off-white/60 text-center">
+                          Choose your preferred payment option during consultation
+                        </p>
+                      </div>
+                    </CardContent>
+                  </Card>
                 </ScrollAnimation>
               ))}
             </div>
 
-            {/* Marketing Services Note */}
-            <div className="mt-16 max-w-4xl mx-auto text-center">
-              <div className="bg-near-black/60 rounded-2xl p-8 border border-slate/20">
-                <h3 className="text-2xl font-bold font-rajdhani text-off-white mb-4">
-                  Need Marketing Too?
+            {/* Pricing Explanation */}
+            <div className="mt-16 max-w-4xl mx-auto">
+              <div className="bg-near-black rounded-2xl p-8">
+                <h3 className="text-2xl font-bold font-rajdhani text-off-white mb-8 text-center">
+                  Payment Options Explained
                 </h3>
-                <p className="text-off-white/80 leading-relaxed mb-6">
-                  Our AI automation and growth marketing services are available at discounted rates for website clients. 
-                  We also work with businesses who have existing websites but want to supercharge their marketing.
-                </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Button 
-                    onClick={() => window.location.href = '/automation'}
-                    variant="outline"
-                  >
-                    View Automation Services
-                  </Button>
-                  <Button 
-                    onClick={handleBookConsultation}
-                    variant="ghost"
-                  >
-                    <Calendar className="w-4 h-4 mr-2" />
-                    Discuss Your Needs
-                  </Button>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center mb-8">
+                  <div>
+                    <div className="text-orange text-lg font-semibold mb-2">Monthly-to-Ownership</div>
+                    <p className="text-off-white/80 text-sm">Pay higher monthly rate, own your site after exactly 12 months. Includes full 12 months of management.</p>
+                  </div>
+                  <div>
+                    <div className="text-blue-400 text-lg font-semibold mb-2">Continuous Monthly</div>
+                    <p className="text-off-white/80 text-sm">Lower monthly rate with buyout option. Early buyout = fewer managed months = lower total cost. Credits cap at 50% of outright price. All prices include VAT.</p>
+                  </div>
+                  <div>
+                    <div className="text-green-400 text-lg font-semibold mb-2">Buy Outright</div>
+                    <p className="text-off-white/80 text-sm">One-time payment for immediate ownership. Optional care plan available post-purchase at continuous rates. All prices include VAT.</p>
+                  </div>
+                </div>
+                
+                {/* Credit System Details */}
+                <div className="border-t border-slate/20 pt-6">
+                  <h4 className="text-lg font-semibold text-orange mb-4">Credit System Details</h4>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm text-off-white/80">
+                    <div>
+                      <h5 className="font-medium text-off-white mb-2">How Credits Work:</h5>
+                      <ul className="space-y-1">
+                        <li>• Credits apply only to consecutive paid months</li>
+                        <li>• Cash-valued: £18/£28/£35 per paid month</li>
+                        <li>• Non-transferable, expire if plan cancelled</li>
+                        <li>• Cap at 50% of outright price</li>
+                        <li>• On plan changes: carry forward £ value</li>
+                      </ul>
+                    </div>
+                    <div>
+                      <h5 className="font-medium text-off-white mb-2">What's Included in "Changes":</h5>
+                      <ul className="space-y-1">
+                        <li>• Copy swaps, image swaps</li>
+                        <li>• Minor layout tweaks</li>
+                        <li>• One active request queue</li>
+                        <li>• Batching allowed, no parallel streams</li>
+                      </ul>
+                    </div>
+                  </div>
+                  
+                  <div className="mt-6 p-4 bg-slate/20 rounded-lg">
+                    <h5 className="font-medium text-off-white mb-2">Not Included (Overage Rates Apply):</h5>
+                    <p className="text-sm text-off-white/80">
+                      New pages beyond plan, new templates, ecommerce, custom integrations, brand/UX redesigns, 
+                      SEO projects, copywriting beyond minor edits.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -547,37 +352,159 @@ const Home = () => {
         </section>
       </ScrollAnimation>
 
-      {/* CTA Footer */}
+      {/* Add-ons Section */}
+      <ScrollAnimation>
+        <section className="py-24 bg-near-black">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 className="text-4xl md:text-5xl font-bold font-rajdhani text-off-white mb-8">
+              Add AI chatbots
+            </h2>
+            <p className="text-xl text-off-white/80 mb-8 leading-relaxed">
+              We can add an AI chatbot to your site. It's billed by usage. Tell us what you need and we'll set it up.
+            </p>
+            <Button 
+              variant="outline"
+              onClick={() => window.location.href = '/contact?subject=AI%20Chatbot'}
+            >
+              <MessageCircle className="w-5 h-5 mr-2" />
+              Ask about chatbots
+            </Button>
+          </div>
+        </section>
+      </ScrollAnimation>
+
+      {/* Custom Plans Section */}
+      <ScrollAnimation>
+        <section className="py-24">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 className="text-4xl md:text-5xl font-bold font-rajdhani text-off-white mb-8">
+              Need something tailored?
+            </h2>
+            <p className="text-xl text-off-white/80 mb-8 leading-relaxed">
+              If your needs don't fit these plans, we'll design a package for you.
+            </p>
+            <Button 
+              variant="outline"
+              onClick={() => window.location.href = '/contact?subject=Custom%20Web%20Plan'}
+            >
+              <Mail className="w-5 h-5 mr-2" />
+              Contact us
+            </Button>
+          </div>
+        </section>
+      </ScrollAnimation>
+
+      {/* Buying Outright Section */}
+      <ScrollAnimation>
+        <section className="py-24 bg-near-black">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 className="text-4xl md:text-5xl font-bold font-rajdhani text-off-white mb-8">
+              Buying outright
+            </h2>
+            <p className="text-xl text-off-white/80 leading-relaxed">
+              One-off design and build with a 14-day snagging period. No ongoing management. You handle hosting, updates, and changes—or add an optional care plan later.
+            </p>
+            <div className="mt-8 p-6 bg-charcoal/60 rounded-lg max-w-2xl mx-auto">
+              <h3 className="text-lg font-semibold text-orange mb-3">Optional Post-Ownership Care Plans</h3>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
+                <div className="text-center">
+                  <div className="font-medium text-off-white">Starter Care</div>
+                  <div className="text-orange">£69/mo ex VAT</div>
+                </div>
+                <div className="text-center">
+                  <div className="font-medium text-off-white">Growth Care</div>
+                  <div className="text-orange">£149/mo ex VAT</div>
+                </div>
+                <div className="text-center">
+                  <div className="font-medium text-off-white">Pro Care</div>
+                  <div className="text-orange">£261/mo ex VAT</div>
+                </div>
+              </div>
+              <p className="text-xs text-off-white/60 mt-3">Same features as continuous monthly plans</p>
+            </div>
+          </div>
+        </section>
+      </ScrollAnimation>
+            </p>
+          </div>
+        </section>
+      </ScrollAnimation>
+
+      {/* FAQ Section */}
+      <ScrollAnimation>
+        <section className="py-24">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold font-rajdhani text-off-white mb-6">
+                Frequently Asked Questions
+              </h2>
+            </div>
+
+            <Accordion type="single" collapsible className="space-y-4">
+              {faqs.map((faq, index) => (
+                <AccordionItem key={index} value={`item-${index}`} className="bg-near-black rounded-lg px-6">
+                  <AccordionTrigger className="text-left text-lg font-semibold font-rajdhani">
+                    {faq.question}
+                  </AccordionTrigger>
+                  <AccordionContent className="text-off-white/80 leading-relaxed">
+                    {faq.answer}
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
+          </div>
+        </section>
+      </ScrollAnimation>
+
+      {/* Final CTA */}
       <ScrollAnimation>
         <section className="py-24 bg-orange">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-4xl md:text-5xl font-bold font-rajdhani text-white mb-8">
-              Ready to get your professional website?
+              Ready to start?
             </h2>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button 
-                onClick={goToWebDesign}
+                onClick={scrollToPricing}
                 size="lg" 
                 variant="secondary"
                 className="bg-white text-orange hover:bg-white/90"
               >
-                View Web Design Plans
+                Get Started
               </Button>
               <Button 
-                onClick={handleBookConsultation} 
+                onClick={() => window.location.href = '/contact'}
                 size="lg" 
                 variant="outline"
                 className="border-white text-white hover:bg-white hover:text-orange"
               >
-                <Calendar className="w-5 h-5 mr-2" />
-                Book Consultation
+                Ask a question
               </Button>
             </div>
           </div>
         </section>
       </ScrollAnimation>
+
+      {/* Structured Data */}
+      <script type="application/ld+json">
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Product",
+          "name": "Web Design Plans",
+          "description": "Monthly web design plans with hosting, security, and updates included",
+          "offers": pricingPlans.map(plan => ({
+            "@type": "Offer",
+            "name": `${plan.name} Plan`,
+            "description": plan.subtitle,
+            "price": plan.monthlyToOwnership.replace('£', '').replace('/mo', ''),
+            "priceCurrency": "GBP",
+            "billingIncrement": "P1M",
+            "url": "https://maind.agency/web-design"
+          }))
+        })}
+      </script>
     </div>
   );
 };
 
-export default Home;
+export default WebDesign;
