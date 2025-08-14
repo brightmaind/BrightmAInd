@@ -248,10 +248,10 @@ const Process: React.FC = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold font-rajdhani text-off-white mb-6">
-                Why Choose Our Approach?
+                Why Work With Us?
               </h2>
               <p className="text-xl text-off-white/80">
-                Clear processes, no surprises, measurable results
+                Simple, honest, and focused on what actually works
               </p>
             </div>
 
@@ -259,10 +259,10 @@ const Process: React.FC = () => {
               <ScrollAnimation delay={0}>
                 <Card className="text-center h-full">
                   <CardHeader>
-                    <CardTitle className="text-orange">Transparent</CardTitle>
+                    <CardTitle className="text-orange">We Keep It Simple</CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-off-white/80">You'll always know what we're doing and why. No black boxes or mysterious processes.</p>
+                    <p className="text-off-white/80">We explain everything in plain English. You'll always know what we're doing and why it matters for your business.</p>
                   </CardContent>
                 </Card>
               </ScrollAnimation>
@@ -270,10 +270,10 @@ const Process: React.FC = () => {
               <ScrollAnimation delay={100}>
                 <Card className="text-center h-full">
                   <CardHeader>
-                    <CardTitle className="text-orange">Practical</CardTitle>
+                    <CardTitle className="text-orange">We Focus on What Works</CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-off-white/80">We focus on solutions that actually work for your business, not what's trendy or complicated.</p>
+                    <p className="text-off-white/80">We choose tools and strategies that solve your actual problems, not whatever's popular this week.</p>
                   </CardContent>
                 </Card>
               </ScrollAnimation>
@@ -281,10 +281,10 @@ const Process: React.FC = () => {
               <ScrollAnimation delay={200}>
                 <Card className="text-center h-full">
                   <CardHeader>
-                    <CardTitle className="text-orange">Results-Focused</CardTitle>
+                    <CardTitle className="text-orange">We Measure What Matters</CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-off-white/80">Everything we do is measured against real business outcomes—more customers, more revenue, less hassle.</p>
+                    <p className="text-off-white/80">More customers, more revenue, less time wasted on stuff that doesn't work. That's how we measure success.</p>
                   </CardContent>
                 </Card>
               </ScrollAnimation>
