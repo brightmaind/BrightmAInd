@@ -402,15 +402,15 @@ const WebDesign: React.FC = () => {
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
                 <div className="text-center">
                   <div className="font-medium text-off-white">Starter Care</div>
-                  <div className="text-orange">£99/mo</div>
+                  <div className="text-orange">£69/mo</div>
                 </div>
                 <div className="text-center">
                   <div className="font-medium text-off-white">Growth Care</div>
-                  <div className="text-orange">£179/mo</div>
+                  <div className="text-orange">£169/mo</div>
                 </div>
                 <div className="text-center">
                   <div className="font-medium text-off-white">Pro Care</div>
-                  <div className="text-orange">£311/mo</div>
+                  <div className="text-orange">£299/mo</div>
                 </div>
               </div>
               <p className="text-xs text-off-white/60 mt-3">Same features as continuous monthly plans. All prices include VAT.</p>
