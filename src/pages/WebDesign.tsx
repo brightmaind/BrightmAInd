@@ -23,7 +23,6 @@ const WebDesign: React.FC = () => {
       monthlyCredit: "18",
       maxCredit: "350",
       setupFee: "£49 ex VAT (£58.80 inc VAT)",
-      setupFee: "£49 ex VAT (£58.80 inc VAT)",
       features: [
         "Single-page website",
         "1 custom logo at onboarding",
@@ -48,7 +47,6 @@ const WebDesign: React.FC = () => {
       outright: "£1,300 ex VAT (£1,560 inc VAT)",
       monthlyCredit: "28",
       maxCredit: "650",
-      setupFee: "£99 ex VAT (£118.80 inc VAT)",
       setupFee: "£99 ex VAT (£118.80 inc VAT)",
       features: [
         "Multi-page website (up to 5 pages)",
@@ -76,13 +74,12 @@ const WebDesign: React.FC = () => {
       monthlyCredit: "35",
       maxCredit: "1000",
       setupFee: "£149 ex VAT (£178.80 inc VAT)",
-      setupFee: "£149 ex VAT (£178.80 inc VAT)",
       features: [
         "Multi-page website (up to 10 pages)",
         "2 marketing graphics each month",
         "24/7 emergency support*",
         "Priority response for routine updates",
-        "14 change credits per month (3.5 hours total)**",
+        "15 change credits per month (3.75 hours total)**",
         "Overage: £90/hour (billed per 15 min)",
         "Hosting, security updates, and backups included"
       ],
@@ -90,7 +87,7 @@ const WebDesign: React.FC = () => {
         { months: 6, credit: "£210", buyout: "£1,790", total: "£3,584", note: "Fewer managed months" },
         { months: 12, credit: "£420", buyout: "£1,580", total: "£5,168", note: "vs £4,788 ownership" },
         { months: 18, credit: "£630", buyout: "£1,370", total: "£6,752" },
-        { months: 24, credit: "£840", buyout: "£1,160", total: "£8,336" }
+        { months: 24, credit: "£840", buyout: "£1,000", total: "£8,176", note: "Max credit (50%)" }
       ]
     }
   ];
@@ -105,20 +102,28 @@ const WebDesign: React.FC = () => {
       answer: "Yes, you can upgrade or change plans. When switching, we carry forward the pound value of your accrued credits and apply the new monthly credit rate thereafter. If you're on continuous monthly and want to buy out, your earned credits reduce the buyout price."
     },
     {
-      question: "What if I want to cancel?",
-      answer: "Monthly plans can be cancelled anytime with 30 days notice. If you've been on continuous monthly, you can buy out your site using any credits you've earned, or we can help transfer it to your own hosting. Credits expire upon cancellation."
-    },
-    {
-      question: "What's included in the monthly fee?",
-      answer: "Everything: hosting, security updates, backups, SSL certificates, and your monthly change credits. Plus 24/7 emergency support for critical issues. Setup fees apply to new projects. All prices include VAT."
+      question: "How do change credits work?",
+      answer: "Credits are cash-valued (£18/£28/£35 per month) and apply only to consecutive paid months. They're for small edits like copy swaps, image swaps, and minor layout tweaks. Credits are non-transferable, expire if you cancel, and cap at 50% of the outright price. One active request queue, batching allowed."
     },
     {
       question: "What counts as overage work?",
       answer: "Overage work is billed at £75-£90/hour in 15-minute increments. This includes new pages beyond your plan, new templates, ecommerce, custom integrations, brand/UX redesigns, SEO projects, and copywriting beyond minor edits. We'll always check with you first."
     },
     {
+      question: "What does 24/7 emergency support mean?",
+      answer: "Emergency support covers site down, checkout/contact form broken, or security incidents. Everything else is handled in 1-2 business days. This prevents midnight requests for routine content updates while ensuring critical issues get immediate attention."
+    },
+    {
+      question: "What's included in the monthly fee?",
+      answer: "Everything: hosting, security updates, backups, SSL certificates, and your monthly change credits. Plus 24/7 emergency support for critical issues. All prices shown are ex VAT with inc VAT amounts in brackets."
+    },
+    {
       question: "How fast are updates?",
-      answer: "Routine updates are completed within 1-2 business days (Pro plans get priority). Emergency support is available 24/7 for critical issues. We work on one request at a time to ensure quality."
+      answer: "Routine updates are completed within 1-2 business days. Emergency issues (site down, broken forms, security) get immediate attention 24/7. We maintain one active request queue per client to ensure quality and prevent confusion."
+    },
+    {
+      question: "Can I cancel my monthly plan?",
+      answer: "Monthly plans can be cancelled anytime with 30 days notice. If you've been on continuous monthly, you can buy out your site using any credits you've earned, or we can help transfer it to your own hosting. Credits expire upon cancellation."
     }
   ];
 
@@ -302,15 +307,15 @@ const WebDesign: React.FC = () => {
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center mb-8">
                   <div>
                     <div className="text-orange text-lg font-semibold mb-2">Monthly-to-Ownership</div>
-                    <p className="text-off-white/80 text-sm">Pay higher monthly rate, own your site after exactly 12 months. Includes full 12 months of management. All prices include VAT.</p>
+                    <p className="text-off-white/80 text-sm">Pay higher monthly rate, own your site after exactly 12 months. Includes full 12 months of management.</p>
                   </div>
                   <div>
                     <div className="text-blue-400 text-lg font-semibold mb-2">Continuous Monthly</div>
-                    <p className="text-off-white/80 text-sm">Lower monthly rate with buyout option. Early buyout = fewer managed months = lower total cost. Credits cap at 50% of outright price. All prices include VAT.</p>
+                    <p className="text-off-white/80 text-sm">Lower monthly rate with buyout option. Early buyout = fewer managed months = lower total cost. Credits cap at 50% of outright price.</p>
                   </div>
                   <div>
                     <div className="text-green-400 text-lg font-semibold mb-2">Buy Outright</div>
-                    <p className="text-off-white/80 text-sm">One-time payment for immediate ownership. Optional care plan available post-purchase at continuous rates. All prices include VAT.</p>
+                    <p className="text-off-white/80 text-sm">One-time payment for immediate ownership. Optional care plan available post-purchase at continuous rates.</p>
                   </div>
                 </div>
                 
@@ -346,10 +351,6 @@ const WebDesign: React.FC = () => {
                       SEO projects, copywriting beyond minor edits.
                     </p>
                   </div>
-                </div>
-
-                <div className="mt-4 text-xs text-off-white/60 text-center">
-                  All prices include VAT
                 </div>
               </div>
             </div>
