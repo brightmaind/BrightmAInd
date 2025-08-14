@@ -118,7 +118,7 @@ const Contact: React.FC = () => {
                         id="name"
                         name="name"
                         required
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange focus:border-transparent transition-colors"
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange focus:border-transparent transition-colors text-charcoal"
                         placeholder="Your full name"
                       />
                     </div>
@@ -132,7 +132,7 @@ const Contact: React.FC = () => {
                         id="email"
                         name="email"
                         required
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange focus:border-transparent transition-colors"
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange focus:border-transparent transition-colors text-charcoal"
                         placeholder="your.email@company.com"
                       />
                     </div>
@@ -146,7 +146,7 @@ const Contact: React.FC = () => {
                       type="text"
                       id="company"
                       name="company"
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange focus:border-transparent transition-colors"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange focus:border-transparent transition-colors text-charcoal"
                       placeholder="Your company name (optional)"
                     />
                   </div>
@@ -160,7 +160,7 @@ const Contact: React.FC = () => {
                       name="message"
                       required
                       rows={6}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange focus:border-transparent transition-colors resize-none"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange focus:border-transparent transition-colors resize-none text-charcoal"
                       placeholder="Tell us about your business goals and how we can help you achieve them..."
                     />
                   </div>
