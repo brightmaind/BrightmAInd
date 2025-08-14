@@ -402,7 +402,7 @@ const WebDesign: React.FC = () => {
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
                 <div className="text-center">
                   <div className="font-medium text-off-white">Starter Care</div>
-                  <div className="text-orange">£83/mo</div>
+                  <div className="text-orange">£99/mo</div>
                 </div>
                 <div className="text-center">
                   <div className="font-medium text-off-white">Growth Care</div>
