@@ -268,22 +268,6 @@ const WebDesign: React.FC = () => {
                         ))}
                       </ul>
                       
-                      {/* Buyout Credit Examples */}
-                      <div className="mb-6 p-3 bg-near-black rounded-lg">
-                        <h4 className="text-sm font-medium text-off-white mb-2">Continuous Monthly Buyout Examples:</h4>
-                        <div className="text-xs text-off-white/60 mb-2">
-                          Earn £{plan.monthlyCredit}/month credit (max £{plan.maxCredit})
-                        </div>
-                        <div className="space-y-1">
-                          {plan.buyoutExamples.slice(0, 3).map((example, exampleIndex) => (
-                            <div key={exampleIndex} className="flex justify-between text-xs">
-                              <span className="text-off-white/70">{example.months} months: {example.total}</span>
-                              <span className="text-blue-400 text-xs">{example.note}</span>
-                            </div>
-                          ))}
-                        </div>
-                      </div>
-
                       <div className="space-y-3">
                         <Button className="w-full" onClick={handleWebDesignBooking}>
                           Get Started
