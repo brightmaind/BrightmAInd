@@ -41,7 +41,7 @@ const WebDesign: React.FC = () => {
     },
     {
       name: "Growth",
-      subtitle: "Multi-page (up to 5 pages)",
+      subtitle: "Multi-page (up to 10 pages)",
       monthlyToOwnership: "£275",
       continuousMonthly: "£203",
       outright: "£1,560",
@@ -49,7 +49,7 @@ const WebDesign: React.FC = () => {
       maxCredit: "650",
       setupFee: "£119",
       features: [
-        "Multi-page website (up to 5 pages)",
+        "Multi-page website (up to 10 pages)",
         "1 marketing graphic each month",
         "24/7 emergency support*",
         "Routine updates in 1–2 business days",
@@ -67,7 +67,7 @@ const WebDesign: React.FC = () => {
     },
     {
       name: "Pro",
-      subtitle: "Multi-page (up to 10 pages)",
+      subtitle: "Multi-page (up to 20 pages)",
       monthlyToOwnership: "£479",
       continuousMonthly: "£359",
       outright: "£2,400",
@@ -75,7 +75,7 @@ const WebDesign: React.FC = () => {
       maxCredit: "1000",
       setupFee: "£179",
       features: [
-        "Multi-page website (up to 10 pages)",
+        "Multi-page website (up to 20 pages)",
         "2 marketing graphics each month",
         "24/7 emergency support*",
         "Priority response for routine updates",
@@ -209,8 +209,14 @@ const WebDesign: React.FC = () => {
               <h2 className="text-4xl md:text-5xl font-bold font-rajdhani text-off-white mb-6">
                 Pricing
               </h2>
-              <p className="text-lg text-off-white/80">
+              <p className="text-lg text-off-white/80 mb-4">
                 All prices are VAT inclusive. No hidden fees.
+              </p>
+              <p className="text-off-white/70">
+                Need more pages, custom features, or enterprise solutions? 
+                <button onClick={handleWebDesignBooking} className="text-orange hover:underline ml-1">
+                  Custom plans are easily available
+                </button>
               </p>
             </div>
 
@@ -371,18 +377,24 @@ const WebDesign: React.FC = () => {
         <section className="py-24">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-4xl md:text-5xl font-bold font-rajdhani text-off-white mb-8">
-              Need something tailored?
+              Need something different?
             </h2>
             <p className="text-xl text-off-white/80 mb-8 leading-relaxed">
-              Everything: hosting, security updates, backups, SSL certificates, and your monthly change credits. Plus 24/7 emergency support for critical issues. All prices include VAT.
+              More pages? E-commerce? Custom integrations? Enterprise features? We create custom plans for any requirement. 
+              Just tell us what you need and we'll design a solution that fits perfectly.
             </p>
-            <Button 
-              variant="outline"
-              onClick={() => window.location.href = '/contact?subject=Custom%20Web%20Plan'}
-            >
-              <Mail className="w-5 h-5 mr-2" />
-              Contact us
-            </Button>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button onClick={handleWebDesignBooking}>
+                Discuss Custom Requirements
+              </Button>
+              <Button 
+                variant="outline"
+                onClick={() => window.location.href = '/contact?subject=Custom%20Web%20Plan'}
+              >
+                <Mail className="w-5 h-5 mr-2" />
+                Send Message
+              </Button>
+            </div>
           </div>
         </section>
       </ScrollAnimation>

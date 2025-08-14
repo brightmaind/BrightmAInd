@@ -32,14 +32,14 @@ const Home = () => {
     },
     {
       name: "Growth",
-      subtitle: "Multi-page (up to 5 pages)",
+      subtitle: "Multi-page (up to 10 pages)",
       monthlyToOwnership: "£275",
       continuousMonthly: "£203",
       outright: "£1,560",
       monthlyCredit: "28",
       icon: <TrendingUp className="w-8 h-8" />,
       features: [
-        "Multi-page website (up to 5 pages)",
+        "Multi-page website (up to 10 pages)",
         "1 marketing graphic each month",
         "24/7 emergency support",
         "8 change credits per month (2 hours)",
@@ -50,14 +50,14 @@ const Home = () => {
     },
     {
       name: "Pro",
-      subtitle: "Multi-page (up to 10 pages)",
+      subtitle: "Multi-page (up to 20 pages)",
       monthlyToOwnership: "£479",
       continuousMonthly: "£359",
       outright: "£2,400",
       monthlyCredit: "28",
       icon: <Settings className="w-8 h-8" />,
       features: [
-        "Multi-page website (up to 10 pages)",
+        "Multi-page website (up to 20 pages)",
         "2 marketing graphics each month",
         "Priority response",
         "14 change credits per month (3.5 hours)",
@@ -483,9 +483,12 @@ const Home = () => {
               <Button onClick={goToWebDesign} size="lg">
                 View All Plans & Pricing
               </Button>
-            <p className="text-sm text-off-white/60 mt-4">
-              All prices are VAT inclusive. No hidden fees.
-            </p>
+              <p className="text-sm text-off-white/60 mt-4">
+                All prices are VAT inclusive. No hidden fees.
+              </p>
+              <p className="text-sm text-off-white/60 mt-2">
+                Need more pages or custom features? <button onClick={handleBookConsultation} className="text-orange hover:underline">Let's discuss your requirements</button>
+              </p>
             </div>
           </div>
         </section>
