@@ -113,7 +113,7 @@ const Home = () => {
   const handleBookConsultation = () => {
     if (window.Calendly) {
       window.Calendly.initPopupWidget({
-        url: 'https://calendly.com/enquiries-brightmaind/30min',
+        url: 'https://calendly.com/enquiries-brightmaind/30min?a1=General%20Consultation',
         parentElement: document.body
       });
       
@@ -129,14 +129,14 @@ const Home = () => {
       }, 100);
     } else {
       // Fallback to direct link if Calendly widget isn't loaded
-      window.open('https://calendly.com/enquiries-brightmaind/30min', '_blank');
+      window.open('https://calendly.com/enquiries-brightmaind/30min?a1=General%20Consultation', '_blank');
     }
   };
 
   const handleWebDesignBooking = () => {
     if (window.Calendly) {
       window.Calendly.initPopupWidget({
-        url: 'https://calendly.com/enquiries-brightmaind/30min',
+        url: 'https://calendly.com/enquiries-brightmaind/30min?a1=Web%20Design%20Enquiry',
         parentElement: document.body
       });
       
@@ -152,7 +152,7 @@ const Home = () => {
       }, 100);
     } else {
       // Fallback to direct link if Calendly widget isn't loaded
-      window.open('https://calendly.com/enquiries-brightmaind/30min', '_blank');
+      window.open('https://calendly.com/enquiries-brightmaind/30min?a1=Web%20Design%20Enquiry', '_blank');
     }
   };
 

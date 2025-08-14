@@ -95,7 +95,7 @@ const Marketing: React.FC = () => {
   const handleBookConsultation = () => {
     if (window.Calendly) {
       window.Calendly.initPopupWidget({
-        url: 'https://calendly.com/enquiries-brightmaind/30min',
+        url: 'https://calendly.com/enquiries-brightmaind/30min?a1=Growth%20Marketing%20Enquiry',
         parentElement: document.body
       });
       
@@ -109,7 +109,7 @@ const Marketing: React.FC = () => {
         }
       }, 100);
     } else {
-      window.open('https://calendly.com/enquiries-brightmaind/30min', '_blank');
+      window.open('https://calendly.com/enquiries-brightmaind/30min?a1=Growth%20Marketing%20Enquiry', '_blank');
     }
   };
 

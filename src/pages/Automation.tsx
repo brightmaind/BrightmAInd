@@ -132,7 +132,7 @@ const Automation: React.FC = () => {
   const handleBookConsultation = () => {
     if (window.Calendly) {
       window.Calendly.initPopupWidget({
-        url: 'https://calendly.com/enquiries-brightmaind/30min',
+        url: 'https://calendly.com/enquiries-brightmaind/30min?a1=AI%20Automation%20Enquiry',
         parentElement: document.body
       });
       
@@ -146,7 +146,7 @@ const Automation: React.FC = () => {
         }
       }, 100);
     } else {
-      window.open('https://calendly.com/enquiries-brightmaind/30min', '_blank');
+      window.open('https://calendly.com/enquiries-brightmaind/30min?a1=AI%20Automation%20Enquiry', '_blank');
     }
   };
 
