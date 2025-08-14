@@ -136,7 +136,7 @@ const Home = () => {
   const handleWebDesignBooking = () => {
     if (window.Calendly) {
       window.Calendly.initPopupWidget({
-        url: 'https://calendly.com/enquiries-brightmaind/30min?a1=Web%20Design%20Enquiry',
+        url: 'https://calendly.com/enquiries-brightmaind/30min?a1=Web%20Design%20General%20Enquiry',
         parentElement: document.body
       });
       
@@ -152,7 +152,7 @@ const Home = () => {
       }, 100);
     } else {
       // Fallback to direct link if Calendly widget isn't loaded
-      window.open('https://calendly.com/enquiries-brightmaind/30min?a1=Web%20Design%20Enquiry', '_blank');
+      window.open('https://calendly.com/enquiries-brightmaind/30min?a1=Web%20Design%20General%20Enquiry', '_blank');
     }
   };
 

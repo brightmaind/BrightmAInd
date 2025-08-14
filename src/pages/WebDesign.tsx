@@ -137,7 +137,7 @@ const WebDesign: React.FC = () => {
   const handleWebDesignBooking = () => {
     if (window.Calendly) {
       window.Calendly.initPopupWidget({
-        url: 'https://calendly.com/enquiries-brightmaind/30min?a1=Web%20Design%20Enquiry',
+        url: 'https://calendly.com/enquiries-brightmaind/30min?a1=Web%20Design%20General%20Enquiry',
         parentElement: document.body
       });
       
@@ -153,10 +153,32 @@ const WebDesign: React.FC = () => {
       }, 100);
     } else {
       // Fallback to direct link if Calendly widget isn't loaded
-      window.open('https://calendly.com/enquiries-brightmaind/30min?a1=Web%20Design%20Enquiry', '_blank');
+      window.open('https://calendly.com/enquiries-brightmaind/30min?a1=Web%20Design%20General%20Enquiry', '_blank');
     }
   };
 
+  const handlePackageBooking = (packageName: string) => {
+    if (window.Calendly) {
+      window.Calendly.initPopupWidget({
+        url: `https://calendly.com/enquiries-brightmaind/30min?a1=Web%20Design%20${packageName}%20Plan`,
+        parentElement: document.body
+      });
+      
+      // Add custom text overlay for package bookings
+      setTimeout(() => {
+        const popup = document.querySelector('.calendly-popup');
+        if (popup && !popup.querySelector('.calendly-text-overlay')) {
+          const textOverlay = document.createElement('div');
+          textOverlay.className = 'calendly-text-overlay';
+          textOverlay.innerHTML = `<span>Great choice! Let's discuss your ${packageName} plan requirements and get you set up.</span>`;
+          popup.appendChild(textOverlay);
+        }
+      }, 100);
+    } else {
+      // Fallback to direct link if Calendly widget isn't loaded
+      window.open(`https://calendly.com/enquiries-brightmaind/30min?a1=Web%20Design%20${packageName}%20Plan`, '_blank');
+    }
+  };
   return (
     <div className="pt-20 bg-charcoal text-off-white">
       {/* Hero Section */}
@@ -283,7 +305,7 @@ const WebDesign: React.FC = () => {
                       </ul>
                       
                       <div className="space-y-3">
-                        <Button className="w-full" onClick={handleWebDesignBooking}>
+                        <Button className="w-full" onClick={() => handlePackageBooking(plan.name)}>
                           Get Started
                         </Button>
                         <p className="text-xs text-off-white/60 text-center">
