@@ -17,12 +17,12 @@ const WebDesign: React.FC = () => {
     {
       name: "Starter",
       subtitle: "Single page",
-      monthlyToOwnership: "£109 ex VAT (£130.80 inc VAT)",
-      continuousMonthly: "£69 ex VAT (£82.80 inc VAT)", 
-      outright: "£700 ex VAT (£840 inc VAT)",
+      monthlyToOwnership: "£131",
+      continuousMonthly: "£83", 
+      outright: "£840",
       monthlyCredit: "18",
       maxCredit: "350",
-      setupFee: "£49 ex VAT (£58.80 inc VAT)",
+      setupFee: "£59",
       features: [
         "Single-page website",
         "1 custom logo at onboarding",
@@ -42,12 +42,12 @@ const WebDesign: React.FC = () => {
     {
       name: "Growth",
       subtitle: "Multi-page (up to 5 pages)",
-      monthlyToOwnership: "£229 ex VAT (£274.80 inc VAT)",
-      continuousMonthly: "£169 ex VAT (£202.80 inc VAT)",
-      outright: "£1,300 ex VAT (£1,560 inc VAT)",
+      monthlyToOwnership: "£275",
+      continuousMonthly: "£203",
+      outright: "£1,560",
       monthlyCredit: "28",
       maxCredit: "650",
-      setupFee: "£99 ex VAT (£118.80 inc VAT)",
+      setupFee: "£119",
       features: [
         "Multi-page website (up to 5 pages)",
         "1 marketing graphic each month",
@@ -68,12 +68,12 @@ const WebDesign: React.FC = () => {
     {
       name: "Pro",
       subtitle: "Multi-page (up to 10 pages)",
-      monthlyToOwnership: "£399 ex VAT (£478.80 inc VAT)",
-      continuousMonthly: "£299 ex VAT (£358.80 inc VAT)",
-      outright: "£2,000 ex VAT (£2,400 inc VAT)",
+      monthlyToOwnership: "£479",
+      continuousMonthly: "£359",
+      outright: "£2,400",
       monthlyCredit: "35",
       maxCredit: "1000",
-      setupFee: "£149 ex VAT (£178.80 inc VAT)",
+      setupFee: "£179",
       features: [
         "Multi-page website (up to 10 pages)",
         "2 marketing graphics each month",
@@ -387,7 +387,7 @@ const WebDesign: React.FC = () => {
               Need something tailored?
             </h2>
             <p className="text-xl text-off-white/80 mb-8 leading-relaxed">
-              If your needs don't fit these plans, we'll design a package for you.
+              Everything: hosting, security updates, backups, SSL certificates, and your monthly change credits. Plus 24/7 emergency support for critical issues. All prices include VAT.
             </p>
             <Button 
               variant="outline"
@@ -415,18 +415,18 @@ const WebDesign: React.FC = () => {
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
                 <div className="text-center">
                   <div className="font-medium text-off-white">Starter Care</div>
-                  <div className="text-orange">£69/mo ex VAT</div>
+                  <div className="text-orange">£83/mo</div>
                 </div>
                 <div className="text-center">
                   <div className="font-medium text-off-white">Growth Care</div>
-                  <div className="text-orange">£149/mo ex VAT</div>
+                  <div className="text-orange">£179/mo</div>
                 </div>
                 <div className="text-center">
                   <div className="font-medium text-off-white">Pro Care</div>
-                  <div className="text-orange">£261/mo ex VAT</div>
+                  <div className="text-orange">£311/mo</div>
                 </div>
               </div>
-              <p className="text-xs text-off-white/60 mt-3">Same features as continuous monthly plans</p>
+              <p className="text-xs text-off-white/60 mt-3">Same features as continuous monthly plans. All prices include VAT.</p>
             </div>
           </div>
         </section>
