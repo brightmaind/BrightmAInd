@@ -23,8 +23,6 @@ const WebDesign: React.FC = () => {
       monthlyCredit: "18",
       maxCredit: "350",
       setupFee: "£49 ex VAT (£58.80 inc VAT)",
-      setupFee: "£49 ex VAT (£58.80 inc VAT)",
-      setupFee: "£49 ex VAT (£58.80 inc VAT)",
       features: [
         "Single-page website",
         "1 custom logo at onboarding",
@@ -49,8 +47,6 @@ const WebDesign: React.FC = () => {
       outright: "£1,300 ex VAT (£1,560 inc VAT)",
       monthlyCredit: "28",
       maxCredit: "650",
-      setupFee: "£99 ex VAT (£118.80 inc VAT)",
-      setupFee: "£99 ex VAT (£118.80 inc VAT)",
       setupFee: "£99 ex VAT (£118.80 inc VAT)",
       features: [
         "Multi-page website (up to 5 pages)",
@@ -78,8 +74,6 @@ const WebDesign: React.FC = () => {
       monthlyCredit: "35",
       maxCredit: "1000",
       setupFee: "£149 ex VAT (£178.80 inc VAT)",
-      setupFee: "£149 ex VAT (£178.80 inc VAT)",
-      setupFee: "£149 ex VAT (£178.80 inc VAT)",
       features: [
         "Multi-page website (up to 10 pages)",
         "2 marketing graphics each month",
@@ -89,7 +83,7 @@ const WebDesign: React.FC = () => {
         "Overage: £90/hour (billed per 15 min)",
         "Hosting, security updates, and backups included"
       ],
-      answer: "Overage work is billed at £75-£90/hour in 15-minute increments. This includes new pages beyond your plan, new templates, ecommerce, custom integrations, brand/UX redesigns, SEO projects, and copywriting beyond minor edits. We'll always check with you first."
+      buyoutExamples: [
         { months: 6, credit: "£210", buyout: "£1,790", total: "£3,584", note: "Fewer managed months" },
         { months: 12, credit: "£420", buyout: "£1,580", total: "£5,168", note: "vs £4,788 ownership" },
         { months: 18, credit: "£630", buyout: "£1,370", total: "£6,752" },
@@ -97,19 +91,31 @@ const WebDesign: React.FC = () => {
       ]
     }
   ];
-      answer: "Everything: hosting, security updates, backups, SSL certificates, and your monthly change credits. Plus 24/7 emergency support for critical issues. Setup fees apply to new projects. All prices include VAT."
+
   const faqs = [
     {
       question: "Do I own my website?",
       answer: "You own your website if you buy outright or after completing 12 months of monthly-to-ownership payments. With continuous monthly plans, we retain ownership but you can buy it anytime using your earned credits. You always own your content and domain regardless of the plan."
     },
     {
-      question: "Do I own the website?",
+      question: "Can I change plans?",
       answer: "Yes, you can upgrade or change plans. When switching, we carry forward the pound value of your accrued credits and apply the new monthly credit rate thereafter. If you're on continuous monthly and want to buy out, your earned credits reduce the buyout price."
     },
     {
-      question: "How fast are updates?",
+      question: "What if I want to cancel?",
       answer: "Monthly plans can be cancelled anytime with 30 days notice. If you've been on continuous monthly, you can buy out your site using any credits you've earned, or we can help transfer it to your own hosting. Credits expire upon cancellation."
+    },
+    {
+      question: "What's included in the monthly fee?",
+      answer: "Everything: hosting, security updates, backups, SSL certificates, and your monthly change credits. Plus 24/7 emergency support for critical issues. Setup fees apply to new projects. All prices include VAT."
+    },
+    {
+      question: "What counts as overage work?",
+      answer: "Overage work is billed at £75-£90/hour in 15-minute increments. This includes new pages beyond your plan, new templates, ecommerce, custom integrations, brand/UX redesigns, SEO projects, and copywriting beyond minor edits. We'll always check with you first."
+    },
+    {
+      question: "How fast are updates?",
+      answer: "Routine updates are completed within 1-2 business days (Pro plans get priority). Emergency support is available 24/7 for critical issues. We work on one request at a time to ensure quality."
     }
   ];
 
@@ -230,7 +236,6 @@ const WebDesign: React.FC = () => {
                           <div className="flex justify-between items-center mb-2">
                             <span className="text-sm font-medium text-off-white/80">Continuous Monthly</span>
                           </div>
-                    <p className="text-off-white/80 text-sm">Pay higher monthly rate, own your site after exactly 12 months. Includes full 12 months of management. All prices include VAT.</p>
                           <div className="text-xl font-bold text-blue-400">{plan.continuousMonthly}<span className="text-sm text-off-white/60">/mo</span></div>
                           <p className="text-xs text-off-white/60 mt-1">+£{plan.monthlyCredit}/mo credit toward buyout</p>
                         </div>
@@ -241,10 +246,6 @@ const WebDesign: React.FC = () => {
                             <span className="text-xs bg-green-500/20 text-green-400 px-2 py-1 rounded">One-time</span>
                           </div>
                           <div className="text-xl font-bold text-green-400">{plan.outright}</div>
-                
-                <div className="mt-4 text-xs text-off-white/60 text-center">
-                  All prices include VAT
-                </div>
                           <p className="text-xs text-off-white/60 mt-1">Full ownership immediately</p>
                         </div>
                       </div>
@@ -298,7 +299,7 @@ const WebDesign: React.FC = () => {
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center mb-8">
                   <div>
                     <div className="text-orange text-lg font-semibold mb-2">Monthly-to-Ownership</div>
-                    <p className="text-off-white/80 text-sm">Pay higher monthly rate, own your site after exactly 12 months. Includes full 12 months of management.</p>
+                    <p className="text-off-white/80 text-sm">Pay higher monthly rate, own your site after exactly 12 months. Includes full 12 months of management. All prices include VAT.</p>
                   </div>
                   <div>
                     <div className="text-blue-400 text-lg font-semibold mb-2">Continuous Monthly</div>
@@ -342,6 +343,10 @@ const WebDesign: React.FC = () => {
                       SEO projects, copywriting beyond minor edits.
                     </p>
                   </div>
+                </div>
+
+                <div className="mt-4 text-xs text-off-white/60 text-center">
+                  All prices include VAT
                 </div>
               </div>
             </div>
@@ -419,10 +424,6 @@ const WebDesign: React.FC = () => {
               </div>
               <p className="text-xs text-off-white/60 mt-3">Same features as continuous monthly plans</p>
             </div>
-          </div>
-        </section>
-      </ScrollAnimation>
-            </p>
           </div>
         </section>
       </ScrollAnimation>
