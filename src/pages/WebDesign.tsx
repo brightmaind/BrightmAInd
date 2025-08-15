@@ -396,23 +396,34 @@ const WebDesign: React.FC = () => {
         </section>
       </ScrollAnimation>
 
-      {/* Add-ons Section */}
+      {/* Buying Outright Section */}
       <ScrollAnimation>
         <section className="py-24 bg-near-black">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-4xl md:text-5xl font-bold font-rajdhani text-off-white mb-8">
-              Add AI chatbots
+              Buying outright
             </h2>
-            <p className="text-xl text-off-white/80 mb-8 leading-relaxed">
-              We can add an AI chatbot to your site. It's billed by usage. Tell us what you need and we'll set it up.
+            <p className="text-xl text-off-white/80 leading-relaxed">
+              One-off design and build with a 14-day snagging period. No ongoing management. You handle hosting, updates, and changes—or add an optional care plan later.
             </p>
-            <Button 
-              variant="outline"
-              onClick={() => window.location.href = '/contact?subject=AI%20Chatbot'}
-            >
-              <MessageCircle className="w-5 h-5 mr-2" />
-              Ask about chatbots
-            </Button>
+            <div className="mt-8 p-6 bg-charcoal/60 rounded-lg max-w-2xl mx-auto">
+              <h3 className="text-lg font-semibold text-orange mb-3">Optional Post-Ownership Care Plans</h3>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
+                <div className="text-center">
+                  <div className="font-medium text-off-white">Starter Care</div>
+                  <div className="text-orange">£69/mo</div>
+                </div>
+                <div className="text-center">
+                  <div className="font-medium text-off-white">Growth Care</div>
+                  <div className="text-orange">£169/mo</div>
+                </div>
+                <div className="text-center">
+                  <div className="font-medium text-off-white">Pro Care</div>
+                  <div className="text-orange">£299/mo</div>
+                </div>
+              </div>
+              <p className="text-xs text-off-white/60 mt-3">Same features as continuous monthly plans. All prices include VAT.</p>
+            </div>
           </div>
         </section>
       </ScrollAnimation>
@@ -444,34 +455,23 @@ const WebDesign: React.FC = () => {
         </section>
       </ScrollAnimation>
 
-      {/* Buying Outright Section */}
+      {/* Add-ons Section */}
       <ScrollAnimation>
-        <section className="py-24 bg-near-black">
+        <section className="py-24">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-4xl md:text-5xl font-bold font-rajdhani text-off-white mb-8">
-              Buying outright
+              Add AI chatbots
             </h2>
-            <p className="text-xl text-off-white/80 leading-relaxed">
-              One-off design and build with a 14-day snagging period. No ongoing management. You handle hosting, updates, and changes—or add an optional care plan later.
+            <p className="text-xl text-off-white/80 mb-8 leading-relaxed">
+              We can add an AI chatbot to your site. It's billed by usage. Tell us what you need and we'll set it up.
             </p>
-            <div className="mt-8 p-6 bg-charcoal/60 rounded-lg max-w-2xl mx-auto">
-              <h3 className="text-lg font-semibold text-orange mb-3">Optional Post-Ownership Care Plans</h3>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
-                <div className="text-center">
-                  <div className="font-medium text-off-white">Starter Care</div>
-                  <div className="text-orange">£69/mo</div>
-                </div>
-                <div className="text-center">
-                  <div className="font-medium text-off-white">Growth Care</div>
-                  <div className="text-orange">£169/mo</div>
-                </div>
-                <div className="text-center">
-                  <div className="font-medium text-off-white">Pro Care</div>
-                  <div className="text-orange">£299/mo</div>
-                </div>
-              </div>
-              <p className="text-xs text-off-white/60 mt-3">Same features as continuous monthly plans. All prices include VAT.</p>
-            </div>
+            <Button 
+              variant="outline"
+              onClick={() => window.location.href = '/contact?subject=AI%20Chatbot'}
+            >
+              <MessageCircle className="w-5 h-5 mr-2" />
+              Ask about chatbots
+            </Button>
           </div>
         </section>
       </ScrollAnimation>
