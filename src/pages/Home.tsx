@@ -224,9 +224,12 @@ const Home = () => {
                 <Button onClick={goToWebDesign} size="lg">
                   View Web Design Plans
                 </Button>
-                <Button onClick={handleBookConsultation} size="lg" variant="outline">
+                <Button onClick={handleBookConsultation} size="default" variant="outline">
                   <Calendar className="w-5 h-5 mr-2" />
                   Book Consultation
+                </Button>
+                <Button onClick={() => navigate('/contact')} size="default" variant="ghost">
+                  Send a Message
                 </Button>
               </div>
             </div>
@@ -565,10 +568,18 @@ const Home = () => {
                   </Button>
                   <Button 
                     onClick={handleBookConsultation}
-                    variant="ghost"
+                    size="sm"
+                    variant="outline"
                   >
                     <Calendar className="w-4 h-4 mr-2" />
-                    Discuss Your Needs
+                    Book Call
+                  </Button>
+                  <Button 
+                    onClick={() => navigate('/contact')}
+                    size="sm"
+                    variant="ghost"
+                  >
+                    Send Message
                   </Button>
                 </div>
               </div>
@@ -595,12 +606,20 @@ const Home = () => {
               </Button>
               <Button 
                 onClick={handleBookConsultation} 
-                size="lg" 
+                size="default" 
                 variant="outline"
                 className="border-white text-white hover:bg-white hover:text-orange"
               >
                 <Calendar className="w-5 h-5 mr-2" />
-                Book Consultation
+                Book Call
+              </Button>
+              <Button 
+                onClick={() => navigate('/contact')} 
+                size="default" 
+                variant="ghost"
+                className="text-white hover:bg-white/10"
+              >
+                Send Message
               </Button>
             </div>
           </div>

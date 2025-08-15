@@ -125,8 +125,14 @@ const Marketing: React.FC = () => {
             <p className="text-xl md:text-2xl text-off-white/80 leading-relaxed mb-8">
               Marketing that actually gets you customers. We focus on real results—more leads, more sales, and better ROI from every pound you spend.
             </p>
-            <Button onClick={handleBookConsultation} size="lg">
-              Discuss Your Marketing Goals
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button onClick={handleBookConsultation} size="default">
+                Book Consultation
+              </Button>
+              <Button onClick={() => window.location.href = '/contact'} size="default" variant="outline">
+                Send Message
+              </Button>
+            </div>
             </Button>
           </div>
         </section>
@@ -289,19 +295,19 @@ const Marketing: React.FC = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button 
                 onClick={handleBookConsultation}
-                size="lg" 
+                size="default" 
                 variant="secondary"
                 className="bg-white text-orange hover:bg-white/90"
               >
-                Book Free Strategy Call
+                Book Call
               </Button>
               <Button 
                 onClick={() => window.location.href = '/contact'}
-                size="lg" 
+                size="default" 
                 variant="outline"
                 className="border-white text-white hover:bg-white hover:text-orange"
               >
-                Ask Questions
+                Send Message
               </Button>
             </div>
           </div>
