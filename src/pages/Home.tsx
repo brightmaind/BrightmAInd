@@ -194,7 +194,7 @@ const Home = () => {
       <section className="pt-8 pb-24 px-4 sm:px-6 lg:px-8 hero-gradient">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            {/* Mobile: Logo first, Desktop: Content first */}
+            {/* Left side: Main content */}
             <div className="space-y-8 text-center lg:text-left order-2 lg:order-1">
               <h1 className="text-4xl md:text-5xl font-bold font-rajdhani text-off-white leading-tight">
                 Professional websites on a simple monthly plan
@@ -231,42 +231,23 @@ const Home = () => {
               </div>
             </div>
 
-            {/* Mobile: Logo first, Desktop: Logo second */}
-            <div className="hidden lg:flex justify-end order-2">
-             <div className="w-104 h-104 lg:w-125 lg:h-125 flex flex-col items-center space-y-2">
-                <img 
-                  src="/assets_task_01k2dvrpkbfntr573hm1h0p81k_1754959602_img_0.webp" 
-                  alt="Bright mAInd Marketing Logo" 
-                 className="w-full h-3/4 object-contain rounded-2xl"
-                />
-               <div className="text-center">
-                 <h2 className="text-4xl lg:text-5xl font-bold font-rajdhani brand-text brand-text-glow mb-2">
-                   Bright m<span className="text-orange">AI</span>nd
-                 </h2>
-                 <p className="tech-subtitle text-sm tracking-widest">Marketing</p>
-               </div>
+            {/* Right side: Why Work With Us */}
+            <div className="order-1 lg:order-2">
+              <div className="max-w-lg mx-auto lg:mx-0 text-center lg:text-left">
+                <h2 className="text-3xl md:text-4xl font-bold font-rajdhani text-off-white mb-6">
+                  Why Work With <span className="text-orange">Us?</span>
+                </h2>
+                <p className="text-lg text-off-white/80 leading-relaxed mb-4">
+                  We specialise in working with brand new and small businesses, helping them get online and market themselves effectively and efficiently.
+                </p>
+                <p className="text-lg text-orange/90 font-medium">
+                  We limit how many clients we work with at one time, so you're guaranteed to be prioritised.
+                </p>
               </div>
             </div>
           </div>
         </div>
       </section>
-
-      {/* Why Work With Us Section */}
-      <ScrollAnimation>
-        <section className="py-24 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl md:text-5xl font-bold font-rajdhani text-off-white mb-8">
-              Why Work With <span className="text-orange">Us?</span>
-            </h2>
-            <p className="text-xl text-off-white/80 leading-relaxed">
-              We specialise in working with brand new and small businesses, helping them get online and market themselves effectively and efficiently.
-            </p>
-            <p className="text-lg text-orange/90 font-medium mt-4">
-              We limit how many clients we work with at one time, so you're guaranteed to be prioritised.
-            </p>
-          </div>
-        </section>
-      </ScrollAnimation>
 
       {/* Services Overview */}
       <ScrollAnimation>
