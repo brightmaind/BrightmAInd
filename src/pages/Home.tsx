@@ -261,6 +261,9 @@ const Home = () => {
             <p className="text-xl text-off-white/80 leading-relaxed">
               We specialise in working with brand new and small businesses, helping them get online and market themselves effectively and efficiently.
             </p>
+            <p className="text-lg text-orange/90 font-medium mt-4">
+              We limit how many clients we work with at one time, so you're guaranteed to be prioritised.
+            </p>
           </div>
         </section>
       </ScrollAnimation>
