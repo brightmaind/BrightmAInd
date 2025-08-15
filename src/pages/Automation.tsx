@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Bot, Zap, Database, MessageSquare, Clock, TrendingUp } from 'lucide-react';
 import ScrollAnimation from '../components/ScrollAnimation';
 import { Button } from '../components/ui/button';
@@ -12,6 +13,8 @@ declare global {
 }
 
 const Automation: React.FC = () => {
+  const navigate = useNavigate();
+
   const automationServices = [
     {
       icon: <Bot className="w-12 h-12" />,
@@ -462,7 +465,10 @@ const Automation: React.FC = () => {
                 Book Free Consultation
               </Button>
               <Button 
-                onClick={() => window.location.href = '/contact'}
+                onClick={() => {
+                  navigate('/contact');
+                  window.scrollTo(0, 0);
+                }}
                 size="lg" 
                 variant="outline"
                 className="border-white text-white hover:bg-white hover:text-orange"

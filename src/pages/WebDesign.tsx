@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Check, ArrowRight, MessageCircle, Mail } from 'lucide-react';
 import ScrollAnimation from '../components/ScrollAnimation';
 import { Button } from '../components/ui/button';
@@ -13,6 +14,8 @@ declare global {
 }
 
 const WebDesign: React.FC = () => {
+  const navigate = useNavigate();
+
   const pricingPlans = [
     {
       name: "Starter",
@@ -445,7 +448,10 @@ const WebDesign: React.FC = () => {
               </Button>
               <Button 
                 variant="outline"
-                onClick={() => window.location.href = '/contact?subject=Custom%20Web%20Plan'}
+                onClick={() => {
+                  navigate('/contact?subject=Custom%20Web%20Plan');
+                  window.scrollTo(0, 0);
+                }}
               >
                 <Mail className="w-5 h-5 mr-2" />
                 Send Message
@@ -466,8 +472,11 @@ const WebDesign: React.FC = () => {
               We can add an AI chatbot to your site. It's billed by usage. Tell us what you need and we'll set it up.
             </p>
             <Button 
+              onClick={() => {
+                navigate('/contact?subject=AI%20Chatbot');
+                window.scrollTo(0, 0);
+              }}
               variant="outline"
-              onClick={() => window.location.href = '/contact?subject=AI%20Chatbot'}
             >
               <MessageCircle className="w-5 h-5 mr-2" />
               Ask about chatbots
@@ -519,7 +528,10 @@ const WebDesign: React.FC = () => {
                 Get Started
               </Button>
               <Button 
-                onClick={() => window.location.href = '/contact'}
+                onClick={() => {
+                  navigate('/contact');
+                  window.scrollTo(0, 0);
+                }}
                 size="lg" 
                 variant="outline"
                 className="border-white text-white hover:bg-white hover:text-orange"

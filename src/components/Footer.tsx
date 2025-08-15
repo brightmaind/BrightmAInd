@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Mail } from 'lucide-react';
 
 const Footer: React.FC = () => {
@@ -35,12 +36,12 @@ const Footer: React.FC = () => {
           <div>
             <h4 className="text-lg font-semibold font-rajdhani mb-6">Quick Links</h4>
             <ul className="space-y-3">
-              <li><a href="/automation" className="text-off-white/70 hover:text-orange transition-colors">Automation</a></li>
-              <li><a href="/marketing" className="text-off-white/70 hover:text-orange transition-colors">Marketing</a></li>
-              <li><a href="/process" className="text-off-white/70 hover:text-orange transition-colors">Process</a></li>
-              <li><a href="/about" className="text-off-white/70 hover:text-orange transition-colors">About</a></li>
-              <li><a href="/faqs" className="text-off-white/70 hover:text-orange transition-colors">FAQs</a></li>
-              <li><a href="/contact" className="text-off-white/70 hover:text-orange transition-colors">Contact</a></li>
+              <li><Link to="/automation" onClick={() => window.scrollTo(0, 0)} className="text-off-white/70 hover:text-orange transition-colors">Automation</Link></li>
+              <li><Link to="/marketing" onClick={() => window.scrollTo(0, 0)} className="text-off-white/70 hover:text-orange transition-colors">Marketing</Link></li>
+              <li><Link to="/process" onClick={() => window.scrollTo(0, 0)} className="text-off-white/70 hover:text-orange transition-colors">Process</Link></li>
+              <li><Link to="/about" onClick={() => window.scrollTo(0, 0)} className="text-off-white/70 hover:text-orange transition-colors">About</Link></li>
+              <li><Link to="/faqs" onClick={() => window.scrollTo(0, 0)} className="text-off-white/70 hover:text-orange transition-colors">FAQs</Link></li>
+              <li><Link to="/contact" onClick={() => window.scrollTo(0, 0)} className="text-off-white/70 hover:text-orange transition-colors">Contact</Link></li>
             </ul>
           </div>
 
@@ -48,9 +49,9 @@ const Footer: React.FC = () => {
           <div>
             <h4 className="text-lg font-semibold font-rajdhani mb-6">Services</h4>
             <ul className="space-y-3">
-              <li><a href="/web-design" className="text-off-white/70 hover:text-orange transition-colors">Web Design</a></li>
-              <li><a href="/marketing" className="text-off-white/70 hover:text-orange transition-colors">Growth Marketing</a></li>
-              <li><a href="/automation" className="text-off-white/70 hover:text-orange transition-colors">AI Automation</a></li>
+              <li><Link to="/web-design" onClick={() => window.scrollTo(0, 0)} className="text-off-white/70 hover:text-orange transition-colors">Web Design</Link></li>
+              <li><Link to="/marketing" onClick={() => window.scrollTo(0, 0)} className="text-off-white/70 hover:text-orange transition-colors">Growth Marketing</Link></li>
+              <li><Link to="/automation" onClick={() => window.scrollTo(0, 0)} className="text-off-white/70 hover:text-orange transition-colors">AI Automation</Link></li>
             </ul>
           </div>
         </div>

@@ -186,6 +186,7 @@ const Home = () => {
   const goToWebDesign = () => {
     navigate('/web-design');
     window.scrollTo(0, 0);
+    window.scrollTo(0, 0);
   };
 
   return (
@@ -292,7 +293,10 @@ const Home = () => {
                       </div>
                     </div>
                     <Button 
-                      onClick={() => navigate('/automation')}
+                      onClick={() => {
+                        navigate('/automation');
+                        window.scrollTo(0, 0);
+                      }}
                       variant="outline" 
                       className="w-full"
                     >
@@ -332,7 +336,10 @@ const Home = () => {
                       </div>
                     </div>
                     <Button 
-                      onClick={() => navigate('/marketing')}
+                      onClick={() => {
+                        navigate('/marketing');
+                        window.scrollTo(0, 0);
+                      }}
                       variant="outline" 
                       className="w-full"
                     >
@@ -487,7 +494,10 @@ const Home = () => {
               <p className="text-sm text-off-white/60 mt-2">
                 Need more pages or custom features? 
                 <Button 
-                  onClick={() => {
+                onClick={() => {
+                  navigate('/automation');
+                  window.scrollTo(0, 0);
+                }}
                     if (window.Calendly) {
                       window.Calendly.initPopupWidget({
                         url: 'https://calendly.com/enquiries-brightmaind/30min?a1=Web%20Design%20Custom%20Plan',

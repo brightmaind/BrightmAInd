@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Target, TrendingUp, Users, BarChart3, Megaphone, Zap } from 'lucide-react';
 import ScrollAnimation from '../components/ScrollAnimation';
 import { Button } from '../components/ui/button';
@@ -12,6 +13,8 @@ declare global {
 }
 
 const Marketing: React.FC = () => {
+  const navigate = useNavigate();
+
   const marketingServices = [
     {
       icon: <Target className="w-12 h-12" />,
@@ -296,7 +299,10 @@ const Marketing: React.FC = () => {
                 Book Free Strategy Call
               </Button>
               <Button 
-                onClick={() => window.location.href = '/contact'}
+                onClick={() => {
+                  navigate('/contact');
+                  window.scrollTo(0, 0);
+                }}
                 size="lg" 
                 variant="outline"
                 className="border-white text-white hover:bg-white hover:text-orange"
