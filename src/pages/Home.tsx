@@ -233,7 +233,7 @@ const Home = () => {
 
             {/* Right side: Why Work With Us */}
             <div className="order-1 lg:order-2">
-              <div className="max-w-lg mx-auto lg:mx-0 text-center lg:text-left">
+              <div className="max-w-lg mx-auto lg:mx-0 text-center">
                 <h2 className="text-3xl md:text-4xl font-bold font-rajdhani text-off-white mb-6">
                   Why Work With <span className="text-orange">Us?</span>
                 </h2>
