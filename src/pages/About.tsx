@@ -47,10 +47,13 @@ const About: React.FC = () => {
             </h1>
             <div className="text-xl md:text-2xl text-off-white/80 leading-relaxed space-y-6">
               <p>
-                 We started mAInd because we were tired of seeing good businesses struggle with systems that should make their lives easier, not harder.
+                We started mAInd because we were tired of seeing new and small businesses struggle with getting online and marketing themselves effectively.
               </p>
               <p>
-                We help founders and small teams grow faster by combining smart marketing with practical automation. No buzzwords, no overcomplicated tech—just solutions that actually work.
+                We specialise in working with brand new and small businesses, helping them establish their online presence and market themselves efficiently. We limit how many clients we work with at one time, so you're guaranteed to be prioritised.
+              </p>
+              <p>
+                No buzzwords, no overcomplicated tech—just solutions that actually work for growing businesses.
               </p>
             </div>
           </div>
