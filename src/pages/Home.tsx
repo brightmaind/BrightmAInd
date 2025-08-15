@@ -494,10 +494,7 @@ const Home = () => {
               <p className="text-sm text-off-white/60 mt-2">
                 Need more pages or custom features? 
                 <Button 
-                onClick={() => {
-                  navigate('/automation');
-                  window.scrollTo(0, 0);
-                }}
+                  onClick={() => {
                     if (window.Calendly) {
                       window.Calendly.initPopupWidget({
                         url: 'https://calendly.com/enquiries-brightmaind/30min?a1=Web%20Design%20Custom%20Plan',
