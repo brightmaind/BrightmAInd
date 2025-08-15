@@ -251,6 +251,20 @@ const Home = () => {
         </div>
       </section>
 
+      {/* Why Work With Us Section */}
+      <ScrollAnimation>
+        <section className="py-24 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl md:text-5xl font-bold font-rajdhani text-off-white mb-8">
+              Why Work With <span className="text-orange">Us?</span>
+            </h2>
+            <p className="text-xl text-off-white/80 leading-relaxed">
+              We specialise in working with brand new and small businesses, helping them get online and market themselves effectively and efficiently.
+            </p>
+          </div>
+        </section>
+      </ScrollAnimation>
+
       {/* Services Overview */}
       <ScrollAnimation>
         <section className="py-24 bg-near-black">
