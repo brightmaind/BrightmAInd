@@ -162,14 +162,9 @@ const Automation: React.FC = () => {
             <p className="text-xl md:text-2xl text-off-white/80 leading-relaxed mb-8">
               Stop doing the same tasks over and over. We'll automate the repetitive stuff so you can focus on what actually grows your business.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button onClick={handleBookConsultation} size="default">
-                Book Consultation
-              </Button>
-              <Button onClick={() => window.location.href = '/contact'} size="default" variant="outline">
-                Send Message
-              </Button>
-            </div>
+            <Button onClick={handleBookConsultation} size="lg">
+              Discuss Your Automation Needs
+            </Button>
           </div>
         </section>
       </ScrollAnimation>
@@ -460,19 +455,19 @@ const Automation: React.FC = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button 
                 onClick={handleBookConsultation}
-                size="default" 
+                size="lg" 
                 variant="secondary"
                 className="bg-white text-orange hover:bg-white/90"
               >
-                Book Call
+                Book Free Consultation
               </Button>
               <Button 
                 onClick={() => window.location.href = '/contact'}
-                size="default" 
+                size="lg" 
                 variant="outline"
                 className="border-white text-white hover:bg-white hover:text-orange"
               >
-                Send Message
+                Ask Questions
               </Button>
             </div>
           </div>

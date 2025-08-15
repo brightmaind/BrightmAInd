@@ -512,19 +512,19 @@ const WebDesign: React.FC = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button 
                 onClick={scrollToPricing}
-                size="default" 
+                size="lg" 
                 variant="secondary"
                 className="bg-white text-orange hover:bg-white/90"
               >
-                Book Call
+                Get Started
               </Button>
               <Button 
                 onClick={() => window.location.href = '/contact'}
-                size="default" 
+                size="lg" 
                 variant="outline"
                 className="border-white text-white hover:bg-white hover:text-orange"
               >
-                Send Message
+                Ask a question
               </Button>
             </div>
           </div>

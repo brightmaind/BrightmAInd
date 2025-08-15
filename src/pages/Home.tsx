@@ -224,19 +224,16 @@ const Home = () => {
                 <Button onClick={goToWebDesign} size="lg">
                   View Web Design Plans
                 </Button>
-                <Button onClick={handleBookConsultation} size="default" variant="outline">
+                <Button onClick={handleBookConsultation} size="lg" variant="outline">
                   <Calendar className="w-5 h-5 mr-2" />
                   Book Consultation
-                </Button>
-                <Button onClick={() => navigate('/contact')} size="default" variant="ghost">
-                  Send a Message
                 </Button>
               </div>
             </div>
 
             {/* Right side: Why Work With Us */}
             <div className="order-1 lg:order-2">
-              <div className="max-w-lg mx-auto lg:mx-0 text-center">
+              <div className="max-w-lg mx-auto lg:mx-0 text-center lg:text-left">
                 <h2 className="text-3xl md:text-4xl font-bold font-rajdhani text-off-white mb-6">
                   Why Work With <span className="text-orange">Us?</span>
                 </h2>
@@ -568,18 +565,10 @@ const Home = () => {
                   </Button>
                   <Button 
                     onClick={handleBookConsultation}
-                    size="sm"
-                    variant="outline"
-                  >
-                    <Calendar className="w-4 h-4 mr-2" />
-                    Book Call
-                  </Button>
-                  <Button 
-                    onClick={() => navigate('/contact')}
-                    size="sm"
                     variant="ghost"
                   >
-                    Send Message
+                    <Calendar className="w-4 h-4 mr-2" />
+                    Discuss Your Needs
                   </Button>
                 </div>
               </div>
@@ -606,20 +595,12 @@ const Home = () => {
               </Button>
               <Button 
                 onClick={handleBookConsultation} 
-                size="default" 
+                size="lg" 
                 variant="outline"
                 className="border-white text-white hover:bg-white hover:text-orange"
               >
                 <Calendar className="w-5 h-5 mr-2" />
-                Book Call
-              </Button>
-              <Button 
-                onClick={() => navigate('/contact')} 
-                size="default" 
-                variant="ghost"
-                className="text-white hover:bg-white/10"
-              >
-                Send Message
+                Book Consultation
               </Button>
             </div>
           </div>
