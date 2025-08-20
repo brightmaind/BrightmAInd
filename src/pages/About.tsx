@@ -1,6 +1,7 @@
 import React from 'react';
 import ScrollAnimation from '../components/ScrollAnimation';
 import SEOHead from '../components/SEOHead';
+import Breadcrumb from '../components/Breadcrumb';
 import { Card, CardContent, CardHeader, CardTitle } from '../components/ui/card';
 
 const About: React.FC = () => {
@@ -26,6 +27,9 @@ const About: React.FC = () => {
         description="We help medical aesthetics clinics in Scotland fill calendars with marketing and AI automation—without the complexity."
         canonical="/about"
       />
+      
+      {/* Breadcrumb */}
+      <Breadcrumb items={[{ name: 'About', url: '/about' }]} />
       
       {/* Header Section */}
       <ScrollAnimation>

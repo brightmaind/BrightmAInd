@@ -1,6 +1,7 @@
 import React from 'react';
 import ScrollAnimation from '../components/ScrollAnimation';
 import SEOHead from '../components/SEOHead';
+import Breadcrumb from '../components/Breadcrumb';
 import { Helmet } from 'react-helmet-async';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '../components/ui/accordion';
 
@@ -55,6 +56,9 @@ const FAQs: React.FC = () => {
         description="Pricing, timelines, landing pages vs websites, and how we cut no-shows with automation."
         canonical="/faqs"
       />
+      
+      {/* Breadcrumb */}
+      <Breadcrumb items={[{ name: 'FAQs', url: '/faqs' }]} />
       
       {/* FAQPage JSON-LD */}
       <Helmet>

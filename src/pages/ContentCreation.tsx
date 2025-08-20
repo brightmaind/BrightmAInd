@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { Video, Camera, TrendingUp, Play, ArrowRight, Calendar } from 'lucide-react';
 import ScrollAnimation from '../components/ScrollAnimation';
 import SEOHead from '../components/SEOHead';
+import Breadcrumb from '../components/Breadcrumb';
 import { Button } from '../components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../components/ui/card';
 
@@ -95,6 +96,9 @@ const ContentCreation: React.FC = () => {
         description="Scroll-stopping reels, ads, and social content that sell treatments and drive bookings."
         canonical="/content-creation"
       />
+      
+      {/* Breadcrumb */}
+      <Breadcrumb items={[{ name: 'Content Creation', url: '/content-creation' }]} />
       
       {/* Header Section */}
       <ScrollAnimation>

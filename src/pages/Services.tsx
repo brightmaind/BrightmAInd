@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { Target, BarChart3, Users, Bot, Calendar, ArrowRight } from 'lucide-react';
 import ScrollAnimation from '../components/ScrollAnimation';
 import SEOHead from '../components/SEOHead';
+import Breadcrumb from '../components/Breadcrumb';
 import { Button } from '../components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../components/ui/card';
 
@@ -129,6 +130,9 @@ const Services: React.FC = () => {
         canonical="/services"
         services={servicesSchema}
       />
+      
+      {/* Breadcrumb */}
+      <Breadcrumb items={[{ name: 'Services', url: '/services' }]} />
       
       {/* Header Section */}
       <ScrollAnimation>

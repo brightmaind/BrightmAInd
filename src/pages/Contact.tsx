@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Mail, Phone, MapPin, Send } from 'lucide-react';
 import ScrollAnimation from '../components/ScrollAnimation';
 import SEOHead from '../components/SEOHead';
+import Breadcrumb from '../components/Breadcrumb';
 
 const Contact: React.FC = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -42,6 +43,9 @@ const Contact: React.FC = () => {
         description="Book a free growth audit or message us—limited clinic slots to ensure priority."
         canonical="/contact"
       />
+      
+      {/* Breadcrumb */}
+      <Breadcrumb items={[{ name: 'Contact', url: '/contact' }]} />
       
       {/* Header Section */}
       <ScrollAnimation>
