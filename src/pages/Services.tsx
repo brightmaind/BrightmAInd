@@ -16,6 +16,24 @@ declare global {
 const Services: React.FC = () => {
   const navigate = useNavigate();
 
+  const servicesSchema = [
+    {
+      serviceType: "Aesthetics Clinic Landing Pages",
+      areaServed: "Scotland",
+      description: "Booking-focused landing pages with deposits and reminders to increase show-up rate."
+    },
+    {
+      serviceType: "Targeted Ads for Aesthetics Clinics", 
+      areaServed: "Scotland",
+      description: "Local campaigns that drive high-intent bookings."
+    },
+    {
+      serviceType: "Automation to Cut No-Shows",
+      areaServed: "Scotland", 
+      description: "Automated deposits + reminders integrated with booking."
+    }
+  ];
+
   const growthSystem = [
     {
       icon: <Target className="w-12 h-12" />,
@@ -109,6 +127,7 @@ const Services: React.FC = () => {
         title="Aesthetics Clinic Growth System | Bright mAInd"
         description="One system for clinics: landing pages, ads, content, automation to cut no-shows and fill calendars."
         canonical="/services"
+        services={servicesSchema}
       />
       
       {/* Header Section */}

@@ -5,9 +5,14 @@ interface SEOHeadProps {
   title: string;
   description: string;
   canonical: string;
+  services?: Array<{
+    serviceType: string;
+    areaServed: string;
+    description: string;
+  }>;
 }
 
-const SEOHead: React.FC<SEOHeadProps> = ({ title, description, canonical }) => {
+const SEOHead: React.FC<SEOHeadProps> = ({ title, description, canonical, services }) => {
   const siteUrl = 'https://brightmaind.com';
   const fullCanonical = `${siteUrl}${canonical}`;
 
@@ -41,6 +46,19 @@ const SEOHead: React.FC<SEOHeadProps> = ({ title, description, canonical }) => {
           "address": { "@type": "PostalAddress", "addressCountry": "GB" }
         })}
       </script>
+      
+      {/* Service-specific JSON-LD */}
+      {services && services.map((service, index) => (
+        <script key={index} type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "serviceType": service.serviceType,
+            "areaServed": service.areaServed,
+            "description": service.description
+          })}
+        </script>
+      ))}
     </Helmet>
   );
 };
