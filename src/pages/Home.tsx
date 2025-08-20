@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Bot, TrendingUp, Settings, ChevronDown, Calendar, ArrowLeft, ArrowRight, Check, Zap } from 'lucide-react';
+import { Bot, TrendingUp, Settings, ChevronDown, Calendar, ArrowLeft, ArrowRight, Check, Zap, Target, Users, BarChart3 } from 'lucide-react';
 import ScrollAnimation from '../components/ScrollAnimation';
 import { Button } from '../components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../components/ui/card';
@@ -8,185 +8,76 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 const Home = () => {
   const navigate = useNavigate();
-  const [expandedService, setExpandedService] = useState(null);
-  const [currentPlan, setCurrentPlan] = useState(0);
-  const [isTransitioning, setIsTransitioning] = useState(false);
-
-  const webDesignPlans = [
-    {
-      name: "Starter",
-      subtitle: "Up to 3 pages",
-      monthlyToOwnership: "£131",
-      continuousMonthly: "£83",
-      outright: "£840",
-      monthlyCredit: "18",
-      icon: <Zap className="w-8 h-8" />,
-      features: [
-        "Website with up to 3 pages",
-        "1 custom logo at onboarding",
-        "24/7 emergency support",
-        "3 change credits per month (45 min)",
-        "Hosting & security included"
-      ],
-      gradient: "from-blue-500 to-cyan-500"
-    },
-    {
-      name: "Growth",
-      subtitle: "Multi-page (up to 10 pages)",
-      monthlyToOwnership: "£275",
-      continuousMonthly: "£203",
-      outright: "£1,560",
-      monthlyCredit: "28",
-      icon: <TrendingUp className="w-8 h-8" />,
-      features: [
-        "Multi-page website (up to 10 pages)",
-        "1 marketing graphic each month",
-        "24/7 emergency support",
-        "8 change credits per month (2 hours)",
-        "Hosting & security included"
-      ],
-      gradient: "from-orange to-red-500",
-      popular: true
-    },
-    {
-      name: "Pro",
-      subtitle: "Multi-page (up to 20 pages)",
-      monthlyToOwnership: "£479",
-      continuousMonthly: "£359",
-      outright: "£2,400",
-      monthlyCredit: "28",
-      icon: <Settings className="w-8 h-8" />,
-      features: [
-        "Multi-page website (up to 20 pages)",
-        "2 marketing graphics each month",
-        "Priority response",
-        "14 change credits per month (3.5 hours)",
-        "Hosting & security included"
-      ],
-      gradient: "from-purple-500 to-pink-500"
-    }
-  ];
 
   const services = [
     {
+      icon: <Target className="w-8 h-8" />,
+      title: "Websites that Convert",
+      summary: "Turn browsers into paying clients with seamless booking flows and upfront deposits.",
+      bullets: [
+        "Sleek booking systems that capture deposits upfront",
+        "Mobile-optimized designs that convert on every device",
+        "Treatment galleries that showcase your best work"
+      ]
+    },
+    {
+      icon: <BarChart3 className="w-8 h-8" />,
+      title: "Content that Sells Treatments",
+      summary: "Scroll-stopping video and creative that make clients want to book now.",
+      bullets: [
+        "Before/after videos that drive treatment bookings",
+        "Social media content that builds trust and desire",
+        "Educational posts that position you as the expert"
+      ]
+    },
+    {
+      icon: <Users className="w-8 h-8" />,
+      title: "Ads that Bring Clients In",
+      summary: "Local targeting campaigns that keep your chairs filled and calendars busy.",
+      bullets: [
+        "Facebook and Instagram ads targeting your ideal clients",
+        "Google Ads for people actively searching for treatments",
+        "Retargeting campaigns that bring back interested prospects"
+      ]
+    },
+    {
       icon: <Bot className="w-8 h-8" />,
-      title: "AI Automation",
-      summary: "We'll automate the repetitive stuff so you can focus on what matters.",
+      title: "Automation that Cuts No-Shows",
+      summary: "Smart reminders + deposits that slash wasted time and revenue loss.",
       bullets: [
-        "Automatically sort and route your leads",
-        "Smart inbox management and auto-replies", 
-        "Clean up your data and create useful reports"
-      ]
-    },
-    {
-      icon: <TrendingUp className="w-8 h-8" />,
-      title: "Marketing That Actually Works",
-      summary: "We focus on getting you real customers, not just pretty numbers.",
-      bullets: [
-        "Design offers and funnels that convert",
-        "Run Google and Facebook ads that pay for themselves",
-        "Test and improve what's working"
-      ]
-    },
-    {
-      icon: <Settings className="w-8 h-8" />,
-      title: "Systems Integration",
-      summary: "We make your business tools work together like they should.",
-      bullets: [
-        "Connect your apps with Zapier or Make",
-        "Set up custom connections when needed",
-        "Integrate Stripe, Shopify, HubSpot, and more"
+        "Automated booking confirmations and reminders",
+        "Deposit collection that reduces no-shows by 40%+",
+        "Follow-up sequences that book repeat treatments"
       ]
     }
-  ];
-  const clients = [
-    "FintechCo", "RetailFlow", "DocuHealth", "Orbit SaaS", "NorthBank"
   ];
 
   const processSteps = [
-    { step: "01", title: "Discover", description: "We'll understand your business goals and design requirements." },
-    { step: "02", title: "Design", description: "Create a website that converts visitors into customers." },
-    { step: "03", title: "Build", description: "Develop your site with hosting, security, and updates included." },
-    { step: "04", title: "Support", description: "Ongoing maintenance, updates, and optional marketing services." }
+    { step: "01", title: "Audit", description: "We analyze your current booking system and identify revenue leaks." },
+    { step: "02", title: "Strategy", description: "Create a custom plan to fill your calendar with paying clients." },
+    { step: "03", title: "Build", description: "Deploy your new booking system, ads, and automation." },
+    { step: "04", title: "Results", description: "Watch your no-shows drop and bookings increase month after month." }
   ];
 
-  const handleBookConsultation = () => {
+  const handleBookAudit = () => {
     if (window.Calendly) {
       window.Calendly.initPopupWidget({
-        url: 'https://calendly.com/enquiries-brightmaind/30min?a1=General%20Consultation',
+        url: 'https://calendly.com/enquiries-brightmaind/30min?a1=Medical%20Aesthetics%20Growth%20Audit',
         parentElement: document.body
       });
       
-      // Add custom text overlay after popup opens
       setTimeout(() => {
         const popup = document.querySelector('.calendly-popup');
         if (popup && !popup.querySelector('.calendly-text-overlay')) {
           const textOverlay = document.createElement('div');
           textOverlay.className = 'calendly-text-overlay';
-          textOverlay.innerHTML = '<span>Please select a convenient time for your consultation call</span>';
+          textOverlay.innerHTML = '<span>Let\'s discuss how to fill your calendar and cut no-shows for your aesthetics clinic</span>';
           popup.appendChild(textOverlay);
         }
       }, 100);
     } else {
-      // Fallback to direct link if Calendly widget isn't loaded
-      window.open('https://calendly.com/enquiries-brightmaind/30min?a1=General%20Consultation', '_blank');
+      window.open('https://calendly.com/enquiries-brightmaind/30min?a1=Medical%20Aesthetics%20Growth%20Audit', '_blank');
     }
-  };
-
-  const handleWebDesignBooking = () => {
-    if (window.Calendly) {
-      window.Calendly.initPopupWidget({
-        url: 'https://calendly.com/enquiries-brightmaind/30min?a1=Web%20Design%20General%20Enquiry',
-        parentElement: document.body
-      });
-      
-      // Add custom text overlay for web design bookings
-      setTimeout(() => {
-        const popup = document.querySelector('.calendly-popup');
-        if (popup && !popup.querySelector('.calendly-text-overlay')) {
-          const textOverlay = document.createElement('div');
-          textOverlay.className = 'calendly-text-overlay';
-          textOverlay.innerHTML = '<span>We\'re excited to work with you! Schedule your call and we\'ll get you set up. No payment required until your website is complete.</span>';
-          popup.appendChild(textOverlay);
-        }
-      }, 100);
-    } else {
-      // Fallback to direct link if Calendly widget isn't loaded
-      window.open('https://calendly.com/enquiries-brightmaind/30min?a1=Web%20Design%20General%20Enquiry', '_blank');
-    }
-  };
-
-  const nextPlan = () => {
-    if (isTransitioning) return;
-    setIsTransitioning(true);
-    setTimeout(() => {
-      setCurrentPlan((prev) => (prev + 1) % webDesignPlans.length);
-      setIsTransitioning(false);
-    }, 150);
-  };
-
-  const prevPlan = () => {
-    if (isTransitioning) return;
-    setIsTransitioning(true);
-    setTimeout(() => {
-      setCurrentPlan((prev) => (prev - 1 + webDesignPlans.length) % webDesignPlans.length);
-      setIsTransitioning(false);
-    }, 150);
-  };
-
-  const goToPlan = (index) => {
-    if (isTransitioning || index === currentPlan) return;
-    setIsTransitioning(true);
-    setTimeout(() => {
-      setCurrentPlan(index);
-      setIsTransitioning(false);
-    }, 150);
-  };
-
-  const goToWebDesign = () => {
-    navigate('/web-design');
-    window.scrollTo(0, 0);
-    window.scrollTo(0, 0);
   };
 
   return (
@@ -194,337 +85,148 @@ const Home = () => {
       {/* Hero Section */}
       <section className="pt-8 pb-24 px-4 sm:px-6 lg:px-8 hero-gradient">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            {/* Left side: Main content */}
-            <div className="space-y-8 text-center lg:text-left order-2 lg:order-1">
-              <h1 className="text-4xl md:text-5xl font-bold font-rajdhani text-off-white leading-tight">
-                Professional websites on a simple monthly plan
-              </h1>
-              
-              <p className="text-lg text-off-white/80 leading-relaxed max-w-2xl">
-                Get a professional website with hosting, security, updates, and ongoing support included. No surprises, no hidden costs.
-              </p>
-              
-              {/* Guarantee Section */}
-              <div className="bg-orange/10 border border-orange/20 rounded-2xl p-6 max-w-2xl mx-auto lg:mx-0">
-                <div className="flex items-center justify-center lg:justify-start mb-3">
-                  <div className="w-8 h-8 bg-orange rounded-full flex items-center justify-center mr-3">
-                    <span className="text-white font-bold text-sm">✓</span>
-                  </div>
-                  <h3 className="text-xl font-bold font-rajdhani text-orange">
-                    100% Risk-Free Guarantee
-                  </h3>
-                </div>
-                <p className="text-off-white/90 leading-relaxed">
-                  You won't pay a penny until your website is complete, deployed, and you're completely happy with it. 
-                  We only get paid when you love your new website.
-                </p>
-              </div>
-              
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Button onClick={goToWebDesign} size="lg">
-                  View Web Design Plans
-                </Button>
-                <Button onClick={handleBookConsultation} size="lg" variant="outline">
-                  <Calendar className="w-5 h-5 mr-2" />
-                  Book Consultation
-                </Button>
-              </div>
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold font-rajdhani text-off-white leading-tight mb-8">
+              Empty Slots and No-Shows Are <span className="text-orange">Costing Your Clinic Thousands</span>
+            </h1>
+            
+            <p className="text-xl md:text-2xl text-off-white/90 leading-relaxed max-w-4xl mx-auto mb-12">
+              Most clinics lose 20% of bookings to no-shows. We fix that with sleek websites, targeted ads, and automated deposits + reminders.
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
+              <Button onClick={handleBookAudit} size="lg" className="text-lg px-8 py-4">
+                Book a Free Growth Audit
+              </Button>
             </div>
 
-            {/* Right side: Why Work With Us */}
-            <div className="order-1 lg:order-2">
-              <div className="max-w-lg mx-auto lg:mx-0 text-center">
-                <h2 className="text-3xl md:text-4xl font-bold font-rajdhani text-off-white mb-6">
-                  Why Work With <span className="text-orange">Us?</span>
-                </h2>
-                <p className="text-lg text-off-white/80 leading-relaxed mb-4">
-                  We specialise in working with brand new and small businesses, helping them get online and market themselves effectively and efficiently.
-                </p>
-                <p className="text-lg text-orange/90 font-medium">
-                  We limit how many clients we work with at one time, so you're guaranteed to be prioritised.
-                </p>
+            {/* Problem Agitation */}
+            <div className="max-w-4xl mx-auto">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+                <div className="bg-near-black/60 rounded-2xl p-6 border border-red-500/20">
+                  <div className="text-3xl font-bold text-red-400 mb-2">20%</div>
+                  <p className="text-off-white/80">Average no-show rate draining your revenue</p>
+                </div>
+                <div className="bg-near-black/60 rounded-2xl p-6 border border-red-500/20">
+                  <div className="text-3xl font-bold text-red-400 mb-2">£200+</div>
+                  <p className="text-off-white/80">Lost per empty slot that could have been filled</p>
+                </div>
+                <div className="bg-near-black/60 rounded-2xl p-6 border border-red-500/20">
+                  <div className="text-3xl font-bold text-red-400 mb-2">Hours</div>
+                  <p className="text-off-white/80">Wasted each week chasing bookings and confirmations</p>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Services Overview */}
+      {/* Services Overview - One Growth System */}
       <ScrollAnimation>
         <section className="py-24 bg-near-black">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold font-rajdhani text-off-white mb-6">
-                We Also Help With <span className="text-orange">Business Growth</span>
+                Our Complete <span className="text-orange">Growth System</span>
               </h2>
-              <p className="text-xl text-off-white/80">
-                Beyond websites, we help businesses work smarter and grow faster
+              <p className="text-xl text-off-white/80 max-w-3xl mx-auto">
+                Everything you need to fill your calendar, reduce no-shows, and grow your aesthetics clinic
               </p>
             </div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
-              <ScrollAnimation delay={0}>
-                <Card className="h-full card-hover">
-                  <CardHeader>
-                    <div className="flex items-center space-x-4 mb-4">
-                      <div className="w-12 h-12 bg-orange rounded-lg flex items-center justify-center">
-                        <Bot className="w-6 h-6 text-white" />
-                      </div>
-                      <CardTitle className="text-2xl">AI Automation</CardTitle>
-                    </div>
-                    <CardDescription className="text-lg text-off-white/80">
-                      Stop doing the same tasks over and over. We'll automate the repetitive stuff so you can focus on what actually grows your business.
-                    </CardDescription>
-                  </CardHeader>
-                  <CardContent>
-                    <div className="space-y-4 mb-6">
-                      <div className="flex items-start space-x-3">
-                        <div className="w-2 h-2 bg-orange rounded-full mt-2 flex-shrink-0"></div>
-                        <span className="text-off-white/80">AI phone and chat agents that handle customer conversations 24/7</span>
-                      </div>
-                      <div className="flex items-start space-x-3">
-                        <div className="w-2 h-2 bg-orange rounded-full mt-2 flex-shrink-0"></div>
-                        <span className="text-off-white/80">Automatically sort leads and send follow-up sequences</span>
-                      </div>
-                      <div className="flex items-start space-x-3">
-                        <div className="w-2 h-2 bg-orange rounded-full mt-2 flex-shrink-0"></div>
-                        <span className="text-off-white/80">Connect your business tools so they work together seamlessly</span>
-                      </div>
-                    </div>
-                    <Button 
-                      onClick={() => {
-                        navigate('/automation');
-                        window.scrollTo(0, 0);
-                      }}
-                      variant="outline" 
-                      className="w-full"
-                    >
-                      Learn About Automation
-                      <ArrowRight className="w-4 h-4 ml-2" />
-                    </Button>
-                  </CardContent>
-                </Card>
-              </ScrollAnimation>
-
-              <ScrollAnimation delay={100}>
-                <Card className="h-full card-hover">
-                  <CardHeader>
-                    <div className="flex items-center space-x-4 mb-4">
-                      <div className="w-12 h-12 bg-orange rounded-lg flex items-center justify-center">
-                        <TrendingUp className="w-6 h-6 text-white" />
-                      </div>
-                      <CardTitle className="text-2xl">Growth Marketing</CardTitle>
-                    </div>
-                    <CardDescription className="text-lg text-off-white/80">
-                      Marketing that actually gets you customers. We focus on real results—more leads, more sales, and better ROI from every pound you spend.
-                    </CardDescription>
-                  </CardHeader>
-                  <CardContent>
-                    <div className="space-y-4 mb-6">
-                      <div className="flex items-start space-x-3">
-                        <div className="w-2 h-2 bg-orange rounded-full mt-2 flex-shrink-0"></div>
-                        <span className="text-off-white/80">Google and Facebook ads that actually pay for themselves</span>
-                      </div>
-                      <div className="flex items-start space-x-3">
-                        <div className="w-2 h-2 bg-orange rounded-full mt-2 flex-shrink-0"></div>
-                        <span className="text-off-white/80">Optimize your customer journey to increase conversions</span>
-                      </div>
-                      <div className="flex items-start space-x-3">
-                        <div className="w-2 h-2 bg-orange rounded-full mt-2 flex-shrink-0"></div>
-                        <span className="text-off-white/80">Track what matters—revenue, not just vanity metrics</span>
-                      </div>
-                    </div>
-                    <Button 
-                      onClick={() => {
-                        navigate('/marketing');
-                        window.scrollTo(0, 0);
-                      }}
-                      variant="outline" 
-                      className="w-full"
-                    >
-                      Learn About Marketing
-                      <ArrowRight className="w-4 h-4 ml-2" />
-                    </Button>
-                  </CardContent>
-                </Card>
-              </ScrollAnimation>
-            </div>
-          </div>
-        </section>
-      </ScrollAnimation>
-
-      {/* Web Design Pricing Carousel */}
-      <ScrollAnimation>
-        <section className="py-24 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold font-rajdhani text-off-white mb-6">
-                Web Design <span className="text-orange">Plans</span>
-              </h2>
-              <p className="text-xl text-off-white/80">
-                Choose the payment option that works best for you
-              </p>
-            </div>
-
-            {/* Carousel Container */}
-            <div className="relative max-w-4xl mx-auto">
-              {/* Background Grid Pattern */}
-              <div className="absolute inset-0 opacity-10">
-                <div className="grid grid-cols-12 gap-1 h-full">
-                  {Array.from({ length: 144 }).map((_, i) => (
-                    <div key={i} className="bg-orange/20 rounded-sm"></div>
-                  ))}
-                </div>
-              </div>
-
-              {/* Carousel Content */}
-              <div className="relative bg-near-black/80 backdrop-blur-sm rounded-2xl p-8 border border-slate/20">
-                <AnimatePresence mode="wait">
-                  <motion.div
-                    key={currentPlan}
-                    initial={{ x: 300, opacity: 0 }}
-                    animate={{ x: 0, opacity: 1 }}
-                    exit={{ x: -300, opacity: 0 }}
-                    transition={{ 
-                      type: "spring",
-                      stiffness: 300,
-                      damping: 30,
-                      duration: 0.3
-                    }}
-                  >
-                    <div className="text-center mb-8">
-                      <div className="flex justify-center mb-4">
-                        <div className={`w-16 h-16 rounded-2xl flex items-center justify-center bg-gradient-to-br ${webDesignPlans[currentPlan].gradient}`}>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+              {services.map((service, index) => (
+                <ScrollAnimation key={index} delay={index * 100}>
+                  <Card className="h-full card-hover">
+                    <CardHeader>
+                      <div className="flex items-center space-x-4 mb-4">
+                        <div className="w-12 h-12 bg-orange rounded-lg flex items-center justify-center">
                           <div className="text-white">
-                            {webDesignPlans[currentPlan].icon}
+                            {service.icon}
                           </div>
                         </div>
+                        <CardTitle className="text-2xl">{service.title}</CardTitle>
                       </div>
-                      <h3 className="text-3xl font-bold font-rajdhani text-off-white mb-2">
-                        {webDesignPlans[currentPlan].name}
-                        {webDesignPlans[currentPlan].popular && (
-                          <span className="ml-3 text-sm bg-orange text-white px-3 py-1 rounded-full">
-                            Most Popular
-                          </span>
-                        )}
-                      </h3>
-                      <p className="text-off-white/70 text-lg">
-                        {webDesignPlans[currentPlan].subtitle}
-                      </p>
-                    </div>
-
-                    {/* Pricing Options */}
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
-                      <div className="bg-slate/20 rounded-lg p-4 text-center">
-                        <div className="text-sm text-off-white/60 mb-1">Monthly to Ownership</div>
-                        <div className="text-2xl font-bold text-orange">
-                          {webDesignPlans[currentPlan].monthlyToOwnership}
-                          <span className="text-sm text-off-white/60">/mo</span>
-                        </div>
-                        <div className="text-xs text-off-white/50">12 months</div>
+                      <CardDescription className="text-lg text-off-white/80">
+                        {service.summary}
+                      </CardDescription>
+                    </CardHeader>
+                    <CardContent>
+                      <div className="space-y-4">
+                        {service.bullets.map((bullet, bulletIndex) => (
+                          <div key={bulletIndex} className="flex items-start space-x-3">
+                            <div className="w-2 h-2 bg-orange rounded-full mt-2 flex-shrink-0"></div>
+                            <span className="text-off-white/80">{bullet}</span>
+                          </div>
+                        ))}
                       </div>
-                      <div className="bg-slate/20 rounded-lg p-4 text-center">
-                        <div className="text-sm text-off-white/60 mb-1">Continuous Monthly</div>
-                        <div className="text-2xl font-bold text-blue-400">
-                          {webDesignPlans[currentPlan].continuousMonthly}
-                          <span className="text-sm text-off-white/60">/mo</span>
-                        </div>
-                        <div className="text-xs text-off-white/50">+£{webDesignPlans[currentPlan].monthlyCredit}/mo credit</div>
-                      </div>
-                      <div className="bg-slate/20 rounded-lg p-4 text-center">
-                        <div className="text-sm text-off-white/60 mb-1">Buy Outright</div>
-                        <div className="text-2xl font-bold text-green-400">
-                          {webDesignPlans[currentPlan].outright}
-                        </div>
-                        <div className="text-xs text-off-white/50">One-time payment</div>
-                      </div>
-                    </div>
-
-                    {/* Features */}
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
-                      {webDesignPlans[currentPlan].features.map((feature, index) => (
-                        <div key={index} className="flex items-start space-x-3">
-                          <Check className="w-5 h-5 text-orange mt-0.5 flex-shrink-0" />
-                          <span className="text-off-white/80 text-sm">{feature}</span>
-                        </div>
-                      ))}
-                    </div>
-                  </motion.div>
-                </AnimatePresence>
-
-                {/* Navigation */}
-                <div className="flex items-center justify-between">
-                  <button
-                    onClick={prevPlan}
-                    className="p-3 rounded-full bg-slate/20 hover:bg-slate/40 transition-colors"
-                  >
-                    <ArrowLeft className="w-5 h-5 text-off-white" />
-                  </button>
-
-                  <div className="flex space-x-2">
-                    {webDesignPlans.map((_, index) => (
-                      <button
-                        key={index}
-                        onClick={() => goToPlan(index)}
-                        className={`w-3 h-3 rounded-full transition-colors ${
-                          index === currentPlan ? 'bg-orange' : 'bg-slate/40'
-                        }`}
-                      />
-                    ))}
-                  </div>
-
-                  <button
-                    onClick={nextPlan}
-                    className="p-3 rounded-full bg-slate/20 hover:bg-slate/40 transition-colors"
-                  >
-                    <ArrowRight className="w-5 h-5 text-off-white" />
-                  </button>
-                </div>
-              </div>
-            </div>
-
-            <div className="text-center mt-8">
-              <Button onClick={goToWebDesign} size="lg">
-                View All Plans & Pricing
-              </Button>
-              <p className="text-sm text-off-white/60 mt-4">
-                All prices are VAT inclusive. No hidden fees.
-              </p>
-              <p className="text-sm text-off-white/60 mt-2">
-                Need more pages or custom features? 
-                <Button 
-                  onClick={() => {
-                    if (window.Calendly) {
-                      window.Calendly.initPopupWidget({
-                        url: 'https://calendly.com/enquiries-brightmaind/30min?a1=Web%20Design%20Custom%20Plan',
-                        parentElement: document.body
-                      });
-                      
-                      setTimeout(() => {
-                        const popup = document.querySelector('.calendly-popup');
-                        if (popup && !popup.querySelector('.calendly-text-overlay')) {
-                          const textOverlay = document.createElement('div');
-                          textOverlay.className = 'calendly-text-overlay';
-                          textOverlay.innerHTML = '<span>Let\'s discuss your custom requirements and create a plan that fits perfectly</span>';
-                          popup.appendChild(textOverlay);
-                        }
-                      }, 100);
-                    } else {
-                      window.open('https://calendly.com/enquiries-brightmaind/30min?a1=Web%20Design%20Custom%20Plan', '_blank');
-                    }
-                  }}
-                  size="sm" 
-                  className="ml-2 bg-orange/10 text-orange hover:bg-orange hover:text-white border border-orange/30 hover:border-orange"
-                >
-                  Let's discuss your requirements
-                </Button>
-              </p>
+                    </CardContent>
+                  </Card>
+                </ScrollAnimation>
+              ))}
             </div>
           </div>
         </section>
       </ScrollAnimation>
 
+      {/* Case Study / Social Proof */}
+      <ScrollAnimation>
+        <section className="py-24">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold font-rajdhani text-off-white mb-6">
+                How a Local Aesthetics Clinic Cut No-Shows by <span className="text-orange">40%</span> and Added <span className="text-orange">15+ New Bookings</span> a Month
+              </h2>
+            </div>
+
+            <div className="max-w-5xl mx-auto">
+              <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
+                {/* Problem */}
+                <div className="bg-red-500/10 border border-red-500/20 rounded-2xl p-8">
+                  <h3 className="text-2xl font-bold font-rajdhani text-red-400 mb-4">The Problem</h3>
+                  <p className="text-off-white/80 leading-relaxed">
+                    Clinic had a website, but no booking integration. No-shows were draining revenue and wasting valuable appointment slots every week.
+                  </p>
+                </div>
+
+                {/* Solution */}
+                <div className="bg-orange/10 border border-orange/20 rounded-2xl p-8">
+                  <h3 className="text-2xl font-bold font-rajdhani text-orange mb-4">Our Solution</h3>
+                  <p className="text-off-white/80 leading-relaxed">
+                    We built a sleek deposit-based booking system, created engaging video ads, and ran targeted local campaigns to attract ideal clients.
+                  </p>
+                </div>
+
+                {/* Results */}
+                <div className="bg-green-500/10 border border-green-500/20 rounded-2xl p-8">
+                  <h3 className="text-2xl font-bold font-rajdhani text-green-400 mb-4">The Results</h3>
+                  <p className="text-off-white/80 leading-relaxed">
+                    Within 60 days, no-shows dropped by 40%, and the clinic gained 15+ extra bookings per month—on autopilot.
+                  </p>
+                </div>
+              </div>
+
+              {/* Visual Results */}
+              <div className="bg-near-black/60 rounded-2xl p-8 border border-slate/20">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                  <div>
+                    <div className="text-4xl font-bold text-green-400 mb-2">40%</div>
+                    <p className="text-off-white/80">Reduction in no-shows</p>
+                  </div>
+                  <div>
+                    <div className="text-4xl font-bold text-orange mb-2">15+</div>
+                    <p className="text-off-white/80">Extra bookings per month</p>
+                  </div>
+                  <div>
+                    <div className="text-4xl font-bold text-blue-400 mb-2">60</div>
+                    <p className="text-off-white/80">Days to see results</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </ScrollAnimation>
 
       {/* Process Section */}
       <ScrollAnimation>
@@ -532,10 +234,10 @@ const Home = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold font-rajdhani text-off-white mb-6">
-                How We Build Your <span className="text-orange">Website</span>
+                How We <span className="text-orange">Transform</span> Your Clinic
               </h2>
-              <p className="text-xl text-off-white/80 max-w-3xl mx-auto">
-                From initial consultation to ongoing support, we handle everything so you can focus on your business.
+              <p className="text-xl text-off-white/80">
+                From audit to results, we handle everything so you can focus on your clients
               </p>
             </div>
 
@@ -552,64 +254,31 @@ const Home = () => {
                 </ScrollAnimation>
               ))}
             </div>
-
-            {/* Marketing Services Note */}
-            <div className="mt-16 max-w-4xl mx-auto text-center">
-              <div className="bg-near-black/60 rounded-2xl p-8 border border-slate/20">
-                <h3 className="text-2xl font-bold font-rajdhani text-off-white mb-4">
-                  Need Marketing Too?
-                </h3>
-                <p className="text-off-white/80 leading-relaxed mb-6">
-                  Our AI automation and growth marketing services are available at discounted rates for website clients. 
-                  We also work with businesses who have existing websites but want to supercharge their marketing.
-                </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Button 
-                    onClick={() => window.location.href = '/automation'}
-                    variant="outline"
-                  >
-                    View Automation Services
-                  </Button>
-                  <Button 
-                    onClick={handleBookConsultation}
-                    variant="ghost"
-                  >
-                    <Calendar className="w-4 h-4 mr-2" />
-                    Discuss Your Needs
-                  </Button>
-                </div>
-              </div>
-            </div>
           </div>
         </section>
       </ScrollAnimation>
 
-      {/* CTA Footer */}
+      {/* Final CTA Section */}
       <ScrollAnimation>
         <section className="py-24 bg-orange">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-4xl md:text-5xl font-bold font-rajdhani text-white mb-8">
-              Ready to get your professional website?
+              Want results like this?
             </h2>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button 
-                onClick={goToWebDesign}
-                size="lg" 
-                variant="secondary"
-                className="bg-white text-orange hover:bg-white/90"
-              >
-                View Web Design Plans
-              </Button>
-              <Button 
-                onClick={handleBookConsultation} 
-                size="lg" 
-                variant="outline"
-                className="border-white text-white hover:bg-white hover:text-orange"
-              >
-                <Calendar className="w-5 h-5 mr-2" />
-                Book Consultation
-              </Button>
-            </div>
+            <p className="text-xl text-white/90 mb-8 leading-relaxed max-w-3xl mx-auto">
+              Book a Free Growth Audit today and see how many more bookings your clinic could be getting.
+            </p>
+            <Button 
+              onClick={handleBookAudit}
+              size="lg" 
+              variant="secondary"
+              className="bg-white text-orange hover:bg-white/90 text-lg px-8 py-4"
+            >
+              Book Free Audit
+            </Button>
+            <p className="text-white/80 mt-4 text-sm">
+              No obligation. See exactly how we'd grow your clinic in 30 minutes.
+            </p>
           </div>
         </section>
       </ScrollAnimation>
