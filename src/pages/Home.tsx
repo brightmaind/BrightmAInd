@@ -87,15 +87,15 @@ const Home = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold font-rajdhani text-off-white leading-tight mb-8">
-              Empty Slots and No-Shows Are <span className="text-orange">Costing Your Clinic Thousands</span>
+              No-Shows and Empty Chairs Are <span className="text-orange">Draining Your Clinic's Profits</span>
             </h1>
             
             <p className="text-xl md:text-2xl text-off-white/90 leading-relaxed max-w-4xl mx-auto mb-12">
-              We help medical aesthetics clinics fill calendars with smart marketing and AI automation—without the complexity. Most clinics lose 20% of bookings to no-shows. We fix that with sleek landing pages, targeted ads, and automated deposits + reminders.
+              Most clinics lose 20% of bookings to no-shows. We fix that with booking-focused landing pages, targeted ads, and automated deposits + reminders that keep your calendar full.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
-              <Button onClick={handleBookAudit} size="lg" className="text-lg px-8 py-4">
+              <Button onClick={handleBookAudit} size="lg" className="text-lg px-8 py-4" aria-label="Book a free growth audit to reduce no-shows and fill your calendar">
                 Book a Free Growth Audit
               </Button>
             </div>

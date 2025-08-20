@@ -25,6 +25,14 @@ const Navbar: React.FC = () => {
   ];
 
   const handleBookConsultation = () => {
+    // Check for environment variable first, fallback to contact page
+    const calendlyUrl = import.meta.env.VITE_CALENDLY_URL;
+    
+    if (calendlyUrl) {
+      window.open(calendlyUrl, '_blank');
+      return;
+    }
+    
     if (window.Calendly) {
       window.Calendly.initPopupWidget({
         url: 'https://calendly.com/enquiries-brightmaind/30min?a1=General%20Consultation',
@@ -43,7 +51,8 @@ const Navbar: React.FC = () => {
       }, 100);
     } else {
       // Fallback to direct link if Calendly widget isn't loaded
-      window.open('https://calendly.com/enquiries-brightmaind/30min?a1=General%20Consultation', '_blank');
+      navigate('/contact');
+      window.scrollTo(0, 0);
     }
   };
 
@@ -90,9 +99,14 @@ const Navbar: React.FC = () => {
                 {item.name}
               </button>
             ))}
-            <Button onClick={handleBookConsultation} size="sm" className="ml-4">
+            <Button 
+              onClick={handleBookConsultation} 
+              size="sm" 
+              className="ml-4"
+              aria-label="Book a free growth audit consultation"
+            >
               <Calendar className="w-4 h-4 mr-2" />
-              Book Consultation
+              Book a Free Growth Audit
             </Button>
           </div>
 
@@ -122,9 +136,14 @@ const Navbar: React.FC = () => {
                   {item.name}
                 </button>
               ))}
-              <Button onClick={handleBookConsultation} size="sm" className="mt-4">
+              <Button 
+                onClick={handleBookConsultation} 
+                size="sm" 
+                className="mt-4"
+                aria-label="Book a free growth audit consultation"
+              >
                 <Calendar className="w-4 h-4 mr-2" />
-                Book Consultation
+                Book a Free Growth Audit
               </Button>
             </div>
           </div>
