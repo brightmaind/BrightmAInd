@@ -41,10 +41,10 @@ const Contact: React.FC = () => {
         <section className="py-24 px-4 sm:px-6 lg:px-8 bg-gray-50">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-5xl md:text-6xl font-bold text-charcoal mb-8">
-            Get In <span className="text-orange">Touch</span>
+            Let's Fill Your <span className="text-orange">Calendar</span>
           </h1>
           <p className="text-xl md:text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-            Ready to transform your business with AI automation and strategic marketing? We're here to help you unlock your potential and achieve measurable results.
+            Book a free growth audit or send us a message. We'll show you exactly how many more bookings your clinic could be getting.
           </p>
         </div>
       </section>
@@ -58,11 +58,11 @@ const Contact: React.FC = () => {
             {/* Contact Information */}
             <div>
               <h2 className="text-3xl md:text-4xl font-bold text-charcoal mb-8">
-                Ready to Get Started?
+                Ready to Fill Your Calendar?
               </h2>
               <p className="text-lg text-gray-600 mb-12 leading-relaxed">
-                Whether you're looking to automate workflows, optimize marketing campaigns, or integrate systems, 
-                we're here to help. Get in touch to discuss your project and discover how we can accelerate your growth.
+                Whether you want to cut no-shows, attract more ideal clients, or automate your booking process, 
+                we're here to help. Get in touch to discuss your clinic and discover how we can fill your calendar consistently.
               </p>
 
               <div className="space-y-8">
@@ -83,8 +83,8 @@ const Contact: React.FC = () => {
               <div className="mt-12 p-6 bg-gray-50 rounded-2xl">
                 <h3 className="text-xl font-semibold text-charcoal mb-4">Response Time</h3>
                 <p className="text-gray-600">
-                  We typically respond to all inquiries within 4 hours during business days. 
-                  For urgent matters, please call us directly for immediate assistance.
+                  We typically respond to all clinic inquiries within 4 hours during business days. 
+                  For urgent booking questions, please email us directly for immediate assistance.
                 </p>
               </div>
             </div>
@@ -162,6 +162,7 @@ const Contact: React.FC = () => {
                       rows={6}
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange focus:border-transparent transition-colors resize-none text-charcoal"
                       placeholder="Tell us about your business goals and how we can help you achieve them..."
+                      placeholder="Tell us about your clinic and current booking challenges. How can we help fill your calendar?"
                     />
                   </div>
 
@@ -186,8 +187,13 @@ const Contact: React.FC = () => {
                     Thank you for reaching out to us. We've received your message and will get back to you within 4 hours during business days.
                   </p>
                   <p className="text-gray-600 mb-8">
-                    We're excited to discuss how we can help grow your business with our web design and marketing services.
+                    We're excited to discuss how we can help fill your clinic's calendar and cut no-shows with our Growth System.
                   </p>
+                  <div className="bg-orange/10 border border-orange/20 rounded-lg p-4 mb-6">
+                    <p className="text-gray-700 text-sm">
+                      <strong>Priority Notice:</strong> We only take on a limited number of clinics at a time, so if you see availability, you're prioritised.
+                    </p>
+                  </div>
                   <button
                     onClick={() => setIsSubmitted(false)}
                     className="bg-orange text-white px-6 py-3 rounded-lg font-semibold hover:bg-orange/90 transition-colors"
@@ -196,6 +202,13 @@ const Contact: React.FC = () => {
                   </button>
                 </div>
               )}
+            </div>
+            
+            {/* Priority Notice */}
+            <div className="mt-6 text-center">
+              <p className="text-gray-600 text-sm">
+                We only take on a limited number of clinics at a time, so if you see availability, you're prioritised.
+              </p>
             </div>
           </div>
         </div>
