@@ -22,7 +22,7 @@ const Footer: React.FC = () => {
               </h3>
             </div>
             <p className="text-off-white/70 mb-6 max-w-md">
-              We help businesses grow faster by combining smart marketing with practical AI automation—without the complexity.
+              We help medical aesthetics clinics fill calendars with smart marketing and AI automation—without the complexity.
             </p>
             <div className="space-y-3">
               <div className="flex items-center space-x-3">

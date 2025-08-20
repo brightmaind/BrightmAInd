@@ -91,7 +91,7 @@ const Home = () => {
             </h1>
             
             <p className="text-xl md:text-2xl text-off-white/90 leading-relaxed max-w-4xl mx-auto mb-12">
-              Most clinics lose 20% of bookings to no-shows. We fix that with sleek websites, targeted ads, and automated deposits + reminders.
+              We help medical aesthetics clinics fill calendars with smart marketing and AI automation—without the complexity. Most clinics lose 20% of bookings to no-shows. We fix that with sleek websites, targeted ads, and automated deposits + reminders.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">

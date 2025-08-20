@@ -65,11 +65,16 @@ const Navbar: React.FC = () => {
               alt="Bright mAInd Marketing" 
              className="w-14 h-14 rounded-lg object-contain"
             />
-            <span className="text-3xl font-bold font-rajdhani text-off-white">
-              <span className="brand-text brand-text-glow">
-                Bright m<span className="text-orange">AI</span>nd
+            <div className="flex flex-col">
+              <span className="text-3xl font-bold font-rajdhani text-off-white">
+                <span className="brand-text brand-text-glow">
+                  Bright m<span className="text-orange">AI</span>nd
+                </span>
               </span>
-            </span>
+              <span className="text-xs text-orange font-medium tracking-wide">
+                Fill Your Calendar. Cut No-Shows.
+              </span>
+            </div>
           </Link>
 
           {/* Desktop Navigation */}
