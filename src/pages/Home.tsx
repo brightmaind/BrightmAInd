@@ -169,6 +169,79 @@ const Home = () => {
         </section>
       </ScrollAnimation>
 
+      {/* Why Work With Us Section */}
+      <ScrollAnimation>
+        <section className="py-24">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold font-rajdhani text-off-white mb-6">
+                Why Clinics Choose <span className="text-orange">Bright mAInd</span>
+              </h2>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+              <ScrollAnimation delay={0}>
+                <Card className="h-full">
+                  <CardHeader>
+                    <CardTitle className="text-xl text-orange mb-4">Specialist Focus</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-off-white/80 leading-relaxed">
+                      We work exclusively with medical aesthetics clinics, so every strategy is tailored to your treatments and client base. No generic solutions—just proven methods that work for your industry.
+                    </p>
+                  </CardContent>
+                </Card>
+              </ScrollAnimation>
+              
+              <ScrollAnimation delay={100}>
+                <Card className="h-full">
+                  <CardHeader>
+                    <CardTitle className="text-xl text-orange mb-4">Proven Growth System</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-off-white/80 leading-relaxed">
+                      Websites, ads, content, and automation all work together as one integrated system that fills calendars and cuts no-shows. Everything connects to maximize your bookings.
+                    </p>
+                  </CardContent>
+                </Card>
+              </ScrollAnimation>
+              
+              <ScrollAnimation delay={200}>
+                <Card className="h-full">
+                  <CardHeader>
+                    <CardTitle className="text-xl text-orange mb-4">Priority Guarantee</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-off-white/80 leading-relaxed">
+                      We only take on a limited number of clinics at a time. That means you're never lost in a queue—you get our full attention and priority support when you need it.
+                    </p>
+                  </CardContent>
+                </Card>
+              </ScrollAnimation>
+              
+              <ScrollAnimation delay={300}>
+                <Card className="h-full">
+                  <CardHeader>
+                    <CardTitle className="text-xl text-orange mb-4">Risk-Free Audit</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-off-white/80 leading-relaxed">
+                      Start with a free growth audit and see exactly how many more bookings your clinic could be getting. No commitment required—just clear insights and actionable recommendations.
+                    </p>
+                  </CardContent>
+                </Card>
+              </ScrollAnimation>
+            </div>
+
+            <div className="text-center">
+              <p className="text-xl text-off-white/90 max-w-3xl mx-auto leading-relaxed">
+                With Bright mAInd, you don't just get a website—you get a growth partner committed to filling your clinic.
+              </p>
+            </div>
+          </div>
+        </section>
+      </ScrollAnimation>
+
       {/* Case Study / Social Proof */}
       <ScrollAnimation>
         <section className="py-24">
@@ -253,79 +326,6 @@ const Home = () => {
                   </div>
                 </ScrollAnimation>
               ))}
-            </div>
-          </div>
-        </section>
-      </ScrollAnimation>
-
-      {/* Why Work With Us Section */}
-      <ScrollAnimation>
-        <section className="py-24">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold font-rajdhani text-off-white mb-6">
-                Why Clinics Choose <span className="text-orange">Bright mAInd</span>
-              </h2>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-              <ScrollAnimation delay={0}>
-                <Card className="h-full">
-                  <CardHeader>
-                    <CardTitle className="text-xl text-orange mb-4">Specialist Focus</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-off-white/80 leading-relaxed">
-                      We work exclusively with medical aesthetics clinics, so every strategy is tailored to your treatments and client base. No generic solutions—just proven methods that work for your industry.
-                    </p>
-                  </CardContent>
-                </Card>
-              </ScrollAnimation>
-              
-              <ScrollAnimation delay={100}>
-                <Card className="h-full">
-                  <CardHeader>
-                    <CardTitle className="text-xl text-orange mb-4">Proven Growth System</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-off-white/80 leading-relaxed">
-                      Websites, ads, content, and automation all work together as one integrated system that fills calendars and cuts no-shows. Everything connects to maximize your bookings.
-                    </p>
-                  </CardContent>
-                </Card>
-              </ScrollAnimation>
-              
-              <ScrollAnimation delay={200}>
-                <Card className="h-full">
-                  <CardHeader>
-                    <CardTitle className="text-xl text-orange mb-4">Priority Guarantee</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-off-white/80 leading-relaxed">
-                      We only take on a limited number of clinics at a time. That means you're never lost in a queue—you get our full attention and priority support when you need it.
-                    </p>
-                  </CardContent>
-                </Card>
-              </ScrollAnimation>
-              
-              <ScrollAnimation delay={300}>
-                <Card className="h-full">
-                  <CardHeader>
-                    <CardTitle className="text-xl text-orange mb-4">Risk-Free Audit</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-off-white/80 leading-relaxed">
-                      Start with a free growth audit and see exactly how many more bookings your clinic could be getting. No commitment required—just clear insights and actionable recommendations.
-                    </p>
-                  </CardContent>
-                </Card>
-              </ScrollAnimation>
-            </div>
-
-            <div className="text-center">
-              <p className="text-xl text-off-white/90 max-w-3xl mx-auto leading-relaxed">
-                With Bright mAInd, you don't just get a website—you get a growth partner committed to filling your clinic.
-              </p>
             </div>
           </div>
         </section>
