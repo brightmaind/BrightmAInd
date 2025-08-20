@@ -6,7 +6,7 @@ const FAQs: React.FC = () => {
   const faqs = [
     {
       question: "How much does your Growth System cost?",
-      answer: "Our Growth System starts from £2,500/month and includes everything: website with booking system, targeted ads, content creation, and automation setup. No hidden fees, no surprise charges. We'll give you exact pricing during your free audit based on your clinic's specific needs."
+      answer: "Our packages typically start at £500–£1,500/month, depending on your clinic size, ad spend, and service level. This includes website optimization, targeted ads, content creation, and automation setup. Even 2–3 new bookings per month usually cover the investment. We'll give you exact pricing during your free audit based on your clinic's specific needs—no hidden fees, no surprise charges."
     },
     {
       question: "How quickly will I see more bookings?",
@@ -26,7 +26,7 @@ const FAQs: React.FC = () => {
     },
     {
       question: "What if the system doesn't work for my clinic?",
-      answer: "We're so confident in our system that we offer a 60-day performance guarantee. If you don't see measurable improvement in bookings and reduction in no-shows within 60 days, we'll refund your investment and part ways professionally."
+      answer: "If you don't see measurable progress within 60 days, we'll keep working at no extra cost until you do. We're confident in our system because we only work with a limited number of clinics at a time—this means every client gets our full attention and priority support to ensure success."
     },
     {
       question: "How many clinics do you work with at once?",
