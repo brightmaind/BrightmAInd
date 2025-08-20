@@ -117,10 +117,10 @@ const FAQs: React.FC = () => {
         <section className="py-24 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-5xl md:text-6xl font-bold font-rajdhani text-off-white mb-8">
-              Questions About Our <span className="text-orange">Growth System</span>
+              Medical Aesthetics Clinic Marketing <span className="text-orange">FAQs</span>
             </h1>
             <p className="text-xl text-off-white/80">
-              Everything you need to know about filling your calendar and cutting no-shows.
+              Everything you need to know about booking-focused landing pages and how to cut no-shows in Scotland.
             </p>
           </div>
         </section>

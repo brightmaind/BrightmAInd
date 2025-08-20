@@ -52,10 +52,10 @@ const Contact: React.FC = () => {
         <section className="py-24 px-4 sm:px-6 lg:px-8 bg-gray-50">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-5xl md:text-6xl font-bold text-charcoal mb-8">
-            Let's Fill Your <span className="text-orange">Calendar</span>
+            Contact Us: Aesthetics Clinic Marketing in <span className="text-orange">Scotland</span>
           </h1>
           <p className="text-xl md:text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-            Book a free growth audit or send us a message. We'll show you exactly how many more bookings your clinic could be getting.
+            Book a free growth audit for your medical aesthetics clinic. We'll show you how booking-focused landing pages can cut no-shows.
           </p>
         </div>
       </section>
@@ -69,7 +69,7 @@ const Contact: React.FC = () => {
             {/* Contact Information */}
             <div>
               <h2 className="text-3xl md:text-4xl font-bold text-charcoal mb-8">
-                Ready to Fill Your Calendar?
+                Ready to Cut No-Shows at Your Medical Aesthetics Clinic?
               </h2>
               <p className="text-lg text-gray-600 mb-12 leading-relaxed">
                 Whether you want to cut no-shows, attract more ideal clients, or automate your booking process, 

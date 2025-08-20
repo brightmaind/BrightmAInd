@@ -94,7 +94,7 @@ const Home = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold font-rajdhani text-off-white leading-tight mb-8">
-              No-Shows and Empty Chairs Are <span className="text-orange">Draining Your Clinic's Profits</span>
+              Medical Aesthetics Clinics in Scotland: <span className="text-orange">Cut No-Shows and Fill Your Calendar</span>
             </h1>
             
             <p className="text-xl md:text-2xl text-off-white/90 leading-relaxed max-w-4xl mx-auto mb-12">
@@ -134,7 +134,7 @@ const Home = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold font-rajdhani text-off-white mb-6">
-                Our Complete <span className="text-orange">Growth System</span>
+                Aesthetics Clinic Marketing: <span className="text-orange">Complete Growth System</span>
               </h2>
               <p className="text-xl text-off-white/80 max-w-3xl mx-auto">
                 Everything you need to fill your calendar, reduce no-shows, and grow your aesthetics clinic
@@ -182,7 +182,7 @@ const Home = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold font-rajdhani text-off-white mb-6">
-                Why Clinics Choose <span className="text-orange">Bright mAInd</span>
+                Why Medical Aesthetics Clinics Choose <span className="text-orange">Bright mAInd</span>
               </h2>
             </div>
 
@@ -255,7 +255,7 @@ const Home = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold font-rajdhani text-off-white mb-6">
-                How a Local Aesthetics Clinic Cut No-Shows by <span className="text-orange">40%</span> and Added <span className="text-orange">15+ New Bookings</span> a Month
+                How Our Booking-Focused Landing Pages Helped a Scotland Clinic <span className="text-orange">Cut No-Shows by 40%</span>
               </h2>
             </div>
 

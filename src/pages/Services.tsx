@@ -139,10 +139,10 @@ const Services: React.FC = () => {
         <section className="py-24 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-5xl md:text-6xl font-bold font-rajdhani text-off-white mb-8">
-              Our Growth System for <span className="text-orange">Clinics</span>
+              Aesthetics Clinic Marketing System for <span className="text-orange">Scotland Clinics</span>
             </h1>
             <p className="text-xl md:text-2xl text-off-white/80 leading-relaxed mb-8">
-              Everything you need to fill calendars, cut no-shows, and grow your medical aesthetics clinic in Scotland.
+              Booking-focused landing pages, targeted ads, and automation to cut no-shows for medical aesthetics clinics.
             </p>
             <Button onClick={handleBookConsultation} size="lg">
               Book Free Growth Audit
@@ -196,7 +196,7 @@ const Services: React.FC = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold font-rajdhani text-off-white mb-6">
-                How We <span className="text-orange">Transform</span> Your Clinic
+                How We Transform <span className="text-orange">Medical Aesthetics Clinics</span>
               </h2>
               <p className="text-xl text-off-white/80">
                 From audit to growth, we handle everything

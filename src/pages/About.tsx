@@ -36,11 +36,11 @@ const About: React.FC = () => {
         <section className="py-24 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-5xl md:text-6xl font-bold font-rajdhani text-off-white mb-8">
-              About Us
+              About Bright mAInd: <span className="text-orange">Medical Aesthetics Clinic Marketing</span>
             </h1>
             <div className="text-xl md:text-2xl text-off-white/80 leading-relaxed space-y-6">
               <p>
-                We're growth specialists who help medical aesthetics clinics in Scotland fill their calendars and cut no-shows.
+                We're aesthetics clinic marketing specialists who help medical aesthetics clinics in Scotland cut no-shows and fill calendars.
               </p>
               <p>
                 Our Growth System combines smart marketing with AI automation to solve the two biggest problems clinics face: empty slots and revenue lost to no-shows.
@@ -59,7 +59,7 @@ const About: React.FC = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold font-rajdhani text-off-white mb-6">
-                Why Clinics Choose Us
+                Why Medical Aesthetics Clinics in Scotland <span className="text-orange">Choose Us</span>
               </h2>
             </div>
 
@@ -87,7 +87,7 @@ const About: React.FC = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold font-rajdhani text-off-white mb-6">
-                Our Approach
+                Our Booking-Focused Landing Pages <span className="text-orange">Approach</span>
               </h2>
             </div>
 

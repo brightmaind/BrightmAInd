@@ -105,10 +105,10 @@ const ContentCreation: React.FC = () => {
         <section className="py-24 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-5xl md:text-6xl font-bold font-rajdhani text-off-white mb-8">
-              Content That Sells Your <span className="text-orange">Treatments</span>
+              Content Creation for Medical Aesthetics Clinics in <span className="text-orange">Scotland</span>
             </h1>
             <p className="text-xl md:text-2xl text-off-white/80 leading-relaxed mb-8">
-              In aesthetics, visuals are everything. We create scroll-stopping videos and ads that make clients book before they walk in.
+              Booking-focused landing pages and video content that help medical aesthetics clinics cut no-shows and drive bookings.
             </p>
             <Button onClick={handleBookAudit} size="lg">
               See How Content Can Fill Your Clinic
@@ -162,7 +162,7 @@ const ContentCreation: React.FC = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold font-rajdhani text-off-white mb-6">
-                Why Content <span className="text-orange">Matters</span> for Clinics
+                Why Aesthetics Clinic Marketing <span className="text-orange">Needs Visual Content</span>
               </h2>
               <p className="text-xl text-off-white/80 max-w-3xl mx-auto">
                 Your treatments transform lives. Your content should transform browsers into bookers.
