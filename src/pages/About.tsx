@@ -14,7 +14,7 @@ const About: React.FC = () => {
     },
     {
       title: "Priority Guarantee",
-      description: "We limit our client roster. You get our full attention, not a spot in a queue."
+      description: "We deliberately limit how many clinics we work with. That means when you're in, you're not competing for our attention—you're our priority."
     }
   ];
 
