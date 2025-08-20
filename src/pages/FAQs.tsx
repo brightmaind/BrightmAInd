@@ -29,8 +29,8 @@ const FAQs: React.FC = () => {
       answer: "If you don't see measurable progress within 60 days, we'll keep working at no extra cost until you do. We're confident in our system because we only work with a limited number of clinics at a time—this means every client gets our full attention and priority support to ensure success."
     },
     {
-      question: "How many clinics do you work with at once?",
-      answer: "We deliberately limit ourselves to working with just 12 clinics at any time. This ensures every client gets our full attention, priority support, and the best possible results. When we're at capacity, new clients join a priority waiting list."
+      question: "How many clients do you take on at once?",
+      answer: "We only work with a handful of clinics at a time—typically 3 to 5—so every client gets our full attention and priority. This ensures faster results and direct access to our team whenever needed."
     },
     {
       question: "Do you only work with certain types of treatments?",

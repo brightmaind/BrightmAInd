@@ -222,11 +222,11 @@ const Home = () => {
               <ScrollAnimation delay={300}>
                 <Card className="h-full">
                   <CardHeader>
-                    <CardTitle className="text-xl text-orange mb-4">Risk-Free Audit</CardTitle>
+                    <CardTitle className="text-xl text-orange mb-4">Priority Guarantee</CardTitle>
                   </CardHeader>
                   <CardContent>
                     <p className="text-off-white/80 leading-relaxed">
-                      Start with a free growth audit and see exactly how many more bookings your clinic could be getting. No commitment required—just clear insights and actionable recommendations.
+                      We deliberately limit how many clinics we work with. That means when you're in, you're not competing for our attention—you're our priority.
                     </p>
                   </CardContent>
                 </Card>
