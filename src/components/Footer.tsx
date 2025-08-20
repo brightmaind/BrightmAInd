@@ -10,11 +10,16 @@ const Footer: React.FC = () => {
           {/* Brand */}
           <div className="md:col-span-2">
             <div className="flex items-center space-x-3 mb-4">
-              <img 
-                src="/assets_task_01k2dvrpkbfntr573hm1h0p81k_1754959602_img_0.webp" 
-                alt="Bright mAInd Marketing" 
-                className="w-14 h-14 rounded-lg object-contain"
-              />
+              <picture>
+                <source srcSet="/bright-maind-logo.webp" type="image/webp" />
+                <img 
+                  src="/bright-maind-logo.jpg" 
+                  alt="Bright mAInd Marketing - Aesthetics Clinic Marketing Scotland"
+                  width="56"
+                  height="56"
+                  className="w-14 h-14 rounded-lg object-contain"
+                />
+              </picture>
               <h3 className="text-3xl font-bold font-rajdhani">
                 <span className="brand-text brand-text-glow">
                   Bright m<span className="text-orange">AI</span>nd

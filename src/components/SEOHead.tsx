@@ -40,7 +40,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({ title, description, canonical, servic
           "@type": "ProfessionalService",
           "name": "Bright mAInd Marketing",
           "url": "https://brightmaind.com",
-          "logo": "https://brightmaind.com/assets_task_01k2dvrpkbfntr573hm1h0p81k_1754959602_img_0.webp",
+          "logo": "https://brightmaind.com/bright-maind-logo.webp",
           "areaServed": "Scotland",
           "description": "We help medical aesthetics clinics fill calendars with booking-focused landing pages, targeted ads, and automated deposits + reminders.",
           "address": { "@type": "PostalAddress", "addressCountry": "GB" }
