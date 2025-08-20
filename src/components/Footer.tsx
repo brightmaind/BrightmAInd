@@ -47,7 +47,7 @@ const Footer: React.FC = () => {
           <div>
             <h4 className="text-lg font-semibold font-rajdhani mb-6">Services</h4>
             <ul className="space-y-3">
-              <li><Link to="/web-design" onClick={() => window.scrollTo(0, 0)} className="text-off-white/70 hover:text-orange transition-colors">Web Design</Link></li>
+              <li><Link to="/content-creation" onClick={() => window.scrollTo(0, 0)} className="text-off-white/70 hover:text-orange transition-colors">Content Creation</Link></li>
               <li><Link to="/services" onClick={() => window.scrollTo(0, 0)} className="text-off-white/70 hover:text-orange transition-colors">Growth System</Link></li>
             </ul>
           </div>

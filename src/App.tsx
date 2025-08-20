@@ -6,7 +6,7 @@ import Services from './pages/Services';
 import About from './pages/About';
 import FAQs from './pages/FAQs';
 import Contact from './pages/Contact';
-import WebDesign from './pages/WebDesign';
+import ContentCreation from './pages/ContentCreation';
 import Footer from './components/Footer';
 
 function App() {
@@ -17,7 +17,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/services" element={<Services />} />
-          <Route path="/web-design" element={<WebDesign />} />
+          <Route path="/content-creation" element={<ContentCreation />} />
           <Route path="/about" element={<About />} />
           <Route path="/faqs" element={<FAQs />} />
           <Route path="/contact" element={<Contact />} />
