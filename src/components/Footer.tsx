@@ -36,9 +36,7 @@ const Footer: React.FC = () => {
           <div>
             <h4 className="text-lg font-semibold font-rajdhani mb-6">Quick Links</h4>
             <ul className="space-y-3">
-              <li><Link to="/automation" onClick={() => window.scrollTo(0, 0)} className="text-off-white/70 hover:text-orange transition-colors">Automation</Link></li>
-              <li><Link to="/marketing" onClick={() => window.scrollTo(0, 0)} className="text-off-white/70 hover:text-orange transition-colors">Marketing</Link></li>
-              <li><Link to="/process" onClick={() => window.scrollTo(0, 0)} className="text-off-white/70 hover:text-orange transition-colors">Process</Link></li>
+              <li><Link to="/services" onClick={() => window.scrollTo(0, 0)} className="text-off-white/70 hover:text-orange transition-colors">Services</Link></li>
               <li><Link to="/about" onClick={() => window.scrollTo(0, 0)} className="text-off-white/70 hover:text-orange transition-colors">About</Link></li>
               <li><Link to="/faqs" onClick={() => window.scrollTo(0, 0)} className="text-off-white/70 hover:text-orange transition-colors">FAQs</Link></li>
               <li><Link to="/contact" onClick={() => window.scrollTo(0, 0)} className="text-off-white/70 hover:text-orange transition-colors">Contact</Link></li>
@@ -50,8 +48,7 @@ const Footer: React.FC = () => {
             <h4 className="text-lg font-semibold font-rajdhani mb-6">Services</h4>
             <ul className="space-y-3">
               <li><Link to="/web-design" onClick={() => window.scrollTo(0, 0)} className="text-off-white/70 hover:text-orange transition-colors">Web Design</Link></li>
-              <li><Link to="/marketing" onClick={() => window.scrollTo(0, 0)} className="text-off-white/70 hover:text-orange transition-colors">Growth Marketing</Link></li>
-              <li><Link to="/automation" onClick={() => window.scrollTo(0, 0)} className="text-off-white/70 hover:text-orange transition-colors">AI Automation</Link></li>
+              <li><Link to="/services" onClick={() => window.scrollTo(0, 0)} className="text-off-white/70 hover:text-orange transition-colors">Growth System</Link></li>
             </ul>
           </div>
         </div>
