@@ -1,6 +1,7 @@
 import React from 'react';
 import ScrollAnimation from '../components/ScrollAnimation';
 import SEOHead from '../components/SEOHead';
+import { Helmet } from 'react-helmet-async';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '../components/ui/accordion';
 
 const FAQs: React.FC = () => {
@@ -54,6 +55,58 @@ const FAQs: React.FC = () => {
         description="Pricing, timelines, landing pages vs websites, and how we cut no-shows with automation."
         canonical="/faqs"
       />
+      
+      {/* FAQPage JSON-LD */}
+      <Helmet>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "How much does your Growth System cost?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Our packages typically start at £500–£1,500/month, depending on your clinic size, ad spend, and service level. This includes website optimization, targeted ads, content creation, and automation setup. Even 2–3 new bookings per month usually cover the investment. We'll give you exact pricing during your free audit based on your clinic's specific needs—no hidden fees, no surprise charges."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How quickly will I see more bookings?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Most clinics see initial results within 30-45 days. The booking system and deposit collection start working immediately, while ads and content typically show increased bookings within 4-6 weeks. Full system optimization usually delivers peak results by month 3."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What if we already have a website?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "That's fine. Many clinics do. We'll build dedicated landing pages designed specifically to drive bookings and cut no-shows. They plug into your existing site and booking system for instant results."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What if the system doesn't work for my clinic?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "If you don't see measurable progress within 60 days, we'll keep working at no extra cost until you do. We're confident in our system because we only work with a limited number of clinics at a time—this means every client gets our full attention and priority support to ensure success."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How do deposits and reminders actually reduce no-shows?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Deposits create financial commitment—clients who pay upfront are 70% more likely to attend. Our automated reminder sequence (48 hours, 24 hours, and 2 hours before) keeps appointments top-of-mind. Together, this typically cuts no-shows by 40-60%."
+                }
+              }
+            ]
+          })}
+        </script>
+      </Helmet>
       
       {/* Header Section */}
       <ScrollAnimation>
