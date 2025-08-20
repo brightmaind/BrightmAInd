@@ -27,6 +27,20 @@ const SEOHead: React.FC<SEOHeadProps> = ({ title, description, canonical }) => {
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
+      
+      {/* JSON-LD Structured Data */}
+      <script type="application/ld+json">
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "ProfessionalService",
+          "name": "Bright mAInd Marketing",
+          "url": "https://brightmaind.com",
+          "logo": "https://brightmaind.com/og-image.jpg",
+          "areaServed": "Scotland",
+          "description": "We help medical aesthetics clinics fill calendars with booking-focused landing pages, targeted ads, and automated deposits + reminders.",
+          "address": { "@type": "PostalAddress", "addressCountry": "GB" }
+        })}
+      </script>
     </Helmet>
   );
 };
