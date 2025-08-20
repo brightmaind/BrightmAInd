@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Mail, Phone, MapPin, Send } from 'lucide-react';
 import ScrollAnimation from '../components/ScrollAnimation';
+import SEOHead from '../components/SEOHead';
 
 const Contact: React.FC = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -36,6 +37,12 @@ const Contact: React.FC = () => {
 
   return (
     <div className="pt-20">
+      <SEOHead 
+        title="Contact Bright mAInd | Book Free Growth Audit"
+        description="Book a free growth audit or message us—limited clinic slots to ensure priority."
+        canonical="/contact"
+      />
+      
       {/* Header Section */}
       <ScrollAnimation>
         <section className="py-24 px-4 sm:px-6 lg:px-8 bg-gray-50">

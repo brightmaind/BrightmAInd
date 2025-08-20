@@ -1,5 +1,6 @@
 import React from 'react';
 import ScrollAnimation from '../components/ScrollAnimation';
+import SEOHead from '../components/SEOHead';
 import { Card, CardContent, CardHeader, CardTitle } from '../components/ui/card';
 
 const About: React.FC = () => {
@@ -20,6 +21,12 @@ const About: React.FC = () => {
 
   return (
     <div className="pt-20 bg-charcoal text-off-white">
+      <SEOHead 
+        title="About Bright mAInd — Aesthetics Clinic Growth Partner"
+        description="We help medical aesthetics clinics in Scotland fill calendars with marketing and AI automation—without the complexity."
+        canonical="/about"
+      />
+      
       {/* Header Section */}
       <ScrollAnimation>
         <section className="py-24 px-4 sm:px-6 lg:px-8">

@@ -1,5 +1,6 @@
 import React from 'react';
 import ScrollAnimation from '../components/ScrollAnimation';
+import SEOHead from '../components/SEOHead';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '../components/ui/accordion';
 
 const FAQs: React.FC = () => {
@@ -48,6 +49,12 @@ const FAQs: React.FC = () => {
 
   return (
     <div className="pt-20 bg-charcoal text-off-white">
+      <SEOHead 
+        title="Aesthetics Clinic Marketing FAQs | Bright mAInd"
+        description="Pricing, timelines, landing pages vs websites, and how we cut no-shows with automation."
+        canonical="/faqs"
+      />
+      
       {/* Header Section */}
       <ScrollAnimation>
         <section className="py-24 px-4 sm:px-6 lg:px-8">

@@ -2,6 +2,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Target, BarChart3, Users, Bot, Calendar, ArrowRight } from 'lucide-react';
 import ScrollAnimation from '../components/ScrollAnimation';
+import SEOHead from '../components/SEOHead';
 import { Button } from '../components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../components/ui/card';
 
@@ -104,6 +105,12 @@ const Services: React.FC = () => {
 
   return (
     <div className="pt-20 bg-charcoal text-off-white">
+      <SEOHead 
+        title="Aesthetics Clinic Growth System | Bright mAInd"
+        description="One system for clinics: landing pages, ads, content, automation to cut no-shows and fill calendars."
+        canonical="/services"
+      />
+      
       {/* Header Section */}
       <ScrollAnimation>
         <section className="py-24 px-4 sm:px-6 lg:px-8">

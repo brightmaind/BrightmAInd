@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Bot, TrendingUp, Settings, ChevronDown, Calendar, ArrowLeft, ArrowRight, Check, Zap, Target, Users, BarChart3 } from 'lucide-react';
 import ScrollAnimation from '../components/ScrollAnimation';
+import SEOHead from '../components/SEOHead';
 import { Button } from '../components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../components/ui/card';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -82,6 +83,12 @@ const Home = () => {
 
   return (
     <div className="pt-20 bg-charcoal text-off-white">
+      <SEOHead 
+        title="Aesthetics Clinic Marketing & Automation | Bright mAInd"
+        description="We fill medical aesthetics clinic calendars across Scotland with booking-focused landing pages, targeted ads, and automated deposits + reminders. Book a free growth audit."
+        canonical="/"
+      />
+      
       {/* Hero Section */}
       <section className="pt-8 pb-24 px-4 sm:px-6 lg:px-8 hero-gradient">
         <div className="max-w-7xl mx-auto">

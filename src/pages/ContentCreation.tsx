@@ -2,6 +2,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Video, Camera, TrendingUp, Play, ArrowRight, Calendar } from 'lucide-react';
 import ScrollAnimation from '../components/ScrollAnimation';
+import SEOHead from '../components/SEOHead';
 import { Button } from '../components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../components/ui/card';
 
@@ -89,6 +90,12 @@ const ContentCreation: React.FC = () => {
 
   return (
     <div className="pt-20 bg-charcoal text-off-white">
+      <SEOHead 
+        title="Aesthetics Clinic Content: Video Reels & Ads | Bright mAInd"
+        description="Scroll-stopping reels, ads, and social content that sell treatments and drive bookings."
+        canonical="/content-creation"
+      />
+      
       {/* Header Section */}
       <ScrollAnimation>
         <section className="py-24 px-4 sm:px-6 lg:px-8">
