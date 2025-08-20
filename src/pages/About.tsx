@@ -3,36 +3,18 @@ import ScrollAnimation from '../components/ScrollAnimation';
 import { Card, CardContent, CardHeader, CardTitle } from '../components/ui/card';
 
 const About: React.FC = () => {
-  const team = [
-    {
-      name: "Stefan Jess",
-      role: "Founder, Automation & Growth",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=400&fit=crop&crop=face"
-    },
-    {
-      name: "M. Patel",
-      role: "Full-Stack & Integrations", 
-      image: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=300&h=400&fit=crop&crop=face"
-    },
-    {
-      name: "A. Nguyen",
-      role: "Performance Creative",
-      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&h=400&fit=crop&crop=face"
-    }
-  ];
-
   const values = [
     {
-      title: "What Works > What's Trendy",
-      description: "We choose tools that solve your problems, not whatever's hot on Twitter."
+      title: "Exclusive Focus",
+      description: "We work only with medical aesthetics clinics. Every strategy is tailored to your treatments and client base."
     },
     {
-      title: "Results Over Opinions", 
-      description: "We let the numbers tell us what's working, not gut feelings."
+      title: "Proven System", 
+      description: "Our Growth System fills calendars and cuts no-shows. It's not theory—it's what works for clinics like yours."
     },
     {
-      title: "You Own Everything",
-      description: "Your systems belong to you. We make sure you understand how they work."
+      title: "Priority Guarantee",
+      description: "We limit our client roster. You get our full attention, not a spot in a queue."
     }
   ];
 
@@ -47,26 +29,26 @@ const About: React.FC = () => {
             </h1>
             <div className="text-xl md:text-2xl text-off-white/80 leading-relaxed space-y-6">
               <p>
-                We started mAInd because we were tired of seeing new and small businesses struggle with getting online and marketing themselves effectively.
+                We're growth specialists who help medical aesthetics clinics in Scotland fill their calendars and cut no-shows.
               </p>
               <p>
-                We specialise in working with brand new and small businesses, helping them establish their online presence and market themselves efficiently. We limit how many clients we work with at one time, so you're guaranteed to be prioritised.
+                Our Growth System combines smart marketing with AI automation to solve the two biggest problems clinics face: empty slots and revenue lost to no-shows.
               </p>
               <p>
-                No buzzwords, no overcomplicated tech—just solutions that actually work for growing businesses.
+                We don't work with everyone. We focus exclusively on medical aesthetics clinics because that's where we deliver the best results.
               </p>
             </div>
           </div>
         </section>
       </ScrollAnimation>
 
-      {/* Values Section */}
+      {/* Why Choose Us Section */}
       <ScrollAnimation>
         <section className="py-24 bg-near-black">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold font-rajdhani text-off-white mb-6">
-                Our Values
+                Why Clinics Choose Us
               </h2>
             </div>
 
@@ -88,31 +70,53 @@ const About: React.FC = () => {
         </section>
       </ScrollAnimation>
 
-      {/* Team Section */}
+      {/* Our Approach Section */}
       <ScrollAnimation>
         <section className="py-24">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold font-rajdhani text-off-white mb-6">
-                Who We Work With
+                Our Approach
               </h2>
             </div>
 
-            <div className="max-w-3xl mx-auto text-center">
-              <p className="text-xl text-off-white/80 leading-relaxed mb-8">
-                While we handle most projects ourselves, we work with a small network of trusted specialists when needed:
-              </p>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div className="text-left">
-                  <h3 className="text-lg font-semibold text-orange mb-2">Development Partner</h3>
-                  <p className="text-off-white/70">For complex integrations and custom builds</p>
+            <div className="max-w-4xl mx-auto">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div className="bg-near-black/60 rounded-2xl p-8">
+                  <h3 className="text-xl font-semibold text-orange mb-4">What We Do</h3>
+                  <p className="text-off-white/80 leading-relaxed">
+                    We build complete Growth Systems: sleek websites with booking flows, targeted ads that attract ideal clients, 
+                    content that sells treatments, and automation that cuts no-shows. Everything works together to fill your calendar.
+                  </p>
                 </div>
-                <div className="text-left">
-                  <h3 className="text-lg font-semibold text-orange mb-2">Creative Partner</h3>
-                  <p className="text-off-white/70">For high-converting ad creative and design</p>
+                
+                <div className="bg-near-black/60 rounded-2xl p-8">
+                  <h3 className="text-xl font-semibold text-orange mb-4">How We're Different</h3>
+                  <p className="text-off-white/80 leading-relaxed">
+                    We only work with medical aesthetics clinics. That means every strategy, every piece of content, 
+                    every automation is designed specifically for your industry. No generic solutions.
+                  </p>
                 </div>
               </div>
             </div>
+          </div>
+        </section>
+      </ScrollAnimation>
+
+      {/* Guarantee Section */}
+      <ScrollAnimation>
+        <section className="py-24 bg-orange">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 className="text-4xl md:text-5xl font-bold font-rajdhani text-white mb-8">
+              Our Priority Guarantee
+            </h2>
+            <p className="text-xl text-white/90 mb-8 leading-relaxed">
+              We deliberately limit the number of clinics we work with at any time. This means you're never lost in a queue—
+              you get our full attention and priority support when you need it.
+            </p>
+            <p className="text-lg text-white/80">
+              When we take on your clinic, we're committed to filling your calendar and cutting your no-shows. That's our promise.
+            </p>
           </div>
         </section>
       </ScrollAnimation>
