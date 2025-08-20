@@ -24,7 +24,8 @@ const Services: React.FC = () => {
         "Seamless online booking with deposit collection",
         "Mobile-optimized designs that convert on every device",
         "Treatment galleries showcasing your best work",
-        "Fast-loading pages that keep potential clients engaged"
+        "Fast-loading pages that keep potential clients engaged",
+        "Already have a website? We create standalone booking-focused landing pages that work alongside your site—built to convert browsers into paying clients with deposits and reminders"
       ]
     },
     {

@@ -37,6 +37,10 @@ const FAQs: React.FC = () => {
       answer: "We work with all medical aesthetics treatments—Botox, fillers, laser treatments, skin rejuvenation, body contouring, and more. Our system adapts to your specific treatments and target demographics, whether you focus on anti-aging, acne treatment, or body aesthetics."
     },
     {
+      question: "What if we already have a website?",
+      answer: "That's fine. Many clinics do. We'll build dedicated landing pages designed specifically to drive bookings and cut no-shows. They plug into your existing site and booking system for instant results."
+    },
+    {
       question: "What happens during the free growth audit?",
       answer: "We'll analyze your current booking process, identify revenue leaks from no-shows, review your online presence, and show you exactly how many more bookings your clinic could be getting. Takes 30 minutes, no sales pressure, and you'll leave with actionable insights regardless of whether we work together."
     }
