@@ -33,7 +33,12 @@ const Footer: React.FC = () => {
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
                 <Mail size={18} className="text-orange" />
-                <span className="text-off-white/80">enquiries@brightmaind.com</span>
+                <a 
+                  href="mailto:enquiries@brightmaind.com" 
+                  className="text-off-white/80 hover:text-orange transition-colors"
+                >
+                  enquiries@brightmaind.com
+                </a>
               </div>
             </div>
           </div>
@@ -60,6 +65,19 @@ const Footer: React.FC = () => {
         </div>
 
         <div className="border-t border-slate/20 mt-12 pt-8">
+          {/* NAP-lite Trust Line */}
+          <div className="text-center mb-6">
+            <p className="text-off-white/70 text-sm leading-relaxed">
+              Serving medical aesthetics clinics across Scotland | Mon–Fri 9–5 | 
+              <a 
+                href="mailto:enquiries@brightmaind.com" 
+                className="text-orange hover:text-orange/80 transition-colors ml-1"
+              >
+                enquiries@brightmaind.com
+              </a>
+            </p>
+          </div>
+          
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-off-white/60 text-sm">
               © 2025 Bright mAInd Marketing. All rights reserved.
