@@ -25,13 +25,15 @@ const SEOHead: React.FC<SEOHeadProps> = ({ title, description, canonical, servic
       {/* Open Graph Tags */}
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
-      <meta property="og:url" content={fullCanonical} />
       <meta property="og:type" content="website" />
+      <meta property="og:url" content={fullCanonical} />
+      <meta property="og:image" content={`${siteUrl}/og-image.jpg`} />
       
       {/* Twitter Card Tags */}
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
+      <meta name="twitter:image" content={`${siteUrl}/og-image.jpg`} />
       
       {/* JSON-LD Structured Data */}
       <script type="application/ld+json">
