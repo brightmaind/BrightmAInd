@@ -1,5 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { Video, Camera, TrendingUp, Play, ArrowRight, Calendar } from 'lucide-react';
 import ScrollAnimation from '../components/ScrollAnimation';
 import SEOHead from '../components/SEOHead';
@@ -110,9 +111,21 @@ const ContentCreation: React.FC = () => {
             <p className="text-xl md:text-2xl text-off-white/80 leading-relaxed mb-8">
               Booking-focused landing pages and video content that help medical aesthetics clinics cut no-shows and drive bookings.
             </p>
-            <Button onClick={handleBookAudit} size="lg">
-              See How Content Can Fill Your Clinic
-            </Button>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button onClick={handleBookAudit} size="lg">
+                See How Content Can Fill Your Clinic
+              </Button>
+              <Button 
+                onClick={() => {
+                  navigate('/services');
+                  window.scrollTo(0, 0);
+                }}
+                size="lg" 
+                variant="outline"
+              >
+                View Complete Growth System
+              </Button>
+            </div>
           </div>
         </section>
       </ScrollAnimation>
@@ -165,7 +178,7 @@ const ContentCreation: React.FC = () => {
                 Why Aesthetics Clinic Marketing <span className="text-orange">Needs Visual Content</span>
               </h2>
               <p className="text-xl text-off-white/80 max-w-3xl mx-auto">
-                Your treatments transform lives. Your content should transform browsers into bookers.
+                Your treatments transform lives. Your content should transform browsers into bookers. Content works best as part of <Link to="/services" onClick={() => window.scrollTo(0, 0)} className="text-orange hover:text-orange/80 underline">our complete growth system</Link>.
               </p>
             </div>
 
@@ -212,6 +225,11 @@ const ContentCreation: React.FC = () => {
               <p className="text-off-white/80">
                 Results from clinics using our content creation system across Scotland.
               </p>
+              <div className="mt-6">
+                <p className="text-off-white/80">
+                  Want to see how content fits into our complete approach? <Link to="/services" onClick={() => window.scrollTo(0, 0)} className="text-orange hover:text-orange/80 underline">Explore our full growth system</Link>.
+                </p>
+              </div>
             </div>
           </div>
         </section>

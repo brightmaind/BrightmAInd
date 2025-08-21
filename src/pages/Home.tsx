@@ -105,6 +105,17 @@ const Home = () => {
               <Button onClick={handleBookAudit} size="lg" className="text-lg px-8 py-4" aria-label="Book a free growth audit to reduce no-shows and fill your calendar">
                 Book a Free Growth Audit
               </Button>
+              <Button 
+                onClick={() => {
+                  navigate('/services');
+                  window.scrollTo(0, 0);
+                }}
+                size="lg" 
+                variant="outline"
+                className="text-lg px-8 py-4"
+              >
+                See Our Growth System
+              </Button>
             </div>
 
             {/* Problem Agitation */}
@@ -137,7 +148,7 @@ const Home = () => {
                 Aesthetics Clinic Marketing: <span className="text-orange">Complete Growth System</span>
               </h2>
               <p className="text-xl text-off-white/80 max-w-3xl mx-auto">
-                Everything you need to fill your calendar, reduce no-shows, and grow your aesthetics clinic
+                Everything you need to fill your calendar, reduce no-shows, and grow your aesthetics clinic. <Link to="/services" onClick={() => window.scrollTo(0, 0)} className="text-orange hover:text-orange/80 underline">Learn more about our complete growth system</Link>.
               </p>
             </div>
 
@@ -166,6 +177,17 @@ const Home = () => {
                             <span className="text-off-white/80">{bullet}</span>
                           </div>
                         ))}
+                        {index === 1 && (
+                          <div className="mt-6 pt-4 border-t border-slate/20">
+                            <Link 
+                              to="/content-creation" 
+                              onClick={() => window.scrollTo(0, 0)}
+                              className="text-orange hover:text-orange/80 underline text-sm"
+                            >
+                              See examples of our video reels and social media content →
+                            </Link>
+                          </div>
+                        )}
                       </div>
                     </CardContent>
                   </Card>
@@ -242,7 +264,7 @@ const Home = () => {
 
             <div className="text-center">
               <p className="text-xl text-off-white/90 max-w-3xl mx-auto leading-relaxed">
-                With Bright mAInd, you don't just get a website—you get a growth partner committed to filling your clinic.
+                With Bright mAInd, you don't just get a website—you get a growth partner committed to filling your clinic. <Link to="/faqs" onClick={() => window.scrollTo(0, 0)} className="text-orange hover:text-orange/80 underline">Check our pricing and timelines</Link> or <Link to="/contact" onClick={() => window.scrollTo(0, 0)} className="text-orange hover:text-orange/80 underline">book a free growth audit</Link>.
               </p>
             </div>
           </div>

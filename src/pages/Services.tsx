@@ -1,5 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { Target, BarChart3, Users, Bot, Calendar, ArrowRight } from 'lucide-react';
 import ScrollAnimation from '../components/ScrollAnimation';
 import SEOHead from '../components/SEOHead';
@@ -144,9 +145,21 @@ const Services: React.FC = () => {
             <p className="text-xl md:text-2xl text-off-white/80 leading-relaxed mb-8">
               Booking-focused landing pages, targeted ads, and automation to cut no-shows for medical aesthetics clinics.
             </p>
-            <Button onClick={handleBookConsultation} size="lg">
-              Book Free Growth Audit
-            </Button>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button onClick={handleBookConsultation} size="lg">
+                Book Free Growth Audit
+              </Button>
+              <Button 
+                onClick={() => {
+                  navigate('/faqs');
+                  window.scrollTo(0, 0);
+                }}
+                size="lg" 
+                variant="outline"
+              >
+                View Pricing & Timelines
+              </Button>
+            </div>
           </div>
         </section>
       </ScrollAnimation>
@@ -181,6 +194,17 @@ const Services: React.FC = () => {
                           </div>
                         ))}
                       </div>
+                      {index === 1 && (
+                        <div className="mt-6 pt-4 border-t border-slate/20">
+                          <Link 
+                            to="/content-creation" 
+                            onClick={() => window.scrollTo(0, 0)}
+                            className="text-orange hover:text-orange/80 underline"
+                          >
+                            Explore our video reels and social media content creation services →
+                          </Link>
+                        </div>
+                      )}
                     </CardContent>
                   </Card>
                 </ScrollAnimation>
@@ -249,6 +273,15 @@ const Services: React.FC = () => {
               <p className="text-off-white/80">
                 Results based on our work with medical aesthetics clinics across Scotland.
               </p>
+              <div className="mt-6">
+                <Link 
+                  to="/faqs" 
+                  onClick={() => window.scrollTo(0, 0)}
+                  className="text-orange hover:text-orange/80 underline"
+                >
+                  See detailed pricing and timeline information →
+                </Link>
+              </div>
             </div>
           </div>
         </section>
