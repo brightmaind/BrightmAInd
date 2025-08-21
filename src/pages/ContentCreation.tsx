@@ -283,7 +283,7 @@ const ContentCreation: React.FC = () => {
                     <CardTitle className="text-xl">Optimize</CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-off-white/80">We track performance and continuously refine content to maximize bookings and ROI for your clinic.</p>
+                    <p className="text-off-white/80">We track performance and continuously refine content to maximise bookings and ROI for your clinic.</p>
                   </CardContent>
                 </Card>
               </ScrollAnimation>

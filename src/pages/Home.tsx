@@ -229,7 +229,7 @@ const Home = () => {
                   </CardHeader>
                   <CardContent>
                     <p className="text-off-white/80 leading-relaxed">
-                      Websites, ads, content, and automation all work together as one integrated system that fills calendars and cuts no-shows. Everything connects to maximize your bookings.
+                      Websites, ads, content, and automation all work together as one integrated system that fills calendars and cuts no-shows. Everything connects to maximise your bookings.
                     </p>
                   </CardContent>
                 </Card>
