@@ -15,6 +15,7 @@ const Footer: React.FC = () => {
                 <img 
                   src="/bright-maind-logo.jpg" 
                   alt="Bright mAInd Marketing - Aesthetics Clinic Marketing Scotland"
+                  loading="lazy"
                   width="56"
                   height="56"
                   className="w-14 h-14 rounded-lg object-contain"

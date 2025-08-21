@@ -1,5 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap');
+
+/* Critical CSS for hero section - inline above-the-fold styles */
+.hero-critical {
+  background: linear-gradient(135deg, #141414 0%, #1a1a1a 25%, #0c0c0c 50%, #1f1f1f 75%, #141414 100%);
+  background-size: 400% 400%;
+  animation: gradientShift 8s ease-in-out infinite;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@keyframes gradientShift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
