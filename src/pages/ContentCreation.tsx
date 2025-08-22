@@ -106,16 +106,29 @@ const ContentCreation: React.FC = () => {
         <section className="py-24 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-5xl md:text-6xl font-bold font-rajdhani text-off-white mb-8">
-              Wrinkle treatment consultation funnel <span className="text-orange">(example)</span>
+              Your treatments aren't selling themselves <span className="text-orange">online</span>
             </h1>
-            <p className="text-xl md:text-2xl text-off-white/80 leading-relaxed mb-8">
-              How we turn paid traffic into booked consultations using your existing booking system—at a predictable cost.
-            </p>
-            <p className="text-lg text-off-white/70 mb-8">
-              Ad → This page → Pick time (your calendar) → Deposit → Reminders → Attend
-            </p>
-            <p className="text-sm text-off-white/60 mb-8">
-              This demo shows the first steps; live builds connect to your current system.
+            <div className="space-y-6 text-xl md:text-2xl text-off-white/80 leading-relaxed mb-8">
+              <p>
+                <strong className="text-red-400">Problem:</strong> Your amazing results are hidden behind generic posts that don't convert browsers into bookers.
+              </p>
+              <p>
+                <strong className="text-red-400">Interest:</strong> Potential clients scroll past because your content doesn't show the transformation they want.
+              </p>
+              <p>
+                <strong className="text-orange">Desire:</strong> Imagine content so compelling that prospects book consultations after seeing just one post.
+              </p>
+              <p>
+                <strong className="text-green-400">Solution:</strong> We create scroll-stopping content that showcases your expertise and drives bookings—video reels, before/after stories, and ads that convert.
+              </p>
+            </div>
+            <div className="bg-orange/10 border border-orange/20 rounded-2xl p-6 mb-8">
+              <p className="text-lg text-off-white/90 mb-2">
+                <strong>What You Get:</strong>
+              </p>
+              <p className="text-off-white/80">
+                Treatment showcase videos · Before/after storytelling · Social media content · Conversion-focused ad creatives
+              </p>
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button onClick={handleBookAudit} size="lg">
