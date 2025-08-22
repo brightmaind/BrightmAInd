@@ -1,37 +1,10 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import SEOHead from '../../components/SEOHead';
 import DemoNavigation from '../../components/DemoNavigation';
 import { Button } from '../../components/ui/button';
 
-// Calendly integration
-declare global {
-  interface Window {
-    Calendly: any;
-  }
-}
-
 const SkinBooster: React.FC = () => {
-  const handleBookAudit = () => {
-    if (window.Calendly) {
-      window.Calendly.initPopupWidget({
-        url: 'https://calendly.com/enquiries-brightmaind/30min?a1=Skin%20Booster%20Demo%20Audit',
-        parentElement: document.body
-      });
-      
-      setTimeout(() => {
-        const popup = document.querySelector('.calendly-popup');
-        if (popup && !popup.querySelector('.calendly-text-overlay')) {
-          const textOverlay = document.createElement('div');
-          textOverlay.className = 'calendly-text-overlay';
-          textOverlay.innerHTML = '<span>Let\'s discuss how this skin booster funnel can work for your clinic</span>';
-          popup.appendChild(textOverlay);
-        }
-      }, 100);
-    } else {
-      window.open('https://calendly.com/enquiries-brightmaind/30min?a1=Skin%20Booster%20Demo%20Audit', '_blank');
-    }
-  };
-
   return (
     <div className="pt-20 bg-charcoal text-off-white">
       <SEOHead 
@@ -151,26 +124,15 @@ const SkinBooster: React.FC = () => {
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/audit">
-              <Button 
-                id="cta-audit" 
-                data-cta="audit"
-                size="lg" 
-                className="text-lg px-8 py-4"
-              >
-                Book Free Audit
-              </Button>
-            </Link>
-            <Link to="/pricing">
-              <Button 
-                id="cta-pricing"
-                size="lg" 
-                variant="outline"
-                className="text-lg px-8 py-4"
-              >
-                See Pricing
-              </Button>
-            </Link>
+            <Button 
+              onClick={handleBookAudit}
+              id="cta-audit" 
+              data-cta="audit"
+              size="lg" 
+              className="text-lg px-8 py-4"
+            >
+              Book Free Audit
+            </Button>
           </div>
         </div>
       </section>
