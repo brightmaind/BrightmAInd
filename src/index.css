@@ -181,14 +181,6 @@ h1, h2, h3, h4, h5, h6 {
   background: #ff7a00;
 }
 
-#demo-hero {
-  /* Demo page hero tracking */
-}
-
-#audit-cta {
-  /* Audit CTA tracking */
-}
-
 /* Calendly Popup Custom Styling */
 .calendly-overlay {
   background: rgba(12, 12, 12, 0.95) !important;
