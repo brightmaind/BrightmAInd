@@ -140,17 +140,17 @@ const Services: React.FC = () => {
         <section className="py-24 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-5xl md:text-6xl font-bold font-rajdhani text-off-white mb-8">
-              Stop losing revenue to <span className="text-orange">empty slots and no-shows</span>
+              Fill your calendar with <span className="text-orange">premium treatment bookings</span>
             </h1>
             <div className="space-y-6 text-xl md:text-2xl text-off-white/80 leading-relaxed mb-8">
               <p>
-                <strong className="text-red-400">Problem:</strong> Your current booking system sends visitors to a generic page with no qualification or commitment.
+                <strong className="text-red-400">Problem:</strong> Your current marketing sends unqualified visitors to generic booking pages that don't convert.
               </p>
               <p>
-                <strong className="text-red-400">Result:</strong> High bounce rates, unpredictable calendars, and 30-40% no-show rates eating into your profits.
+                <strong className="text-red-400">Result:</strong> Empty appointment slots, inconsistent revenue, and missed opportunities for your highest-value treatments.
               </p>
               <p>
-                <strong className="text-green-400">Solution:</strong> Treatment-specific funnels that qualify prospects, secure deposits, and deliver 15+ consultations monthly at a predictable cost.
+                <strong className="text-green-400">Solution:</strong> Treatment-specific funnels that attract qualified prospects and deliver 15+ premium consultations monthly at a predictable cost.
               </p>
             </div>
             <div className="bg-orange/10 border border-orange/20 rounded-2xl p-6 mb-8">

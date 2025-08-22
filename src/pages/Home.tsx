@@ -126,7 +126,7 @@ const Home = () => {
                   <p className="text-off-white/80">Most clinics send cold visitors to a generic "book now" page. No context, no qualification, no commitment—so people bounce.</p>
                 </div>
                 <div className="bg-near-black/60 rounded-2xl p-6 border border-red-500/20">
-                  <h3 className="text-lg font-semibold text-red-400 mb-2">Agitate</h3>
+                  <h3 className="text-lg font-semibold text-red-400 mb-2">Result</h3>
                   <p className="text-off-white/80">That wastes ad spend, keeps diaries unpredictable, and caps growth on your highest-value treatments.</p>
                 </div>
                 <div className="bg-near-black/60 rounded-2xl p-6 border border-red-500/20">
