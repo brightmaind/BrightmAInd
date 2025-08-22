@@ -119,6 +119,7 @@ const Home = () => {
             </div>
 
             {/* PAS Block */}
+          </div>
         </div>
       </section>
 
