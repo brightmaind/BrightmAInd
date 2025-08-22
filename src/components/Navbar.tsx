@@ -33,27 +33,9 @@ const Navbar: React.FC = () => {
       return;
     }
     
-    if (window.Calendly) {
-      window.Calendly.initPopupWidget({
-        url: 'https://calendly.com/enquiries-brightmaind/30min?a1=General%20Consultation',
-        parentElement: document.body
-      });
-      
-      // Add custom text overlay after popup opens
-      setTimeout(() => {
-        const popup = document.querySelector('.calendly-popup');
-        if (popup && !popup.querySelector('.calendly-text-overlay')) {
-          const textOverlay = document.createElement('div');
-          textOverlay.className = 'calendly-text-overlay';
-          textOverlay.innerHTML = '<span>Please select a convenient time for your consultation call</span>';
-          popup.appendChild(textOverlay);
-        }
-      }, 100);
-    } else {
-      // Fallback to direct link if Calendly widget isn't loaded
-      navigate('/contact');
-      window.scrollTo(0, 0);
-    }
+    // Navigate to audit page
+    navigate('/audit');
+    window.scrollTo(0, 0);
   };
 
   const handleNavigation = (href: string) => {
@@ -109,10 +91,10 @@ const Navbar: React.FC = () => {
               onClick={handleBookConsultation} 
               size="sm" 
               className="ml-4"
-              aria-label="Book a free growth audit consultation"
+              aria-label="Book a 10-minute audit"
             >
               <Calendar className="w-4 h-4 mr-2" />
-              Book a Free Growth Audit
+              Book a 10-minute audit
             </Button>
           </div>
 
@@ -146,10 +128,10 @@ const Navbar: React.FC = () => {
                 onClick={handleBookConsultation} 
                 size="sm" 
                 className="mt-4"
-                aria-label="Book a free growth audit consultation"
+                aria-label="Book a 10-minute audit"
               >
                 <Calendar className="w-4 h-4 mr-2" />
-                Book a Free Growth Audit
+                Book a 10-minute audit
               </Button>
             </div>
           </div>

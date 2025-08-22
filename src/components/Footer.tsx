@@ -47,19 +47,19 @@ const Footer: React.FC = () => {
           <div>
             <h4 className="text-lg font-semibold font-rajdhani mb-6">Quick Links</h4>
             <ul className="space-y-3">
-              <li><Link to="/services" onClick={() => window.scrollTo(0, 0)} className="text-off-white/70 hover:text-orange transition-colors">Services</Link></li>
-              <li><Link to="/about" onClick={() => window.scrollTo(0, 0)} className="text-off-white/70 hover:text-orange transition-colors">About</Link></li>
-              <li><Link to="/faqs" onClick={() => window.scrollTo(0, 0)} className="text-off-white/70 hover:text-orange transition-colors">FAQs</Link></li>
-              <li><Link to="/contact" onClick={() => window.scrollTo(0, 0)} className="text-off-white/70 hover:text-orange transition-colors">Contact</Link></li>
+              <li><Link to="/pricing" onClick={() => window.scrollTo(0, 0)} className="text-off-white/70 hover:text-orange transition-colors">Pricing</Link></li>
+              <li><Link to="/audit" onClick={() => window.scrollTo(0, 0)} className="text-off-white/70 hover:text-orange transition-colors">Audit</Link></li>
+              <li><Link to="/compliance" onClick={() => window.scrollTo(0, 0)} className="text-off-white/70 hover:text-orange transition-colors">Compliance</Link></li>
             </ul>
           </div>
 
-          {/* Services */}
+          {/* Demos */}
           <div>
-            <h4 className="text-lg font-semibold font-rajdhani mb-6">Services</h4>
+            <h4 className="text-lg font-semibold font-rajdhani mb-6">Demo Funnels</h4>
             <ul className="space-y-3">
-              <li><Link to="/content-creation" onClick={() => window.scrollTo(0, 0)} className="text-off-white/70 hover:text-orange transition-colors">Content Creation</Link></li>
-              <li><Link to="/services" onClick={() => window.scrollTo(0, 0)} className="text-off-white/70 hover:text-orange transition-colors">Growth System</Link></li>
+              <li><Link to="/demos/wrinkle-consult" onClick={() => window.scrollTo(0, 0)} className="text-off-white/70 hover:text-orange transition-colors">Wrinkle Consultation</Link></li>
+              <li><Link to="/demos/lip-enhancement" onClick={() => window.scrollTo(0, 0)} className="text-off-white/70 hover:text-orange transition-colors">Lip Enhancement</Link></li>
+              <li><Link to="/demos/skin-booster" onClick={() => window.scrollTo(0, 0)} className="text-off-white/70 hover:text-orange transition-colors">Skin Booster</Link></li>
             </ul>
           </div>
         </div>
@@ -86,6 +86,13 @@ const Footer: React.FC = () => {
               <a href="#" className="text-off-white/60 hover:text-orange text-sm transition-colors">Privacy Policy</a>
               <a href="#" className="text-off-white/60 hover:text-orange text-sm transition-colors">Terms of Service</a>
             </div>
+          </div>
+          
+          {/* Compliance footnote */}
+          <div className="mt-8 pt-6 border-t border-slate/20">
+            <p className="text-off-white/60 text-xs text-center leading-relaxed">
+              We follow ASA/CAP/MHRA guidance. Public assets avoid prescription-only medicine terms (e.g., we use "wrinkle treatment consultation"). All claims are evidence-based and responsibly presented.
+            </p>
           </div>
         </div>
       </div>
