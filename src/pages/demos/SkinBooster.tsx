@@ -5,6 +5,23 @@ import DemoNavigation from '../../components/DemoNavigation';
 import { Button } from '../../components/ui/button';
 
 const SkinBooster: React.FC = () => {
+  const handleBookAudit = () => {
+    // @ts-ignore
+    if (window.Calendly) {
+      // @ts-ignore
+      window.Calendly.initPopupWidget({
+        url: 'https://calendly.com/brightmaind/audit?a1=Skin%20Booster%20Demo%20Audit',
+        text: 'Book your free audit - Skin Booster Demo',
+        color: '#ff6b35',
+        textColor: '#ffffff',
+        branding: false
+      });
+    } else {
+      // Fallback to direct link
+      window.open('https://calendly.com/brightmaind/audit?a1=Skin%20Booster%20Demo%20Audit', '_blank');
+    }
+  };
+
   return (
     <div className="pt-20 bg-charcoal text-off-white">
       <SEOHead 
