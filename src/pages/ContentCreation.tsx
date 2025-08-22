@@ -110,7 +110,7 @@ const ContentCreation: React.FC = () => {
             </h1>
             <div className="space-y-6 text-xl md:text-2xl text-off-white/80 leading-relaxed mb-8">
               <p>
-                <strong className="text-red-400">Problem:</strong> Your amazing results are hidden behind generic posts that don't convert browsers into bookers.
+                <strong className="text-red-400">Problem:</strong> Your results are hidden behind generic posts that don't convert browsers into bookers.
               </p>
               <p>
                 Potential clients scroll past because your content doesn't show the transformation they want.
