@@ -121,16 +121,13 @@ const Home = () => {
             {/* PAS Block */}
             <div className="max-w-4xl mx-auto">
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
-                <div className="bg-near-black/60 rounded-2xl p-6 border border-red-500/20">
-                  <h3 className="text-lg font-semibold text-red-400 mb-2">Problem</h3>
+                <div className="bg-near-black/60 rounded-2xl p-6 border-4 border-red-500">
                   <p className="text-off-white/80">Most clinics send cold visitors to a generic "book now" page. No context, no qualification, no commitment—so people bounce.</p>
                 </div>
-                <div className="bg-near-black/60 rounded-2xl p-6 border border-red-500/20">
-                  <h3 className="text-lg font-semibold text-red-400 mb-2">Result</h3>
+                <div className="bg-near-black/60 rounded-2xl p-6 border-4 border-orange">
                   <p className="text-off-white/80">That wastes ad spend, keeps diaries unpredictable, and caps growth on your highest-value treatments.</p>
                 </div>
-                <div className="bg-near-black/60 rounded-2xl p-6 border border-red-500/20">
-                  <h3 className="text-lg font-semibold text-green-400 mb-2">Solution</h3>
+                <div className="bg-near-black/60 rounded-2xl p-6 border-4 border-green-500">
                   <p className="text-off-white/80">We route paid traffic to a treatment page that qualifies intent, guides to the right slot, and secures a small deposit—then reminders ensure attendance. You keep your current booking tool. We make it convert.</p>
                 </div>
               </div>
