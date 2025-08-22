@@ -7,6 +7,9 @@ import About from './pages/About';
 import FAQs from './pages/FAQs';
 import Contact from './pages/Contact';
 import ContentCreation from './pages/ContentCreation';
+import WrinkleConsult from './pages/demos/WrinkleConsult';
+import LipEnhancement from './pages/demos/LipEnhancement';
+import SkinBooster from './pages/demos/SkinBooster';
 import Footer from './components/Footer';
 
 function App() {
@@ -21,6 +24,9 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/faqs" element={<FAQs />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/demos/wrinkle-consult" element={<WrinkleConsult />} />
+          <Route path="/demos/lip-enhancement" element={<LipEnhancement />} />
+          <Route path="/demos/skin-booster" element={<SkinBooster />} />
         </Routes>
         <Footer />
       </div>
