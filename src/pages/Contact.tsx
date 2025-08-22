@@ -52,10 +52,10 @@ const Contact: React.FC = () => {
         <section className="py-24 px-4 sm:px-6 lg:px-8 bg-gray-50">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-5xl md:text-6xl font-bold text-charcoal mb-8">
-            Contact Us: Aesthetics Clinic Marketing in <span className="text-orange">Scotland</span>
+            Ready for a <span className="text-orange">full calendar</span>?
           </h1>
           <p className="text-xl md:text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-            Book a free growth audit for your medical aesthetics clinic. We'll show you how booking-focused landing pages can cut no-shows.
+            Book a free growth audit for your medical aesthetics clinic. We'll show you how our system brings in predictable bookings every week.
           </p>
         </div>
       </section>
@@ -72,7 +72,7 @@ const Contact: React.FC = () => {
                 Ready to start?
               </h2>
               <p className="text-lg text-gray-600 mb-12 leading-relaxed">
-                Book your 10-minute audit and get your treatment funnel plan. We're here to help you achieve predictable premium bookings.
+                Book your 10-minute audit and get your treatment funnel plan. We're here to help you fill your calendar with consistent growth.
               </p>
 
               <div className="space-y-8">
@@ -172,7 +172,7 @@ const Contact: React.FC = () => {
                       rows={6}
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange focus:border-transparent transition-colors resize-none text-charcoal"
                       placeholder="Tell us about your business goals and how we can help you achieve them..."
-                      placeholder="Tell us about your clinic and current booking challenges. How can we help fill your calendar?"
+                      placeholder="Tell us about your clinic and current booking challenges. How can we help you achieve consistent growth?"
                     />
                   </div>
 
@@ -197,7 +197,7 @@ const Contact: React.FC = () => {
                     Thank you for reaching out to us. We've received your message and will get back to you within 4 hours during business days.
                   </p>
                   <p className="text-gray-600 mb-8">
-                    We're excited to discuss how we can help fill your clinic's calendar and cut no-shows with our Growth System.
+                    We're excited to discuss how we can help you achieve predictable bookings and consistent revenue growth.
                   </p>
                   <div className="bg-orange/10 border border-orange/20 rounded-lg p-4 mb-6">
                     <p className="text-gray-700 text-sm">
