@@ -140,16 +140,32 @@ const Services: React.FC = () => {
         <section className="py-24 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-5xl md:text-6xl font-bold font-rajdhani text-off-white mb-8">
-              Performance growth — <span className="text-orange">£1,500/month</span>
+              Stop losing revenue to <span className="text-orange">empty slots and no-shows</span>
             </h1>
-            <p className="text-xl md:text-2xl text-off-white/80 leading-relaxed mb-8">
-              Funnel build · 3 creatives/month · tracking setup · weekly optimisation & reporting
-            </p>
-            <p className="text-lg text-off-white/70 mb-6">
-              Start £500–£800/month per flagship treatment
-            </p>
+            <div className="space-y-6 text-xl md:text-2xl text-off-white/80 leading-relaxed mb-8">
+              <p>
+                <strong className="text-red-400">Problem:</strong> Your current booking system sends visitors to a generic page with no qualification or commitment.
+              </p>
+              <p>
+                <strong className="text-red-400">Result:</strong> High bounce rates, unpredictable calendars, and 30-40% no-show rates eating into your profits.
+              </p>
+              <p>
+                <strong className="text-green-400">Solution:</strong> Treatment-specific funnels that qualify prospects, secure deposits, and deliver 15+ consultations monthly at a predictable cost.
+              </p>
+            </div>
+            <div className="bg-orange/10 border border-orange/20 rounded-2xl p-6 mb-8">
+              <p className="text-lg text-off-white/90 mb-2">
+                <strong>What You Get:</strong>
+              </p>
+              <p className="text-off-white/80">
+                Funnel build · 3 creatives/month · tracking setup · weekly optimisation & reporting
+              </p>
+              <p className="text-sm text-off-white/70 mt-2">
+                From £1,500/month + £500–£800 ad spend per flagship treatment
+              </p>
+            </div>
             <p className="text-lg text-orange mb-8">
-              15+ qualified consultations in 60 days at the agreed cost—or we work for free until we hit it.
+              <strong>Our Guarantee:</strong> 15+ qualified consultations in 60 days at the agreed cost—or we work for free until we hit it.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button onClick={handleBookConsultation} size="lg">
