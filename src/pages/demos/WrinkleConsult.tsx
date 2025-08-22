@@ -54,26 +54,15 @@ const WrinkleConsult: React.FC = () => {
             We deliver deposit-paid consultations at an agreed CAC using your existing booking system.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/audit">
-              <Button 
-                id="cta-audit" 
-                data-cta="audit"
-                size="lg" 
-                className="text-lg px-8 py-4"
-              >
-                Book Free Audit
-              </Button>
-            </Link>
-            <Link to="/pricing">
-              <Button 
-                id="cta-pricing"
-                size="lg" 
-                variant="outline"
-                className="text-lg px-8 py-4"
-              >
-                See Pricing
-              </Button>
-            </Link>
+            <Button 
+              onClick={handleBookAudit}
+              id="cta-audit" 
+              data-cta="audit"
+              size="lg" 
+              className="text-lg px-8 py-4"
+            >
+              Book Free Audit
+            </Button>
           </div>
         </div>
       </section>
