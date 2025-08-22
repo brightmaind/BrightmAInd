@@ -1,64 +1,12 @@
-import React, { useState } from 'react';
-import { useNavigate, Link } from 'react-router-dom';
-import { Bot, TrendingUp, Settings, ChevronDown, Calendar, ArrowLeft, ArrowRight, Check, Zap, Target, Users, BarChart3 } from 'lucide-react';
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
+import { Calendar, Target, BarChart3, Users, CheckCircle } from 'lucide-react';
 import ScrollAnimation from '../components/ScrollAnimation';
 import SEOHead from '../components/SEOHead';
 import { Button } from '../components/ui/button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../components/ui/card';
-import { motion, AnimatePresence } from 'framer-motion';
 
 const Home = () => {
   const navigate = useNavigate();
-
-  const services = [
-    {
-      icon: <Target className="w-8 h-8" />,
-      title: "Websites that Convert",
-      summary: "Turn browsers into paying clients with seamless booking flows and upfront deposits.",
-      bullets: [
-        "Sleek booking systems that capture deposits upfront",
-        "Mobile-optimized designs that convert on every device",
-        "Treatment galleries that showcase your best work"
-      ]
-    },
-    {
-      icon: <BarChart3 className="w-8 h-8" />,
-      title: "Content that Sells Treatments",
-      summary: "Scroll-stopping video and creative that make clients want to book now.",
-      bullets: [
-        "Before/after videos that drive treatment bookings",
-        "Social media content that builds trust and desire",
-        "Educational posts that position you as the expert"
-      ]
-    },
-    {
-      icon: <Users className="w-8 h-8" />,
-      title: "Ads that Bring Clients In",
-      summary: "Local targeting campaigns that keep your chairs filled and calendars busy.",
-      bullets: [
-        "Facebook and Instagram ads targeting your ideal clients",
-        "Google Ads for people actively searching for treatments",
-        "Retargeting campaigns that bring back interested prospects"
-      ]
-    },
-    {
-      icon: <Bot className="w-8 h-8" />,
-      title: "Automation that Cuts No-Shows",
-      summary: "Smart reminders + deposits that slash wasted time and revenue loss.",
-      bullets: [
-        "Automated booking confirmations and reminders",
-        "Deposit collection that reduces no-shows by 40%+",
-        "Follow-up sequences that book repeat treatments"
-      ]
-    }
-  ];
-
-  const processSteps = [
-    { step: "01", title: "Audit", description: "We analyze your current booking system and identify revenue leaks." },
-    { step: "02", title: "Strategy", description: "Create a custom plan to fill your calendar with paying clients." },
-    { step: "03", title: "Build", description: "Deploy your new booking system, ads, and automation." },
-    { step: "04", title: "Results", description: "Watch your no-shows drop and bookings increase month after month." }
-  ];
 
   const handleBookAudit = () => {
     if (window.Calendly) {
@@ -89,312 +37,154 @@ const Home = () => {
         canonical="/"
       />
       
-      {/* Hero Section */}
+      {/* Hero Section - Attention / Problem */}
       <section className="pt-8 pb-24 px-4 sm:px-6 lg:px-8 hero-gradient">
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold font-rajdhani text-off-white leading-tight mb-8">
-              High-value bookings on demand. <span className="text-orange">Predictable cost. Higher LTV.</span>
+              Most clinic websites are just <span className="text-orange">brochures</span>. They don't fill calendars.
             </h1>
             
             <p className="text-xl md:text-2xl text-off-white/90 leading-relaxed max-w-4xl mx-auto mb-12">
-              We build treatment-specific funnels that deliver qualified consultations at an agreed cost—using your existing booking system.
+              That means empty slots, wasted ad spend, and staff chasing no-shows instead of serving patients.
             </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
-              <Button onClick={handleBookAudit} size="lg" className="text-lg px-8 py-4" aria-label="Book a free growth audit to reduce no-shows and fill your calendar">
-                Book a 10-minute audit
-              </Button>
-            </div>
-
-            {/* PAS Block */}
           </div>
         </div>
       </section>
 
-      {/* PAS Block */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="max-w-4xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
-              <div className="bg-near-black/60 rounded-2xl p-6 border-2 border-red-500">
-                <p className="text-off-white/80">Most clinics send cold visitors to a generic "book now" page. No context, no qualification, no commitment—so people bounce.</p>
-              </div>
-              <div className="bg-near-black/60 rounded-2xl p-6 border-2 border-orange">
-                <p className="text-off-white/80">That wastes ad spend, keeps diaries unpredictable, and caps growth on your highest-value treatments.</p>
-              </div>
-              <div className="bg-near-black/60 rounded-2xl p-6 border-2 border-green-500">
-                <p className="text-off-white/80">We route paid traffic to a treatment page that qualifies intent, guides to the right slot, and secures a small deposit—then reminders ensure attendance. You keep your current booking tool. We make it convert.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Services Overview - One Growth System */}
+      {/* Agitation Section */}
       <ScrollAnimation>
-        <section className="py-24 bg-near-black">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <section className="py-24 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold font-rajdhani text-off-white mb-6">
-                Value Propositions: <span className="text-orange">What You Get</span>
+              <h2 className="text-4xl md:text-5xl font-bold font-rajdhani text-off-white mb-8">
+                The cost of an <span className="text-orange">empty chair</span>
               </h2>
-              <p className="text-xl text-off-white/80 max-w-3xl mx-auto">
-                Treatment-specific funnels that deliver qualified consultations at predictable costs.
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              {services.map((service, index) => (
-                <ScrollAnimation key={index} delay={index * 100}>
-                  <Card className="h-full card-hover">
-                    <CardHeader>
-                      <div className="flex items-center space-x-4 mb-4">
-                        <div className="w-12 h-12 bg-orange rounded-lg flex items-center justify-center">
-                          <div className="text-white">
-                            {service.icon}
-                          </div>
-                        </div>
-                        <CardTitle className="text-2xl">
-                          {index === 0 ? "Treatment-specific funnels" :
-                           index === 1 ? "Target cost per consultation" :
-                           index === 2 ? "Deposits + reminders" :
-                           "AOV/LTV lift via bundles"}
-                        </CardTitle>
-                      </div>
-                      <CardDescription className="text-lg text-off-white/80">
-                        {index === 0 ? "Wrinkle treatment consultation*, lip enhancement, skin boosters" :
-                         index === 1 ? "Agreed and reported weekly" :
-                         index === 2 ? "To protect attendance" :
-                         "Memberships, and rebooking"}
-                      </CardDescription>
-                    </CardHeader>
-                    <CardContent>
-                      <div className="space-y-4">
-                        <div className="flex items-start space-x-3">
-                          <div className="w-2 h-2 bg-orange rounded-full mt-2 flex-shrink-0"></div>
-                          <span className="text-off-white/80">
-                            {index === 0 ? "Qualified leads for your highest-value treatments" :
-                             index === 1 ? "Weekly reporting on performance metrics" :
-                             index === 2 ? "Integrated with your existing booking system" :
-                             "Strategies to increase lifetime value"}
-                          </span>
-                        </div>
-                      </div>
-                    </CardContent>
-                  </Card>
-                </ScrollAnimation>
-              ))}
-            </div>
-            
-            <div className="text-center mt-8">
-              <p className="text-sm text-off-white/60">
-                *Public pages use "wrinkle treatment consultation" to meet UK guidance.
-              </p>
-            </div>
-          </div>
-        </section>
-      </ScrollAnimation>
-
-      {/* Why Work With Us Section */}
-      <ScrollAnimation>
-        <section className="py-24">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold font-rajdhani text-off-white mb-6">
-                Why Medical Aesthetics Clinics Choose <span className="text-orange">Bright mAInd</span>
-              </h2>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-              <ScrollAnimation delay={0}>
-                <Card className="h-full">
-                  <CardHeader>
-                    <CardTitle className="text-xl text-orange mb-4">Specialist Focus</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-off-white/80 leading-relaxed">
-                      We work exclusively with medical aesthetics clinics, so every strategy is tailored to your treatments and client base. No generic solutions—just proven methods that work for your industry.
-                    </p>
-                  </CardContent>
-                </Card>
-              </ScrollAnimation>
-              
-              <ScrollAnimation delay={100}>
-                <Card className="h-full">
-                  <CardHeader>
-                    <CardTitle className="text-xl text-orange mb-4">Proven Growth System</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-off-white/80 leading-relaxed">
-                      Websites, ads, content, and automation all work together as one integrated system that fills calendars and cuts no-shows. Everything connects to maximise your bookings.
-                    </p>
-                  </CardContent>
-                </Card>
-              </ScrollAnimation>
-              
-              <ScrollAnimation delay={200}>
-                <Card className="h-full">
-                  <CardHeader>
-                    <CardTitle className="text-xl text-orange mb-4">Priority Guarantee</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-off-white/80 leading-relaxed">
-                      We only take on a limited number of clinics at a time. That means you're never lost in a queue—you get our full attention and priority support when you need it.
-                    </p>
-                  </CardContent>
-                </Card>
-              </ScrollAnimation>
-              
-              <ScrollAnimation delay={300}>
-                <Card className="h-full">
-                  <CardHeader>
-                    <CardTitle className="text-xl text-orange mb-4">Priority Guarantee</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-off-white/80 leading-relaxed">
-                      We deliberately limit how many clinics we work with. That means when you're in, you're not competing for our attention—you're our priority.
-                    </p>
-                  </CardContent>
-                </Card>
-              </ScrollAnimation>
-            </div>
-
-            <div className="text-center">
-              <p className="text-xl text-off-white/90 max-w-3xl mx-auto leading-relaxed">
-                With Bright mAInd, you don't just get a website—you get a growth partner committed to filling your clinic. <Link to="/contact" onClick={() => window.scrollTo(0, 0)} className="text-orange hover:text-orange/80 underline">Book a free growth audit</Link>.
-              </p>
-            </div>
-          </div>
-        </section>
-      </ScrollAnimation>
-
-      {/* Case Study / Social Proof */}
-      <ScrollAnimation>
-        <section className="py-24">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold font-rajdhani text-off-white mb-6">
-                Our <span className="text-orange">Results Guarantee</span>
-              </h2>
-              <p className="text-xl text-off-white/80 max-w-3xl mx-auto">
-                15+ qualified consultations in 60 days at the agreed cost—or we work for free until we hit it.
-              </p>
             </div>
 
             <div className="max-w-4xl mx-auto">
-              <Card className="bg-orange/10 border border-orange/20">
-                <CardContent className="p-8 text-center">
-                  <h3 className="text-2xl font-bold font-rajdhani text-orange mb-4">Pricing Teaser</h3>
+              <p className="text-xl text-off-white/90 leading-relaxed mb-12 text-center">
+                Every missed consultation is lost revenue. Most clinics lose hundreds each week from:
+              </p>
+
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+                <div className="bg-near-black/60 rounded-2xl p-8 border border-red-500/30">
+                  <div className="w-12 h-12 bg-red-500/20 rounded-lg flex items-center justify-center mb-6">
+                    <Target className="w-6 h-6 text-red-400" />
+                  </div>
                   <p className="text-off-white/80 leading-relaxed">
-                    From £1,500/month + £500–£800 ad spend per flagship treatment. Includes funnel build, creatives, tracking, weekly optimisation, and reporting.
+                    "Book now" links that dump people in confusing portals
                   </p>
-                </CardContent>
-              </Card>
+                </div>
+
+                <div className="bg-near-black/60 rounded-2xl p-8 border border-red-500/30">
+                  <div className="w-12 h-12 bg-red-500/20 rounded-lg flex items-center justify-center mb-6">
+                    <Users className="w-6 h-6 text-red-400" />
+                  </div>
+                  <p className="text-off-white/80 leading-relaxed">
+                    No deposits or reminders → high no-show rates
+                  </p>
+                </div>
+
+                <div className="bg-near-black/60 rounded-2xl p-8 border border-red-500/30">
+                  <div className="w-12 h-12 bg-red-500/20 rounded-lg flex items-center justify-center mb-6">
+                    <BarChart3 className="w-6 h-6 text-red-400" />
+                  </div>
+                  <p className="text-off-white/80 leading-relaxed">
+                    Ads that drive clicks but not confirmed appointments
+                  </p>
+                </div>
+              </div>
+
+              <p className="text-xl text-off-white/90 leading-relaxed text-center">
+                Left alone, these leaks keep eating into growth.
+              </p>
             </div>
           </div>
         </section>
       </ScrollAnimation>
 
-      {/* Process Section */}
+      {/* Solution Section */}
       <ScrollAnimation>
         <section className="py-24 bg-near-black">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold font-rajdhani text-off-white mb-6">
-                How It <span className="text-orange">Works</span>
+              <h2 className="text-4xl md:text-5xl font-bold font-rajdhani text-off-white mb-8">
+                One system that <span className="text-orange">fixes it</span>
               </h2>
-              <p className="text-xl text-off-white/80">
-                Simple steps to predictable bookings
-              </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-              {processSteps.map((step, index) => (
-                <ScrollAnimation key={index} delay={index * 100}>
-                  <div className="text-center">
-                    <div className="w-16 h-16 bg-orange text-white rounded-full flex items-center justify-center text-xl font-bold font-rajdhani mx-auto mb-6">
-                      {step.step}
-                    </div>
-                    <h3 className="text-xl font-semibold font-rajdhani text-off-white mb-4">
-                      {index === 0 ? "Plan" :
-                       index === 1 ? "Build" :
-                       index === 2 ? "Measure" :
-                       "Scale"}
-                    </h3>
-                    <p className="text-off-white/80">
-                      {index === 0 ? "Pick 1–3 flagship treatments and set targets" :
-                       index === 1 ? "Ads + treatment page + deposit layer (using your system)" :
-                       index === 2 ? "Weekly report on cost per consultation, attendance, and revenue per visit" :
-                       "Increase budget where cost holds; add memberships and rebooking"}
-                    </p>
+            <div className="max-w-4xl mx-auto">
+              <p className="text-xl text-off-white/90 leading-relaxed mb-12 text-center">
+                We build treatment-specific booking funnels that:
+              </p>
+
+              <div className="space-y-6 mb-12">
+                <div className="flex items-start space-x-4">
+                  <div className="w-8 h-8 bg-orange rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                    <CheckCircle className="w-5 h-5 text-white" />
                   </div>
-                </ScrollAnimation>
-              ))}
+                  <p className="text-lg text-off-white/90 leading-relaxed">
+                    Run ads to qualified local patients
+                  </p>
+                </div>
+
+                <div className="flex items-start space-x-4">
+                  <div className="w-8 h-8 bg-orange rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                    <CheckCircle className="w-5 h-5 text-white" />
+                  </div>
+                  <p className="text-lg text-off-white/90 leading-relaxed">
+                    Send them straight to a simple calendar + deposit checkout
+                  </p>
+                </div>
+
+                <div className="flex items-start space-x-4">
+                  <div className="w-8 h-8 bg-orange rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                    <CheckCircle className="w-5 h-5 text-white" />
+                  </div>
+                  <p className="text-lg text-off-white/90 leading-relaxed">
+                    Automate confirmations and reminders so they actually show
+                  </p>
+                </div>
+
+                <div className="flex items-start space-x-4">
+                  <div className="w-8 h-8 bg-orange rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                    <CheckCircle className="w-5 h-5 text-white" />
+                  </div>
+                  <p className="text-lg text-off-white/90 leading-relaxed">
+                    Report CAC, show-rate, and consult→treatment % weekly
+                  </p>
+                </div>
+              </div>
+
+              <p className="text-xl text-off-white/90 leading-relaxed text-center">
+                It means predictable bookings, higher AOV/LTV, and full utilisation of your staff.
+              </p>
             </div>
           </div>
         </section>
       </ScrollAnimation>
 
-      {/* Final CTA Section */}
+      {/* Call to Action Section */}
       <ScrollAnimation>
         <section className="py-24 bg-orange">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-4xl md:text-5xl font-bold font-rajdhani text-white mb-8">
-              Frequently Asked Questions
-            </h2>
-            
-            <div className="max-w-4xl mx-auto mb-8">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <Card className="bg-white/10">
-                  <CardHeader>
-                    <CardTitle className="text-white text-lg">Do you replace our booking system?</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-white/80">No. We wrap a high-converting funnel around it and send qualified patients into your existing calendar.</p>
-                  </CardContent>
-                </Card>
-                
-                <Card className="bg-white/10">
-                  <CardHeader>
-                    <CardTitle className="text-white text-lg">Can you handle deposits and reminders?</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-white/80">Yes. We use your native setup (or Stripe if needed) to protect attendance.</p>
-                  </CardContent>
-                </Card>
-                
-                <Card className="bg-white/10">
-                  <CardHeader>
-                    <CardTitle className="text-white text-lg">What do you report each week?</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-white/80">Cost per consultation, attendance rate, consult→treatment %, average revenue per visit, retention/memberships.</p>
-                  </CardContent>
-                </Card>
-                
-                <Card className="bg-white/10">
-                  <CardHeader>
-                    <CardTitle className="text-white text-lg">What if targets aren't hit?</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-white/80">We keep working for free until we do (see guarantee).</p>
-                  </CardContent>
-                </Card>
-              </div>
+            <div className="max-w-3xl mx-auto">
+              <p className="text-2xl md:text-3xl text-white leading-relaxed mb-12">
+                See how this works for your clinic in a free 10-minute audit.
+              </p>
+              
+              <Button 
+                onClick={handleBookAudit}
+                size="lg" 
+                variant="secondary"
+                className="bg-white text-orange hover:bg-white/90 text-xl px-12 py-6"
+                aria-label="Book a free growth audit to reduce no-shows and fill your calendar"
+              >
+                <Calendar className="w-6 h-6 mr-3" />
+                Book Your Audit
+              </Button>
             </div>
-            
-            <Button 
-              onClick={handleBookAudit}
-              size="lg" 
-              variant="secondary"
-              className="bg-white text-orange hover:bg-white/90 text-lg px-8 py-4"
-            >
-              Book a 10-minute audit
-            </Button>
-            <p className="text-white/80 mt-6 text-sm max-w-2xl mx-auto">
-              We follow ASA/CAP/MHRA guidance. Public assets avoid prescription-only medicine terms. All claims are evidence-based and responsibly presented.
-            </p>
           </div>
         </section>
       </ScrollAnimation>
