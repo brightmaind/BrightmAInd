@@ -105,17 +105,6 @@ const Home = () => {
               <Button onClick={handleBookAudit} size="lg" className="text-lg px-8 py-4" aria-label="Book a free growth audit to reduce no-shows and fill your calendar">
                 Book a 10-minute audit
               </Button>
-              <Button 
-                onClick={() => {
-                  navigate('/demos/wrinkle-consult');
-                  window.scrollTo(0, 0);
-                }}
-                size="lg" 
-                variant="outline"
-                className="text-lg px-8 py-4"
-              >
-                See Demo Funnels
-              </Button>
             </div>
 
             {/* PAS Block */}
@@ -151,7 +140,7 @@ const Home = () => {
                 Value Propositions: <span className="text-orange">What You Get</span>
               </h2>
               <p className="text-xl text-off-white/80 max-w-3xl mx-auto">
-                Treatment-specific funnels that deliver qualified consultations at predictable costs. <Link to="/demos/wrinkle-consult" onClick={() => window.scrollTo(0, 0)} className="text-orange hover:text-orange/80 underline">See the demo funnels</Link>.
+                Treatment-specific funnels that deliver qualified consultations at predictable costs.
               </p>
             </div>
 
@@ -191,17 +180,6 @@ const Home = () => {
                              "Strategies to increase lifetime value"}
                           </span>
                         </div>
-                        {index === 1 && (
-                          <div className="mt-6 pt-4 border-t border-slate/20">
-                            <Link 
-                              to="/content-creation" 
-                              onClick={() => window.scrollTo(0, 0)}
-                              className="text-orange hover:text-orange/80 underline text-sm"
-                            >
-                              See the demo funnels →
-                            </Link>
-                          </div>
-                        )}
                       </div>
                     </CardContent>
                   </Card>
@@ -284,7 +262,7 @@ const Home = () => {
 
             <div className="text-center">
               <p className="text-xl text-off-white/90 max-w-3xl mx-auto leading-relaxed">
-                With Bright mAInd, you don't just get a website—you get a growth partner committed to filling your clinic. <Link to="/faqs" onClick={() => window.scrollTo(0, 0)} className="text-orange hover:text-orange/80 underline">Check our pricing and timelines</Link> or <Link to="/contact" onClick={() => window.scrollTo(0, 0)} className="text-orange hover:text-orange/80 underline">book a free growth audit</Link>.
+                With Bright mAInd, you don't just get a website—you get a growth partner committed to filling your clinic. <Link to="/contact" onClick={() => window.scrollTo(0, 0)} className="text-orange hover:text-orange/80 underline">Book a free growth audit</Link>.
               </p>
             </div>
           </div>
