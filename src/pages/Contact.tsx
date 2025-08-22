@@ -69,11 +69,10 @@ const Contact: React.FC = () => {
             {/* Contact Information */}
             <div>
               <h2 className="text-3xl md:text-4xl font-bold text-charcoal mb-8">
-                Ready to Cut No-Shows at Your Medical Aesthetics Clinic?
+                Ready to start?
               </h2>
               <p className="text-lg text-gray-600 mb-12 leading-relaxed">
-                Whether you want to cut no-shows, attract more ideal clients, or automate your booking process, 
-                we're here to help. Get in touch to discuss your clinic and discover how we can fill your calendar consistently.
+                Book your 10-minute audit and get your treatment funnel plan. We're here to help you achieve predictable premium bookings.
               </p>
 
               <div className="space-y-8">

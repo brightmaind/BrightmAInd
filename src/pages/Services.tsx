@@ -140,14 +140,20 @@ const Services: React.FC = () => {
         <section className="py-24 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-5xl md:text-6xl font-bold font-rajdhani text-off-white mb-8">
-              Aesthetics Clinic Marketing System for <span className="text-orange">Scotland Clinics</span>
+              Performance growth — <span className="text-orange">£1,500/month</span>
             </h1>
             <p className="text-xl md:text-2xl text-off-white/80 leading-relaxed mb-8">
-              Booking-focused landing pages, targeted ads, and automation to cut no-shows for medical aesthetics clinics.
+              Funnel build · 3 creatives/month · tracking setup · weekly optimisation & reporting
+            </p>
+            <p className="text-lg text-off-white/70 mb-6">
+              Start £500–£800/month per flagship treatment
+            </p>
+            <p className="text-lg text-orange mb-8">
+              15+ qualified consultations in 60 days at the agreed cost—or we work for free until we hit it.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button onClick={handleBookConsultation} size="lg">
-                Book Free Growth Audit
+                Book a 10-minute audit
               </Button>
               <Button 
                 onClick={() => {
@@ -157,7 +163,7 @@ const Services: React.FC = () => {
                 size="lg" 
                 variant="outline"
               >
-                View Pricing & Timelines
+                See the demo funnels
               </Button>
             </div>
           </div>

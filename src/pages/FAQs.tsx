@@ -117,10 +117,15 @@ const FAQs: React.FC = () => {
         <section className="py-24 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-5xl md:text-6xl font-bold font-rajdhani text-off-white mb-8">
-              Medical Aesthetics Clinic Marketing <span className="text-orange">FAQs</span>
+              Get your <span className="text-orange">10-minute growth audit</span>
             </h1>
-            <p className="text-xl text-off-white/80">
-              Everything you need to know about booking-focused landing pages and how to cut no-shows in Scotland.
+            <div className="space-y-4 text-xl text-off-white/80 max-w-3xl mx-auto">
+              <p>A quick treatment funnel plan for your clinic</p>
+              <p>A target cost-per-consult and budget range</p>
+              <p>A launch plan you can start in 7–10 days</p>
+            </div>
+            <p className="text-sm text-off-white/60 mt-6">
+              ASA/CAP aligned. No obligation.
             </p>
           </div>
         </section>
@@ -151,10 +156,10 @@ const FAQs: React.FC = () => {
         <section className="py-24 bg-orange">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-4xl md:text-5xl font-bold font-rajdhani text-white mb-8">
-              Still Have Questions?
+              Ready to start?
             </h2>
             <p className="text-xl text-white/90 mb-8 leading-relaxed">
-              Book a free growth audit and get all your questions answered. No obligation, just clear insights about growing your clinic.
+              Book your 10-minute audit and get your treatment funnel plan.
             </p>
             <button
               onClick={() => {
@@ -179,7 +184,7 @@ const FAQs: React.FC = () => {
               }}
               className="bg-white text-orange px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white/90 transition-colors"
             >
-              Book Free Growth Audit
+              Book a 10-minute audit
             </button>
           </div>
         </section>

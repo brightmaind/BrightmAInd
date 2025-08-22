@@ -106,14 +106,20 @@ const ContentCreation: React.FC = () => {
         <section className="py-24 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-5xl md:text-6xl font-bold font-rajdhani text-off-white mb-8">
-              Content Creation for Medical Aesthetics Clinics in <span className="text-orange">Scotland</span>
+              Wrinkle treatment consultation funnel <span className="text-orange">(example)</span>
             </h1>
             <p className="text-xl md:text-2xl text-off-white/80 leading-relaxed mb-8">
-              Booking-focused landing pages and video content that help medical aesthetics clinics cut no-shows and drive bookings.
+              How we turn paid traffic into booked consultations using your existing booking system—at a predictable cost.
+            </p>
+            <p className="text-lg text-off-white/70 mb-8">
+              Ad → This page → Pick time (your calendar) → Deposit → Reminders → Attend
+            </p>
+            <p className="text-sm text-off-white/60 mb-8">
+              This demo shows the first steps; live builds connect to your current system.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button onClick={handleBookAudit} size="lg">
-                See How Content Can Fill Your Clinic
+                Book a 10-minute audit
               </Button>
               <Button 
                 onClick={() => {
@@ -123,7 +129,7 @@ const ContentCreation: React.FC = () => {
                 size="lg" 
                 variant="outline"
               >
-                View Complete Growth System
+                See pricing
               </Button>
             </div>
           </div>
@@ -175,26 +181,52 @@ const ContentCreation: React.FC = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold font-rajdhani text-off-white mb-6">
-                Why Aesthetics Clinic Marketing <span className="text-orange">Needs Visual Content</span>
+                Benefits of This <span className="text-orange">Approach</span>
               </h2>
               <p className="text-xl text-off-white/80 max-w-3xl mx-auto">
-                Your treatments transform lives. Your content should transform browsers into bookers. Content works best as part of <Link to="/services" onClick={() => window.scrollTo(0, 0)} className="text-orange hover:text-orange/80 underline">our complete growth system</Link>.
+                Treatment-specific funnels that qualify intent and secure commitment.
               </p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {contentBenefits.map((benefit, index) => (
-                <ScrollAnimation key={index} delay={index * 100}>
-                  <Card className="text-center h-full">
-                    <CardHeader>
-                      <CardTitle className="text-xl text-orange">{benefit.title}</CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                      <p className="text-off-white/80">{benefit.description}</p>
-                    </CardContent>
-                  </Card>
-                </ScrollAnimation>
-              ))}
+              <ScrollAnimation delay={0}>
+                <Card className="text-center h-full">
+                  <CardHeader>
+                    <CardTitle className="text-xl text-orange">Clear eligibility</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-off-white/80">And realistic expectations</p>
+                  </CardContent>
+                </Card>
+              </ScrollAnimation>
+              
+              <ScrollAnimation delay={100}>
+                <Card className="text-center h-full">
+                  <CardHeader>
+                    <CardTitle className="text-xl text-orange">Direct path</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-off-white/80">To the right service and time</p>
+                  </CardContent>
+                </Card>
+              </ScrollAnimation>
+              
+              <ScrollAnimation delay={200}>
+                <Card className="text-center h-full">
+                  <CardHeader>
+                    <CardTitle className="text-xl text-orange">Deposit + reminders</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-off-white/80">To protect attendance</p>
+                  </CardContent>
+                </Card>
+              </ScrollAnimation>
+            </div>
+            
+            <div className="text-center mt-12">
+              <p className="text-lg text-off-white/80">
+                Example: ~£600 ad spend → ~15 bookings ≈ ~£3,000 in month one (repeat visits lift this).
+              </p>
             </div>
           </div>
         </section>
@@ -297,10 +329,10 @@ const ContentCreation: React.FC = () => {
         <section className="py-24 bg-orange">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-4xl md:text-5xl font-bold font-rajdhani text-white mb-8">
-              See How Content Can Fill Your Clinic
+              Ready to start?
             </h2>
             <p className="text-xl text-white/90 mb-8 leading-relaxed">
-              Book a free growth audit and discover how the right content can transform your clinic's booking rate.
+              Book your 10-minute audit and get your treatment funnel plan.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button 
@@ -310,7 +342,7 @@ const ContentCreation: React.FC = () => {
                 className="bg-white text-orange hover:bg-white/90"
               >
                 <Calendar className="w-5 h-5 mr-2" />
-                Book Free Growth Audit
+                Book a 10-minute audit
               </Button>
               <Button 
                 onClick={() => {
@@ -321,9 +353,12 @@ const ContentCreation: React.FC = () => {
                 variant="outline"
                 className="border-white text-white hover:bg-white hover:text-orange"
               >
-                Ask About Content Creation
+                See pricing
               </Button>
             </div>
+            <p className="text-white/80 mt-6 text-sm max-w-2xl mx-auto">
+              Public assets avoid prescription-only medicine terms. Example content shown for demonstration.
+            </p>
           </div>
         </section>
       </ScrollAnimation>
