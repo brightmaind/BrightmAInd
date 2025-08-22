@@ -113,10 +113,10 @@ const ContentCreation: React.FC = () => {
                 <strong className="text-red-400">Problem:</strong> Your amazing results are hidden behind generic posts that don't convert browsers into bookers.
               </p>
               <p>
-                <strong className="text-red-400">Interest:</strong> Potential clients scroll past because your content doesn't show the transformation they want.
+                Potential clients scroll past because your content doesn't show the transformation they want.
               </p>
               <p>
-                <strong className="text-orange">Desire:</strong> Imagine content so compelling that prospects book consultations after seeing just one post.
+                Imagine content so compelling that prospects book consultations after seeing just one post.
               </p>
               <p>
                 <strong className="text-green-400">Solution:</strong> We create scroll-stopping content that showcases your expertise and drives bookings—video reels, before/after stories, and ads that convert.
