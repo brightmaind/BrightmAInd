@@ -1,10 +1,37 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import SEOHead from '../../components/SEOHead';
 import DemoNavigation from '../../components/DemoNavigation';
 import { Button } from '../../components/ui/button';
 
+// Calendly integration
+declare global {
+  interface Window {
+    Calendly: any;
+  }
+}
+
 const SkinBooster: React.FC = () => {
+  const handleBookAudit = () => {
+    if (window.Calendly) {
+      window.Calendly.initPopupWidget({
+        url: 'https://calendly.com/enquiries-brightmaind/30min?a1=Skin%20Booster%20Demo%20Audit',
+        parentElement: document.body
+      });
+      
+      setTimeout(() => {
+        const popup = document.querySelector('.calendly-popup');
+        if (popup && !popup.querySelector('.calendly-text-overlay')) {
+          const textOverlay = document.createElement('div');
+          textOverlay.className = 'calendly-text-overlay';
+          textOverlay.innerHTML = '<span>Let\'s discuss how this skin booster funnel can work for your clinic</span>';
+          popup.appendChild(textOverlay);
+        }
+      }, 100);
+    } else {
+      window.open('https://calendly.com/enquiries-brightmaind/30min?a1=Skin%20Booster%20Demo%20Audit', '_blank');
+    }
+  };
+
   return (
     <div className="pt-20 bg-charcoal text-off-white">
       <SEOHead 

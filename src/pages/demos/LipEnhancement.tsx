@@ -124,26 +124,15 @@ const LipEnhancement: React.FC = () => {
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/audit">
-              <Button 
-                id="cta-audit" 
-                data-cta="audit"
-                size="lg" 
-                className="text-lg px-8 py-4"
-              >
-                Book Free Audit
-              </Button>
-            </Link>
-            <Link to="/pricing">
-              <Button 
-                id="cta-pricing"
-                size="lg" 
-                variant="outline"
-                className="text-lg px-8 py-4"
-              >
-                See Pricing
-              </Button>
-            </Link>
+            <Button 
+              onClick={handleBookAudit}
+              id="cta-audit" 
+              data-cta="audit"
+              size="lg" 
+              className="text-lg px-8 py-4"
+            >
+              Book Free Audit
+            </Button>
           </div>
         </div>
       </section>
