@@ -107,14 +107,14 @@ const Home = () => {
               </Button>
               <Button 
                 onClick={() => {
-                  navigate('/services');
+                  navigate('/demos/wrinkle-consult');
                   window.scrollTo(0, 0);
                 }}
                 size="lg" 
                 variant="outline"
                 className="text-lg px-8 py-4"
               >
-                See the demo funnels
+                See Demo Funnels
               </Button>
             </div>
 
@@ -151,7 +151,7 @@ const Home = () => {
                 Value Propositions: <span className="text-orange">What You Get</span>
               </h2>
               <p className="text-xl text-off-white/80 max-w-3xl mx-auto">
-                Treatment-specific funnels that deliver qualified consultations at predictable costs. <Link to="/services" onClick={() => window.scrollTo(0, 0)} className="text-orange hover:text-orange/80 underline">See the demo funnels</Link>.
+                Treatment-specific funnels that deliver qualified consultations at predictable costs. <Link to="/demos/wrinkle-consult" onClick={() => window.scrollTo(0, 0)} className="text-orange hover:text-orange/80 underline">See the demo funnels</Link>.
               </p>
             </div>
 

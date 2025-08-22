@@ -173,13 +173,13 @@ const Services: React.FC = () => {
               </Button>
               <Button 
                 onClick={() => {
-                  navigate('/faqs');
+                  navigate('/demos/wrinkle-consult');
                   window.scrollTo(0, 0);
                 }}
                 size="lg" 
                 variant="outline"
               >
-                See the demo funnels
+                See Demo Funnels
               </Button>
             </div>
           </div>

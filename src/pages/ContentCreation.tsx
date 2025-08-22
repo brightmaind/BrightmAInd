@@ -136,13 +136,13 @@ const ContentCreation: React.FC = () => {
               </Button>
               <Button 
                 onClick={() => {
-                  navigate('/services');
+                  navigate('/demos/wrinkle-consult');
                   window.scrollTo(0, 0);
                 }}
                 size="lg" 
                 variant="outline"
               >
-                See pricing
+                See Demo Funnels
               </Button>
             </div>
           </div>
