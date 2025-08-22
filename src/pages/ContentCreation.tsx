@@ -129,7 +129,6 @@ const ContentCreation: React.FC = () => {
               <p className="text-off-white/80">
                 Treatment showcase videos · Before/after storytelling · Social media content · Conversion-focused ad creatives
               </p>
-            </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button onClick={handleBookAudit} size="lg">
                 Book a 10-minute audit
