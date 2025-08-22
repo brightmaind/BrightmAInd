@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import SEOHead from '../../components/SEOHead';
+import DemoNavigation from '../../components/DemoNavigation';
 import { Button } from '../../components/ui/button';
 
 const LipEnhancement: React.FC = () => {
@@ -11,6 +12,9 @@ const LipEnhancement: React.FC = () => {
         description="Demo funnel for lip enhancement consultations with deposit collection and automated reminders."
         canonical="/demos/lip-enhancement"
       />
+      
+      {/* Demo Navigation */}
+      <DemoNavigation />
       
       {/* Hero Section */}
       <section className="py-24 px-4 sm:px-6 lg:px-8">
