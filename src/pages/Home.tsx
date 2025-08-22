@@ -134,11 +134,11 @@ const Home = () => {
 
       {/* Guarantee Strip */}
       <ScrollAnimation>
-        <section className="py-8 bg-orange/10 border-y border-orange/20">
+        <section className="py-8 bg-near-black border-y border-orange/30">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
-              <p className="text-lg md:text-xl text-charcoal font-medium leading-relaxed">
-                <strong>Our guarantee:</strong> 15+ qualified consultations in 60 days at the agreed cost—or we work for free until we hit it.
+              <p className="text-lg md:text-xl text-off-white font-medium leading-relaxed">
+                <strong className="text-orange">Our guarantee:</strong> 15+ qualified consultations in 60 days at the agreed cost—or we work for free until we hit it.
               </p>
             </div>
           </div>
