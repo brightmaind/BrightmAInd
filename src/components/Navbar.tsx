@@ -81,7 +81,7 @@ const Navbar: React.FC = () => {
                 </span>
               </span>
               <span className="text-xs text-orange font-medium tracking-wide">
-                Fill Your Calendar. Grow Predictably.
+                Fill Your Calendar. Automate Growth.
               </span>
             </div>
           </Link>
