@@ -32,8 +32,8 @@ const Home = () => {
   return (
     <div className="pt-20 bg-charcoal text-off-white">
       <SEOHead 
-        title="Aesthetics Clinic Marketing & Automation | Bright mAInd"
-        description="We fill medical aesthetics clinic calendars across Scotland with booking-focused landing pages, targeted ads, and automated deposits + reminders. Book a free growth audit."
+        title="Aesthetics Clinic Growth — Predictable CAC, Higher LTV | Bright mAInd"
+        description="We deliver deposit-paid consultations at an agreed CAC using your existing booking system. Book a 10-minute audit."
         canonical="/"
       />
       

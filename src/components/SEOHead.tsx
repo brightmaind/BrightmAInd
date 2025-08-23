@@ -13,7 +13,7 @@ interface SEOHeadProps {
 }
 
 const SEOHead: React.FC<SEOHeadProps> = ({ title, description, canonical, services }) => {
-  const siteUrl = 'https://brightmaind.com';
+  const siteUrl = 'https://www.brightmaind.com';
   const fullCanonical = `${siteUrl}${canonical}`;
 
   return (
@@ -41,10 +41,10 @@ const SEOHead: React.FC<SEOHeadProps> = ({ title, description, canonical, servic
           "@context": "https://schema.org",
           "@type": "ProfessionalService",
           "name": "Bright mAInd Marketing",
-          "url": "https://brightmaind.com",
-          "logo": "https://brightmaind.com/bright-maind-logo.webp",
+          "url": "https://www.brightmaind.com",
+          "logo": "https://www.brightmaind.com/bright-maind-logo.webp",
           "areaServed": "Scotland",
-          "description": "We help medical aesthetics clinics fill calendars with booking-focused landing pages, targeted ads, and automated deposits + reminders.",
+          "description": "We deliver deposit-paid consultations at an agreed CAC using your existing booking system.",
           "address": { "@type": "PostalAddress", "addressCountry": "GB" }
         })}
       </script>

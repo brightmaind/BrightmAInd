@@ -108,7 +108,7 @@ const Navbar: React.FC = () => {
               aria-label="Book a free growth audit consultation"
             >
               <Calendar className="w-4 h-4 mr-2" />
-              Book a Free Growth Audit
+              Book a 10-minute audit
             </Button>
           </div>
 

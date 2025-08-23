@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://brightmaind.com/sitemap.xml
+Sitemap: https://www.brightmaind.com/sitemap.xml
