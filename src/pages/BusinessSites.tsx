@@ -50,7 +50,7 @@ const BusinessSites = () => {
             </h1>
             
             <p className="text-xl md:text-2xl text-off-white/90 leading-relaxed max-w-4xl mx-auto mb-12">
-             We design clean, conversion-focused sites and simple marketing systems so new businesses start strong.
+              We design clean, conversion-focused sites and simple marketing systems so you start strong.
             </p>
 
             <Button 
