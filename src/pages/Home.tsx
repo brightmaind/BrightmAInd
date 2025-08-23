@@ -92,7 +92,7 @@ const Home = () => {
                     <CheckCircle className="w-5 h-5 text-white" />
                   </div>
                   <p className="text-lg text-off-white/90 leading-relaxed">
-                    Target qualified local patients with ads
+                    Run high-converting ads to qualified local patients
                   </p>
                 </div>
 
@@ -101,7 +101,7 @@ const Home = () => {
                     <CheckCircle className="w-5 h-5 text-white" />
                   </div>
                   <p className="text-lg text-off-white/90 leading-relaxed">
-                    Guide them through a simple booking + deposit flow
+                    Drive them through a simple booking + deposit checkout
                   </p>
                 </div>
 
