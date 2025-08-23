@@ -119,6 +119,14 @@ const Home = () => {
                     <CheckCircle className="w-5 h-5 text-white" />
                   </div>
                   <p className="text-lg text-off-white/90 leading-relaxed">
+                    Use AI automation for follow-ups and rebookings
+                  </p>
+                </div>
+                <div className="flex items-start space-x-4">
+                  <div className="w-8 h-8 bg-orange rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                    <CheckCircle className="w-5 h-5 text-white" />
+                  </div>
+                  <p className="text-lg text-off-white/90 leading-relaxed">
                     Track CAC and conversion so you know your numbers
                   </p>
                 </div>
