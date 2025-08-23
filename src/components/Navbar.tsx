@@ -16,7 +16,7 @@ const Navbar: React.FC = () => {
   const navigate = useNavigate();
 
   const navigation = [
-    { name: 'Home', href: '/' },
+    { name: 'Clinic Growth', href: '/' },
     { name: 'Smart Websites', href: '/business-sites' },
     { name: 'Contact', href: '/contact' },
   ];
