@@ -124,7 +124,7 @@ const Home = () => {
               </div>
 
               <p className="text-xl text-off-white/90 leading-relaxed text-center">
-                <span className="text-green-400 font-semibold">Result:</span> predictable new consultations and consistent revenue growth.
+                <span className="text-green-400 font-semibold">Result:</span> Predictable new consultations and consistent revenue growth.
               </p>
             </div>
           </div>
