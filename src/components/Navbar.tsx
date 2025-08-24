@@ -17,7 +17,6 @@ const Navbar: React.FC = () => {
 
   const navigation = [
     { name: 'Clinic Growth', href: '/' },
-    { name: 'Smart Websites', href: '/business-sites' },
     { name: 'Contact', href: '/contact' },
   ];
 
@@ -89,7 +88,36 @@ const Navbar: React.FC = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
-            {navigation.map((item) => (
+            {navigation.map((item, index) => (
+              <React.Fragment key={item.name}>
+                <button
+                  onClick={() => handleNavigation(item.href)}
+                  className={`text-sm font-medium transition-all duration-300 hover:scale-105 focus-visible ${
+                    location.pathname === item.href
+                      ? 'text-orange'
+                      : 'text-off-white hover:text-orange'
+                  }`}
+                >
+                  {item.name}
+                </button>
+                {index === 1 && (
+                  <span className="text-off-white/40 text-sm">|</span>
+                )}
+              </React.Fragment>
+            ))}
+            
+            {/* Smart Websites - Pill Button */}
+            <button
+              onClick={() => handleNavigation('/business-sites')}
+              className={`text-sm font-medium transition-all duration-300 hover:scale-105 focus-visible px-4 py-2 rounded-full ${
+                location.pathname === '/business-sites'
+                  ? 'bg-orange/20 text-orange border border-orange/30'
+                  : 'bg-slate/20 text-off-white hover:text-orange hover:bg-slate/30 border border-slate/30'
+              }`}
+            >
+              Smart Websites
+            </button>
+            
               <button
                 key={item.name}
                 onClick={() => handleNavigation(item.href)}
@@ -139,6 +167,16 @@ const Navbar: React.FC = () => {
                   {item.name}
                 </button>
               ))}
+              <button
+                onClick={() => handleNavigation('/business-sites')}
+                className={`block text-sm font-medium transition-all duration-300 px-4 py-2 rounded-full ${
+                  location.pathname === '/business-sites'
+                    ? 'bg-orange/20 text-orange border border-orange/30'
+                    : 'bg-slate/20 text-off-white hover:text-orange hover:bg-slate/30 border border-slate/30'
+                }`}
+              >
+                Smart Websites
+              </button>
               <Button 
                 onClick={handleBookConsultation} 
                 size="sm" 
