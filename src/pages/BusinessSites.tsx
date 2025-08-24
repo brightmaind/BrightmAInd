@@ -39,7 +39,7 @@ const BusinessSites = () => {
       />
       
       {/* Breadcrumb */}
-      <Breadcrumb items={[{ name: 'Business Sites', url: '/business-sites' }]} />
+      <Breadcrumb items={[{ name: 'Smart Websites', url: '/business-sites' }]} />
       
       {/* Hero Section */}
       <section className="pt-8 pb-24 px-4 sm:px-6 lg:px-8 hero-gradient">
