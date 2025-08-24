@@ -118,18 +118,6 @@ const Navbar: React.FC = () => {
               Smart Websites
             </button>
             
-              <button
-                key={item.name}
-                onClick={() => handleNavigation(item.href)}
-                className={`text-sm font-medium transition-all duration-300 hover:scale-105 focus-visible ${
-                  location.pathname === item.href
-                    ? 'text-orange'
-                    : 'text-off-white hover:text-orange'
-                }`}
-              >
-                {item.name}
-              </button>
-            ))}
             <Button 
               onClick={handleBookConsultation} 
               size="sm" 
