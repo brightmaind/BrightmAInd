@@ -247,7 +247,7 @@ const ClinicGrowth = () => {
                     <CheckCircle className="w-5 h-5 text-white" />
                   </div>
                   <p className="text-lg text-off-white/90 leading-relaxed">
-                    Run high-converting ads to qualified local patients
+                    Run high-converting ads to qualified local pet owners
                   </p>
                 </div>
 
@@ -256,7 +256,7 @@ const ClinicGrowth = () => {
                     <CheckCircle className="w-5 h-5 text-white" />
                   </div>
                   <p className="text-lg text-off-white/90 leading-relaxed">
-                    Drive them through a simple booking + deposit checkout
+                    Drive them through a simple pet service booking + deposit checkout
                   </p>
                 </div>
 
@@ -265,7 +265,7 @@ const ClinicGrowth = () => {
                     <CheckCircle className="w-5 h-5 text-white" />
                   </div>
                   <p className="text-lg text-off-white/90 leading-relaxed">
-                    Automate confirmations, reminders, follow-ups and rebookings with AI
+                    Automate appointment confirmations, pet care reminders, and rebookings with AI
                   </p>
                 </div>
                 <div className="flex items-start space-x-4">
@@ -273,13 +273,13 @@ const ClinicGrowth = () => {
                     <CheckCircle className="w-5 h-5 text-white" />
                   </div>
                   <p className="text-lg text-off-white/90 leading-relaxed">
-                    Track CAC and conversion so you know your numbers
+                    Track customer acquisition cost and bookings so you know your numbers
                   </p>
                 </div>
               </div>
 
               <p className="text-xl text-off-white/90 leading-relaxed text-center">
-                <span className="text-green-400 font-semibold">Result:</span> Predictable new consultations and consistent revenue growth.
+                <span className="text-green-400 font-semibold">Result:</span> Predictable new pet service bookings and consistent revenue growth.
               </p>
             </div>
           </div>
@@ -292,7 +292,7 @@ const ClinicGrowth = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
               <p className="text-lg md:text-xl text-off-white font-medium leading-relaxed">
-                <strong className="text-orange">Our guarantee:</strong> 15+ qualified consultations in 60 days at the agreed cost—or we work for free until we hit it.
+                <strong className="text-orange">Our guarantee:</strong> 15+ qualified pet service bookings in 60 days at the agreed cost—or we work for free until we hit it.
               </p>
             </div>
           </div>
