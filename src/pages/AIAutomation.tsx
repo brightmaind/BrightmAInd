@@ -59,7 +59,7 @@ const AIAutomation = () => {
   ];
 
   return (
-    <div className="pt-20 bg-white text-charcoal">
+    <div className="pt-20 bg-charcoal text-off-white">
       <SEOHead 
         title="AI Automation Services | Work Smarter, Scale Faster | Bright mAInd"
         description="AI-powered workflows save you hours every week, cut costs, and let you focus on growth instead of admin. Book a free automation audit."
@@ -70,22 +70,23 @@ const AIAutomation = () => {
       <Breadcrumb items={[{ name: 'AI Automation', url: '/ai-automation' }]} />
       
       {/* Hero Section - Attention */}
-      <section className="pt-8 pb-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-50 via-white to-orange/5 relative overflow-hidden">
+      <section className="pt-8 pb-24 px-4 sm:px-6 lg:px-8 hero-gradient relative overflow-hidden">
         {/* Subtle tech pattern overlay */}
         <div className="absolute inset-0 opacity-5">
-          <div className="absolute top-20 left-10 w-32 h-32 border border-charcoal rounded-full"></div>
+          <div className="absolute top-20 left-10 w-32 h-32 border border-off-white rounded-full"></div>
           <div className="absolute top-40 right-20 w-24 h-24 border border-orange rounded-lg rotate-45"></div>
-          <div className="absolute bottom-20 left-1/4 w-16 h-16 border border-charcoal rounded-full"></div>
+          <div className="absolute bottom-20 left-1/4 w-16 h-16 border border-off-white rounded-full"></div>
           <div className="absolute bottom-40 right-1/3 w-20 h-20 border border-orange rounded-lg rotate-12"></div>
         </div>
         
         <div className="max-w-7xl mx-auto relative">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold font-rajdhani text-charcoal leading-tight mb-8">
+            <h1 className="text-4xl md:text-6xl font-bold font-rajdhani text-off-white leading-tight mb-8">
               Work Smarter. Scale Faster. <span className="text-orange">Automate Everything.</span>
             </h1>
             
-            <p className="text-xl md:text-2xl text-gray-600 leading-relaxed max-w-4xl mx-auto mb-12">
+            <p className="text-xl md:text-2xl text-off-white/90 leading-relaxed max-w-4xl mx-auto mb-12">
               AI-powered workflows save you hours every week, cut costs, and let you focus on growth instead of admin.
             </p>
 
@@ -117,13 +118,13 @@ const AIAutomation = () => {
 
       {/* Problem + Interest Section */}
       <ScrollAnimation>
-        <section className="py-24 px-4 sm:px-6 lg:px-8 bg-gray-50">
+        <section className="py-24 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold font-rajdhani text-charcoal mb-8">
+              <h2 className="text-4xl md:text-5xl font-bold font-rajdhani text-off-white mb-8">
                 Stop losing time and money to <span className="text-orange">manual chaos</span>
               </h2>
-              <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+              <p className="text-xl text-off-white/90 max-w-4xl mx-auto leading-relaxed">
                 Every day you're manually handling leads, chasing follow-ups, and drowning in admin tasks that could run themselves.
               </p>
             </div>
@@ -131,27 +132,27 @@ const AIAutomation = () => {
             {/* Pain Points Icons */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
               <div className="text-center">
-                <div className="w-20 h-20 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Clock className="w-10 h-10 text-red-600" />
+                <div className="w-20 h-20 bg-orange/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Clock className="w-10 h-10 text-orange" />
                 </div>
-                <h3 className="text-xl font-semibold text-charcoal mb-2">Time Drain</h3>
-                <p className="text-gray-600">Hours wasted on repetitive tasks that add no value</p>
+                <h3 className="text-xl font-semibold text-off-white mb-2">Time Drain</h3>
+                <p className="text-off-white/70">Hours wasted on repetitive tasks that add no value</p>
               </div>
 
               <div className="text-center">
-                <div className="w-20 h-20 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <TrendingDown className="w-10 h-10 text-red-600" />
+                <div className="w-20 h-20 bg-orange/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <TrendingDown className="w-10 h-10 text-orange" />
                 </div>
-                <h3 className="text-xl font-semibold text-charcoal mb-2">Lost Sales</h3>
-                <p className="text-gray-600">Missed leads and forgotten follow-ups cost you revenue</p>
+                <h3 className="text-xl font-semibold text-off-white mb-2">Lost Sales</h3>
+                <p className="text-off-white/70">Missed leads and forgotten follow-ups cost you revenue</p>
               </div>
 
               <div className="text-center">
-                <div className="w-20 h-20 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Users className="w-10 h-10 text-red-600" />
+                <div className="w-20 h-20 bg-orange/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Users className="w-10 h-10 text-orange" />
                 </div>
-                <h3 className="text-xl font-semibold text-charcoal mb-2">Frustrated Clients</h3>
-                <p className="text-gray-600">Slow responses and manual errors damage relationships</p>
+                <h3 className="text-xl font-semibold text-off-white mb-2">Frustrated Clients</h3>
+                <p className="text-off-white/70">Slow responses and manual errors damage relationships</p>
               </div>
             </div>
           </div>
@@ -160,10 +161,10 @@ const AIAutomation = () => {
 
       {/* Desire - Benefits Section */}
       <ScrollAnimation>
-        <section className="py-24 px-4 sm:px-6 lg:px-8">
+        <section className="py-24 px-4 sm:px-6 lg:px-8 bg-near-black">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold font-rajdhani text-charcoal mb-8">
+              <h2 className="text-4xl md:text-5xl font-bold font-rajdhani text-off-white mb-8">
                 What AI Automation Can Do <span className="text-orange">For You</span>
               </h2>
             </div>
@@ -174,17 +175,17 @@ const AIAutomation = () => {
                 return (
                   <div
                     key={index}
-                    className="group bg-white/80 backdrop-blur-sm border border-gray-200 rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 card-hover"
+                    className="group bg-slate/20 backdrop-blur-sm border border-slate/30 rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 card-hover"
                   >
                     <div className="w-16 h-16 bg-orange/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-orange/20 transition-colors duration-300">
                       <IconComponent className="w-8 h-8 text-orange" />
                     </div>
                     
-                    <h3 className="text-2xl font-bold font-rajdhani text-charcoal mb-4">
+                    <h3 className="text-2xl font-bold font-rajdhani text-off-white mb-4">
                       {benefit.title}
                     </h3>
                     
-                    <p className="text-lg text-gray-600 leading-relaxed">
+                    <p className="text-lg text-off-white/90 leading-relaxed">
                       {benefit.description}
                     </p>
                   </div>
@@ -222,30 +223,30 @@ const AIAutomation = () => {
 
       {/* Satisfaction - Proof Section */}
       <ScrollAnimation>
-        <section className="py-24 px-4 sm:px-6 lg:px-8 bg-gray-50">
+        <section className="py-24 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
                 <div className="text-center">
                   <div className="text-4xl font-bold text-orange mb-2">40%</div>
-                  <div className="text-lg text-gray-600">Less admin work</div>
+                  <div className="text-lg text-off-white/70">Less admin work</div>
                 </div>
                 <div className="text-center">
                   <div className="text-4xl font-bold text-orange mb-2">2-5</div>
-                  <div className="text-lg text-gray-600">Extra hours freed per week</div>
+                  <div className="text-lg text-off-white/70">Extra hours freed per week</div>
                 </div>
                 <div className="text-center">
                   <div className="text-4xl font-bold text-orange mb-2">Higher</div>
-                  <div className="text-lg text-gray-600">Client retention rates</div>
+                  <div className="text-lg text-off-white/70">Client retention rates</div>
                 </div>
               </div>
 
-              <div className="bg-white rounded-2xl p-8 shadow-lg max-w-4xl mx-auto">
+              <div className="bg-slate/20 border border-slate/30 rounded-2xl p-8 shadow-lg max-w-4xl mx-auto">
                 <div className="flex items-center justify-center mb-4">
                   <CheckCircle className="w-8 h-8 text-green-500 mr-3" />
-                  <span className="text-xl font-semibold text-charcoal">Our Promise</span>
+                  <span className="text-xl font-semibold text-off-white">Our Promise</span>
                 </div>
-                <p className="text-lg text-gray-600 leading-relaxed">
+                <p className="text-lg text-off-white/90 leading-relaxed">
                   We customise automation for your exact workflow. No templates, no wasted tools. 
                   Every system is built specifically for how your business operates.
                 </p>

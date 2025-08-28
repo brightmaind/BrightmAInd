@@ -39,7 +39,7 @@ const Home = () => {
   };
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-charcoal">
       <SEOHead 
         title="Bright mAInd Marketing | Medical Aesthetics Growth Partners"
         description="We help medical aesthetics clinics fill calendars with smart marketing and AI automation—without the complexity."
