@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Calendar, Target, BarChart3, Users, CheckCircle } from 'lucide-react';
+import { Calendar, Target, BarChart3, Users, CheckCircle, Phone, UserX, TrendingDown } from 'lucide-react';
 import ScrollAnimation from '../components/ScrollAnimation';
 import SEOHead from '../components/SEOHead';
 import { Button } from '../components/ui/button';
@@ -11,7 +11,7 @@ const ClinicGrowth = () => {
   const handleBookAudit = () => {
     if (window.Calendly) {
       window.Calendly.initPopupWidget({
-        url: 'https://calendly.com/enquiries-brightmaind/30min?a1=Medical%20Aesthetics%20Growth%20Audit',
+        url: 'https://calendly.com/enquiries-brightmaind/30min?a1=Pet%20Business%20Growth%20Audit',
         parentElement: document.body
       });
       
@@ -20,20 +20,20 @@ const ClinicGrowth = () => {
         if (popup && !popup.querySelector('.calendly-text-overlay')) {
           const textOverlay = document.createElement('div');
           textOverlay.className = 'calendly-text-overlay';
-          textOverlay.innerHTML = '<span>Let\'s discuss how to fill your calendar and cut no-shows for your aesthetics clinic</span>';
+          textOverlay.innerHTML = '<span>Let\'s discuss how to fill your calendar and cut no-shows for your pet business</span>';
           popup.appendChild(textOverlay);
         }
       }, 100);
     } else {
-      window.open('https://calendly.com/enquiries-brightmaind/30min?a1=Medical%20Aesthetics%20Growth%20Audit', '_blank');
+      window.open('https://calendly.com/enquiries-brightmaind/30min?a1=Pet%20Business%20Growth%20Audit', '_blank');
     }
   };
 
   return (
     <div className="pt-20 bg-charcoal text-off-white">
       <SEOHead 
-        title="Aesthetics Clinic Growth — Predictable CAC, Higher LTV | Bright mAInd"
-        description="We deliver deposit-paid consultations at an agreed CAC using your existing booking system. Book a 10-minute audit."
+        title="Pet Business Growth — Fill Your Calendar With Ease | Bright mAInd"
+        description="From groomers to trainers, vets to daycares—we help pet businesses attract more clients, reduce no-shows, and grow consistently."
         canonical="/clinic-growth"
       />
       
@@ -42,11 +42,11 @@ const ClinicGrowth = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold font-rajdhani text-off-white leading-tight mb-8">
-              Your clinic should have a <span className="text-orange">full calendar</span>—every week.
+              Fill Your Pet Business <span className="text-orange">Calendar With Ease</span>.
             </h1>
             
             <p className="text-xl md:text-2xl text-off-white/90 leading-relaxed max-w-4xl mx-auto mb-12">
-              Most clinics rely on word of mouth and a "book now" button. That leaves chairs empty and growth unpredictable.
+              From groomers to trainers, vets to daycares—we help pet businesses attract more clients, reduce no-shows, and grow consistently.
             </p>
           </div>
         </div>
@@ -58,14 +58,41 @@ const ClinicGrowth = () => {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold font-rajdhani text-off-white mb-8">
-                The problem with <span className="text-orange">hope-marketing</span>
+                Most pet businesses rely on <span className="text-orange">outdated systems</span>
               </h2>
             </div>
 
-            <div className="max-w-4xl mx-auto">
-              <p className="text-xl text-off-white/90 leading-relaxed text-center">
-                Without a clear system, new clients trickle in randomly. Competitors with better funnels win the steady flow of patients—while you're left guessing where the next booking will come from.
+            <div className="max-w-4xl mx-auto mb-16">
+              <p className="text-xl text-off-white/90 leading-relaxed text-center mb-12">
+                Most pet businesses rely on word of mouth and outdated booking systems. Missed calls, no-shows, and empty slots cost you growth every week.
               </p>
+
+              {/* Problem Icons */}
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div className="text-center">
+                  <div className="w-20 h-20 bg-orange/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Phone className="w-10 h-10 text-orange" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-off-white mb-2">Missed Calls</h3>
+                  <p className="text-off-white/70">Potential clients hang up when you can't answer</p>
+                </div>
+
+                <div className="text-center">
+                  <div className="w-20 h-20 bg-orange/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <UserX className="w-10 h-10 text-orange" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-off-white mb-2">No-Shows</h3>
+                  <p className="text-off-white/70">Empty appointments mean lost revenue</p>
+                </div>
+
+                <div className="text-center">
+                  <div className="w-20 h-20 bg-orange/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <TrendingDown className="w-10 h-10 text-orange" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-off-white mb-2">Lost Revenue</h3>
+                  <p className="text-off-white/70">Inconsistent bookings hurt your bottom line</p>
+                </div>
+              </div>
             </div>
           </div>
         </section>
@@ -77,19 +104,142 @@ const ClinicGrowth = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold font-rajdhani text-off-white mb-8">
-                Our system brings clients in, <span className="text-orange">week after week</span>
+                What Pet Business <span className="text-orange">Growth Looks Like</span>
               </h2>
             </div>
 
-            <div className="max-w-4xl mx-auto">
-              <p className="text-xl text-off-white/90 leading-relaxed mb-12 text-center">
-                We build treatment-specific funnels that:
-              </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div className="group bg-slate/20 backdrop-blur-sm border border-slate/30 rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 card-hover">
+                <div className="w-16 h-16 bg-orange/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-orange/20 transition-colors duration-300">
+                  <Calendar className="w-8 h-8 text-orange" />
+                </div>
+                <h3 className="text-2xl font-bold font-rajdhani text-off-white mb-4">Smart Bookings</h3>
+                <p className="text-lg text-off-white/90 leading-relaxed">
+                  Deposit checkout, automated reminders, and confirmations that reduce no-shows and secure your schedule.
+                </p>
+              </div>
 
-              <div className="space-y-6 mb-12">
-                <div className="flex items-start space-x-4">
-                  <div className="w-8 h-8 bg-orange rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                    <CheckCircle className="w-5 h-5 text-white" />
+              <div className="group bg-slate/20 backdrop-blur-sm border border-slate/30 rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 card-hover">
+                <div className="w-16 h-16 bg-orange/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-orange/20 transition-colors duration-300">
+                  <Target className="w-8 h-8 text-orange" />
+                </div>
+                <h3 className="text-2xl font-bold font-rajdhani text-off-white mb-4">Content That Converts</h3>
+                <p className="text-lg text-off-white/90 leading-relaxed">
+                  Videos of grooming transformations, training sessions, and happy pets that go viral and bring in new clients.
+                </p>
+              </div>
+
+              <div className="group bg-slate/20 backdrop-blur-sm border border-slate/30 rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 card-hover">
+                <div className="w-16 h-16 bg-orange/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-orange/20 transition-colors duration-300">
+                  <BarChart3 className="w-8 h-8 text-orange" />
+                </div>
+                <h3 className="text-2xl font-bold font-rajdhani text-off-white mb-4">Targeted Ads</h3>
+                <p className="text-lg text-off-white/90 leading-relaxed">
+                  Reach local pet owners on Meta, Google, and TikTok with ads that showcase your services and drive bookings.
+                </p>
+              </div>
+
+              <div className="group bg-slate/20 backdrop-blur-sm border border-slate/30 rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 card-hover">
+                <div className="w-16 h-16 bg-orange/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-orange/20 transition-colors duration-300">
+                  <Users className="w-8 h-8 text-orange" />
+                </div>
+                <h3 className="text-2xl font-bold font-rajdhani text-off-white mb-4">Automation</h3>
+                <p className="text-lg text-off-white/90 leading-relaxed">
+                  Loyalty reminders, subscription refills, and rebooking flows that keep clients coming back automatically.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </ScrollAnimation>
+
+      {/* Action - CTA Block */}
+      <ScrollAnimation>
+        <section className="py-24 bg-charcoal">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div className="max-w-3xl mx-auto">
+              <h2 className="text-4xl md:text-5xl font-bold font-rajdhani text-off-white mb-8">
+                Ready to <span className="text-orange">grow your pet business</span>?
+              </h2>
+              
+              <p className="text-xl md:text-2xl text-off-white/90 leading-relaxed mb-12">
+                We build growth systems tailored for pet groomers, trainers, daycares, vets, and pet brands.
+              </p>
+              
+              <Button 
+                onClick={handleBookAudit}
+                size="lg" 
+                className="text-xl px-12 py-6"
+                aria-label="Book a free growth audit for your pet business"
+              >
+                <Calendar className="w-6 h-6 mr-3" />
+                Book a Free Audit
+              </Button>
+              
+              <div className="flex flex-col gap-4 justify-center items-center mt-6">
+                <Button 
+                  onClick={() => navigate('/contact')}
+                  size="lg" 
+                  variant="outline"
+                  className="text-xl px-12 py-6"
+                  aria-label="Send us a message"
+                >
+                  Send us a message
+                </Button>
+              </div>
+            </div>
+          </div>
+        </section>
+      </ScrollAnimation>
+
+      {/* Satisfaction - Proof Section */}
+      <ScrollAnimation>
+        <section className="py-24 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <div className="bg-slate/20 border border-slate/30 rounded-2xl p-8 shadow-lg max-w-4xl mx-auto mb-12">
+                <div className="flex items-center justify-center mb-4">
+                  <CheckCircle className="w-8 h-8 text-green-500 mr-3" />
+                  <span className="text-xl font-semibold text-off-white">Real Results</span>
+                </div>
+                <p className="text-lg text-off-white/90 leading-relaxed mb-6">
+                  Pet salons cut no-shows by 40%. Trainers filled classes weeks in advance. Vets booked more consults without extra admin.
+                </p>
+                <p className="text-lg text-off-white/90 leading-relaxed">
+                  With automation, content, and ads working together, pet owners never slip through the cracks.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </ScrollAnimation>
+
+      {/* Footer CTA Strip */}
+      <ScrollAnimation>
+        <section className="py-16 bg-orange">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h3 className="text-2xl md:text-3xl font-bold text-white mb-6">
+              Don't chase clients—<span className="text-white">let them come to you</span>.
+            </h3>
+            
+            <Button 
+              onClick={handleBookAudit}
+              size="lg" 
+              variant="secondary"
+              className="bg-white text-orange hover:bg-white/90 text-xl px-12 py-6"
+              aria-label="Book a free audit for your pet business"
+            >
+              <Calendar className="w-6 h-6 mr-3" />
+              Book a Free Audit
+            </Button>
+          </div>
+        </section>
+      </ScrollAnimation>
+    </div>
+  );
+};
+
+export default ClinicGrowth;
                   </div>
                   <p className="text-lg text-off-white/90 leading-relaxed">
                     Run high-converting ads to qualified local patients
