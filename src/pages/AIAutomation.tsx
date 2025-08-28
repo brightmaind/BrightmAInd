@@ -99,7 +99,7 @@ const AIAutomation = () => {
                 onClick={() => navigate('/contact')}
                 size="lg" 
                 variant="outline"
-                className="text-xl px-12 py-6 ml-4"
+                className="text-xl px-12 py-6"
                 aria-label="Send us a message"
               >
                 Send us a message
@@ -216,7 +216,7 @@ const AIAutomation = () => {
               onClick={() => navigate('/contact')}
               size="lg" 
               variant="outline"
-              className="text-xl px-12 py-6 ml-4"
+              className="text-xl px-12 py-6"
               aria-label="Send us a message"
             >
               Send us a message
