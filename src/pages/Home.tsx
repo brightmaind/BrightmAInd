@@ -56,20 +56,20 @@ const Home = () => {
                 <button
                   key={index}
                   onClick={() => handleServiceClick(service.href)}
-                  className="group relative bg-charcoal hover:bg-orange text-off-white hover:text-charcoal p-12 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-orange/30 min-h-[280px] flex flex-col items-center justify-center text-center"
+                  className="group relative bg-charcoal hover:bg-orange text-off-white hover:text-charcoal p-6 md:p-12 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-orange/30 min-h-[200px] md:min-h-[280px] flex flex-col items-center justify-center text-center"
                 >
                   {/* Icon */}
-                  <div className="mb-6 p-4 bg-orange/10 group-hover:bg-charcoal/10 rounded-full transition-colors duration-300">
-                    <IconComponent className="w-12 h-12 text-orange group-hover:text-charcoal transition-colors duration-300" />
+                  <div className="mb-3 md:mb-6 p-3 md:p-4 bg-orange/10 group-hover:bg-charcoal/10 rounded-full transition-colors duration-300">
+                    <IconComponent className="w-8 h-8 md:w-12 md:h-12 text-orange group-hover:text-charcoal transition-colors duration-300" />
                   </div>
                   
                   {/* Title */}
-                  <h2 className="text-3xl font-bold font-rajdhani mb-4 transition-colors duration-300">
+                  <h2 className="text-2xl md:text-3xl font-bold font-rajdhani mb-2 md:mb-4 transition-colors duration-300">
                     {service.title}
                   </h2>
                   
                   {/* Description */}
-                  <p className="text-lg text-off-white/80 group-hover:text-charcoal/80 transition-colors duration-300 leading-relaxed">
+                  <p className="text-base md:text-lg text-off-white/80 group-hover:text-charcoal/80 transition-colors duration-300 leading-relaxed">
                     {service.description}
                   </p>
                   
