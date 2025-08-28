@@ -218,7 +218,7 @@ const AIAutomation = () => {
 
       {/* Secondary CTA */}
       <ScrollAnimation>
-        <section className="py-8 px-4 sm:px-6 lg:px-8 bg-charcoal text-off-white">
+        <section className="py-4 px-4 sm:px-6 lg:px-8 bg-charcoal text-off-white">
           <div className="max-w-7xl mx-auto text-center">
             <Button 
               onClick={() => navigate('/contact')}
