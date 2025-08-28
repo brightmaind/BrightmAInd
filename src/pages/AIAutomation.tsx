@@ -208,7 +208,8 @@ const AIAutomation = () => {
               aria-label="Book your free automation audit"
             >
               <Calendar className="w-6 h-6 mr-3" />
-              Book Your Free Automation Audit
+              <span className="hidden sm:inline">Book Your Free Automation Audit</span>
+              <span className="sm:hidden">Book Free Audit</span>
             </Button>
             
             <Button 
