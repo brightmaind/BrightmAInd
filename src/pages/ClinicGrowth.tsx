@@ -11,7 +11,7 @@ const ClinicGrowth = () => {
   const handleBookAudit = () => {
     if (window.Calendly) {
       window.Calendly.initPopupWidget({
-        url: 'https://calendly.com/enquiries-brightmaind/30min?a1=Pet%20Business%20Growth%20Audit',
+        url: 'https://calendly.com/enquiries-brightmaind/30min?a1=Pet%20Growth%20Pro%20Audit',
         parentElement: document.body
       });
       
@@ -20,21 +20,21 @@ const ClinicGrowth = () => {
         if (popup && !popup.querySelector('.calendly-text-overlay')) {
           const textOverlay = document.createElement('div');
           textOverlay.className = 'calendly-text-overlay';
-          textOverlay.innerHTML = '<span>Let\'s discuss how to fill your calendar and cut no-shows for your pet business</span>';
+          textOverlay.innerHTML = '<span>Let\'s discuss how Pet Growth Pro can fill your calendar and cut no-shows</span>';
           popup.appendChild(textOverlay);
         }
       }, 100);
     } else {
-      window.open('https://calendly.com/enquiries-brightmaind/30min?a1=Pet%20Business%20Growth%20Audit', '_blank');
+      window.open('https://calendly.com/enquiries-brightmaind/30min?a1=Pet%20Growth%20Pro%20Audit', '_blank');
     }
   };
 
   return (
     <div className="pt-20 bg-charcoal text-off-white">
       <SEOHead 
-        title="Pet Business Growth — Fill Your Calendar With Ease | Bright mAInd"
+        title="Pet Growth Pro — Fill Your Calendar With Ease | Bright mAInd"
         description="From groomers to trainers, vets to daycares—we help pet businesses attract more clients, reduce no-shows, and grow consistently."
-        canonical="/clinic-growth"
+        canonical="/pet-growth-pro"
       />
       
       {/* Hero Section - Attention / Problem */}
@@ -104,7 +104,7 @@ const ClinicGrowth = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold font-rajdhani text-off-white mb-8">
-                What Pet Business <span className="text-orange">Growth Looks Like</span>
+                What Pet Growth Pro <span className="text-orange">Looks Like</span>
               </h2>
             </div>
 
