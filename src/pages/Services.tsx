@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Target, Bot, Globe, PenTool } from 'lucide-react';
+import { Target, Bot, Globe, Camera } from 'lucide-react';
 import SEOHead from '../components/SEOHead';
 
 const Services = () => {
@@ -27,7 +27,7 @@ const Services = () => {
     },
     {
       title: 'Content Creation',
-      icon: PenTool,
+      icon: Camera,
       href: '/content-creation',
       description: 'Content that builds trust and drives bookings'
     }

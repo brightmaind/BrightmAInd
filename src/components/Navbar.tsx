@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { Menu, X, Calendar } from 'lucide-react';
+import { Menu, X, Calendar, Camera } from 'lucide-react';
 import { Button } from './ui/button';
 
 // Calendly integration
