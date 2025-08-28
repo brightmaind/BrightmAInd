@@ -28,7 +28,7 @@ const Footer: React.FC = () => {
               </h3>
             </div>
             <p className="text-off-white/70 mb-6 max-w-md">
-              We help medical aesthetics clinics fill calendars with smart marketing and AI automation—without the complexity.
+              We help businesses grow with smart marketing, AI automation, high-converting websites, and content that drives results.
             </p>
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
