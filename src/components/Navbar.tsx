@@ -158,10 +158,10 @@ const Navbar: React.FC = () => {
                 <button
                   key={item.name}
                   onClick={() => handleNavigation(item.href)}
-                  className={`block text-sm font-medium transition-all duration-300 ${
+                  className={`block text-sm font-medium transition-all duration-300 hover:scale-105 focus-visible px-4 py-2 rounded-full ${
                     location.pathname === item.href
-                      ? 'text-orange'
-                      : 'text-off-white hover:text-orange'
+                      ? 'bg-orange/20 text-orange border border-orange/30'
+                      : 'bg-slate/20 text-off-white hover:text-orange hover:bg-slate/30 border border-slate/30'
                   }`}
                 >
                   {item.name}
@@ -169,7 +169,11 @@ const Navbar: React.FC = () => {
               ))}
               <button
                 onClick={() => handleNavigation('/contact')}
-                className="block text-sm font-medium transition-all duration-300 text-off-white hover:text-orange"
+                className={`block text-sm font-medium transition-all duration-300 hover:scale-105 focus-visible px-4 py-2 rounded-full ${
+                  location.pathname === '/contact'
+                    ? 'bg-orange/20 text-orange border border-orange/30'
+                    : 'bg-slate/20 text-off-white hover:text-orange hover:bg-slate/30 border border-slate/30'
+                }`}
               >
                 Send us a message
               </button>
