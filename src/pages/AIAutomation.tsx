@@ -281,5 +281,3 @@ const AIAutomation = () => {
 };
 
 export default AIAutomation;
-  )
-}
