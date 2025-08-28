@@ -7,6 +7,7 @@ import AIAutomation from './pages/AIAutomation';
 import Contact from './pages/Contact';
 import BusinessSites from './pages/BusinessSites';
 import Services from './pages/Services';
+import ContentCreation from './pages/ContentCreation';
 import Footer from './components/Footer';
 
 function App() {
@@ -21,7 +22,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/business-sites" element={<BusinessSites />} />
           <Route path="/services" element={<Services />} />
-          <Route path="/content-creation" element={<Services />} />
+          <Route path="/content-creation" element={<ContentCreation />} />
         </Routes>
         <Footer />
       </div>
