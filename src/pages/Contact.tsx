@@ -52,10 +52,10 @@ const Contact: React.FC = () => {
         <section className="py-24 px-4 sm:px-6 lg:px-8 bg-gray-50">
           <div className="max-w-7xl mx-auto text-center">
             <h1 className="text-5xl md:text-6xl font-bold text-charcoal mb-8">
-              Ready to <span className="text-orange">grow your clinic</span>?
+              Ready to <span className="text-orange">grow your business</span>?
             </h1>
             <p className="text-xl md:text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-              Get predictable patient bookings with our complete growth system: smart marketing, AI automation, and conversion-focused websites.
+              Transform your business with our complete growth system: smart marketing, AI automation, conversion-focused websites, and high-impact content creation.
             </p>
           </div>
       </section>
@@ -69,10 +69,10 @@ const Contact: React.FC = () => {
             {/* Contact Information */}
             <div>
               <h2 className="text-3xl md:text-4xl font-bold text-charcoal mb-8">
-                Let's talk growth
+                Let's discuss your goals
               </h2>
               <p className="text-lg text-gray-600 mb-12 leading-relaxed">
-                We help medical aesthetics clinics scale with predictable patient acquisition, smart automation, and high-converting websites.
+                We help businesses scale with smart marketing systems, AI automation, high-converting websites, and content that drives results.
               </p>
 
               <div className="space-y-8">
@@ -94,7 +94,7 @@ const Contact: React.FC = () => {
                 <h3 className="text-xl font-semibold text-charcoal mb-4">Response Time</h3>
                 <p className="text-gray-600">
                   We respond to all inquiries within 4 hours during business days. 
-                  Limited clinic slots available to ensure quality service.
+                  Limited client slots available to ensure quality service.
                 </p>
               </div>
             </div>
@@ -171,8 +171,7 @@ const Contact: React.FC = () => {
                       required
                       rows={6}
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange focus:border-transparent transition-colors resize-none text-charcoal"
-                      placeholder="Tell us about your business goals and how we can help you achieve them..."
-                      placeholder="Tell us about your clinic and growth goals. What challenges are you facing with patient acquisition?"
+                      placeholder="Tell us about your business and growth goals. What challenges are you facing with marketing, automation, or your website?"
                     />
                   </div>
 
@@ -197,11 +196,11 @@ const Contact: React.FC = () => {
                     Thank you for reaching out. We've received your message and will respond within 4 hours during business days.
                   </p>
                   <p className="text-gray-600 mb-8">
-                    We're excited to discuss how we can help you scale your clinic with our complete growth system.
+                    We're excited to discuss how we can help you scale your business with our complete growth system.
                   </p>
                   <div className="bg-orange/10 border border-orange/20 rounded-lg p-4 mb-6">
                     <p className="text-gray-700 text-sm">
-                      <strong>Limited Availability:</strong> We only work with a select number of clinics to ensure exceptional results.
+                      <strong>Limited Availability:</strong> We only work with a select number of clients to ensure exceptional results.
                     </p>
                   </div>
                   <button
@@ -217,7 +216,7 @@ const Contact: React.FC = () => {
             {/* Priority Notice */}
             <div className="mt-6 text-center">
               <p className="text-gray-600 text-sm">
-                Limited clinic partnerships available. Apply today to secure your spot.
+                Limited client partnerships available. Apply today to secure your spot.
               </p>
             </div>
           </div>
