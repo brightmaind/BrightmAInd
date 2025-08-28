@@ -125,9 +125,9 @@ const Navbar: React.FC = () => {
               size="sm" 
               variant="outline"
               className="ml-4"
-              aria-label="Contact us"
+              aria-label="Send us a message"
             >
-              Contact
+              Send us a message
             </Button>
             
             <Button 
@@ -171,7 +171,7 @@ const Navbar: React.FC = () => {
                 onClick={() => handleNavigation('/contact')}
                 className="block text-sm font-medium transition-all duration-300 text-off-white hover:text-orange"
               >
-                Contact
+                Send us a message
               </button>
               <button
                 onClick={() => handleNavigation('/business-sites')}

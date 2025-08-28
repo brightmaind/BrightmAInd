@@ -111,9 +111,9 @@ const ContentCreation = () => {
                 size="lg" 
                 variant="outline"
                 className="text-xl px-12 py-6 border-2 border-white text-white hover:bg-white hover:text-black transition-all duration-300"
-                aria-label="Contact us directly"
+                aria-label="Send us a message"
               >
-                Contact Us
+                Send us a message
               </Button>
             </div>
           </div>
@@ -209,9 +209,9 @@ const ContentCreation = () => {
               size="lg" 
               variant="outline"
               className="text-xl px-12 py-6 border-2 border-white text-white hover:bg-white hover:text-black transition-all duration-300 ml-4"
-              aria-label="Contact us directly"
+              aria-label="Send us a message"
             >
-              Contact Us
+              Send us a message
             </Button>
           </div>
         </section>
@@ -275,9 +275,9 @@ const ContentCreation = () => {
               size="lg" 
               variant="outline"
               className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-charcoal text-xl px-12 py-6 ml-4 transition-all duration-300"
-              aria-label="Contact us directly"
+              aria-label="Send us a message"
             >
-              Contact Us
+              Send us a message
             </Button>
           </div>
         </section>

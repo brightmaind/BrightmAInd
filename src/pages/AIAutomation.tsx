@@ -105,9 +105,9 @@ const AIAutomation = () => {
                 size="lg" 
                 variant="outline"
                 className="text-xl px-12 py-6 ml-4"
-                aria-label="Contact us directly"
+                aria-label="Send us a message"
               >
-                Contact Us
+                Send us a message
               </Button>
               
               <Button 
@@ -232,9 +232,9 @@ const AIAutomation = () => {
               size="lg" 
               variant="outline"
               className="text-xl px-12 py-6 ml-4"
-              aria-label="Contact us directly"
+              aria-label="Send us a message"
             >
-              Contact Us
+              Send us a message
             </Button>
           </div>
         </section>
@@ -299,9 +299,9 @@ const AIAutomation = () => {
               size="lg" 
               variant="outline"
               className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-orange text-xl px-12 py-6 ml-4"
-              aria-label="Contact us directly"
+              aria-label="Send us a message"
             >
-              Contact Us
+              Send us a message
             </Button>
           </div>
         </section>
