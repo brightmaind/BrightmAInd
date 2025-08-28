@@ -49,7 +49,7 @@ const Home = () => {
       <div className="pt-32 pb-24 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           {/* Services Grid */}
-          <div className="grid grid-cols-2 gap-4 md:gap-8 lg:gap-12 max-w-2xl md:max-w-6xl mx-auto">
+          <div className="grid grid-cols-2 gap-4 md:gap-8 lg:gap-12 max-w-2xl md:max-w-6xl mx-auto flex items-center justify-center min-h-[60vh]">
             {services.map((service, index) => {
               const IconComponent = service.icon;
               return (
