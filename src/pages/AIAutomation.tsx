@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Calendar, Play, Clock, TrendingDown, Users, Zap, Bot, BarChart3, Mail, CheckCircle } from 'lucide-react';
+import { Calendar, Clock, TrendingDown, Users, Zap, Bot, BarChart3, Mail, CheckCircle } from 'lucide-react';
 import ScrollAnimation from '../components/ScrollAnimation';
 import SEOHead from '../components/SEOHead';
 import Breadcrumb from '../components/Breadcrumb';
@@ -28,11 +28,6 @@ const AIAutomation = () => {
     } else {
       window.open('https://calendly.com/enquiries-brightmaind/30min?a1=AI%20Automation%20Audit', '_blank');
     }
-  };
-
-  const handleDemoVideo = () => {
-    // Placeholder for demo video
-    alert('Demo video coming soon!');
   };
 
   const benefits = [
@@ -108,17 +103,6 @@ const AIAutomation = () => {
                 aria-label="Send us a message"
               >
                 Send us a message
-              </Button>
-              
-              <Button 
-                onClick={handleDemoVideo}
-                size="lg" 
-                variant="outline"
-                className="text-xl px-12 py-6"
-                aria-label="See AI automation in action"
-              >
-                <Play className="w-6 h-6 mr-3" />
-                See AI in Action
               </Button>
             </div>
           </div>
