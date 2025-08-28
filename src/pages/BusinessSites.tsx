@@ -62,6 +62,16 @@ const BusinessSites = () => {
               <Calendar className="w-6 h-6 mr-3" />
               Book a Call
             </Button>
+            
+            <Button 
+              onClick={() => navigate('/contact')}
+              size="lg" 
+              variant="outline"
+              className="text-xl px-12 py-6 ml-4"
+              aria-label="Contact us directly"
+            >
+              Contact Us
+            </Button>
           </div>
         </div>
       </section>
@@ -156,6 +166,16 @@ const BusinessSites = () => {
               >
                 <Calendar className="w-6 h-6 mr-3" />
                 Book a Call
+              </Button>
+              
+              <Button 
+                onClick={() => navigate('/contact')}
+                size="lg" 
+                variant="outline"
+                className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-orange text-xl px-12 py-6 ml-4"
+                aria-label="Contact us directly"
+              >
+                Contact Us
               </Button>
             </div>
           </div>

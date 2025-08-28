@@ -16,9 +16,10 @@ const Navbar: React.FC = () => {
   const navigate = useNavigate();
 
   const navigation = [
-    { name: 'Services', href: '/' },
+    { name: 'Home', href: '/' },
     { name: 'Clinic Growth', href: '/clinic-growth' },
-    { name: 'Contact', href: '/contact' },
+    { name: 'AI Automation', href: '/ai-automation' },
+    { name: 'Content Creation', href: '/content-creation' },
   ];
 
   const handleBookConsultation = () => {
@@ -101,7 +102,7 @@ const Navbar: React.FC = () => {
                 >
                   {item.name}
                 </button>
-                {index === 1 && (
+                {index < navigation.length - 1 && (
                   <span className="text-off-white/40 text-sm">|</span>
                 )}
               </React.Fragment>
@@ -118,6 +119,16 @@ const Navbar: React.FC = () => {
             >
               Smart Websites
             </button>
+            
+            <Button 
+              onClick={() => handleNavigation('/contact')}
+              size="sm" 
+              variant="outline"
+              className="ml-4"
+              aria-label="Contact us"
+            >
+              Contact
+            </Button>
             
             <Button 
               onClick={handleBookConsultation} 
@@ -156,6 +167,12 @@ const Navbar: React.FC = () => {
                   {item.name}
                 </button>
               ))}
+              <button
+                onClick={() => handleNavigation('/contact')}
+                className="block text-sm font-medium transition-all duration-300 text-off-white hover:text-orange"
+              >
+                Contact
+              </button>
               <button
                 onClick={() => handleNavigation('/business-sites')}
                 className={`block text-sm font-medium transition-all duration-300 px-4 py-2 rounded-full ${
