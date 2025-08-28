@@ -235,11 +235,16 @@ const ClinicGrowth = () => {
           </div>
         </section>
       </ScrollAnimation>
-    </div>
-  );
-};
 
-export default ClinicGrowth;
+      {/* Additional Section */}
+      <ScrollAnimation>
+        <section className="py-24 bg-near-black">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-4xl mx-auto">
+              <div className="space-y-8">
+                <div className="flex items-start space-x-4">
+                  <div className="w-8 h-8 bg-orange rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                    <CheckCircle className="w-5 h-5 text-white" />
                   </div>
                   <p className="text-lg text-off-white/90 leading-relaxed">
                     Run high-converting ads to qualified local patients
