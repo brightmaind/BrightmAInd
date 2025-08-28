@@ -53,6 +53,7 @@ const BusinessSites = () => {
               We design clean, conversion-focused sites and simple marketing systems so you start strong.
             </p>
 
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Button 
               onClick={handleBookCall}
               size="lg" 
@@ -67,11 +68,12 @@ const BusinessSites = () => {
               onClick={() => navigate('/contact')}
               size="lg" 
               variant="outline"
-              className="text-xl px-12 py-6 ml-4"
+              className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-orange text-xl px-12 py-6"
               aria-label="Send us a message"
             >
               Send us a message
             </Button>
+            </div>
           </div>
         </div>
       </section>

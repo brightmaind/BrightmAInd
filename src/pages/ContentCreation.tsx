@@ -260,6 +260,7 @@ const ContentCreation = () => {
               Don't just post. <span className="text-orange">Perform</span>.
             </h3>
             
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Button 
               onClick={handleBookAudit}
               size="lg" 
@@ -274,11 +275,12 @@ const ContentCreation = () => {
               onClick={() => navigate('/contact')}
               size="lg" 
               variant="outline"
-              className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-charcoal text-xl px-12 py-6 ml-4 transition-all duration-300"
+              className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-charcoal text-xl px-12 py-6 transition-all duration-300"
               aria-label="Send us a message"
             >
               Send us a message
             </Button>
+            </div>
           </div>
         </section>
       </ScrollAnimation>

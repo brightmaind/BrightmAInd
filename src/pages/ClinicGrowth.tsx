@@ -164,15 +164,17 @@ const ClinicGrowth = () => {
                 Book a 10-minute audit
               </Button>
               
+              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mt-6">
               <Button 
                 onClick={() => navigate('/contact')}
                 size="lg" 
                 variant="outline"
-                className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-orange text-xl px-12 py-6 ml-4"
+                className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-orange text-xl px-12 py-6"
                 aria-label="Send us a message"
               >
                 Send us a message
               </Button>
+              </div>
             </div>
           </div>
         </section>
