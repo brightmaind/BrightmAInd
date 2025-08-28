@@ -168,16 +168,6 @@ const Navbar: React.FC = () => {
                 </button>
               ))}
               <button
-                onClick={() => handleNavigation('/contact')}
-                className={`block text-sm font-medium transition-all duration-300 hover:scale-105 focus-visible px-4 py-2 rounded-full ${
-                  location.pathname === '/contact'
-                    ? 'bg-orange/20 text-orange border border-orange/30'
-                    : 'bg-slate/20 text-off-white hover:text-orange hover:bg-slate/30 border border-slate/30'
-                }`}
-              >
-                Send us a message
-              </button>
-              <button
                 onClick={() => handleNavigation('/business-sites')}
                 className={`block text-sm font-medium transition-all duration-300 px-4 py-2 rounded-full ${
                   location.pathname === '/business-sites'
@@ -186,6 +176,16 @@ const Navbar: React.FC = () => {
                 }`}
               >
                 Smart Websites
+              </button>
+              <button
+                onClick={() => handleNavigation('/contact')}
+                className={`block text-sm font-medium transition-all duration-300 hover:scale-105 focus-visible px-4 py-2 rounded-full ${
+                  location.pathname === '/contact'
+                    ? 'bg-orange/20 text-orange border border-orange/30'
+                    : 'bg-slate/20 text-off-white hover:text-orange hover:bg-slate/30 border border-slate/30'
+                }`}
+              >
+                Send us a message
               </button>
               <Button 
                 onClick={handleBookConsultation} 
