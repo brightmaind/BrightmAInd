@@ -50,14 +50,14 @@ const Contact: React.FC = () => {
       {/* Header Section */}
       <ScrollAnimation>
         <section className="py-24 px-4 sm:px-6 lg:px-8 bg-gray-50">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-5xl md:text-6xl font-bold text-charcoal mb-8">
-            Ready for a <span className="text-orange">full calendar</span>?
-          </h1>
-          <p className="text-xl md:text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-            Book a free growth audit for your medical aesthetics clinic. We'll show you how our system brings in predictable bookings every week.
-          </p>
-        </div>
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-5xl md:text-6xl font-bold text-charcoal mb-8">
+              Ready to <span className="text-orange">grow your clinic</span>?
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+              Get predictable patient bookings with our complete growth system: smart marketing, AI automation, and conversion-focused websites.
+            </p>
+          </div>
       </section>
       </ScrollAnimation>
 
@@ -69,10 +69,10 @@ const Contact: React.FC = () => {
             {/* Contact Information */}
             <div>
               <h2 className="text-3xl md:text-4xl font-bold text-charcoal mb-8">
-                Ready to start?
+                Let's talk growth
               </h2>
               <p className="text-lg text-gray-600 mb-12 leading-relaxed">
-                Book your 10-minute audit and get your treatment funnel plan. We're here to help you fill your calendar with consistent growth.
+                We help medical aesthetics clinics scale with predictable patient acquisition, smart automation, and high-converting websites.
               </p>
 
               <div className="space-y-8">
@@ -93,8 +93,8 @@ const Contact: React.FC = () => {
               <div className="mt-12 p-6 bg-gray-50 rounded-2xl">
                 <h3 className="text-xl font-semibold text-charcoal mb-4">Response Time</h3>
                 <p className="text-gray-600">
-                  We typically respond to all clinic inquiries within 4 hours during business days. 
-                  For urgent booking questions, please email us directly for immediate assistance.
+                  We respond to all inquiries within 4 hours during business days. 
+                  Limited clinic slots available to ensure quality service.
                 </p>
               </div>
             </div>
@@ -172,7 +172,7 @@ const Contact: React.FC = () => {
                       rows={6}
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange focus:border-transparent transition-colors resize-none text-charcoal"
                       placeholder="Tell us about your business goals and how we can help you achieve them..."
-                      placeholder="Tell us about your clinic and current booking challenges. How can we help you achieve consistent growth?"
+                      placeholder="Tell us about your clinic and growth goals. What challenges are you facing with patient acquisition?"
                     />
                   </div>
 
@@ -194,14 +194,14 @@ const Contact: React.FC = () => {
                   </div>
                   <h3 className="text-2xl font-bold text-charcoal mb-4">Message Sent Successfully!</h3>
                   <p className="text-gray-600 mb-6 leading-relaxed">
-                    Thank you for reaching out to us. We've received your message and will get back to you within 4 hours during business days.
+                    Thank you for reaching out. We've received your message and will respond within 4 hours during business days.
                   </p>
                   <p className="text-gray-600 mb-8">
-                    We're excited to discuss how we can help you achieve predictable bookings and consistent revenue growth.
+                    We're excited to discuss how we can help you scale your clinic with our complete growth system.
                   </p>
                   <div className="bg-orange/10 border border-orange/20 rounded-lg p-4 mb-6">
                     <p className="text-gray-700 text-sm">
-                      <strong>Priority Notice:</strong> We only take on a limited number of clinics at a time, so if you see availability, you're prioritised.
+                      <strong>Limited Availability:</strong> We only work with a select number of clinics to ensure exceptional results.
                     </p>
                   </div>
                   <button
@@ -217,7 +217,7 @@ const Contact: React.FC = () => {
             {/* Priority Notice */}
             <div className="mt-6 text-center">
               <p className="text-gray-600 text-sm">
-                We only take on a limited number of clinics at a time, so if you see availability, you're prioritised.
+                Limited clinic partnerships available. Apply today to secure your spot.
               </p>
             </div>
           </div>
