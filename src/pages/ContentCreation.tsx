@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Calendar, Play, Eye, MessageCircle, TrendingDown, Video, Palette, Camera, BarChart3, CheckCircle } from 'lucide-react';
+import { Calendar, Eye, MessageCircle, TrendingDown, Video, Palette, Camera, BarChart3, CheckCircle } from 'lucide-react';
 import ScrollAnimation from '../components/ScrollAnimation';
 import SEOHead from '../components/SEOHead';
 import Breadcrumb from '../components/Breadcrumb';
@@ -8,12 +8,6 @@ import { Button } from '../components/ui/button';
 
 const ContentCreation = () => {
   const navigate = useNavigate();
-
-  const handleSeeWork = () => {
-    // Placeholder for portfolio page
-    navigate('/portfolio');
-    window.scrollTo(0, 0);
-  };
 
   const handleBookAudit = () => {
     if (window.Calendly) {
@@ -101,16 +95,6 @@ const ContentCreation = () => {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Button 
-                onClick={handleSeeWork}
-                size="lg" 
-                className="text-xl px-12 py-6 bg-orange hover:bg-white hover:text-black hover:border-orange hover:border-2 transition-all duration-300"
-                aria-label="See our content creation portfolio"
-              >
-                <Play className="w-6 h-6 mr-3" />
-                See Our Work
-              </Button>
-              
               <Button 
                 onClick={handleBookAudit}
                 size="lg" 
