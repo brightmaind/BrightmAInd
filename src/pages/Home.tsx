@@ -8,10 +8,10 @@ const Home = () => {
 
   const services = [
     {
-      title: 'Clinic Growth',
+      title: 'Pet Growth Pro',
       icon: Target,
       href: '/clinic-growth',
-      description: 'Predictable patient acquisition'
+      description: 'Fill your pet business calendar'
     },
     {
       title: 'AI Automation',
