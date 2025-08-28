@@ -84,7 +84,7 @@ const AIAutomation = () => {
               AI-powered workflows save you hours every week, cut costs, and let you focus on growth instead of admin.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <div className="flex flex-col gap-4 justify-center items-center">
               <Button 
                 onClick={handleBookAudit}
                 size="lg" 
@@ -212,6 +212,14 @@ const AIAutomation = () => {
               <span className="sm:hidden">Book Free Audit</span>
             </Button>
             
+          </div>
+        </section>
+      </ScrollAnimation>
+
+      {/* Secondary CTA */}
+      <ScrollAnimation>
+        <section className="py-8 px-4 sm:px-6 lg:px-8 bg-charcoal text-off-white">
+          <div className="max-w-7xl mx-auto text-center">
             <Button 
               onClick={() => navigate('/contact')}
               size="lg" 
@@ -268,7 +276,7 @@ const AIAutomation = () => {
               Ready to cut costs and reclaim your time?
             </h3>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <div className="flex flex-col gap-4 justify-center items-center">
             <Button 
               onClick={handleBookAudit}
               size="lg" 
