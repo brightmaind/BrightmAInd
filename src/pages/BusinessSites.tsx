@@ -31,7 +31,7 @@ const BusinessSites = () => {
   };
 
   return (
-    <div className="pt-20 bg-charcoal text-off-white">
+    <div className="pt-16 bg-charcoal text-off-white">
       <SEOHead 
         title="Business Websites That Win Clients | Bright mAInd"
         description="We design clean, conversion-focused sites and simple marketing systems so you start strong. Book a call today."
@@ -42,7 +42,7 @@ const BusinessSites = () => {
       <Breadcrumb items={[{ name: 'Smart Websites', url: '/business-sites' }]} />
       
       {/* Hero Section */}
-      <section className="pt-8 pb-24 px-4 sm:px-6 lg:px-8 hero-gradient">
+      <section className="pt-16 pb-24 px-4 sm:px-6 lg:px-8 hero-gradient">
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold font-rajdhani text-off-white leading-tight mb-8">

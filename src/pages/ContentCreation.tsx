@@ -72,7 +72,7 @@ const ContentCreation = () => {
   ];
 
   return (
-    <div className="pt-20 bg-black text-white">
+    <div className="pt-16 bg-black text-white">
       <SEOHead 
         title="Content Creation Services | Stop the Scroll, Win Clients | Bright mAInd"
         description="High-impact videos, visuals, and campaigns designed to stop the scroll and win clients. Book a free content audit."
@@ -83,7 +83,7 @@ const ContentCreation = () => {
       <Breadcrumb items={[{ name: 'Content Creation', url: '/content-creation' }]} />
       
       {/* Hero Section - Attention */}
-      <section className="pt-8 pb-24 px-4 sm:px-6 lg:px-8">
+      <section className="pt-16 pb-24 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold font-rajdhani text-white leading-tight mb-8">

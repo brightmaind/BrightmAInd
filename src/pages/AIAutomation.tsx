@@ -54,7 +54,7 @@ const AIAutomation = () => {
   ];
 
   return (
-    <div className="pt-20 bg-charcoal text-off-white">
+    <div className="pt-16 bg-charcoal text-off-white">
       <SEOHead 
         title="AI Automation Services | Work Smarter, Scale Faster | Bright mAInd"
         description="AI-powered workflows save you hours every week, cut costs, and let you focus on growth instead of admin. Book a free automation audit."
@@ -65,7 +65,7 @@ const AIAutomation = () => {
       <Breadcrumb items={[{ name: 'AI Automation', url: '/ai-automation' }]} />
       
       {/* Hero Section - Attention */}
-      <section className="pt-8 pb-24 px-4 sm:px-6 lg:px-8 hero-gradient relative overflow-hidden">
+      <section className="pt-16 pb-24 px-4 sm:px-6 lg:px-8 hero-gradient relative overflow-hidden">
         {/* Subtle tech pattern overlay */}
         <div className="absolute inset-0 opacity-5">
           <div className="absolute top-20 left-10 w-32 h-32 border border-off-white rounded-full"></div>
