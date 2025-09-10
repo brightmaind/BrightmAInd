@@ -72,7 +72,7 @@ const ContentCreation = () => {
   ];
 
   return (
-    <div className="pt-32 bg-black text-white">
+    <div className="pt-40 bg-black text-white">
       <SEOHead 
         title="Content Creation Services | Stop the Scroll, Win Clients | Bright mAInd"
         description="High-impact videos, visuals, and campaigns designed to stop the scroll and win clients. Book a free content audit."
