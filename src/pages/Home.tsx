@@ -10,7 +10,7 @@ const Home = () => {
     {
       title: 'Pet Growth Pro',
       icon: Target,
-      href: '/clinic-growth',
+      href: '/pet-growth-pro',
       description: 'Fill your pet business calendar'
     },
     {

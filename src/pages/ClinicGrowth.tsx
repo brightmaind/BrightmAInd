@@ -34,11 +34,11 @@ const ClinicGrowth = () => {
       <SEOHead 
         title="Pet Growth Pro — Fill Your Calendar With Ease | Bright mAInd"
         description="From groomers to trainers, vets to daycares—we help pet businesses attract more clients, reduce no-shows, and grow consistently."
-        canonical="/clinic-growth"
+        canonical="/pet-growth-pro"
       />
       
       {/* Hero Section - Attention / Problem */}
-      <section className="pt-8 pb-24 px-4 sm:px-6 lg:px-8 hero-gradient">
+      <Breadcrumb items={[{ name: 'Pet Growth Pro', url: '/pet-growth-pro' }]} />
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold font-rajdhani text-off-white leading-tight mb-8">

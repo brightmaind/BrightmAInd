@@ -17,7 +17,7 @@ const Navbar: React.FC = () => {
 
   const navigation = [
     { name: 'Home', href: '/' },
-    { name: 'Pet Growth Pro', href: '/clinic-growth' },
+    { name: 'Pet Growth Pro', href: '/pet-growth-pro' },
     { name: 'AI Automation', href: '/ai-automation' },
     { name: 'Content Creation', href: '/content-creation' },
   ];

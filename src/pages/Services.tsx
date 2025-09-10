@@ -10,7 +10,7 @@ const Services = () => {
     {
       title: 'Clinic Growth',
       icon: Target,
-      href: '/clinic-growth',
+      href: '/pet-growth-pro',
       description: 'Predictable patient acquisition'
     },
     {
