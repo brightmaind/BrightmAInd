@@ -34,7 +34,7 @@ const ClinicGrowth = () => {
       <SEOHead 
         title="Pet Growth Pro — Fill Your Calendar With Ease | Bright mAInd"
         description="From groomers to trainers, vets to daycares—we help pet businesses attract more clients, reduce no-shows, and grow consistently."
-        canonical="/pet-growth-pro"
+        canonical="/clinic-growth"
       />
       
       {/* Hero Section - Attention / Problem */}
