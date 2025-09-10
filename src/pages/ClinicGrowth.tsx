@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { Calendar, Target, BarChart3, Users, CheckCircle, Phone, UserX, TrendingDown } from 'lucide-react';
 import ScrollAnimation from '../components/ScrollAnimation';
 import SEOHead from '../components/SEOHead';
+import Breadcrumb from '../components/Breadcrumb';
 import { Button } from '../components/ui/button';
 
 const ClinicGrowth = () => {
