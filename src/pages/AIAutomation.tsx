@@ -54,7 +54,7 @@ const AIAutomation = () => {
   ];
 
   return (
-    <div className="pt-32 bg-charcoal text-off-white">
+    <div className="pt-36 bg-charcoal text-off-white">
       <SEOHead 
         title="AI Automation Services | Work Smarter, Scale Faster | Bright mAInd"
         description="AI-powered workflows save you hours every week, cut costs, and let you focus on growth instead of admin. Book a free automation audit."

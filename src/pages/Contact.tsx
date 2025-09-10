@@ -37,7 +37,7 @@ const Contact: React.FC = () => {
   };
 
   return (
-    <div className="pt-32">
+    <div className="pt-36">
       <SEOHead 
         title="Contact Bright mAInd | Book Free Growth Audit"
         description="Book a free growth audit or message us—limited clinic slots to ensure priority."

@@ -31,7 +31,7 @@ const ClinicGrowth = () => {
   };
 
   return (
-    <div className="pt-32 bg-charcoal text-off-white">
+    <div className="pt-36 bg-charcoal text-off-white">
       <SEOHead 
         title="Pet Growth Pro — Fill Your Calendar With Ease | Bright mAInd"
         description="From groomers to trainers, vets to daycares—we help pet businesses attract more clients, reduce no-shows, and grow consistently."

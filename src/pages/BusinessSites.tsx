@@ -31,7 +31,7 @@ const BusinessSites = () => {
   };
 
   return (
-    <div className="pt-32 bg-charcoal text-off-white">
+    <div className="pt-36 bg-charcoal text-off-white">
       <SEOHead 
         title="Business Websites That Win Clients | Bright mAInd"
         description="We design clean, conversion-focused sites and simple marketing systems so you start strong. Book a call today."
