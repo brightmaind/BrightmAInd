@@ -44,7 +44,7 @@ const Breadcrumb: React.FC<BreadcrumbProps> = ({ items }) => {
       </Helmet>
 
       {/* Breadcrumb UI */}
-      <nav className="bg-near-black/50 border-b border-slate/10" aria-label="Breadcrumb">
+      <nav className="fixed top-20 left-0 right-0 z-40 bg-near-black/50 border-b border-slate/10" aria-label="Breadcrumb">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
           <ol className="flex items-center space-x-2 text-sm">
             <li>

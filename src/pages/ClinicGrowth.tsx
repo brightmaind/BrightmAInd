@@ -31,16 +31,16 @@ const ClinicGrowth = () => {
   };
 
   return (
-    <div className="pt-20 bg-charcoal text-off-white">
+    <div className="pt-32 bg-charcoal text-off-white">
       <SEOHead 
         title="Pet Growth Pro — Fill Your Calendar With Ease | Bright mAInd"
         description="From groomers to trainers, vets to daycares—we help pet businesses attract more clients, reduce no-shows, and grow consistently."
         canonical="/pet-growth-pro"
       />
       
-      {/* Hero Section - Attention / Problem */}
       <Breadcrumb items={[{ name: 'Pet Growth Pro', url: '/pet-growth-pro' }]} />
       
+      {/* Hero Section - Attention / Problem */}
       <section className="py-24 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
