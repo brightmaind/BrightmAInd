@@ -38,6 +38,7 @@ const ClinicGrowth = () => {
       />
       
       {/* Hero Section - Attention / Problem */}
+      <section className="py-24 px-4 sm:px-6 lg:px-8">
       <Breadcrumb items={[{ name: 'Pet Growth Pro', url: '/pet-growth-pro' }]} />
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
