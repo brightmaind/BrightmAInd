@@ -151,10 +151,10 @@ h1, h2, h3, h4, h5, h6 {
   
   /* Enhanced text shadows for better readability */
   text-shadow: 
-    0 0 20px rgba(237, 237, 237, 0.3),
-    0 2px 8px rgba(0, 0, 0, 0.8),
-    0 4px 16px rgba(0, 0, 0, 0.6),
-    0 0 40px rgba(255, 255, 255, 0.1);
+    0 0 12px rgba(237, 237, 237, 0.2),
+    0 2px 4px rgba(0, 0, 0, 0.4),
+    0 4px 8px rgba(0, 0, 0, 0.3),
+    0 0 20px rgba(255, 255, 255, 0.05);
   
   /* Ensure text remains visible */
   position: relative;
@@ -163,7 +163,7 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: 0.02em;
   
   /* Add a subtle outline for extra definition */
-  -webkit-text-stroke: 0.5px rgba(237, 237, 237, 0.1);
+  -webkit-text-stroke: 0.3px rgba(237, 237, 237, 0.05);
 }
 
 .hero-gradient-text-orange {
@@ -183,10 +183,10 @@ h1, h2, h3, h4, h5, h6 {
   
   /* Enhanced text shadows for better readability */
   text-shadow: 
-    0 0 20px rgba(255, 122, 0, 0.4),
-    0 2px 8px rgba(0, 0, 0, 0.8),
-    0 4px 16px rgba(0, 0, 0, 0.6),
-    0 0 40px rgba(255, 122, 0, 0.2);
+    0 0 12px rgba(255, 122, 0, 0.25),
+    0 2px 4px rgba(0, 0, 0, 0.4),
+    0 4px 8px rgba(0, 0, 0, 0.3),
+    0 0 20px rgba(255, 122, 0, 0.1);
   
   /* Ensure text remains visible */
   position: relative;
@@ -195,7 +195,7 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: 0.02em;
   
   /* Add a subtle outline for extra definition */
-  -webkit-text-stroke: 0.5px rgba(255, 122, 0, 0.1);
+  -webkit-text-stroke: 0.3px rgba(255, 122, 0, 0.05);
 }
 .tech-subtitle {
   background: linear-gradient(
