@@ -14,7 +14,7 @@ const Footer: React.FC = () => {
                 <source srcSet="/bright-maind-logo.webp" type="image/webp" />
                 <img 
                   src="/bright-maind-logo.jpg" 
-                  alt="Bright mAInd Marketing - Aesthetics Clinic Marketing Scotland"
+                  alt="Bright mAInd - Ayrshire AI experts specializing in business automation"
                   loading="lazy"
                   width="56"
                   height="56"

@@ -67,7 +67,7 @@ const Navbar: React.FC = () => {
               <source srcSet="/bright-maind-logo.webp" type="image/webp" />
               <img 
                 src="/bright-maind-logo.jpg" 
-                alt="Bright mAInd Marketing - Medical Aesthetics Clinic Growth Partner"
+                alt="Bright mAInd - Ayrshire AI experts helping local businesses automate and grow"
                 loading="lazy"
                 width="56"
                 height="56"
