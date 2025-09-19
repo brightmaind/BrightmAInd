@@ -110,7 +110,7 @@ const AIAutomation = () => {
         <section className="py-6 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12 max-w-2xl mx-auto">
                 <div className="text-center">
                   <div className="text-4xl font-bold text-orange mb-2">40%</div>
                   <div className="text-lg text-off-white/70">Less admin work</div>
