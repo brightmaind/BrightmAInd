@@ -179,7 +179,7 @@ const Services = () => {
                   onClick={() => navigate('/contact')}
                   className="text-white hover:text-white/80 underline transition-colors ml-1"
                 >
-                  Speak to Ayrshire AI experts
+                  Speak to Ayrshire's AI experts
                 </button> about your project today.
               </p>
               
