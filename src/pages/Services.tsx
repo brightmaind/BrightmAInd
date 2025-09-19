@@ -81,8 +81,8 @@ const Services = () => {
       <section className="pt-16 pb-24 px-4 sm:px-6 lg:px-8 hero-gradient">
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold font-rajdhani gradient-text-primary leading-tight mb-8">
-              Other <span className="gradient-text-orange">Services</span>
+            <h1 className="text-4xl md:text-6xl font-bold font-rajdhani text-off-white leading-tight mb-8">
+              Other <span className="text-orange">Services</span>
             </h1>
             
             <p className="text-xl md:text-2xl text-off-white/90 leading-relaxed max-w-4xl mx-auto mb-12">
@@ -132,7 +132,7 @@ const Services = () => {
                         <div className="w-16 h-16 bg-orange/10 rounded-2xl flex items-center justify-center group-hover:bg-orange/20 transition-colors duration-300 flex-shrink-0">
                           <IconComponent className="w-8 h-8 text-orange" />
                         </div>
-                        <h3 className="text-3xl font-bold font-rajdhani gradient-text-primary">
+                        <h3 className="text-3xl font-bold font-rajdhani text-off-white">
                           {service.title}
                         </h3>
                       </div>
@@ -166,7 +166,7 @@ const Services = () => {
         <section className="py-24 bg-orange">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <div className="max-w-3xl mx-auto">
-              <h2 className="text-3xl md:text-4xl font-bold gradient-text-primary mb-8">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-8">
                 Ready to grow your business with our complete service suite?
               </h2>
               
