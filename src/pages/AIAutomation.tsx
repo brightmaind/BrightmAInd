@@ -107,7 +107,7 @@ const AIAutomation = () => {
 
       {/* Our Promise Section - Moved from bottom */}
       <ScrollAnimation>
-        <section className="py-12 px-4 sm:px-6 lg:px-8">
+        <section className="py-6 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
@@ -138,7 +138,7 @@ const AIAutomation = () => {
 
       {/* Problem + Interest Section */}
       <ScrollAnimation>
-        <section className="pt-12 pb-24 px-4 sm:px-6 lg:px-8">
+        <section className="pt-6 pb-24 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold font-rajdhani text-off-white mb-8">
