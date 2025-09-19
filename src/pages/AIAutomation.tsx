@@ -56,13 +56,11 @@ const AIAutomation = () => {
   return (
     <div className="pt-36 bg-charcoal text-off-white">
       <SEOHead 
-        title="AI Automation Services | Work Smarter, Scale Faster | Bright mAInd"
+        title="AI Automation | Work Smarter, Scale Faster | Bright mAInd"
         description="AI-powered workflows save you hours every week, cut costs, and let you focus on growth instead of admin. Book a free automation audit."
-        canonical="/ai-automation"
+        canonical="/"
       />
       
-      {/* Breadcrumb */}
-      <Breadcrumb items={[{ name: 'AI Automation', url: '/ai-automation' }]} />
       
       {/* Hero Section - Attention */}
       <section className="pt-16 pb-24 px-4 sm:px-6 lg:px-8 hero-gradient relative overflow-hidden">

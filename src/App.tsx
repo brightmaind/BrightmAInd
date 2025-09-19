@@ -16,12 +16,11 @@ function App() {
       <div className="min-h-screen bg-charcoal font-inter">
         <Navbar />
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<AIAutomation />} />
           <Route path="/pet-growth-pro" element={<ClinicGrowth />} />
-          <Route path="/ai-automation" element={<AIAutomation />} />
+          <Route path="/other-services" element={<Services />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/business-sites" element={<BusinessSites />} />
-          <Route path="/services" element={<Services />} />
           <Route path="/content-creation" element={<ContentCreation />} />
         </Routes>
         <Footer />

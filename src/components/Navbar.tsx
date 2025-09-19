@@ -16,9 +16,9 @@ const Navbar: React.FC = () => {
   const navigate = useNavigate();
 
   const navigation = [
-    { name: 'Home', href: '/' },
+    { name: 'AI Automation', href: '/' },
     { name: 'Pet Growth Pro', href: '/pet-growth-pro' },
-    { name: 'AI Automation', href: '/ai-automation' },
+    { name: 'Other Services', href: '/other-services' },
     { name: 'Content Creation', href: '/content-creation' },
   ];
 
