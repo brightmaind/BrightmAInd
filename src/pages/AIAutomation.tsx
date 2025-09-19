@@ -73,7 +73,7 @@ const AIAutomation = () => {
         <div className="max-w-7xl mx-auto relative">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold font-rajdhani text-charcoal leading-tight mb-8">
-              Work Smarter. Scale Faster. <span className="text-orange">Automate Everything.</span>
+              <span className="text-off-white drop-shadow-lg">Work Smarter. Scale Faster.</span> <span className="text-orange drop-shadow-lg">Automate Everything.</span>
             </h1>
             
             <p className="text-xl md:text-2xl text-off-white/90 leading-relaxed max-w-4xl mx-auto mb-12">

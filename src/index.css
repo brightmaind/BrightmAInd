@@ -81,15 +81,47 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
   font-weight: 700;
   letter-spacing: 0.05em;
+  /* Fallback for better readability */
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Enhanced readability for gradient text on dark backgrounds */
+@supports not (-webkit-background-clip: text) {
+  .brand-text {
+    color: #EDEDED;
+    text-shadow: 0 0 8px rgba(255, 122, 0, 0.4);
+  }
 }
 
 .brand-text-glow {
   text-shadow: 
     0 0 8px rgba(255, 122, 0, 0.2),
-    0 0 16px rgba(255, 122, 0, 0.1);
+    0 0 16px rgba(255, 122, 0, 0.1),
+    0 2px 4px rgba(0, 0, 0, 0.3);
   filter: drop-shadow(0 0 6px rgba(255, 122, 0, 0.3));
 }
 
+/* Hero text readability improvements */
+.hero-text-readable {
+  text-shadow: 
+    0 2px 4px rgba(0, 0, 0, 0.5),
+    0 0 8px rgba(0, 0, 0, 0.3);
+  /* Ensure text remains visible during animations */
+  position: relative;
+  z-index: 2;
+}
+
+/* Enhanced contrast for orange text */
+.text-orange {
+  text-shadow: 
+    0 2px 4px rgba(0, 0, 0, 0.4),
+    0 0 6px rgba(255, 122, 0, 0.2);
+}
+
+/* Improved readability for off-white text on dark backgrounds */
+.text-off-white {
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
 
 .tech-subtitle {
   background: linear-gradient(
