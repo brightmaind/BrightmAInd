@@ -53,7 +53,7 @@ const AIAutomation = () => {
   ];
 
   return (
-    <div className="pt-36 bg-charcoal text-off-white">
+    <div className="bg-charcoal text-off-white">
       <SEOHead 
         title="AI Automation | Work Smarter, Scale Faster | Bright mAInd"
         description="AI-powered workflows save you hours every week, cut costs, and let you focus on growth instead of admin. Book a free automation audit."
@@ -61,7 +61,7 @@ const AIAutomation = () => {
       />
       
       {/* Hero Section - Attention */}
-      <section className="pt-16 pb-24 px-4 sm:px-6 lg:px-8 hero-gradient relative overflow-hidden">
+      <section className="pt-36 pb-24 px-4 sm:px-6 lg:px-8 hero-gradient relative overflow-hidden">
         {/* Subtle tech pattern overlay */}
         <div className="absolute inset-0 opacity-5">
           <div className="absolute top-20 left-10 w-32 h-32 border border-off-white rounded-full"></div>
