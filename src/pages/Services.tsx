@@ -82,11 +82,11 @@ const Services = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold font-rajdhani text-off-white leading-tight mb-8">
-              Other Services from <span className="text-orange">Ayrshire AI Experts</span>
+              Other Services from <span className="text-orange">Bright mAInd</span>
             </h1>
             
             <p className="text-xl md:text-2xl text-off-white/90 leading-relaxed max-w-4xl mx-auto mb-12">
-              Complete business growth solutions from Ayrshire AI experts: websites that convert, content that engages, and marketing that delivers results.
+              Complete business growth solutions from Ayrshire's AI experts: websites that convert, content that engages, and marketing that delivers results.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
