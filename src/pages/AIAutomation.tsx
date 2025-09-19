@@ -55,8 +55,8 @@ const AIAutomation = () => {
   return (
     <div className="bg-charcoal text-off-white">
       <SEOHead 
-        title="AI Automation | Work Smarter, Scale Faster | Bright mAInd"
-        description="AI-powered workflows save you hours every week, cut costs, and let you focus on growth instead of admin. Book a free automation audit."
+        title="Ayrshire AI Experts | Bright mAInd"
+        description="Bright mAInd are Ayrshire's AI experts. We help local businesses automate processes, generate leads, and grow using cutting-edge AI systems and automation."
         canonical="/"
       />
       
