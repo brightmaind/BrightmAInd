@@ -116,10 +116,6 @@ const AIAutomation = () => {
                   <div className="text-lg text-off-white/70">Less admin work</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-4xl font-bold text-orange mb-2">2-5</div>
-                  <div className="text-lg text-off-white/70">Extra hours freed per week</div>
-                </div>
-                <div className="text-center">
                   <div className="text-4xl font-bold text-orange mb-2">Higher</div>
                   <div className="text-lg text-off-white/70">Client retention rates</div>
                 </div>
