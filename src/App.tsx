@@ -1,13 +1,9 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
-import Home from './pages/Home';
-import ClinicGrowth from './pages/ClinicGrowth';
 import AIAutomation from './pages/AIAutomation';
 import Contact from './pages/Contact';
-import BusinessSites from './pages/BusinessSites';
 import Services from './pages/Services';
-import ContentCreation from './pages/ContentCreation';
 import Footer from './components/Footer';
 
 function App() {
@@ -17,11 +13,8 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={<AIAutomation />} />
-          <Route path="/pet-growth-pro" element={<ClinicGrowth />} />
           <Route path="/other-services" element={<Services />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/business-sites" element={<BusinessSites />} />
-          <Route path="/content-creation" element={<ContentCreation />} />
         </Routes>
         <Footer />
       </div>

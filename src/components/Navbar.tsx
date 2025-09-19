@@ -17,9 +17,7 @@ const Navbar: React.FC = () => {
 
   const navigation = [
     { name: 'AI Automation', href: '/' },
-    { name: 'Pet Growth Pro', href: '/pet-growth-pro' },
     { name: 'Other Services', href: '/other-services' },
-    { name: 'Content Creation', href: '/content-creation' },
   ];
 
   const handleBookConsultation = () => {
@@ -108,18 +106,6 @@ const Navbar: React.FC = () => {
               </React.Fragment>
             ))}
             
-            {/* Smart Websites - Pill Button */}
-            <button
-              onClick={() => handleNavigation('/business-sites')}
-              className={`text-sm font-medium transition-all duration-300 hover:scale-105 focus-visible px-4 py-2 rounded-full ${
-                location.pathname === '/business-sites'
-                  ? 'bg-orange/20 text-orange border border-orange/30'
-                  : 'bg-slate/20 text-off-white hover:text-orange hover:bg-slate/30 border border-slate/30'
-              }`}
-            >
-              Smart Websites
-            </button>
-            
             <Button 
               onClick={() => handleNavigation('/contact')}
               size="sm" 
@@ -167,16 +153,6 @@ const Navbar: React.FC = () => {
                   {item.name}
                 </button>
               ))}
-              <button
-                onClick={() => handleNavigation('/business-sites')}
-                className={`block text-sm font-medium transition-all duration-300 px-4 py-2 rounded-full ${
-                  location.pathname === '/business-sites'
-                    ? 'bg-orange/20 text-orange border border-orange/30'
-                    : 'bg-slate/20 text-off-white hover:text-orange hover:bg-slate/30 border border-slate/30'
-                }`}
-              >
-                Smart Websites
-              </button>
               <button
                 onClick={() => handleNavigation('/contact')}
                 className={`block text-sm font-medium transition-all duration-300 hover:scale-105 focus-visible px-4 py-2 rounded-full ${
