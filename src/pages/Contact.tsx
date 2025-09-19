@@ -72,7 +72,7 @@ const Contact: React.FC = () => {
                 Let's discuss your automation needs
               </h2>
               <p className="text-lg text-gray-600 mb-12 leading-relaxed">
-                We specialize in AI automation to streamline your business operations and boost efficiency. We also offer marketing, websites, and content creation services.
+                As experienced Ayrshire AI experts, we specialize in AI automation to streamline your business operations and boost efficiency. We also offer marketing, websites, and content creation services.
               </p>
 
               <div className="space-y-8">
@@ -201,7 +201,7 @@ const Contact: React.FC = () => {
                   </p>
                   <div className="bg-orange/10 border border-orange/20 rounded-lg p-4 mb-6">
                     <p className="text-gray-700 text-sm">
-                      <strong>Limited Availability:</strong> We only work with a select number of clients to ensure exceptional results.
+                      Our Ayrshire AI experts are excited to discuss how we can help you scale your business with our complete growth system.
                     </p>
                   </div>
                   <button

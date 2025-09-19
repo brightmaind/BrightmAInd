@@ -82,11 +82,11 @@ const Services = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold font-rajdhani text-off-white leading-tight mb-8">
-              Other <span className="text-orange">Services</span>
+              Other Services from <span className="text-orange">Ayrshire AI Experts</span>
             </h1>
             
             <p className="text-xl md:text-2xl text-off-white/90 leading-relaxed max-w-4xl mx-auto mb-12">
-              Complete business growth solutions: websites that convert, content that engages, and marketing that delivers results.
+              Complete business growth solutions from Ayrshire AI experts: websites that convert, content that engages, and marketing that delivers results.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -140,7 +140,10 @@ const Services = () => {
                       {/* Description and Features */}
                       <div className="flex-1">
                         <p className="text-lg text-off-white/90 leading-relaxed mb-6">
-                          {service.description}
+                          {index === 0 ? 
+                            `${service.description} Our team of Ayrshire AI experts ensures every website is optimized for your local market.` :
+                            service.description
+                          }
                         </p>
                         
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
@@ -171,7 +174,13 @@ const Services = () => {
               </h2>
               
               <p className="text-xl text-white/90 leading-relaxed mb-12">
-                From websites to content to marketing—we handle it all so you can focus on what you do best.
+                From websites to content to marketing—our Ayrshire AI experts handle it all so you can focus on what you do best. 
+                <button
+                  onClick={() => navigate('/contact')}
+                  className="text-white hover:text-white/80 underline transition-colors ml-1"
+                >
+                  Speak to Ayrshire AI experts
+                </button> about your project today.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">

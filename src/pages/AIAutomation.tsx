@@ -107,9 +107,12 @@ const AIAutomation = () => {
 
       {/* Our Promise Section - Moved from bottom */}
       <ScrollAnimation>
-        <section className="py-6 px-4 sm:px-6 lg:px-8">
+        <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold font-rajdhani text-off-white mb-8">
+                Why Choose Ayrshire AI Experts?
+              </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12 max-w-2xl mx-auto">
                 <div className="text-center">
                   <div className="text-4xl font-bold text-orange mb-2">40%</div>
@@ -129,6 +132,14 @@ const AIAutomation = () => {
                 <p className="text-lg text-off-white/90 leading-relaxed">
                   We customise automation for your exact workflow. No templates, no wasted tools. 
                   Every system is built specifically for how your business operates.
+                  <br /><br />
+                  Ready to transform your business? 
+                  <button
+                    onClick={() => navigate('/contact')}
+                    className="text-orange hover:text-orange/80 underline transition-colors ml-1"
+                  >
+                    Speak to Ayrshire AI experts
+                  </button> today.
                 </p>
               </div>
             </div>
@@ -142,10 +153,10 @@ const AIAutomation = () => {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold font-rajdhani text-off-white mb-8">
-                As Ayrshire AI experts, we help local businesses <span className="text-orange">work smarter</span>
+                How Ayrshire AI Experts Help Local Businesses <span className="text-orange">Work Smarter</span>
               </h2>
               <p className="text-xl text-off-white/90 max-w-4xl mx-auto leading-relaxed">
-                Every day you're manually handling leads, chasing follow-ups, and drowning in admin tasks that could run themselves. Our AI-powered workflows save you hours every week, cut costs, and let you focus on growth instead of admin.
+                Every day you're manually handling leads, chasing follow-ups, and drowning in admin tasks that could run themselves. As experienced Ayrshire AI experts, we create AI-powered workflows that save you hours every week, cut costs, and let you focus on growth instead of admin.
               </p>
             </div>
 
@@ -225,7 +236,7 @@ const AIAutomation = () => {
             </h2>
             
             <p className="text-xl md:text-2xl text-off-white/90 leading-relaxed max-w-4xl mx-auto mb-12">
-              We design automation systems for clinics, agencies, salons, coaches, retailers—any service business that wants to scale without adding headcount.
+              As trusted Ayrshire AI experts, we design automation systems for clinics, agencies, salons, coaches, retailers—any service business that wants to scale without adding headcount.
             </p>
 
             <div className="flex flex-col items-center gap-4 max-w-sm mx-auto">
