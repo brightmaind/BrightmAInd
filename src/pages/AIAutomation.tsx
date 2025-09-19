@@ -239,24 +239,16 @@ const AIAutomation = () => {
               <span className="sm:hidden">Book Free Audit</span>
             </Button>
             
-          </div>
-        </section>
-      </ScrollAnimation>
-
-      {/* Secondary CTA */}
-      <ScrollAnimation>
-        <section className="py-2 px-4 sm:px-6 lg:px-8 bg-charcoal text-off-white">
-          <div className="max-w-7xl mx-auto text-center">
-            <Button 
-              onClick={() => navigate('/contact')}
-              size="lg" 
-              variant="outline"
-              className="text-xl px-12 py-6"
-              aria-label="Send us a message"
-            >
-              Send us a message
-            </Button>
-          </div>
+              <Button 
+                onClick={() => navigate('/contact')}
+                size="lg" 
+                variant="outline"
+                className="text-xl px-12 py-6"
+                aria-label="Send us a message"
+              >
+                Send us a message
+              </Button>
+            </div>
         </section>
       </ScrollAnimation>
 
