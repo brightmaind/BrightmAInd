@@ -228,27 +228,29 @@ const AIAutomation = () => {
               We design automation systems for clinics, agencies, salons, coaches, retailers—any service business that wants to scale without adding headcount.
             </p>
 
-            <Button 
-              onClick={handleBookAudit}
-              size="lg" 
-              className="text-xl px-12 py-6 bg-orange hover:bg-orange/90"
-              aria-label="Book your free automation audit"
-            >
-              <Calendar className="w-6 h-6 mr-3" />
-              <span className="hidden sm:inline">Book Your Free Automation Audit</span>
-              <span className="sm:hidden">Book Free Audit</span>
-            </Button>
-            
+            <div className="flex flex-col items-center gap-4 max-w-sm mx-auto">
+              <Button 
+                onClick={handleBookAudit}
+                size="lg" 
+                className="text-xl px-12 py-6 bg-orange hover:bg-orange/90 w-full"
+                aria-label="Book your free automation audit"
+              >
+                <Calendar className="w-6 h-6 mr-3" />
+                <span className="hidden sm:inline">Book Your Free Automation Audit</span>
+                <span className="sm:hidden">Book Free Audit</span>
+              </Button>
+              
               <Button 
                 onClick={() => navigate('/contact')}
                 size="lg" 
                 variant="outline"
-                className="text-xl px-12 py-6"
+                className="text-xl px-12 py-6 w-full"
                 aria-label="Send us a message"
               >
                 Send us a message
               </Button>
             </div>
+          </div>
         </section>
       </ScrollAnimation>
 
