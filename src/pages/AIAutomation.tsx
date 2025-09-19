@@ -73,11 +73,11 @@ const AIAutomation = () => {
         <div className="max-w-7xl mx-auto relative">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold font-rajdhani text-charcoal leading-tight mb-8">
-              <span className="hero-gradient-text">Work Smarter. Scale Faster.</span> <span className="hero-gradient-text-orange">Automate Everything.</span>
+              <span className="hero-gradient-text">Ayrshire's</span> <span className="hero-gradient-text-orange">AI Experts</span>
             </h1>
             
             <p className="text-xl md:text-2xl text-off-white/90 leading-relaxed max-w-4xl mx-auto mb-12">
-              AI-powered workflows save you hours every week, cut costs, and let you focus on growth instead of admin.
+              Transforming local businesses with AI-driven systems, automation, and marketing solutions.
             </p>
 
             <div className="flex flex-col gap-4 justify-center items-center">
@@ -142,10 +142,10 @@ const AIAutomation = () => {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold font-rajdhani text-off-white mb-8">
-                Stop losing time and money to <span className="text-orange">manual chaos</span>
+                As Ayrshire AI experts, we help local businesses <span className="text-orange">work smarter</span>
               </h2>
               <p className="text-xl text-off-white/90 max-w-4xl mx-auto leading-relaxed">
-                Every day you're manually handling leads, chasing follow-ups, and drowning in admin tasks that could run themselves.
+                Every day you're manually handling leads, chasing follow-ups, and drowning in admin tasks that could run themselves. Our AI-powered workflows save you hours every week, cut costs, and let you focus on growth instead of admin.
               </p>
             </div>
 
