@@ -71,7 +71,7 @@ const Footer: React.FC = () => {
           
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-off-white/60 text-sm">
-              © 2025 Bright mAInd Marketing. All rights reserved.
+              © 2025 Bright mAInd. All rights reserved.
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
               <a href="#" className="text-off-white/60 hover:text-orange text-sm transition-colors">Privacy Policy</a>
