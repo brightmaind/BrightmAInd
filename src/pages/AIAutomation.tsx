@@ -3,7 +3,6 @@ import { useNavigate } from 'react-router-dom';
 import { Calendar, Clock, TrendingDown, Users, Zap, Bot, BarChart3, Mail, CheckCircle } from 'lucide-react';
 import ScrollAnimation from '../components/ScrollAnimation';
 import SEOHead from '../components/SEOHead';
-import Breadcrumb from '../components/Breadcrumb';
 import { Button } from '../components/ui/button';
 
 const AIAutomation = () => {
@@ -60,7 +59,6 @@ const AIAutomation = () => {
         description="AI-powered workflows save you hours every week, cut costs, and let you focus on growth instead of admin. Book a free automation audit."
         canonical="/"
       />
-      
       
       {/* Hero Section - Attention */}
       <section className="pt-16 pb-24 px-4 sm:px-6 lg:px-8 hero-gradient relative overflow-hidden">
