@@ -156,7 +156,7 @@ const AIAutomation = () => {
                 How We Help Local Businesses <span className="text-orange">Work Smarter</span>
               </h2>
               <p className="text-xl text-off-white/90 max-w-4xl mx-auto leading-relaxed">
-                Every day you're manually handling leads, chasing follow-ups, and drowning in admin tasks that could run themselves. As experienced Ayrshire AI experts, we create AI-powered workflows that save you hours every week, cut costs, and let you focus on growth instead of admin.
+                Every day you're manually handling leads, chasing follow-ups, and drowning in admin tasks that could run themselves. As Ayrshire's AI experts, we create AI-powered workflows that save you hours every week, cut costs, and let you focus on growth instead of admin.
               </p>
             </div>
 
