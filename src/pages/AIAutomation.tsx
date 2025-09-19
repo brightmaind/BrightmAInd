@@ -153,8 +153,8 @@ const AIAutomation = () => {
         <section className="py-24 px-4 sm:px-6 lg:px-8 bg-near-black">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold font-rajdhani text-off-white mb-8">
-                What AI Automation Can Do <span className="text-orange">For You</span>
+              <h2 className="text-4xl md:text-5xl font-bold font-rajdhani gradient-text-primary mb-8">
+                What AI Automation Can Do <span className="gradient-text-orange">For You</span>
               </h2>
             </div>
 
@@ -189,8 +189,8 @@ const AIAutomation = () => {
       <ScrollAnimation>
         <section className="py-24 px-4 sm:px-6 lg:px-8 bg-charcoal text-off-white">
           <div className="max-w-7xl mx-auto text-center">
-            <h2 className="text-4xl md:text-5xl font-bold font-rajdhani mb-8">
-              Start automating <span className="text-orange">today</span>
+            <h2 className="text-4xl md:text-5xl font-bold font-rajdhani gradient-text-primary mb-8">
+              Start automating <span className="gradient-text-orange">today</span>
             </h2>
             
             <p className="text-xl md:text-2xl text-off-white/90 leading-relaxed max-w-4xl mx-auto mb-12">
@@ -268,7 +268,7 @@ const AIAutomation = () => {
       <ScrollAnimation>
         <section className="py-12 bg-orange">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h3 className="text-2xl md:text-3xl font-bold text-white mb-6">
+            <h3 className="text-2xl md:text-3xl font-bold gradient-text-primary mb-6">
               Ready to cut costs and reclaim your time?
             </h3>
             

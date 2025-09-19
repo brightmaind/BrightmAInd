@@ -198,6 +198,83 @@ h1, h2, h3, h4, h5, h6 {
   -webkit-text-stroke: 0.3px rgba(255, 122, 0, 0.05);
 }
 .tech-subtitle {
+/* Reusable gradient text classes for all headers */
+.gradient-text-primary {
+  background: linear-gradient(
+    135deg,
+    #EDEDED 0%,
+    #ffffff 25%,
+    #f0f0f0 50%,
+    #EDEDED 75%,
+    #ffffff 100%
+  );
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradientFlow 6s ease-in-out infinite;
+  
+  /* Enhanced text shadows for better readability */
+  text-shadow: 
+    0 0 8px rgba(237, 237, 237, 0.15),
+    0 2px 4px rgba(0, 0, 0, 0.3),
+    0 4px 8px rgba(0, 0, 0, 0.2),
+    0 0 16px rgba(255, 255, 255, 0.03);
+  
+  /* Ensure text remains visible */
+  position: relative;
+  z-index: 2;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  
+  /* Add a subtle outline for extra definition */
+  -webkit-text-stroke: 0.3px rgba(237, 237, 237, 0.05);
+}
+
+.gradient-text-orange {
+  background: linear-gradient(
+    135deg,
+    #FF7A00 0%,
+    #ff9533 25%,
+    #FF7A00 50%,
+    #ff6600 75%,
+    #FF7A00 100%
+  );
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradientFlow 6s ease-in-out infinite reverse;
+  
+  /* Enhanced text shadows for better readability */
+  text-shadow: 
+    0 0 8px rgba(255, 122, 0, 0.15),
+    0 2px 4px rgba(0, 0, 0, 0.3),
+    0 4px 8px rgba(0, 0, 0, 0.2),
+    0 0 16px rgba(255, 122, 0, 0.05);
+  
+  /* Ensure text remains visible */
+  position: relative;
+  z-index: 2;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  
+  /* Add a subtle outline for extra definition */
+  -webkit-text-stroke: 0.3px rgba(255, 122, 0, 0.05);
+}
+
+/* Fallback support for browsers that don't support gradient text */
+@supports not (-webkit-background-clip: text) {
+  .gradient-text-primary {
+    color: #EDEDED !important;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8) !important;
+  }
+  
+  .gradient-text-orange {
+    color: #FF7A00 !important;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8) !important;
+  }
+}
   background: linear-gradient(
     90deg,
     rgba(237, 237, 237, 0.6) 0%,

@@ -51,8 +51,8 @@ const Contact: React.FC = () => {
       <ScrollAnimation>
         <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50">
           <div className="max-w-7xl mx-auto text-center">
-            <h1 className="text-5xl md:text-6xl font-bold text-charcoal mb-8">
-              Ready to <span className="text-orange">automate your business</span>?
+            <h1 className="text-5xl md:text-6xl font-bold font-rajdhani gradient-text-primary mb-8">
+              Ready to <span className="gradient-text-orange">automate your business</span>?
             </h1>
             <p className="text-xl md:text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
               Streamline your operations with AI automation that saves hours every week. We also offer marketing, websites, and content creation services.
@@ -68,7 +68,7 @@ const Contact: React.FC = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-20">
             {/* Contact Information */}
             <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-charcoal mb-8">
+              <h2 className="text-3xl md:text-4xl font-bold font-rajdhani gradient-text-primary mb-8">
                 Let's discuss your automation needs
               </h2>
               <p className="text-lg text-gray-600 mb-12 leading-relaxed">
@@ -91,7 +91,7 @@ const Contact: React.FC = () => {
               </div>
 
               <div className="mt-12 p-6 bg-gray-50 rounded-2xl">
-                <h3 className="text-xl font-semibold text-charcoal mb-4">Response Time</h3>
+                <h3 className="text-xl font-semibold font-rajdhani gradient-text-primary mb-4">Response Time</h3>
                 <p className="text-gray-600">
                   We respond to all inquiries within 4 hours during business days. 
                   Limited client slots available to ensure quality service.
