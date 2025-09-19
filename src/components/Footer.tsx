@@ -59,7 +59,7 @@ const Footer: React.FC = () => {
           {/* NAP-lite Trust Line */}
           <div className="text-center mb-6">
             <p className="text-off-white/70 text-sm leading-relaxed">
-              Serving medical aesthetics clinics across Scotland | Mon–Fri 9–5 | 
+              Ayrshire's AI Experts | Mon–Fri 9–5 | 
               <a 
                 href="mailto:enquiries@brightmaind.com" 
                 className="text-orange hover:text-orange/80 transition-colors ml-1"
