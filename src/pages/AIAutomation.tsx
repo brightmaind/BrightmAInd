@@ -105,6 +105,41 @@ const AIAutomation = () => {
         </div>
       </section>
 
+      {/* Our Promise Section - Moved from bottom */}
+      <ScrollAnimation>
+        <section className="py-24 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+                <div className="text-center">
+                  <div className="text-4xl font-bold text-orange mb-2">40%</div>
+                  <div className="text-lg text-off-white/70">Less admin work</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-4xl font-bold text-orange mb-2">2-5</div>
+                  <div className="text-lg text-off-white/70">Extra hours freed per week</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-4xl font-bold text-orange mb-2">Higher</div>
+                  <div className="text-lg text-off-white/70">Client retention rates</div>
+                </div>
+              </div>
+
+              <div className="bg-slate/20 border border-slate/30 rounded-2xl p-8 shadow-lg max-w-4xl mx-auto">
+                <div className="flex items-center justify-center mb-4">
+                  <CheckCircle className="w-8 h-8 text-green-500 mr-3" />
+                  <span className="text-xl font-semibold text-off-white">Our Promise</span>
+                </div>
+                <p className="text-lg text-off-white/90 leading-relaxed">
+                  We customise automation for your exact workflow. No templates, no wasted tools. 
+                  Every system is built specifically for how your business operates.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </ScrollAnimation>
+
       {/* Problem + Interest Section */}
       <ScrollAnimation>
         <section className="py-24 px-4 sm:px-6 lg:px-8">
@@ -225,41 +260,6 @@ const AIAutomation = () => {
             >
               Send us a message
             </Button>
-          </div>
-        </section>
-      </ScrollAnimation>
-
-      {/* Satisfaction - Proof Section */}
-      <ScrollAnimation>
-        <section className="py-24 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-                <div className="text-center">
-                  <div className="text-4xl font-bold text-orange mb-2">40%</div>
-                  <div className="text-lg text-off-white/70">Less admin work</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-4xl font-bold text-orange mb-2">2-5</div>
-                  <div className="text-lg text-off-white/70">Extra hours freed per week</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-4xl font-bold text-orange mb-2">Higher</div>
-                  <div className="text-lg text-off-white/70">Client retention rates</div>
-                </div>
-              </div>
-
-              <div className="bg-slate/20 border border-slate/30 rounded-2xl p-8 shadow-lg max-w-4xl mx-auto">
-                <div className="flex items-center justify-center mb-4">
-                  <CheckCircle className="w-8 h-8 text-green-500 mr-3" />
-                  <span className="text-xl font-semibold text-off-white">Our Promise</span>
-                </div>
-                <p className="text-lg text-off-white/90 leading-relaxed">
-                  We customise automation for your exact workflow. No templates, no wasted tools. 
-                  Every system is built specifically for how your business operates.
-                </p>
-              </div>
-            </div>
           </div>
         </section>
       </ScrollAnimation>
