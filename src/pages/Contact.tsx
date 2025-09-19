@@ -52,10 +52,10 @@ const Contact: React.FC = () => {
         <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50">
           <div className="max-w-7xl mx-auto text-center">
             <h1 className="text-5xl md:text-6xl font-bold text-charcoal mb-8">
-              Ready to <span className="text-orange">grow your business</span>?
+              Ready to <span className="text-orange">automate your business</span>?
             </h1>
             <p className="text-xl md:text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-              Transform your business with our complete growth system: smart marketing, AI automation, conversion-focused websites, and high-impact content creation.
+              Streamline your operations with AI automation that saves hours every week. We also offer marketing, websites, and content creation services.
             </p>
           </div>
       </section>
@@ -69,10 +69,10 @@ const Contact: React.FC = () => {
             {/* Contact Information */}
             <div>
               <h2 className="text-3xl md:text-4xl font-bold text-charcoal mb-8">
-                Let's discuss your goals
+                Let's discuss your automation needs
               </h2>
               <p className="text-lg text-gray-600 mb-12 leading-relaxed">
-                We help businesses scale with smart marketing systems, AI automation, high-converting websites, and content that drives results.
+                We specialize in AI automation to streamline your business operations and boost efficiency. We also offer marketing, websites, and content creation services.
               </p>
 
               <div className="space-y-8">
@@ -172,6 +172,7 @@ const Contact: React.FC = () => {
                       rows={6}
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange focus:border-transparent transition-colors resize-none text-charcoal"
                       placeholder="Tell us about your business and growth goals. What challenges are you facing with marketing, automation, or your website?"
+                      placeholder="Tell us about your business and automation needs. What repetitive tasks are taking up your time? We also help with marketing, websites, and content creation."
                     />
                   </div>
 
