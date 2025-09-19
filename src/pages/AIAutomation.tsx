@@ -153,7 +153,7 @@ const AIAutomation = () => {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold font-rajdhani text-off-white mb-8">
-                How Ayrshire AI Experts Help Local Businesses <span className="text-orange">Work Smarter</span>
+                How We Help Local Businesses <span className="text-orange">Work Smarter</span>
               </h2>
               <p className="text-xl text-off-white/90 max-w-4xl mx-auto leading-relaxed">
                 Every day you're manually handling leads, chasing follow-ups, and drowning in admin tasks that could run themselves. As experienced Ayrshire AI experts, we create AI-powered workflows that save you hours every week, cut costs, and let you focus on growth instead of admin.
