@@ -261,26 +261,26 @@ const AIAutomation = () => {
             </h3>
             
             <div className="flex flex-col gap-3 justify-center items-center">
-            <Button 
-              onClick={handleBookAudit}
-              size="lg" 
-              variant="secondary"
-              className="bg-white text-orange hover:bg-white/90 text-xl px-12 py-6"
-              aria-label="Let's talk about AI automation for your business"
-            >
-              <Bot className="w-6 h-6 mr-3" />
-              Let's Talk AI
-            </Button>
-            
-            <Button 
-              onClick={() => navigate('/contact')}
-              size="lg" 
-              variant="outline"
-              className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-orange text-xl px-12 py-6"
-              aria-label="Send us a message"
-            >
-              Send us a message
-            </Button>
+              <Button 
+                onClick={handleBookAudit}
+                size="lg" 
+                variant="secondary"
+                className="bg-white text-orange hover:bg-white/90 text-xl px-12 py-6 w-full max-w-sm"
+                aria-label="Let's talk about AI automation for your business"
+              >
+                <Bot className="w-6 h-6 mr-3" />
+                Let's Talk AI
+              </Button>
+              
+              <Button 
+                onClick={() => navigate('/contact')}
+                size="lg" 
+                variant="outline"
+                className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-orange text-xl px-12 py-6 w-full max-w-sm"
+                aria-label="Send us a message"
+              >
+                Send us a message
+              </Button>
             </div>
           </div>
         </section>
