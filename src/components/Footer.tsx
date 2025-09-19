@@ -28,7 +28,7 @@ const Footer: React.FC = () => {
               </h3>
             </div>
             <p className="text-off-white/70 mb-6 max-w-md">
-              We help businesses grow with smart marketing, AI automation, high-converting websites, and content that drives results.
+              We specialize in AI automation to streamline your business operations and boost efficiency. We also offer marketing, websites, and content creation services.
             </p>
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
