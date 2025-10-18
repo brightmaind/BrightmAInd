@@ -111,7 +111,7 @@ const AIAutomation = () => {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold font-rajdhani text-off-white mb-8">
-                Why Choose <h2 className="text-3xl md:text-4xl font-bold font-rajdhani text-orange mb-8">Bright mAInd?</h2>
+                Why Choose <span className="text-orange whitespace-nowrap">Bright mAInd?</span>
               </h2>
               <div className="flex flex-wrap justify-center gap-12 mb-12 max-w-5xl mx-auto">
                 <div className="text-center">
