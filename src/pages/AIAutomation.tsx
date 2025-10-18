@@ -80,25 +80,22 @@ const AIAutomation = () => {
             </p>
 
             <div className="flex flex-col gap-4 justify-center items-center">
-              <Button 
+              <button
                 onClick={handleBookAudit}
-                size="lg" 
-                className="text-xl px-12 py-6"
+                className="text-xl px-12 py-6 bg-orange text-black hover:bg-orange/90 transition-all rounded flex items-center"
                 aria-label="Book a free AI automation audit"
               >
                 <Calendar className="w-6 h-6 mr-3" />
                 Book a Free Audit
-              </Button>
-              
-              <Button 
+              </button>
+
+              <button
                 onClick={() => navigate('/contact')}
-                size="lg" 
-                variant="outline"
-                className="text-xl px-12 py-6"
+                className="text-xl px-12 py-6 border border-off-white text-off-white hover:bg-off-white hover:text-black transition-all rounded"
                 aria-label="Send us a message"
               >
                 Send us a message
-              </Button>
+              </button>
             </div>
           </div>
         </div>
@@ -243,26 +240,23 @@ const AIAutomation = () => {
             </p>
 
             <div className="flex flex-col items-center gap-4 max-w-sm mx-auto">
-              <Button 
+              <button
                 onClick={handleBookAudit}
-                size="lg" 
-                className="text-xl px-12 py-6 bg-orange hover:bg-orange/90 w-full"
+                className="text-xl px-12 py-6 bg-orange hover:bg-orange/90 w-full transition-all rounded flex items-center justify-center"
                 aria-label="Book your free automation audit"
               >
                 <Calendar className="w-6 h-6 mr-3" />
                 <span className="hidden sm:inline">Book Your Free Automation Audit</span>
                 <span className="sm:hidden">Book Free Audit</span>
-              </Button>
-              
-              <Button 
+              </button>
+
+              <button
                 onClick={() => navigate('/contact')}
-                size="lg" 
-                variant="outline"
-                className="text-xl px-12 py-6 w-full"
+                className="text-xl px-12 py-6 w-full border border-off-white text-off-white hover:bg-off-white hover:text-black transition-all rounded"
                 aria-label="Send us a message"
               >
                 Send us a message
-              </Button>
+              </button>
             </div>
           </div>
         </section>
@@ -277,26 +271,22 @@ const AIAutomation = () => {
             </h3>
             
             <div className="flex flex-col gap-3 justify-center items-center">
-              <Button 
+              <button
                 onClick={handleBookAudit}
-                size="lg" 
-                variant="secondary"
-                className="bg-white text-orange hover:bg-white/90 text-xl px-12 py-6 w-full max-w-sm"
+                className="bg-white text-orange hover:bg-white/90 text-xl px-12 py-6 w-full max-w-sm transition-all rounded flex items-center justify-center"
                 aria-label="Let's talk about AI automation for your business"
               >
                 <Bot className="w-6 h-6 mr-3" />
                 Let's Talk AI
-              </Button>
-              
-              <Button 
+              </button>
+
+              <button
                 onClick={() => navigate('/contact')}
-                size="lg" 
-                variant="outline"
-                className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-orange text-xl px-12 py-6 w-full max-w-sm"
+                className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-orange text-xl px-12 py-6 w-full max-w-sm transition-all rounded"
                 aria-label="Send us a message"
               >
                 Send us a message
-              </Button>
+              </button>
             </div>
           </div>
         </section>

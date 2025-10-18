@@ -89,25 +89,22 @@ const Services = () => {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Button 
+              <button
                 onClick={handleBookCall}
-                size="lg" 
-                className="text-xl px-12 py-6"
+                className="text-xl px-12 py-6 bg-orange text-black hover:bg-orange/90 transition-all rounded flex items-center"
                 aria-label="Book a consultation for our services"
               >
                 <Calendar className="w-6 h-6 mr-3" />
                 Book a Consultation
-              </Button>
-              
-              <Button 
+              </button>
+
+              <button
                 onClick={() => navigate('/contact')}
-                size="lg" 
-                variant="outline"
-                className="text-xl px-12 py-6"
+                className="text-xl px-12 py-6 border border-off-white text-off-white hover:bg-off-white hover:text-black transition-all rounded"
                 aria-label="Send us a message"
               >
                 Send us a message
-              </Button>
+              </button>
             </div>
           </div>
         </div>
@@ -183,26 +180,22 @@ const Services = () => {
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                <Button 
+                <button
                   onClick={handleBookCall}
-                  size="lg" 
-                  variant="secondary"
-                  className="bg-white text-orange hover:bg-white/90 text-xl px-12 py-6"
+                  className="bg-white text-orange hover:bg-white/90 text-xl px-12 py-6 transition-all rounded flex items-center"
                   aria-label="Book a consultation to discuss our services"
                 >
                   <Calendar className="w-6 h-6 mr-3" />
                   Book a Consultation
-                </Button>
-                
-                <Button 
+                </button>
+
+                <button
                   onClick={() => navigate('/contact')}
-                  size="lg" 
-                  variant="outline"
-                  className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-orange text-xl px-12 py-6"
+                  className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-orange text-xl px-12 py-6 transition-all rounded"
                   aria-label="Send us a message"
                 >
                   Send us a message
-                </Button>
+                </button>
               </div>
             </div>
           </div>
