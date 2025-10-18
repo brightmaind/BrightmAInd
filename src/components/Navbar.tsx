@@ -66,9 +66,9 @@ const Navbar: React.FC = () => {
             <img
               src="/LOGO.jpg"
               alt="Bright mAInd - Ayrshire AI experts helping local businesses automate and grow"
-              width="56"
-              height="56"
-              className="w-14 h-14 object-contain rounded-md"
+              width="80"
+              height="80"
+              className="w-20 h-20 object-cover rounded-md scale-150"
             />
             <div className="flex flex-col">
               <span className="text-3xl font-bold font-rajdhani text-off-white">
