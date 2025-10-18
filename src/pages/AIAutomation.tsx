@@ -113,7 +113,7 @@ const AIAutomation = () => {
               <h2 className="text-3xl md:text-4xl font-bold font-rajdhani text-off-white mb-8">
                 Why Choose Bright mAInd?
               </h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12 max-w-2xl mx-auto">
+              <div className="flex flex-wrap justify-center gap-12 mb-12 max-w-5xl mx-auto">
                 <div className="text-center">
                   <div className="text-4xl font-bold text-orange mb-2">40%</div>
                   <div className="text-lg text-off-white/70">Less admin work</div>
