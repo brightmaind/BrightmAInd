@@ -68,7 +68,7 @@ const Navbar: React.FC = () => {
               alt="Bright mAInd - Ayrshire AI experts helping local businesses automate and grow"
               width="80"
               height="80"
-              className="w-20 h-20 object-cover rounded-md scale-150"
+              className="w-20 h-20 object-cover rounded-md scale-[2] object-center"
             />
             <div className="flex flex-col">
               <span className="text-3xl font-bold font-rajdhani text-off-white">
