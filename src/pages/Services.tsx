@@ -174,12 +174,12 @@ const Services = () => {
               </h2>
               
               <p className="text-xl text-white/90 leading-relaxed mb-12">
-                From websites to content to marketing—our Ayrshire AI experts handle it all so you can focus on what you do best. 
+                From websites to content to marketing—our experts handle it all so you can focus on what you do best. 
                 <button
                   onClick={() => navigate('/contact')}
                   className="text-white hover:text-white/80 underline transition-colors ml-1"
                 >
-                  Speak to Ayrshire's AI experts
+                  Speak to us
                 </button> about your project today.
               </p>
               
