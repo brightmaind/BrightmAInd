@@ -42,7 +42,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({ title, description, canonical, servic
           "@type": "ProfessionalService",
           "name": "Bright mAInd Marketing",
           "url": "https://www.brightmaind.com",
-          "logo": "https://www.brightmaind.com/bright-maind-logo.webp",
+          "logo": "https://www.brightmaind.com/logo.svg",
           "areaServed": "Scotland",
           "description": "We deliver deposit-paid consultations at an agreed CAC using your existing booking system.",
           "address": { "@type": "PostalAddress", "addressCountry": "GB" }

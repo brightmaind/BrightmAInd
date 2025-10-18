@@ -63,17 +63,13 @@ const Navbar: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
           <Link to="/" className="flex items-center space-x-3">
-            <picture>
-              <source srcSet="/bright-maind-logo.webp" type="image/webp" />
-              <img 
-                src="/bright-maind-logo.jpg" 
-                alt="Bright mAInd - Ayrshire AI experts helping local businesses automate and grow"
-                loading="lazy"
-                width="56"
-                height="56"
-                className="w-14 h-14 rounded-lg object-contain"
-              />
-            </picture>
+            <img
+              src="/logo.svg"
+              alt="Bright mAInd - Ayrshire AI experts helping local businesses automate and grow"
+              width="56"
+              height="56"
+              className="w-14 h-14 object-contain"
+            />
             <div className="flex flex-col">
               <span className="text-3xl font-bold font-rajdhani text-off-white">
                 <span className="brand-text brand-text-glow">
