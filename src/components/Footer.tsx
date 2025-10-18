@@ -4,12 +4,12 @@ import { Mail } from 'lucide-react';
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-near-black text-off-white border-t border-slate/20">
+    <footer className="bg-black text-off-white border-t border-slate/20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
           {/* Brand */}
           <div className="md:col-span-2">
-            <div className="flex items-center space-x-3 mb-4">
+            <div className="mb-4">
               <img
                 src="/Untitled design (1).png"
                 alt="Bright mAInd - Ayrshire AI experts specializing in business automation"
@@ -17,11 +17,6 @@ const Footer: React.FC = () => {
                 height="120"
                 className="h-20 w-auto object-contain rounded-lg"
               />
-              <h3 className="text-3xl font-bold font-rajdhani">
-                <span className="brand-text brand-text-glow">
-                  Bright m<span className="text-orange">AI</span>nd
-                </span>
-              </h3>
             </div>
             <p className="text-off-white/70 mb-6 max-w-md">
               We specialize in AI automation to streamline your business operations and boost efficiency. We also offer marketing, websites, and content creation services.
