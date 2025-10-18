@@ -78,8 +78,8 @@ const Services = () => {
       <Breadcrumb items={[{ name: 'Other Services', url: '/other-services' }]} />
       
       {/* Hero Section */}
-      <section className="pt-16 pb-24 px-4 sm:px-6 lg:px-8 hero-gradient relative overflow-hidden z-50" style={{ clipPath: 'inset(100px 0 0 0)' }}>
-        <div className="max-w-7xl mx-auto relative">
+      <section className="pt-16 pb-24 px-4 sm:px-6 lg:px-8 hero-gradient">
+        <div className="max-w-7xl mx-auto">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold font-rajdhani text-off-white leading-tight mb-8">
               Other Services from <span className="text-orange">Bright mAInd</span>
