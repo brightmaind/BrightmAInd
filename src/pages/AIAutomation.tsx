@@ -142,7 +142,7 @@ const AIAutomation = () => {
                     onClick={() => navigate('/contact')}
                     className="text-orange hover:text-orange/80 underline transition-colors ml-1"
                   >
-                    Speak to Ayrshire's AI experts
+                    Speak to Our Experts
                   </button> today.
                 </p>
               </div>
