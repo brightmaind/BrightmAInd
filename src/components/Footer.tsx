@@ -13,9 +13,9 @@ const Footer: React.FC = () => {
               <img
                 src="/Newlogo.png"
                 alt="Bright mAInd - Ayrshire AI experts specializing in business automation"
-                width="60"
-                height="60"
-                className="w-15 h-15 object-contain"
+                width="120"
+                height="120"
+                className="h-20 w-auto object-contain"
               />
               <h3 className="text-3xl font-bold font-rajdhani">
                 <span className="brand-text brand-text-glow">

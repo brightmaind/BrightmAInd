@@ -62,24 +62,14 @@ const Navbar: React.FC = () => {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-charcoal/95 navbar-blur border-b border-slate/20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
-          <Link to="/" className="flex items-center space-x-3">
+          <Link to="/" className="flex items-center">
             <img
               src="/Newlogo.png"
               alt="Bright mAInd - Ayrshire AI experts helping local businesses automate and grow"
-              width="60"
-              height="60"
-              className="w-15 h-15 object-contain"
+              width="120"
+              height="120"
+              className="h-16 w-auto object-contain"
             />
-            <div className="flex flex-col">
-              <span className="text-3xl font-bold font-rajdhani text-off-white">
-                <span className="brand-text brand-text-glow">
-                  Bright m<span className="text-orange">AI</span>nd
-                </span>
-              </span>
-              <span className="text-xs text-orange font-medium tracking-wide">
-                Ayrshire's AI Experts
-              </span>
-            </div>
           </Link>
 
           {/* Desktop Navigation */}
