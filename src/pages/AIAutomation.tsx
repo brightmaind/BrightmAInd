@@ -240,7 +240,7 @@ const AIAutomation = () => {
             </h2>
             
             <p className="text-xl md:text-2xl text-off-white/90 leading-relaxed max-w-4xl mx-auto mb-12">
-              As trusted Ayrshire AI experts, we design automation systems for clinics, agencies, salons, coaches, retailers—any service business that wants to scale without adding headcount.
+              As trusted AI experts, we design automation systems for any business that wants to scale without adding headcount.
             </p>
 
             <div className="flex flex-col items-center gap-4 max-w-sm mx-auto">
