@@ -60,15 +60,15 @@ const Navbar: React.FC = () => {
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-40 bg-black navbar-blur border-b border-slate/20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-6 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
-          <Link to="/" className="flex items-center">
+          <Link to="/" className="flex items-center shrink-0">
             <img
               src="/Untitled design (1).png"
               alt="Bright mAInd - Ayrshire AI experts helping local businesses automate and grow"
               width="200"
               height="200"
-              className="h-24 w-auto object-cover object-center rounded-lg scale-150"
+              className="h-24 w-auto object-cover object-center rounded-lg scale-125 lg:scale-150"
             />
           </Link>
 
