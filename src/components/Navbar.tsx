@@ -66,9 +66,9 @@ const Navbar: React.FC = () => {
             <img
               src="/Newlogo.png"
               alt="Bright mAInd - Ayrshire AI experts helping local businesses automate and grow"
-              width="120"
-              height="120"
-              className="h-16 w-auto object-contain"
+              width="200"
+              height="200"
+              className="h-24 w-auto object-contain"
             />
           </Link>
 
