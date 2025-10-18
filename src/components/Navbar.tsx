@@ -64,7 +64,7 @@ const Navbar: React.FC = () => {
         <div className="flex justify-between items-center py-4">
           <Link to="/" className="flex items-center">
             <img
-              src="/Newlogo.png"
+              src="/Untitled design (1).png"
               alt="Bright mAInd - Ayrshire AI experts helping local businesses automate and grow"
               width="200"
               height="200"

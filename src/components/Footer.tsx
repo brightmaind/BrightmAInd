@@ -11,7 +11,7 @@ const Footer: React.FC = () => {
           <div className="md:col-span-2">
             <div className="flex items-center space-x-3 mb-4">
               <img
-                src="/Newlogo.png"
+                src="/Untitled design (1).png"
                 alt="Bright mAInd - Ayrshire AI experts specializing in business automation"
                 width="120"
                 height="120"
