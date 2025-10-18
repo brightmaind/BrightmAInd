@@ -11,11 +11,11 @@ const Footer: React.FC = () => {
           <div className="md:col-span-2">
             <div className="flex items-center space-x-3 mb-4">
               <img
-                src="/LOGO.jpg"
+                src="/Newlogo.png"
                 alt="Bright mAInd - Ayrshire AI experts specializing in business automation"
-                width="80"
-                height="80"
-                className="w-20 h-20 object-cover rounded-md scale-[2] object-center"
+                width="60"
+                height="60"
+                className="w-15 h-15 object-contain"
               />
               <h3 className="text-3xl font-bold font-rajdhani">
                 <span className="brand-text brand-text-glow">
