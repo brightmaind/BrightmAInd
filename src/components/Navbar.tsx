@@ -68,7 +68,7 @@ const Navbar: React.FC = () => {
               alt="Bright mAInd - Ayrshire AI experts helping local businesses automate and grow"
               width="200"
               height="200"
-              className="h-24 w-auto object-cover object-center rounded-lg scale-125 lg:scale-150"
+              className="h-24 w-auto object-cover object-center rounded-lg scale-150 lg:scale-[1.75]"
             />
           </Link>
 
