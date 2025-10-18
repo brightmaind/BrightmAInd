@@ -15,7 +15,7 @@ const Footer: React.FC = () => {
                 alt="Bright mAInd - Ayrshire AI experts specializing in business automation"
                 width="120"
                 height="120"
-                className="h-20 w-auto object-contain"
+                className="h-20 w-auto object-contain rounded-lg"
               />
               <h3 className="text-3xl font-bold font-rajdhani">
                 <span className="brand-text brand-text-glow">
