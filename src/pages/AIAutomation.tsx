@@ -61,9 +61,9 @@ const AIAutomation = () => {
       />
       
       {/* Hero Section - Attention */}
-      <section className="pt-36 pb-24 px-4 sm:px-6 lg:px-8 hero-gradient relative overflow-hidden z-[60]">
+      <section className="pt-36 pb-24 px-4 sm:px-6 lg:px-8 hero-gradient relative z-[60]">
         {/* Subtle tech pattern overlay */}
-        <div className="absolute inset-0 opacity-5">
+        <div className="absolute inset-0 opacity-5 overflow-hidden">
           <div className="absolute top-20 left-10 w-32 h-32 border border-off-white rounded-full"></div>
           <div className="absolute top-40 right-20 w-24 h-24 border border-orange rounded-lg rotate-45"></div>
           <div className="absolute bottom-20 left-1/4 w-16 h-16 border border-off-white rounded-full"></div>
