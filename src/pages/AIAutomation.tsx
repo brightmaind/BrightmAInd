@@ -3,7 +3,6 @@ import { useNavigate } from 'react-router-dom';
 import { Calendar, Clock, TrendingDown, Users, Zap, Bot, BarChart3, Mail, CheckCircle } from 'lucide-react';
 import ScrollAnimation from '../components/ScrollAnimation';
 import SEOHead from '../components/SEOHead';
-import { Button } from '../components/ui/button';
 
 const AIAutomation = () => {
   const navigate = useNavigate();
