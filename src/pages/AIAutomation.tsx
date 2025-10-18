@@ -77,7 +77,7 @@ const AIAutomation = () => {
             </h1>
             
             <p className="text-xl md:text-2xl text-off-white/90 leading-relaxed max-w-4xl mx-auto mb-12">
-              Transforming local businesses with AI-driven systems, automation, and marketing solutions.
+              Transforming local businesses with AI-driven systems integration and automation.
             </p>
 
             <div className="flex flex-col gap-4 justify-center items-center">
@@ -111,7 +111,7 @@ const AIAutomation = () => {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold font-rajdhani text-off-white mb-8">
-                Why Choose Ayrshire's AI Experts?
+                Why Choose Bright mAInd?
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12 max-w-2xl mx-auto">
                 <div className="text-center">
@@ -121,6 +121,10 @@ const AIAutomation = () => {
                 <div className="text-center">
                   <div className="text-4xl font-bold text-orange mb-2">Higher</div>
                   <div className="text-lg text-off-white/70">Client retention rates</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-4xl font-bold text-orange mb-2">Higher</div>
+                  <div className="text-lg text-off-white/70">Staff Satisfaction</div>
                 </div>
               </div>
 
