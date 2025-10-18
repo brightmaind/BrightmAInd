@@ -61,7 +61,7 @@ const AIAutomation = () => {
       />
       
       {/* Hero Section - Attention */}
-      <section className="pt-36 pb-24 px-4 sm:px-6 lg:px-8 hero-gradient relative z-[60]">
+      <section className="pt-36 pb-24 px-4 sm:px-6 lg:px-8 hero-gradient relative overflow-hidden" style={{ clipPath: 'inset(100px 0 0 0)' }}>
         {/* Subtle tech pattern overlay */}
         <div className="absolute inset-0 opacity-5 overflow-hidden">
           <div className="absolute top-20 left-10 w-32 h-32 border border-off-white rounded-full"></div>
