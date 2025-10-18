@@ -91,25 +91,22 @@ const Navbar: React.FC = () => {
               </React.Fragment>
             ))}
             
-            <Button 
+            <button
               onClick={() => handleNavigation('/contact')}
-              size="sm" 
-              variant="outline"
-              className="ml-4"
+              className="ml-4 px-4 py-2 text-sm border border-off-white text-off-white hover:bg-off-white hover:text-black transition-all rounded"
               aria-label="Send us a message"
             >
               Send us a message
-            </Button>
+            </button>
             
-            <Button 
-              onClick={handleBookConsultation} 
-              size="sm" 
-              className="ml-4"
+            <button
+              onClick={handleBookConsultation}
+              className="ml-4 px-4 py-2 text-sm bg-orange text-black hover:bg-orange/90 transition-all rounded flex items-center"
               aria-label="Book a free growth audit consultation"
             >
               <Calendar className="w-4 h-4 mr-2" />
               Book a 10-minute audit
-            </Button>
+            </button>
           </div>
 
           {/* Mobile menu button */}
@@ -148,15 +145,14 @@ const Navbar: React.FC = () => {
               >
                 Send us a message
               </button>
-              <Button 
-                onClick={handleBookConsultation} 
-                size="sm" 
-                className="mt-4"
+              <button
+                onClick={handleBookConsultation}
+                className="mt-4 px-4 py-2 text-sm bg-orange text-black hover:bg-orange/90 transition-all rounded flex items-center justify-center"
                 aria-label="Book a free growth audit consultation"
               >
                 <Calendar className="w-4 h-4 mr-2" />
                 Book a 10-minute audit
-              </Button>
+              </button>
             </div>
           </div>
         )}
