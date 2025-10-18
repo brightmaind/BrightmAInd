@@ -64,11 +64,11 @@ const Navbar: React.FC = () => {
         <div className="flex justify-between items-center py-4">
           <Link to="/" className="flex items-center space-x-3">
             <img
-              src="/logo.svg"
+              src="/LOGO.jpg"
               alt="Bright mAInd - Ayrshire AI experts helping local businesses automate and grow"
               width="56"
               height="56"
-              className="w-14 h-14 object-contain"
+              className="w-14 h-14 object-contain rounded-md"
             />
             <div className="flex flex-col">
               <span className="text-3xl font-bold font-rajdhani text-off-white">

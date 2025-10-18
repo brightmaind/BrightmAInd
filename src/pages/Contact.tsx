@@ -171,7 +171,6 @@ const Contact: React.FC = () => {
                       required
                       rows={6}
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange focus:border-transparent transition-colors resize-none text-charcoal"
-                      placeholder="Tell us about your business and growth goals. What challenges are you facing with marketing, automation, or your website?"
                       placeholder="Tell us about your business and automation needs. What repetitive tasks are taking up your time? We also help with marketing, websites, and content creation."
                     />
                   </div>
