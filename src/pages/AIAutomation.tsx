@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { Calendar, Clock, TrendingDown, Users, Zap, Bot, BarChart3, Mail, CheckCircle } from 'lucide-react';
 import ScrollAnimation from '../components/ScrollAnimation';
 import SEOHead from '../components/SEOHead';
+import { Button } from '../components/ui/button';
 
 const AIAutomation = () => {
   const navigate = useNavigate();
@@ -80,22 +81,25 @@ const AIAutomation = () => {
             </p>
 
             <div className="flex flex-col gap-4 justify-center items-center">
-              <button
+              <Button 
                 onClick={handleBookAudit}
-                className="text-xl px-12 py-6 bg-orange text-black hover:bg-orange/90 transition-all rounded flex items-center"
+                size="lg" 
+                className="text-xl px-12 py-6"
                 aria-label="Book a free AI automation audit"
               >
                 <Calendar className="w-6 h-6 mr-3" />
                 Book a Free Audit
-              </button>
-
-              <button
+              </Button>
+              
+              <Button 
                 onClick={() => navigate('/contact')}
-                className="text-xl px-12 py-6 border border-off-white text-off-white hover:bg-off-white hover:text-black transition-all rounded"
+                size="lg" 
+                variant="outline"
+                className="text-xl px-12 py-6"
                 aria-label="Send us a message"
               >
                 Send us a message
-              </button>
+              </Button>
             </div>
           </div>
         </div>
@@ -240,23 +244,26 @@ const AIAutomation = () => {
             </p>
 
             <div className="flex flex-col items-center gap-4 max-w-sm mx-auto">
-              <button
+              <Button 
                 onClick={handleBookAudit}
-                className="text-xl px-12 py-6 bg-orange hover:bg-orange/90 w-full transition-all rounded flex items-center justify-center"
+                size="lg" 
+                className="text-xl px-12 py-6 bg-orange hover:bg-orange/90 w-full"
                 aria-label="Book your free automation audit"
               >
                 <Calendar className="w-6 h-6 mr-3" />
                 <span className="hidden sm:inline">Book Your Free Automation Audit</span>
                 <span className="sm:hidden">Book Free Audit</span>
-              </button>
-
-              <button
+              </Button>
+              
+              <Button 
                 onClick={() => navigate('/contact')}
-                className="text-xl px-12 py-6 w-full border border-off-white text-off-white hover:bg-off-white hover:text-black transition-all rounded"
+                size="lg" 
+                variant="outline"
+                className="text-xl px-12 py-6 w-full"
                 aria-label="Send us a message"
               >
                 Send us a message
-              </button>
+              </Button>
             </div>
           </div>
         </section>
@@ -271,22 +278,26 @@ const AIAutomation = () => {
             </h3>
             
             <div className="flex flex-col gap-3 justify-center items-center">
-              <button
+              <Button 
                 onClick={handleBookAudit}
-                className="bg-white text-orange hover:bg-white/90 text-xl px-12 py-6 w-full max-w-sm transition-all rounded flex items-center justify-center"
+                size="lg" 
+                variant="secondary"
+                className="bg-white text-orange hover:bg-white/90 text-xl px-12 py-6 w-full max-w-sm"
                 aria-label="Let's talk about AI automation for your business"
               >
                 <Bot className="w-6 h-6 mr-3" />
                 Let's Talk AI
-              </button>
-
-              <button
+              </Button>
+              
+              <Button 
                 onClick={() => navigate('/contact')}
-                className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-orange text-xl px-12 py-6 w-full max-w-sm transition-all rounded"
+                size="lg" 
+                variant="outline"
+                className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-orange text-xl px-12 py-6 w-full max-w-sm"
                 aria-label="Send us a message"
               >
                 Send us a message
-              </button>
+              </Button>
             </div>
           </div>
         </section>

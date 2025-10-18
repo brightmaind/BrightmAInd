@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { Menu, X, Calendar, Camera } from 'lucide-react';
+import { Button } from './ui/button';
 
 // Calendly integration
 declare global {
@@ -67,7 +68,7 @@ const Navbar: React.FC = () => {
               alt="Bright mAInd - Ayrshire AI experts helping local businesses automate and grow"
               width="200"
               height="200"
-              className="h-24 w-auto object-cover object-center rounded-lg scale-[1.75]"
+              className="h-24 w-auto object-cover object-center rounded-lg scale-150"
             />
           </Link>
 
@@ -91,22 +92,25 @@ const Navbar: React.FC = () => {
               </React.Fragment>
             ))}
             
-            <button
+            <Button 
               onClick={() => handleNavigation('/contact')}
-              className="ml-4 px-4 py-2 text-sm border border-off-white text-off-white hover:bg-off-white hover:text-black transition-all rounded"
+              size="sm" 
+              variant="outline"
+              className="ml-4"
               aria-label="Send us a message"
             >
               Send us a message
-            </button>
+            </Button>
             
-            <button
-              onClick={handleBookConsultation}
-              className="ml-4 px-4 py-2 text-sm bg-orange text-black hover:bg-orange/90 transition-all rounded flex items-center"
+            <Button 
+              onClick={handleBookConsultation} 
+              size="sm" 
+              className="ml-4"
               aria-label="Book a free growth audit consultation"
             >
               <Calendar className="w-4 h-4 mr-2" />
               Book a 10-minute audit
-            </button>
+            </Button>
           </div>
 
           {/* Mobile menu button */}
@@ -145,14 +149,15 @@ const Navbar: React.FC = () => {
               >
                 Send us a message
               </button>
-              <button
-                onClick={handleBookConsultation}
-                className="mt-4 px-4 py-2 text-sm bg-orange text-black hover:bg-orange/90 transition-all rounded flex items-center justify-center"
+              <Button 
+                onClick={handleBookConsultation} 
+                size="sm" 
+                className="mt-4"
                 aria-label="Book a free growth audit consultation"
               >
                 <Calendar className="w-4 h-4 mr-2" />
                 Book a 10-minute audit
-              </button>
+              </Button>
             </div>
           </div>
         )}

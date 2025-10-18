@@ -4,6 +4,7 @@ import { Globe, Camera, Target, Calendar } from 'lucide-react';
 import ScrollAnimation from '../components/ScrollAnimation';
 import SEOHead from '../components/SEOHead';
 import Breadcrumb from '../components/Breadcrumb';
+import { Button } from '../components/ui/button';
 
 const Services = () => {
   const navigate = useNavigate();
@@ -89,22 +90,25 @@ const Services = () => {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <button
+              <Button 
                 onClick={handleBookCall}
-                className="text-xl px-12 py-6 bg-orange text-black hover:bg-orange/90 transition-all rounded flex items-center"
+                size="lg" 
+                className="text-xl px-12 py-6"
                 aria-label="Book a consultation for our services"
               >
                 <Calendar className="w-6 h-6 mr-3" />
                 Book a Consultation
-              </button>
-
-              <button
+              </Button>
+              
+              <Button 
                 onClick={() => navigate('/contact')}
-                className="text-xl px-12 py-6 border border-off-white text-off-white hover:bg-off-white hover:text-black transition-all rounded"
+                size="lg" 
+                variant="outline"
+                className="text-xl px-12 py-6"
                 aria-label="Send us a message"
               >
                 Send us a message
-              </button>
+              </Button>
             </div>
           </div>
         </div>
@@ -180,22 +184,26 @@ const Services = () => {
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                <button
+                <Button 
                   onClick={handleBookCall}
-                  className="bg-white text-orange hover:bg-white/90 text-xl px-12 py-6 transition-all rounded flex items-center"
+                  size="lg" 
+                  variant="secondary"
+                  className="bg-white text-orange hover:bg-white/90 text-xl px-12 py-6"
                   aria-label="Book a consultation to discuss our services"
                 >
                   <Calendar className="w-6 h-6 mr-3" />
                   Book a Consultation
-                </button>
-
-                <button
+                </Button>
+                
+                <Button 
                   onClick={() => navigate('/contact')}
-                  className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-orange text-xl px-12 py-6 transition-all rounded"
+                  size="lg" 
+                  variant="outline"
+                  className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-orange text-xl px-12 py-6"
                   aria-label="Send us a message"
                 >
                   Send us a message
-                </button>
+                </Button>
               </div>
             </div>
           </div>
