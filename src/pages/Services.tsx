@@ -141,7 +141,7 @@ const Services = () => {
                       <div className="flex-1">
                         <p className="text-lg text-off-white/90 leading-relaxed mb-6">
                           {index === 0 ? 
-                            `${service.description} Our team of Ayrshire AI experts ensures every website is optimized for your local market.` :
+                            `${service.description} Our team of experts ensures every website is optimized for your local market.` :
                             service.description
                           }
                         </p>
