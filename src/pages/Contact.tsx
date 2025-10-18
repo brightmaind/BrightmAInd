@@ -37,7 +37,7 @@ const Contact: React.FC = () => {
   };
 
   return (
-    <div className="pt-36">
+    <div className="pt-36 bg-charcoal text-off-white">
       <SEOHead 
         title="Contact Bright mAInd | Book Free Growth Audit"
         description="Book a free growth audit or message us—limited clinic slots to ensure priority."
@@ -49,7 +49,7 @@ const Contact: React.FC = () => {
       
       {/* Header Section */}
       <ScrollAnimation>
-        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50">
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50 relative overflow-hidden z-50" style={{ clipPath: 'inset(100px 0 0 0)' }}>
           <div className="max-w-7xl mx-auto text-center">
             <h1 className="text-5xl md:text-6xl font-bold text-charcoal mb-8">
               Ready to <span className="text-orange">automate your business</span>?
