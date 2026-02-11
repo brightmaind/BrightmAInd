@@ -11,7 +11,7 @@ const Footer: React.FC = () => {
             <div className="mb-4">
               <img
                 src="/bright-maind-logo-main.png"
-                alt="BrightMaind — on-premise AI and air-gapped AI solutions for UK manufacturing"
+                alt="BrightMaind — on-premise AI and air-gapped AI solutions for UK industry"
                 width="120"
                 height="120"
                 className="h-20 w-auto object-contain rounded-lg"
@@ -19,7 +19,7 @@ const Footer: React.FC = () => {
               />
             </div>
             <p className="text-off-white/70 mb-6 max-w-md">
-              Custom-built, air-gapped AI appliances for UK manufacturing. BrightBox sits on your network, trained on your processes. Your data never leaves your building.
+              Custom-built, air-gapped AI appliances for UK industry. BrightBox sits on your network, trained on your processes. Your data never leaves your building.
             </p>
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
@@ -46,7 +46,7 @@ const Footer: React.FC = () => {
         <div className="border-t border-slate/20 mt-12 pt-8">
           <div className="text-center mb-6">
             <p className="text-off-white/70 text-sm leading-relaxed">
-              On-Premise AI for Manufacturing | Mon-Fri 9-5 |
+              On-Premise AI for Industry | Mon-Fri 9-5 |
               <a
                 href="mailto:enquiries@brightmaind.com"
                 className="text-orange hover:text-orange/80 transition-colors ml-1"

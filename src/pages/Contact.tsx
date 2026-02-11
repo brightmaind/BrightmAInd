@@ -39,14 +39,14 @@ const Contact: React.FC = () => {
     <div className="pt-36">
       <SEOHead
         title="Contact BrightMaind | Enquire About BrightBox On-Premise AI"
-        description="Get in touch to learn how BrightBox can bring secure, air-gapped AI to your manufacturing facility. Private AI appliance — your data never leaves your building."
+        description="Get in touch to learn how BrightBox can bring secure, air-gapped AI to your facility. Private AI appliance — your data never leaves your building."
         canonical="/contact"
         structuredData={[
           {
             "@context": "https://schema.org",
             "@type": "ContactPage",
             "name": "Contact BrightMaind",
-            "description": "Enquire about BrightBox on-premise AI appliances for manufacturing",
+            "description": "Enquire about BrightBox on-premise AI appliances for industrial operations",
             "url": "https://www.brightmaind.com/contact",
             "mainEntity": {
               "@type": "Organization",
@@ -79,10 +79,10 @@ const Contact: React.FC = () => {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-20">
               <div>
                 <h2 className="text-3xl md:text-4xl font-bold text-charcoal mb-8">
-                  Bring AI to your factory floor
+                  Bring AI to your operation
                 </h2>
                 <p className="text-lg text-gray-600 mb-12 leading-relaxed">
-                  BrightBox is a custom-built, air-gapped AI appliance designed for manufacturing environments across the UK. Tell us about your processes, documentation, and challenges, and we'll show you what's possible — without your data ever leaving your building.
+                  BrightBox is a custom-built, air-gapped AI appliance designed for industrial environments across the UK — manufacturing plants, paper mills, wind farms, refineries, water treatment facilities, and more. Tell us about your processes, documentation, and challenges, and we'll show you what's possible — without your data ever leaving your building.
                 </p>
 
                 <div className="space-y-8">

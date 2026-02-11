@@ -39,7 +39,7 @@ const AIAutomation = () => {
     {
       icon: WifiOff,
       title: 'Connectivity Issues',
-      description: 'Factory floors and production environments often have limited or no internet. Cloud tools fail exactly when your team needs them most.'
+      description: 'Industrial sites — from refineries to production lines — often have limited or no internet. Cloud tools fail exactly when your team needs them most.'
     },
     {
       icon: Bot,
@@ -85,7 +85,7 @@ const AIAutomation = () => {
     {
       icon: HardHat,
       title: 'Training Support',
-      description: 'New operators get answers immediately. Reduce training time and improve confidence on the floor.'
+      description: 'New operators get answers immediately. Reduce training time and improve confidence on site.'
     },
     {
       icon: Wrench,
@@ -125,15 +125,15 @@ const AIAutomation = () => {
   return (
     <div className="bg-charcoal text-off-white">
       <SEOHead
-        title="BrightMaind | On-Premise AI for Manufacturing | BrightBox"
-        description="BrightBox by BrightMaind — custom-built, air-gapped AI appliances for factories. Your data never leaves your facility. No cloud, no internet required."
+        title="BrightMaind | On-Premise AI for Industrial Operations | BrightBox"
+        description="BrightBox by BrightMaind — custom-built, air-gapped AI appliances for industrial operations. Your data never leaves your facility. No cloud, no internet required."
         canonical="/"
         structuredData={[
           {
             "@context": "https://schema.org",
             "@type": "Product",
             "name": "BrightBox",
-            "description": "Custom-built, air-gapped AI appliance for manufacturing. Trained on your processes, SOPs, and documentation. Operates entirely on-premise with no cloud dependency.",
+            "description": "Custom-built, air-gapped AI appliance for industrial operations. Trained on your processes, SOPs, and documentation. Operates entirely on-premise with no cloud dependency.",
             "brand": { "@type": "Brand", "name": "BrightMaind" },
             "manufacturer": { "@type": "Organization", "name": "BrightMaind", "url": "https://www.brightmaind.com" },
             "category": "Industrial AI Appliance",
@@ -166,8 +166,8 @@ const AIAutomation = () => {
             </div>
 
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold font-rajdhani text-off-white leading-tight mb-8">
-              AI That Lives On Your{' '}
-              <span className="hero-gradient-text-orange">Factory Floor</span>
+              AI That Lives On{' '}
+              <span className="hero-gradient-text-orange">Your Site</span>
             </h1>
 
             <p className="text-xl md:text-2xl text-off-white/80 leading-relaxed max-w-3xl mx-auto mb-12">
@@ -209,10 +209,10 @@ const AIAutomation = () => {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-5xl font-bold font-rajdhani text-off-white mb-6">
-                Why Cloud AI <span className="text-orange">Doesn't Work</span> for Manufacturing
+                Why Cloud AI <span className="text-orange">Doesn't Work</span> in Industry
               </h2>
               <p className="text-lg text-off-white/70 max-w-2xl mx-auto">
-                Generic cloud tools weren't built for the factory floor. Here's why they fall short.
+                Generic cloud tools weren't built for industrial environments. Here's why they fall short.
               </p>
             </div>
 
@@ -253,7 +253,7 @@ const AIAutomation = () => {
               <div className="relative rounded-2xl overflow-hidden shadow-2xl shadow-orange/10 border border-slate/20">
                 <img
                   src="/brightbox-product.png"
-                  alt="BrightBox air-gapped AI appliance for factory floor deployment — on-premise manufacturing AI by BrightMaind"
+                  alt="BrightBox air-gapped AI appliance for on-site industrial deployment — on-premise AI by BrightMaind"
                   className="w-full h-auto object-cover"
                   loading="lazy"
                   width="896"
@@ -293,10 +293,10 @@ const AIAutomation = () => {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-5xl font-bold font-rajdhani text-off-white mb-6">
-                Built for the <span className="text-orange">Factory Floor</span>
+                Built for <span className="text-orange">Your Operations</span>
               </h2>
               <p className="text-lg text-off-white/70 max-w-2xl mx-auto">
-                Your industrial AI assistant handles the real challenges your team faces every day on the production floor.
+                Your industrial AI assistant handles the real challenges your team faces every day — from paper mills and manufacturing plants to wind farms and water treatment facilities.
               </p>
             </div>
 
@@ -371,8 +371,8 @@ const AIAutomation = () => {
                 <Lock className="w-8 h-8 text-orange" />
               </div>
               <h2 className="text-3xl md:text-4xl font-bold font-rajdhani text-off-white mb-6">
-                What Happens on Your Floor,{' '}
-                <span className="text-orange">Stays on Your Floor</span>
+                What Happens on Your Site,{' '}
+                <span className="text-orange">Stays on Your Site</span>
               </h2>
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-10">
                 <div className="flex items-center justify-center gap-3">

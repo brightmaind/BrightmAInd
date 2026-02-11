@@ -49,7 +49,7 @@ const Navbar: React.FC = () => {
           <Link to="/" className="flex items-center shrink-0">
             <img
               src="/bright-maind-logo-main.png"
-              alt="BrightMaind - On-Premise AI Solutions for Manufacturing"
+              alt="BrightMaind - On-Premise AI Solutions for Industry"
               width="200"
               height="200"
               className="h-24 w-auto object-cover object-center rounded-lg scale-150 lg:scale-[1.75]"
