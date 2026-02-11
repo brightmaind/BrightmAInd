@@ -1,4 +1,3 @@
-import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Calendar, ShieldCheck, WifiOff, Server, Bot, ClipboardList, BookOpen, Wrench, HardHat, ArrowRight, Lock, CloudOff, Cpu, CheckCircle } from 'lucide-react';
 import ScrollAnimation from '../components/ScrollAnimation';

@@ -14,30 +14,6 @@ export default {
         'rajdhani': ['Rajdhani', 'sans-serif'],
         'inter': ['Inter', 'sans-serif'],
       },
-      animation: {
-        'fade-in': 'fadeIn 0.4s ease-out forwards',
-        'slide-up': 'slideUp 0.4s ease-out forwards',
-        'gradient-shift': 'gradientShift 8s ease-in-out infinite',
-      },
-      keyframes: {
-        fadeIn: {
-          '0%': { opacity: '0', transform: 'translateY(20px)' },
-          '100%': { opacity: '1', transform: 'translateY(0)' },
-        },
-        slideUp: {
-          '0%': { opacity: '0', transform: 'translateY(30px)' },
-          '100%': { opacity: '1', transform: 'translateY(0)' },
-        },
-        gradientShift: {
-          '0%, 100%': { backgroundPosition: '0% 50%' },
-          '50%': { backgroundPosition: '100% 50%' },
-        },
-      },
-      spacing: {
-        '104': '26rem',
-        '125': '31.25rem',
-        '150': '37.5rem',
-      },
     },
   },
   plugins: [],
