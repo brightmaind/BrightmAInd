@@ -11,14 +11,15 @@ const Footer: React.FC = () => {
             <div className="mb-4">
               <img
                 src="/bright-maind-logo-main.png"
-                alt="BrightMaind - On-Premise AI Solutions for Manufacturing"
+                alt="BrightMaind — on-premise AI and air-gapped AI solutions for UK manufacturing"
                 width="120"
                 height="120"
                 className="h-20 w-auto object-contain rounded-lg"
+                loading="lazy"
               />
             </div>
             <p className="text-off-white/70 mb-6 max-w-md">
-              Custom-built, air-gapped AI appliances for manufacturing. BrightBox sits on your network, trained on your processes. Your data never leaves your building.
+              Custom-built, air-gapped AI appliances for UK manufacturing. BrightBox sits on your network, trained on your processes. Your data never leaves your building.
             </p>
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
@@ -36,8 +37,8 @@ const Footer: React.FC = () => {
           <div>
             <h4 className="text-lg font-semibold font-rajdhani mb-6">Quick Links</h4>
             <ul className="space-y-3">
-              <li><Link to="/" onClick={() => window.scrollTo(0, 0)} className="text-off-white/70 hover:text-orange transition-colors">BrightBox</Link></li>
-              <li><Link to="/contact" onClick={() => window.scrollTo(0, 0)} className="text-off-white/70 hover:text-orange transition-colors">Contact</Link></li>
+              <li><Link to="/" onClick={() => window.scrollTo(0, 0)} className="text-off-white/70 hover:text-orange transition-colors">BrightBox On-Premise AI</Link></li>
+              <li><Link to="/contact" onClick={() => window.scrollTo(0, 0)} className="text-off-white/70 hover:text-orange transition-colors">Contact Us</Link></li>
             </ul>
           </div>
         </div>

@@ -9,10 +9,12 @@ function App() {
     <Router>
       <div className="min-h-screen bg-charcoal font-inter">
         <Navbar />
-        <Routes>
-          <Route path="/" element={<AIAutomation />} />
-          <Route path="/contact" element={<Contact />} />
-        </Routes>
+        <main>
+          <Routes>
+            <Route path="/" element={<AIAutomation />} />
+            <Route path="/contact" element={<Contact />} />
+          </Routes>
+        </main>
         <Footer />
       </div>
     </Router>

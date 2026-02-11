@@ -16,7 +16,7 @@ const AIAutomation = () => {
   const handleBookConsultation = () => {
     const calendlyUrl = import.meta.env.VITE_CALENDLY_URL;
     if (calendlyUrl) {
-      window.open(calendlyUrl, '_blank');
+      window.open(calendlyUrl, '_blank', 'noopener,noreferrer');
       return;
     }
     if (window.Calendly) {
@@ -39,7 +39,7 @@ const AIAutomation = () => {
     {
       icon: WifiOff,
       title: 'Connectivity Issues',
-      description: 'Factory floors have limited or no internet. Cloud tools fail exactly when your team needs them most.'
+      description: 'Factory floors and production environments often have limited or no internet. Cloud tools fail exactly when your team needs them most.'
     },
     {
       icon: Bot,
@@ -52,7 +52,7 @@ const AIAutomation = () => {
     {
       icon: Server,
       title: 'On-Premise',
-      description: 'A physical appliance that sits on your network. No cloud dependency, no external servers.'
+      description: 'A private AI appliance that sits on your network. AI that runs locally — no cloud dependency, no external servers.'
     },
     {
       icon: Lock,
@@ -125,9 +125,28 @@ const AIAutomation = () => {
   return (
     <div className="bg-charcoal text-off-white">
       <SEOHead
-        title="On-Premise AI for Manufacturing | BrightMaind"
-        description="BrightBox - custom-built, air-gapped AI appliances for factories and manufacturing. Your data never leaves your building. On-premise AI trained on your processes."
+        title="BrightMaind | On-Premise AI for Manufacturing | BrightBox"
+        description="BrightBox by BrightMaind — custom-built, air-gapped AI appliances for factories. Your data never leaves your facility. No cloud, no internet required."
         canonical="/"
+        structuredData={[
+          {
+            "@context": "https://schema.org",
+            "@type": "Product",
+            "name": "BrightBox",
+            "description": "Custom-built, air-gapped AI appliance for manufacturing. Trained on your processes, SOPs, and documentation. Operates entirely on-premise with no cloud dependency.",
+            "brand": { "@type": "Brand", "name": "BrightMaind" },
+            "manufacturer": { "@type": "Organization", "name": "BrightMaind", "url": "https://www.brightmaind.com" },
+            "category": "Industrial AI Appliance",
+            "image": "https://www.brightmaind.com/brightbox-product.png",
+            "url": "https://www.brightmaind.com",
+            "offers": {
+              "@type": "Offer",
+              "availability": "https://schema.org/InStock",
+              "priceCurrency": "GBP",
+              "url": "https://www.brightmaind.com/contact"
+            }
+          }
+        ]}
       />
 
       <section className="pt-36 pb-24 px-4 sm:px-6 lg:px-8 hero-gradient relative overflow-hidden z-10" style={{ clipPath: 'inset(100px 0 0 0)' }}>
@@ -226,7 +245,7 @@ const AIAutomation = () => {
                 Introducing <span className="text-orange">BrightBox</span>
               </h2>
               <p className="text-lg text-off-white/70 max-w-2xl mx-auto">
-                A physical AI appliance that plugs into your network. No cloud. No external APIs. No data leaving your facility.
+                An on-premise AI appliance that plugs into your network. No cloud. No external APIs. No data leaving your facility.
               </p>
             </div>
 
@@ -234,8 +253,11 @@ const AIAutomation = () => {
               <div className="relative rounded-2xl overflow-hidden shadow-2xl shadow-orange/10 border border-slate/20">
                 <img
                   src="/brightbox-product.png"
-                  alt="BrightBox AI - on-premise AI appliance for manufacturing"
+                  alt="BrightBox air-gapped AI appliance for factory floor deployment — on-premise manufacturing AI by BrightMaind"
                   className="w-full h-auto object-cover"
+                  loading="lazy"
+                  width="896"
+                  height="504"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-near-black/40 via-transparent to-transparent pointer-events-none" />
               </div>
@@ -274,7 +296,7 @@ const AIAutomation = () => {
                 Built for the <span className="text-orange">Factory Floor</span>
               </h2>
               <p className="text-lg text-off-white/70 max-w-2xl mx-auto">
-                BrightBox handles the real challenges your team faces every day.
+                Your industrial AI assistant handles the real challenges your team faces every day on the production floor.
               </p>
             </div>
 
@@ -382,7 +404,7 @@ const AIAutomation = () => {
               Ready to See BrightBox <span className="text-orange">in Action?</span>
             </h2>
             <p className="text-xl text-off-white/70 leading-relaxed max-w-2xl mx-auto mb-12">
-              Book a consultation and we'll walk you through how BrightBox would work in your facility.
+              Book a consultation and we'll walk you through how our secure, on-premise AI would work in your facility.
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">

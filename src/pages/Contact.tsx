@@ -38,9 +38,24 @@ const Contact: React.FC = () => {
   return (
     <div className="pt-36">
       <SEOHead
-        title="Contact BrightMaind | On-Premise AI for Manufacturing"
-        description="Get in touch to learn how BrightBox can bring secure, air-gapped AI to your manufacturing facility. Your data never leaves your building."
+        title="Contact BrightMaind | Enquire About BrightBox On-Premise AI"
+        description="Get in touch to learn how BrightBox can bring secure, air-gapped AI to your manufacturing facility. Private AI appliance — your data never leaves your building."
         canonical="/contact"
+        structuredData={[
+          {
+            "@context": "https://schema.org",
+            "@type": "ContactPage",
+            "name": "Contact BrightMaind",
+            "description": "Enquire about BrightBox on-premise AI appliances for manufacturing",
+            "url": "https://www.brightmaind.com/contact",
+            "mainEntity": {
+              "@type": "Organization",
+              "name": "BrightMaind",
+              "email": "enquiries@brightmaind.com",
+              "url": "https://www.brightmaind.com"
+            }
+          }
+        ]}
       />
 
       <Breadcrumb items={[{ name: 'Contact', url: '/contact' }]} />
@@ -67,7 +82,7 @@ const Contact: React.FC = () => {
                   Bring AI to your factory floor
                 </h2>
                 <p className="text-lg text-gray-600 mb-12 leading-relaxed">
-                  BrightBox is a custom-built, air-gapped AI appliance designed for manufacturing environments. Tell us about your processes, documentation, and challenges, and we'll show you what's possible — without your data ever leaving your building.
+                  BrightBox is a custom-built, air-gapped AI appliance designed for manufacturing environments across the UK. Tell us about your processes, documentation, and challenges, and we'll show you what's possible — without your data ever leaving your building.
                 </p>
 
                 <div className="space-y-8">

@@ -22,7 +22,7 @@ const Navbar: React.FC = () => {
   const handleBookConsultation = () => {
     const calendlyUrl = import.meta.env.VITE_CALENDLY_URL;
     if (calendlyUrl) {
-      window.open(calendlyUrl, '_blank');
+      window.open(calendlyUrl, '_blank', 'noopener,noreferrer');
       return;
     }
     if (window.Calendly) {
