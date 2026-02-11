@@ -166,8 +166,8 @@ const AIAutomation = () => {
             </div>
 
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold font-rajdhani text-off-white leading-tight mb-8">
-              AI That Lives On{' '}
-              <span className="hero-gradient-text-orange">Your Site</span>
+              AI That Lives In{' '}
+              <span className="hero-gradient-text-orange">Your Facility</span>
             </h1>
 
             <p className="text-xl md:text-2xl text-off-white/80 leading-relaxed max-w-3xl mx-auto mb-12">
