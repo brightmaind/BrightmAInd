@@ -10,7 +10,7 @@ const Footer: React.FC = () => {
           <div className="md:col-span-2">
             <div className="mb-4">
               <img
-                src="/Untitled design (1).png"
+                src="/bright-maind-logo-main.png"
                 alt="BrightMaind - On-Premise AI Solutions for Manufacturing"
                 width="120"
                 height="120"

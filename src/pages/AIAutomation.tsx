@@ -222,13 +222,24 @@ const AIAutomation = () => {
       <ScrollAnimation>
         <section className="py-24 px-4 sm:px-6 lg:px-8 bg-near-black">
           <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
+            <div className="text-center mb-12">
               <h2 className="text-3xl md:text-5xl font-bold font-rajdhani text-off-white mb-6">
                 Introducing <span className="text-orange">BrightBox</span>
               </h2>
               <p className="text-lg text-off-white/70 max-w-2xl mx-auto">
                 A physical AI appliance that plugs into your network. No cloud. No external APIs. No data leaving your facility.
               </p>
+            </div>
+
+            <div className="max-w-4xl mx-auto mb-16">
+              <div className="relative rounded-2xl overflow-hidden shadow-2xl shadow-orange/10 border border-slate/20">
+                <img
+                  src="/brightbox-product.png"
+                  alt="BrightBox AI - on-premise AI appliance for manufacturing"
+                  className="w-full h-auto object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-near-black/40 via-transparent to-transparent pointer-events-none" />
+              </div>
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">

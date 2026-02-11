@@ -48,7 +48,7 @@ const Navbar: React.FC = () => {
         <div className="flex justify-between items-center py-2">
           <Link to="/" className="flex items-center shrink-0">
             <img
-              src="/Untitled design (1).png"
+              src="/bright-maind-logo-main.png"
               alt="BrightMaind - On-Premise AI Solutions for Manufacturing"
               width="200"
               height="200"
