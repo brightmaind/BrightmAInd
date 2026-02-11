@@ -39,12 +39,11 @@ const SEOHead: React.FC<SEOHeadProps> = ({ title, description, canonical, servic
       <script type="application/ld+json">
         {JSON.stringify({
           "@context": "https://schema.org",
-          "@type": "ProfessionalService",
-          "name": "Bright mAInd Marketing",
+          "@type": "Organization",
+          "name": "BrightMaind",
           "url": "https://www.brightmaind.com",
           "logo": "https://www.brightmaind.com/logo.svg",
-          "areaServed": "Scotland",
-          "description": "We deliver deposit-paid consultations at an agreed CAC using your existing booking system.",
+          "description": "Custom-built, air-gapped AI appliances for manufacturing. Your data never leaves your building.",
           "address": { "@type": "PostalAddress", "addressCountry": "GB" }
         })}
       </script>

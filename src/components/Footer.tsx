@@ -7,25 +7,24 @@ const Footer: React.FC = () => {
     <footer className="bg-black text-off-white border-t border-slate/20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
-          {/* Brand */}
           <div className="md:col-span-2">
             <div className="mb-4">
               <img
                 src="/Untitled design (1).png"
-                alt="Bright mAInd - Ayrshire AI experts specializing in business automation"
+                alt="BrightMaind - On-Premise AI Solutions for Manufacturing"
                 width="120"
                 height="120"
                 className="h-20 w-auto object-contain rounded-lg"
               />
             </div>
             <p className="text-off-white/70 mb-6 max-w-md">
-              We specialize in AI automation to streamline your business operations and boost efficiency. We also offer marketing, websites, and content creation services.
+              Custom-built, air-gapped AI appliances for manufacturing. BrightBox sits on your network, trained on your processes. Your data never leaves your building.
             </p>
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
                 <Mail size={18} className="text-orange" />
-                <a 
-                  href="mailto:enquiries@brightmaind.com" 
+                <a
+                  href="mailto:enquiries@brightmaind.com"
                   className="text-off-white/80 hover:text-orange transition-colors"
                 >
                   enquiries@brightmaind.com
@@ -34,35 +33,31 @@ const Footer: React.FC = () => {
             </div>
           </div>
 
-          {/* Quick Links */}
           <div>
             <h4 className="text-lg font-semibold font-rajdhani mb-6">Quick Links</h4>
             <ul className="space-y-3">
-              <li><Link to="/" onClick={() => window.scrollTo(0, 0)} className="text-off-white/70 hover:text-orange transition-colors">AI Automation</Link></li>
-              <li><Link to="/other-services" onClick={() => window.scrollTo(0, 0)} className="text-off-white/70 hover:text-orange transition-colors">Other Services</Link></li>
+              <li><Link to="/" onClick={() => window.scrollTo(0, 0)} className="text-off-white/70 hover:text-orange transition-colors">BrightBox</Link></li>
               <li><Link to="/contact" onClick={() => window.scrollTo(0, 0)} className="text-off-white/70 hover:text-orange transition-colors">Contact</Link></li>
             </ul>
           </div>
-
         </div>
 
         <div className="border-t border-slate/20 mt-12 pt-8">
-          {/* NAP-lite Trust Line */}
           <div className="text-center mb-6">
             <p className="text-off-white/70 text-sm leading-relaxed">
-              Ayrshire's AI Experts | Mon–Fri 9–5 | 
-              <a 
-                href="mailto:enquiries@brightmaind.com" 
+              On-Premise AI for Manufacturing | Mon-Fri 9-5 |
+              <a
+                href="mailto:enquiries@brightmaind.com"
                 className="text-orange hover:text-orange/80 transition-colors ml-1"
               >
                 enquiries@brightmaind.com
               </a>
             </p>
           </div>
-          
+
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-off-white/60 text-sm">
-              © 2025 Bright mAInd. All rights reserved.
+              &copy; {new Date().getFullYear()} BrightMaind. All rights reserved.
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
               <a href="#" className="text-off-white/60 hover:text-orange text-sm transition-colors">Privacy Policy</a>
