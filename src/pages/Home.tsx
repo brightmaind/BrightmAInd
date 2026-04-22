@@ -205,7 +205,7 @@ const Home: React.FC = () => {
               </p>
               
               <p className="text-paper">
-                BrightMaind is built for real operational environments, not boardroom theory.
+                BrightMaind is built for real operational environments.
               </p>
             </div>
           </div>
