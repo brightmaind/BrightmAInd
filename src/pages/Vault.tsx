@@ -146,7 +146,7 @@ const Vault: React.FC = () => {
             <ol className="space-y-px bg-border/60 border border-border/60 rounded-lg overflow-hidden">
               {[
                 ['01', 'AI Appliance on your premises', 'The appliance is installed in your server room or comms cabinet. You own the box; it does not phone home.'],
-                ['02', 'Large models running locally', 'Frontier-class open-weight models run directly on the appliance. All inference is local.'],
+                ['02', 'Large models running locally', 'Large open-weight models run directly on the appliance. All inference is local.'],
                 ['03', 'Connected to your documents and workflows', 'File stores, intranets, line-of-business apps, MES / ERP where it fits. Access rules are honoured.'],
                 ['04', 'Air-gap where required', 'For defence, pharma, or any environment that needs it, Vault operates fully air-gapped with no external connectivity.'],
               ].map(([n, title, body]) => (
