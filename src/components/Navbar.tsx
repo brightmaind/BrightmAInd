@@ -36,13 +36,12 @@ const Navbar: React.FC = () => {
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
         <div className="flex items-center justify-between h-16">
-          <Link to="/" className="flex items-center gap-2.5 group">
-            <span className="inline-flex items-center justify-center w-7 h-7 rounded-[6px] border border-accent/50 bg-accent/10">
-              <span className="w-2 h-2 rounded-sm bg-accent" />
-            </span>
-            <span className="font-display text-base font-semibold tracking-tight text-paper">
-              BrightMaind
-            </span>
+          <Link to="/" className="flex items-center group" aria-label="BrightMaind">
+            <img
+              src="/bright-maind-logo-main.png"
+              alt="BrightMaind"
+              className="h-8 w-auto"
+            />
           </Link>
 
           <nav className="hidden md:flex items-center gap-8">
