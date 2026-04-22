@@ -109,13 +109,22 @@ const Products: React.FC = () => {
                 </div>
                 <div className="md:col-span-5 border-t md:border-t-0 md:border-l border-border/60 p-8 md:p-12 flex flex-col justify-between bg-ink/60">
                   <div>
-                    <div className="text-xs font-mono uppercase tracking-[0.2em] text-accent mb-4">Pilot offer</div>
-                    <p className="text-sm text-whisper-soft leading-relaxed mb-4">
-                      <span className="text-paper font-medium">Pilot partners:</span> £150/month for the first two months, £250/month thereafter. Setup £3,000.
-                    </p>
-                    <p className="text-sm text-whisper-soft leading-relaxed">
-                      <span className="text-accent">First three Scottish legal firms:</span> setup cost waived in exchange for a testimonial.
-                    </p>
+                    <div className="text-xs font-mono uppercase tracking-[0.2em] text-whisper-dim mb-4">Pilot offer</div>
+                    <div className="space-y-5">
+                      <div>
+                        <div className="text-sm text-whisper">Pilot (first 2 months)</div>
+                        <div className="font-display text-2xl text-paper">£150 <span className="text-base text-whisper">/month</span></div>
+                      </div>
+                      <div>
+                        <div className="text-sm text-whisper">Thereafter</div>
+                        <div className="font-display text-2xl text-paper">£250 <span className="text-base text-whisper">/month</span></div>
+                      </div>
+                      <div>
+                        <div className="text-sm text-whisper">Setup</div>
+                        <div className="font-display text-2xl text-paper">£3,000</div>
+                        <div className="text-xs text-accent mt-1">Waived for first three Scottish legal firms</div>
+                      </div>
+                    </div>
                   </div>
                   <p className="text-xs text-whisper-dim mt-8">Limited pilot cohort — book a demo to discuss.</p>
                 </div>
