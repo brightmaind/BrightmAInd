@@ -39,7 +39,7 @@ const Products: React.FC = () => {
                     Vault
                   </h2>
                   <p className="text-lg text-whisper-soft leading-relaxed mb-6 max-w-xl">
-                    DGX Spark-based AI appliance running large models on your premises. For any privacy-sensitive industry, built to order, deployed in-building.
+                    AI appliance running large models on your premises. For any privacy-sensitive industry, built to order, deployed in-building.
                   </p>
                   <p className="text-sm text-whisper leading-relaxed mb-8 max-w-xl">
                     Document Q&amp;A, private knowledge base, verified answers via dual-model cross-check, integration with your existing systems. Air-gap capable where regulation demands it.
@@ -122,7 +122,7 @@ const Products: React.FC = () => {
                       <div>
                         <div className="text-sm text-whisper">Setup</div>
                         <div className="font-display text-2xl text-paper">£3,000</div>
-                        <div className="text-xs text-accent mt-1">Waived for first three Scottish legal firms</div>
+                        <div className="text-xs text-accent mt-1">Waived for first two Scottish legal firms</div>
                       </div>
                     </div>
                   </div>
