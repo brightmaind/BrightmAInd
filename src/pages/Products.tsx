@@ -13,7 +13,7 @@ const Products: React.FC = () => {
         canonical="/products"
       />
 
-      <section className="pt-40 pb-16 md:pt-48 md:pb-20 px-6 lg:px-10 border-b border-border/60">
+      <section className="pt-40 pb-16 md:pt-48 md:pb-20 px-6 lg:px-10 border-b border-border-soft">
         <div className="max-w-6xl mx-auto">
           <div className="eyebrow mb-6">Products</div>
           <h1 className="font-display text-5xl md:text-6xl lg:text-7xl font-semibold text-paper tracking-tightest leading-[1.05] max-w-4xl">
@@ -59,7 +59,7 @@ const Products: React.FC = () => {
                     <ArrowUpRight className="w-4 h-4" />
                   </Link>
                 </div>
-                <div className="md:col-span-5 border-t md:border-t-0 md:border-l border-border/60 p-8 md:p-12 flex flex-col justify-between bg-ink/60">
+                <div className="md:col-span-5 border-t md:border-t-0 md:border-l border-border-soft p-8 md:p-12 flex flex-col justify-between bg-ink/60">
                   <div>
                     <div className="text-xs font-mono uppercase tracking-[0.2em] text-whisper-dim mb-4">Pricing</div>
                     <div className="space-y-5">
@@ -115,7 +115,7 @@ const Products: React.FC = () => {
                     <ArrowUpRight className="w-4 h-4" />
                   </Link>
                 </div>
-                <div className="md:col-span-5 border-t md:border-t-0 md:border-l border-border/60 p-8 md:p-12 flex flex-col justify-between bg-ink/60">
+                <div className="md:col-span-5 border-t md:border-t-0 md:border-l border-border-soft p-8 md:p-12 flex flex-col justify-between bg-ink/60">
                   <div>
                     <div className="text-xs font-mono uppercase tracking-[0.2em] text-whisper-dim mb-4">Pricing</div>
                     <div className="space-y-5">
@@ -141,7 +141,7 @@ const Products: React.FC = () => {
           </ScrollAnimation>
 
           <ScrollAnimation>
-            <article className="rounded-xl border border-border/60 bg-ink/40 overflow-hidden">
+            <article className="rounded-xl border border-border-soft bg-ink/40 overflow-hidden">
               <div className="grid md:grid-cols-12 gap-0">
                 <div className="md:col-span-8 p-8 md:p-10">
                   <div className="flex items-center gap-2 mb-5">
@@ -155,7 +155,7 @@ const Products: React.FC = () => {
                     An on-device wellness journaling app for Android. The same on-device philosophy as our B2B appliances, made personal: your journal lives on your phone, and nowhere else.
                   </p>
                 </div>
-                <div className="md:col-span-4 border-t md:border-t-0 md:border-l border-border/60 p-8 md:p-10 flex items-center">
+                <div className="md:col-span-4 border-t md:border-t-0 md:border-l border-border-soft p-8 md:p-10 flex items-center">
                   <a
                     href="https://play.google.com/store"
                     target="_blank"

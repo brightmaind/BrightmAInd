@@ -3,7 +3,7 @@ import { Mail, MapPin } from 'lucide-react';
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-abyss border-t border-border/60">
+    <footer className="bg-abyss border-t border-border-soft">
       <div className="max-w-7xl mx-auto px-6 lg:px-10 py-16">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12">
           <div className="md:col-span-5">
@@ -50,7 +50,7 @@ const Footer: React.FC = () => {
           </div>
         </div>
 
-        <div className="mt-16 pt-6 border-t border-border/60 flex flex-col md:flex-row items-start md:items-center justify-between gap-3">
+        <div className="mt-16 pt-6 border-t border-border-soft flex flex-col md:flex-row items-start md:items-center justify-between gap-3">
           <p className="text-xs text-whisper-dim">
             &copy; {new Date().getFullYear()} BrightMaind Ltd. Registered in Scotland.
           </p>

@@ -61,7 +61,7 @@ const Home: React.FC = () => {
           </p>
           <div className="mt-10 flex flex-wrap items-center gap-3">
             <Link to="/products">
-              <Button size="lg" variant="accent">
+              <Button size="lg" variant="default">
                 See the products
                 <ArrowUpRight className="w-4 h-4 ml-2" />
               </Button>
@@ -73,7 +73,7 @@ const Home: React.FC = () => {
             </Link>
           </div>
 
-          <div className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-y-8 gap-x-6 border-t border-border/60 pt-10">
+          <div className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-y-8 gap-x-6 border-t border-border-soft pt-10">
             {[
               ['Air-gap capable', 'No external dependencies'],
               ['On your hardware', 'Installed on-site, not rented'],
@@ -90,7 +90,7 @@ const Home: React.FC = () => {
       </section>
 
       <ScrollAnimation>
-        <section className="px-6 lg:px-10 py-24 md:py-32 border-t border-border/60">
+        <section className="px-6 lg:px-10 py-24 md:py-32 border-t border-border-soft">
           <div className="max-w-6xl mx-auto grid md:grid-cols-12 gap-12 md:gap-16">
             <div className="md:col-span-4">
               <div className="eyebrow mb-4">The problem</div>
@@ -114,7 +114,7 @@ const Home: React.FC = () => {
       </ScrollAnimation>
 
       <ScrollAnimation>
-        <section className="px-6 lg:px-10 py-24 md:py-32 bg-deep/40 border-y border-border/60">
+        <section className="px-6 lg:px-10 py-24 md:py-32 bg-deep/40 border-y border-border-soft">
           <div className="max-w-6xl mx-auto">
             <div className="max-w-2xl mb-16">
               <div className="eyebrow mb-4">The approach</div>
@@ -126,7 +126,7 @@ const Home: React.FC = () => {
               </p>
             </div>
 
-            <div className="grid md:grid-cols-3 gap-px bg-border/60 border border-border/60 rounded-lg overflow-hidden">
+            <div className="grid md:grid-cols-3 gap-px bg-border-soft border border-border-soft rounded-lg overflow-hidden">
               {[
                 {
                   icon: ServerCog,
@@ -170,7 +170,7 @@ const Home: React.FC = () => {
               </p>
             </div>
 
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-px bg-border/60 border border-border/60 rounded-lg overflow-hidden">
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-px bg-border-soft border border-border-soft rounded-lg overflow-hidden">
               {industries.map(({ icon: Icon, name }) => (
                 <div
                   key={name}
@@ -186,7 +186,7 @@ const Home: React.FC = () => {
       </ScrollAnimation>
 
       <ScrollAnimation>
-        <section className="px-6 lg:px-10 py-24 md:py-32 border-t border-border/60">
+        <section className="px-6 lg:px-10 py-24 md:py-32 border-t border-border-soft">
           <div className="max-w-6xl mx-auto grid md:grid-cols-12 gap-12 md:gap-16 items-start">
             <div className="md:col-span-5">
               <div className="eyebrow mb-4">Founder</div>
@@ -215,7 +215,7 @@ const Home: React.FC = () => {
       </ScrollAnimation>
 
       <ScrollAnimation>
-        <section className="px-6 lg:px-10 py-16 border-t border-border/60">
+        <section className="px-6 lg:px-10 py-16 border-t border-border-soft">
           <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8">
             <Link
               to="/vault"

@@ -37,7 +37,7 @@ const Contact: React.FC = () => {
         canonical="/contact"
       />
 
-      <section className="pt-40 pb-16 md:pt-48 md:pb-20 px-6 lg:px-10 border-b border-border/60">
+      <section className="pt-40 pb-16 md:pt-48 md:pb-20 px-6 lg:px-10 border-b border-border-soft">
         <div className="max-w-6xl mx-auto">
           <div className="eyebrow mb-6">Contact</div>
           <h1 className="font-display text-5xl md:text-6xl lg:text-7xl font-semibold text-paper tracking-tightest leading-[1.05] max-w-4xl">
@@ -74,7 +74,7 @@ const Contact: React.FC = () => {
               </p>
             </div>
 
-            <div className="pt-6 border-t border-border/60">
+            <div className="pt-6 border-t border-border-soft">
               <div className="text-xs font-mono uppercase tracking-[0.2em] text-whisper-dim mb-3">What to expect</div>
               <ul className="space-y-3 text-sm text-whisper">
                 <li className="flex items-start gap-3">

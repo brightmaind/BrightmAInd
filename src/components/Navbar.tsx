@@ -30,8 +30,8 @@ const Navbar: React.FC = () => {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? 'bg-ink/80 backdrop-blur-md border-b border-border/60'
-          : 'bg-transparent border-b border-transparent'
+          ? 'bg-ink/80 backdrop-blur-md border-b border-border-soft'
+          : 'bg-transparent border-b border-border-soft/70'
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
