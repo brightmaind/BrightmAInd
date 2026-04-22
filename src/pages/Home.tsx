@@ -42,7 +42,14 @@ const Home: React.FC = () => {
             url: 'https://www.brightmaind.com',
             description:
               'BrightMaind builds privacy-first, on-premise AI hardware appliances for legal, manufacturing, healthcare, finance and other confidentiality-bound industries.',
-            address: { '@type': 'PostalAddress', addressRegion: 'Scotland', addressCountry: 'GB' },
+            address: {
+              '@type': 'PostalAddress',
+              streetAddress: 'Office 1481, 3 Fitzroy Place, 1/1, Sauchiehall Street',
+              addressLocality: 'Glasgow Central',
+              postalCode: 'G3 7RH',
+              addressRegion: 'Scotland',
+              addressCountry: 'GB',
+            },
             email: 'enquiries@brightmaind.com',
           },
         ]}

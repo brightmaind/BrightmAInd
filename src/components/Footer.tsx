@@ -41,9 +41,9 @@ const Footer: React.FC = () => {
                   enquiries@brightmaind.com
                 </a>
               </li>
-              <li className="inline-flex items-center gap-2 text-whisper">
-                <MapPin className="w-3.5 h-3.5" />
-                Near Ayr, Scotland, United Kingdom
+              <li className="flex items-start gap-2 text-whisper">
+                <MapPin className="w-3.5 h-3.5 mt-0.5 flex-shrink-0" />
+                <span>Office 1481, 3 Fitzroy Place, 1/1, Sauchiehall Street, Glasgow Central, G3 7RH</span>
               </li>
               <li><Link to="/contact" className="text-whisper hover:text-paper transition-colors">Get in touch</Link></li>
             </ul>

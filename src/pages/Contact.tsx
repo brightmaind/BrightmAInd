@@ -33,7 +33,7 @@ const Contact: React.FC = () => {
     <div>
       <SEOHead
         title="Contact — BrightMaind"
-        description="Talk to BrightMaind about on-premise AI for your organisation. Based near Ayr, Scotland. UK and Europe."
+        description="Talk to BrightMaind about on-premise AI for your organisation. Office 1481, 3 Fitzroy Place, 1/1, Sauchiehall Street, Glasgow Central, G3 7RH. UK and Europe."
         canonical="/contact"
       />
 
@@ -65,9 +65,9 @@ const Contact: React.FC = () => {
 
             <div>
               <div className="text-xs font-mono uppercase tracking-[0.2em] text-whisper-dim mb-3">Location</div>
-              <div className="inline-flex items-center gap-2.5 text-paper">
-                <MapPin className="w-4 h-4" />
-                Near Ayr, Scotland
+              <div className="flex items-start gap-2.5 text-paper">
+                <MapPin className="w-4 h-4 mt-1 flex-shrink-0" />
+                <span>Office 1481, 3 Fitzroy Place, 1/1, Sauchiehall Street, Glasgow Central, G3 7RH</span>
               </div>
               <p className="text-sm text-whisper mt-2 max-w-sm leading-relaxed">
                 BrightMaind Ltd is a Scotland-registered company. We work with clients across the UK and Europe.
