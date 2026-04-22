@@ -13,7 +13,7 @@ const Products: React.FC = () => {
         canonical="/products"
       />
 
-      <section className="pt-40 pb-16 md:pt-48 md:pb-20 px-6 lg:px-10 border-b border-border/60">
+      <section className="pt-40 pb-16 md:pt-48 md:pb-20 px-6 lg:px-10 border-b border-border/60 bg-ink">
         <div className="max-w-6xl mx-auto">
           <div className="eyebrow mb-6">Products</div>
           <h1 className="font-display text-5xl md:text-6xl lg:text-7xl font-semibold text-paper tracking-tightest leading-[1.05] max-w-4xl">
@@ -25,14 +25,14 @@ const Products: React.FC = () => {
         </div>
       </section>
 
-      <section className="px-6 lg:px-10 py-20 md:py-28">
+      <section className="section-light px-6 lg:px-10 py-20 md:py-28">
         <div className="max-w-6xl mx-auto space-y-8">
           <ScrollAnimation>
-            <article className="group relative rounded-xl border border-border-soft hover:border-accent/50 bg-gradient-to-br from-surface to-ink overflow-hidden transition-all">
+            <article className="dark-card group relative rounded-xl border border-border-soft hover:border-accent/50 bg-gradient-to-br from-surface to-ink overflow-hidden transition-all">
               <div className="grid md:grid-cols-12 gap-0">
                 <div className="md:col-span-7 p-8 md:p-12 lg:p-14">
                   <div className="flex items-center gap-2 mb-6">
-                    <CircuitBoard className="w-5 h-5 text-accent" strokeWidth={1.5} />
+                    <CircuitBoard className="w-5 h-5 text-paper" strokeWidth={1.5} />
                     <span className="eyebrow">Tier 01 — Flagship</span>
                   </div>
                   <h2 className="font-display text-4xl md:text-5xl font-semibold text-paper tracking-tightest leading-[1.05] mb-5">
@@ -84,11 +84,11 @@ const Products: React.FC = () => {
           </ScrollAnimation>
 
           <ScrollAnimation>
-            <article className="group relative rounded-xl border border-border-soft hover:border-accent/50 bg-gradient-to-br from-surface to-ink overflow-hidden transition-all">
+            <article className="dark-card group relative rounded-xl border border-border-soft hover:border-accent/50 bg-gradient-to-br from-surface to-ink overflow-hidden transition-all">
               <div className="grid md:grid-cols-12 gap-0">
                 <div className="md:col-span-7 p-8 md:p-12 lg:p-14">
                   <div className="flex items-center gap-2 mb-6">
-                    <Mic className="w-5 h-5 text-accent" strokeWidth={1.5} />
+                    <Mic className="w-5 h-5 text-paper" strokeWidth={1.5} />
                     <span className="eyebrow">Tier 02 — Focused</span>
                   </div>
                   <h2 className="font-display text-4xl md:text-5xl font-semibold text-paper tracking-tightest leading-[1.05] mb-5">
@@ -130,7 +130,7 @@ const Products: React.FC = () => {
                       <div>
                         <div className="text-sm text-whisper">Setup</div>
                         <div className="font-display text-2xl text-paper">£2,000</div>
-                        <div className="text-xs text-accent mt-1">Waived for first pilot customers</div>
+                        <div className="text-xs text-accent mt-1 font-medium">Waived for first pilot customers</div>
                       </div>
                     </div>
                   </div>

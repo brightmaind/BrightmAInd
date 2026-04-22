@@ -23,16 +23,22 @@ html {
 
 body {
   font-family: 'Inter', sans-serif;
-  background-color: #0B1120;
-  color: #E2E8F0;
+  background-color: #0A0B0D;
+  color: #EDEAE4;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-feature-settings: 'ss01', 'cv11';
+  line-height: 1.65;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Space Grotesk', sans-serif;
   letter-spacing: -0.02em;
+  line-height: 1.15;
+}
+
+p {
+  line-height: 1.7;
 }
 
 .fade-in-section {
@@ -48,27 +54,101 @@ h1, h2, h3, h4, h5, h6 {
 
 .grid-bg {
   background-image:
-    linear-gradient(to right, rgba(148, 163, 184, 0.04) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(148, 163, 184, 0.04) 1px, transparent 1px);
+    linear-gradient(to right, rgba(237, 234, 228, 0.035) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(237, 234, 228, 0.035) 1px, transparent 1px);
+  background-size: 56px 56px;
+}
+
+.grid-bg-light {
+  background-image:
+    linear-gradient(to right, rgba(26, 27, 30, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(26, 27, 30, 0.05) 1px, transparent 1px);
   background-size: 56px 56px;
 }
 
 .hairline {
-  background-image: linear-gradient(to right, transparent, rgba(148, 163, 184, 0.25), transparent);
+  background-image: linear-gradient(to right, transparent, rgba(237, 234, 228, 0.18), transparent);
   height: 1px;
 }
 
 .eyebrow {
   font-family: 'JetBrains Mono', ui-monospace, monospace;
   font-size: 0.7rem;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: #7DD3FC;
+  color: #9A968D;
 }
 
+/* Light section: warm off-white background with charcoal text.
+   Overrides common dark-mode utility classes so existing markup flips cleanly. */
+.section-light {
+  background-color: #F5F3EF;
+  color: #1A1B1E;
+}
+.section-light .eyebrow { color: #6B675F; }
+.section-light .text-paper { color: #1A1B1E; }
+.section-light .text-mist { color: #1A1B1E; }
+.section-light .text-whisper { color: #3D3E42; }
+.section-light .text-whisper-soft { color: #2A2B2F; }
+.section-light .text-whisper-dim { color: #5F5C55; }
+
+.section-light .border-border\/60,
+.section-light .border-y,
+.section-light .border-t,
+.section-light .border-b {
+  border-color: rgba(26, 27, 30, 0.1);
+}
+.section-light .border-border-soft { border-color: rgba(26, 27, 30, 0.14); }
+.section-light .hover\:border-accent\/50:hover,
+.section-light .hover\:border-accent\/60:hover { border-color: rgba(232, 130, 58, 0.7); }
+
+.section-light .bg-ink,
+.section-light .bg-ink\/40,
+.section-light .bg-ink\/60,
+.section-light .bg-ink\/80,
+.section-light .bg-surface,
+.section-light .bg-deep\/40 {
+  background-color: #EBE8E1;
+}
+.section-light .bg-border\/60 { background-color: rgba(26, 27, 30, 0.1); }
+
+.section-light .from-surface { --tw-gradient-from: #EBE8E1 var(--tw-gradient-from-position); --tw-gradient-to: rgba(235, 232, 225, 0) var(--tw-gradient-to-position); --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to); }
+.section-light .to-ink,
+.section-light .to-deep { --tw-gradient-to: #DEDBD4 var(--tw-gradient-to-position); }
+
+.section-light .hover\:bg-surface:hover { background-color: #E0DCD3; }
+
+.section-light a.text-accent,
+.section-light .text-accent { color: #C56826; }
+.section-light .hover\:text-accent:hover { color: #C56826; }
+
+/* Demote cloud-grid hero overlay on light sections */
+.section-light .grid-bg { opacity: 0; }
+
+/* dark-card: keep a card visually dark even inside a light section.
+   Apply to Link/article wrappers where dark-on-light contrast is desired. */
+.section-light .dark-card { background-color: #0A0B0D; color: #EDEAE4; }
+.section-light .dark-card .text-paper { color: #EDEAE4; }
+.section-light .dark-card .text-mist { color: #D8D5CE; }
+.section-light .dark-card .text-whisper { color: #9A968D; }
+.section-light .dark-card .text-whisper-soft { color: #B8B4AB; }
+.section-light .dark-card .text-whisper-dim { color: #6B675F; }
+.section-light .dark-card .eyebrow { color: #9A968D; }
+.section-light .dark-card .border-border-soft { border-color: #2A2D33; }
+.section-light .dark-card .border-border\/60 { border-color: #22252A; }
+.section-light .dark-card .bg-ink,
+.section-light .dark-card .bg-ink\/40,
+.section-light .dark-card .bg-ink\/60,
+.section-light .dark-card .bg-ink\/80,
+.section-light .dark-card .bg-surface { background-color: #0A0B0D; }
+.section-light .dark-card .bg-border\/60 { background-color: rgba(237, 234, 228, 0.08); }
+.section-light .dark-card .from-surface { --tw-gradient-from: #16181C var(--tw-gradient-from-position); --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to); }
+.section-light .dark-card .to-ink { --tw-gradient-to: #0A0B0D var(--tw-gradient-to-position); }
+.section-light .dark-card .text-accent { color: #E8823A; }
+
 ::selection {
-  background: rgba(125, 211, 252, 0.25);
-  color: #F8FAFC;
+  background: rgba(232, 130, 58, 0.25);
+  color: #EDEAE4;
 }
 
 ::-webkit-scrollbar {
@@ -76,19 +156,19 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 ::-webkit-scrollbar-track {
-  background: #060912;
+  background: #06070A;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #1F2937;
+  background: #22252A;
   border-radius: 6px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #273449;
+  background: #2A2D33;
 }
 
 .focus-visible:focus-visible {
-  outline: 2px solid #7DD3FC;
+  outline: 2px solid #E8823A;
   outline-offset: 2px;
 }

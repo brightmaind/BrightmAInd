@@ -55,7 +55,7 @@ const Vault: React.FC = () => {
         canonical="/vault"
       />
 
-      <section className="pt-40 pb-16 md:pt-48 md:pb-24 px-6 lg:px-10 border-b border-border/60 relative overflow-hidden">
+      <section className="pt-40 pb-16 md:pt-48 md:pb-24 px-6 lg:px-10 border-b border-border/60 relative overflow-hidden bg-ink">
         <div className="absolute inset-0 grid-bg opacity-40 pointer-events-none" />
         <div className="relative max-w-6xl mx-auto">
           <div className="text-xs font-mono text-whisper-dim mb-5">
@@ -67,7 +67,7 @@ const Vault: React.FC = () => {
           <div className="grid md:grid-cols-12 gap-10 md:gap-14 items-center">
             <div className="md:col-span-7">
               <div className="flex items-center gap-2 mb-6">
-                <CircuitBoard className="w-5 h-5 text-accent" strokeWidth={1.5} />
+                <CircuitBoard className="w-5 h-5 text-paper" strokeWidth={1.5} />
                 <span className="eyebrow">Vault</span>
               </div>
               <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-semibold text-paper tracking-tightest leading-[1.05]">
@@ -101,7 +101,7 @@ const Vault: React.FC = () => {
                 />
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div className="text-center px-8">
-                    <CircuitBoard className="w-10 h-10 text-accent/60 mx-auto mb-4" strokeWidth={1.25} />
+                    <CircuitBoard className="w-10 h-10 text-whisper mx-auto mb-4" strokeWidth={1.25} />
                     <div className="text-xs font-mono text-whisper-dim uppercase tracking-[0.2em]">
                       vault-hero.png
                     </div>
@@ -112,7 +112,7 @@ const Vault: React.FC = () => {
                     <div className="text-xs font-mono text-whisper-dim">VLT-01</div>
                     <div className="text-sm text-paper font-medium mt-0.5">DGX Spark · on-premise</div>
                   </div>
-                  <div className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse" />
+                  <div className="w-1.5 h-1.5 rounded-full bg-paper/70 animate-pulse" />
                 </div>
               </div>
             </div>
@@ -121,7 +121,7 @@ const Vault: React.FC = () => {
       </section>
 
       <ScrollAnimation>
-        <section className="px-6 lg:px-10 py-24 md:py-32 border-b border-border/60">
+        <section className="section-light px-6 lg:px-10 py-24 md:py-32">
           <div className="max-w-6xl mx-auto grid md:grid-cols-12 gap-10 md:gap-16">
             <div className="md:col-span-4">
               <div className="eyebrow mb-4">The problem</div>
@@ -145,7 +145,7 @@ const Vault: React.FC = () => {
       </ScrollAnimation>
 
       <ScrollAnimation>
-        <section className="px-6 lg:px-10 py-24 md:py-32 bg-deep/40 border-b border-border/60">
+        <section className="px-6 lg:px-10 py-24 md:py-32 bg-ink border-y border-border/60">
           <div className="max-w-6xl mx-auto">
             <div className="max-w-2xl mb-16">
               <div className="eyebrow mb-4">How it works</div>
@@ -162,7 +162,7 @@ const Vault: React.FC = () => {
                 ['04', 'Air-gap where required', 'For defence, pharma, or any environment that needs it, Vault operates fully air-gapped with no external connectivity.'],
               ].map(([n, title, body]) => (
                 <li key={n} className="bg-ink p-8 md:p-10 grid md:grid-cols-12 gap-6 items-start">
-                  <div className="md:col-span-2 font-mono text-sm text-accent">{n}</div>
+                  <div className="md:col-span-2 font-mono text-sm text-whisper-soft">{n}</div>
                   <div className="md:col-span-3">
                     <div className="font-display text-xl font-semibold text-paper">{title}</div>
                   </div>
@@ -175,7 +175,7 @@ const Vault: React.FC = () => {
       </ScrollAnimation>
 
       <ScrollAnimation>
-        <section id="capabilities" className="px-6 lg:px-10 py-24 md:py-32 border-b border-border/60">
+        <section id="capabilities" className="section-light px-6 lg:px-10 py-24 md:py-32">
           <div className="max-w-6xl mx-auto">
             <div className="mb-16 max-w-2xl">
               <div className="eyebrow mb-4">Capabilities</div>
@@ -187,7 +187,7 @@ const Vault: React.FC = () => {
             <div className="grid md:grid-cols-2 gap-px bg-border/60 border border-border/60 rounded-lg overflow-hidden">
               {capabilities.map(({ icon: Icon, title, body }) => (
                 <div key={title} className="bg-ink p-8 md:p-10">
-                  <Icon className="w-5 h-5 text-accent mb-5" strokeWidth={1.5} />
+                  <Icon className="w-5 h-5 text-charcoal-soft mb-5" strokeWidth={1.5} />
                   <h3 className="font-display text-xl font-semibold text-paper mb-3">{title}</h3>
                   <p className="text-sm md:text-base text-whisper leading-relaxed">{body}</p>
                 </div>
@@ -198,7 +198,7 @@ const Vault: React.FC = () => {
       </ScrollAnimation>
 
       <ScrollAnimation>
-        <section className="px-6 lg:px-10 py-24 md:py-32 border-b border-border/60">
+        <section className="px-6 lg:px-10 py-24 md:py-32 border-y border-border/60 bg-ink">
           <div className="max-w-6xl mx-auto">
             <div className="eyebrow mb-4">Industry benchmark</div>
             <h2 className="font-display text-3xl md:text-5xl font-semibold text-paper tracking-tightest leading-[1.05] mb-12 max-w-3xl">
@@ -206,7 +206,7 @@ const Vault: React.FC = () => {
             </h2>
             <div className="rounded-xl border border-border-soft bg-gradient-to-br from-surface to-ink p-8 md:p-14">
               <blockquote className="font-display text-2xl md:text-3xl lg:text-4xl leading-[1.2] text-paper tracking-tightest max-w-4xl">
-                Manufacturing clients have seen up to <span className="text-accent">30% downtime reduction</span> and <span className="text-accent">10% OEE improvement</span> with on-premise AI copilot deployments.
+                Manufacturing clients have seen up to <span className="text-paper font-semibold">30% downtime reduction</span> and <span className="text-paper font-semibold">10% OEE improvement</span> with on-premise AI copilot deployments.
               </blockquote>
               <div className="mt-8 pt-8 border-t border-border/60 flex flex-col md:flex-row md:items-center md:justify-between gap-3">
                 <div className="text-sm text-whisper">
@@ -222,7 +222,7 @@ const Vault: React.FC = () => {
       </ScrollAnimation>
 
       <ScrollAnimation>
-        <section className="px-6 lg:px-10 py-24 md:py-32 border-b border-border/60">
+        <section className="section-light px-6 lg:px-10 py-24 md:py-32">
           <div className="max-w-6xl mx-auto">
             <div className="grid md:grid-cols-12 gap-8 md:gap-12">
               <div className="md:col-span-5">
@@ -246,7 +246,7 @@ const Vault: React.FC = () => {
       </ScrollAnimation>
 
       <ScrollAnimation>
-        <section className="px-6 lg:px-10 py-24 md:py-32">
+        <section className="px-6 lg:px-10 py-24 md:py-32 bg-ink border-t border-border/60">
           <div className="max-w-6xl mx-auto">
             <div className="eyebrow mb-4">Pricing</div>
             <h2 className="font-display text-3xl md:text-5xl font-semibold text-paper tracking-tightest leading-[1.05] mb-14 max-w-2xl">
@@ -271,7 +271,7 @@ const Vault: React.FC = () => {
                 </p>
               </div>
               <div className="bg-ink p-8 md:p-10">
-                <div className="text-xs font-mono uppercase tracking-[0.2em] text-accent mb-4">Pilot</div>
+                <div className="text-xs font-mono uppercase tracking-[0.2em] text-whisper-dim mb-4">Pilot</div>
                 <div className="font-display text-4xl font-semibold text-paper mb-1">£2,700</div>
                 <div className="text-sm text-whisper mb-6">per month</div>
                 <p className="text-sm text-whisper leading-relaxed">

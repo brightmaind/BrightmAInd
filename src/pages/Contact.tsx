@@ -37,7 +37,7 @@ const Contact: React.FC = () => {
         canonical="/contact"
       />
 
-      <section className="pt-40 pb-16 md:pt-48 md:pb-20 px-6 lg:px-10 border-b border-border/60">
+      <section className="pt-40 pb-16 md:pt-48 md:pb-20 px-6 lg:px-10 border-b border-border/60 bg-ink">
         <div className="max-w-6xl mx-auto">
           <div className="eyebrow mb-6">Contact</div>
           <h1 className="font-display text-5xl md:text-6xl lg:text-7xl font-semibold text-paper tracking-tightest leading-[1.05] max-w-4xl">
@@ -49,7 +49,7 @@ const Contact: React.FC = () => {
         </div>
       </section>
 
-      <section className="px-6 lg:px-10 py-20 md:py-28">
+      <section className="section-light px-6 lg:px-10 py-20 md:py-28">
         <div className="max-w-6xl mx-auto grid lg:grid-cols-12 gap-12 lg:gap-20">
           <aside className="lg:col-span-5 space-y-10">
             <div>
@@ -94,7 +94,7 @@ const Contact: React.FC = () => {
           </aside>
 
           <div className="lg:col-span-7">
-            <div className="rounded-xl border border-border-soft bg-ink p-6 md:p-10">
+            <div className="dark-card rounded-xl border border-border-soft bg-ink p-6 md:p-10">
               {!isSubmitted ? (
                 <form
                   name="contact"

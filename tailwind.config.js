@@ -4,22 +4,28 @@ export default {
   theme: {
     extend: {
       colors: {
-        abyss: '#060912',
-        ink: '#0B1120',
-        deep: '#111827',
-        surface: '#18212F',
-        border: '#1F2937',
-        'border-soft': '#273449',
+        abyss: '#06070A',
+        ink: '#0A0B0D',
+        deep: '#101216',
+        surface: '#16181C',
+        border: '#22252A',
+        'border-soft': '#2A2D33',
 
-        paper: '#F8FAFC',
-        mist: '#E2E8F0',
-        whisper: '#94A3B8',
-        'whisper-soft': '#CBD5E1',
-        'whisper-dim': '#64748B',
+        paper: '#EDEAE4',
+        mist: '#D8D5CE',
+        whisper: '#9A968D',
+        'whisper-soft': '#B8B4AB',
+        'whisper-dim': '#6B675F',
 
-        accent: '#7DD3FC',
-        'accent-soft': '#BAE6FD',
-        'accent-deep': '#0EA5E9',
+        cream: '#F5F3EF',
+        'cream-soft': '#EBE8E1',
+        charcoal: '#1A1B1E',
+        'charcoal-soft': '#3D3E42',
+        'charcoal-dim': '#5F5C55',
+
+        accent: '#E8823A',
+        'accent-soft': '#F4A36E',
+        'accent-deep': '#C56826',
       },
       fontFamily: {
         display: ['"Space Grotesk"', 'ui-sans-serif', 'system-ui', 'sans-serif'],
