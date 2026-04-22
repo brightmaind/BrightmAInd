@@ -90,11 +90,11 @@ const Vault: React.FC = () => {
             </div>
 
             <div className="md:col-span-5">
-              <div className="relative rounded-xl border border-border-soft bg-ink/80 overflow-hidden aspect-square flex items-center justify-center p-6">
+              <div className="relative rounded-xl border border-border-soft bg-ink/80 overflow-hidden aspect-square flex items-center justify-center p-3">
                 <img
                   src="/ChatGPT_Image_Apr_22,_2026,_03_49_53_PM.png"
                   alt="Vault — on-premise AI appliance"
-                  className="w-full h-full object-contain"
+                  className="w-full h-full object-contain rounded-2xl"
                 />
                 <div className="absolute bottom-0 left-0 right-0 p-5 flex items-end justify-between bg-gradient-to-t from-abyss/90 to-transparent">
                   <div>
