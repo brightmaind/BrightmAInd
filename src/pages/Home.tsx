@@ -76,7 +76,7 @@ const Home: React.FC = () => {
           <div className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-y-8 gap-x-6 border-t border-border/60 pt-10">
             {[
               ['Air-gap capable', 'No external dependencies'],
-              ['On your hardware', 'Installed on-site, not rented'],
+              ['On your hardware', 'Installed on-site'],
               ['UK built', 'Supported from Scotland'],
               ['No data egress', 'Nothing leaves the premises'],
             ].map(([title, desc]) => (
