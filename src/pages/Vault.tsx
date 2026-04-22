@@ -238,38 +238,11 @@ const Vault: React.FC = () => {
         <section className="px-6 lg:px-10 py-24 md:py-32">
           <div className="max-w-6xl mx-auto">
             <div className="eyebrow mb-4">Pricing</div>
-            <h2 className="font-display text-3xl md:text-5xl font-semibold text-paper tracking-tightest leading-[1.05] mb-14 max-w-2xl">
-              Custom deployment. Honest numbers.
+            <h2 className="font-display text-3xl md:text-5xl font-semibold text-paper tracking-tightest leading-[1.05] mb-8 max-w-2xl">
+              Every deployment is custom-priced.
             </h2>
-
-            <div className="grid md:grid-cols-3 gap-px bg-border/60 border border-border/60 rounded-lg overflow-hidden">
-              <div className="bg-ink p-8 md:p-10">
-                <div className="text-xs font-mono uppercase tracking-[0.2em] text-whisper-dim mb-4">Setup</div>
-                <div className="font-display text-4xl font-semibold text-paper mb-1">From £10,200</div>
-                <div className="text-sm text-whisper mb-6">one-off</div>
-                <p className="text-sm text-whisper leading-relaxed">
-                  Hardware, model configuration, installation, initial integration and training of your team.
-                </p>
-              </div>
-              <div className="bg-ink p-8 md:p-10">
-                <div className="text-xs font-mono uppercase tracking-[0.2em] text-whisper-dim mb-4">Standard</div>
-                <div className="font-display text-4xl font-semibold text-paper mb-1">From £5,400</div>
-                <div className="text-sm text-whisper mb-6">per month</div>
-                <p className="text-sm text-whisper leading-relaxed">
-                  Ongoing support, updates, model maintenance, monitoring, and integration changes as you grow.
-                </p>
-              </div>
-              <div className="bg-ink p-8 md:p-10">
-                <div className="text-xs font-mono uppercase tracking-[0.2em] text-accent mb-4">Pilot</div>
-                <div className="font-display text-4xl font-semibold text-paper mb-1">£2,700</div>
-                <div className="text-sm text-whisper mb-6">per month</div>
-                <p className="text-sm text-whisper leading-relaxed">
-                  A reduced pilot rate for early customers willing to work with us on fit and feedback.
-                </p>
-              </div>
-            </div>
-            <p className="text-xs text-whisper-dim mt-6">
-              Every Vault deployment is scoped to the estate, users, and integrations involved. Final pricing follows a short discovery call.
+            <p className="text-lg text-whisper leading-relaxed max-w-2xl">
+              Vault is scoped to your estate, users, integrations, and compliance boundary. Because no two deployments look the same, we quote each engagement individually after a short discovery call — no templated tiers, no per-seat padding, just the numbers that reflect the work.
             </p>
           </div>
         </section>

@@ -62,22 +62,14 @@ const Products: React.FC = () => {
                 <div className="md:col-span-5 border-t md:border-t-0 md:border-l border-border/60 p-8 md:p-12 flex flex-col justify-between bg-ink/60">
                   <div>
                     <div className="text-xs font-mono uppercase tracking-[0.2em] text-whisper-dim mb-4">Pricing</div>
-                    <div className="space-y-5">
-                      <div>
-                        <div className="text-sm text-whisper">Setup</div>
-                        <div className="font-display text-2xl text-paper">From £10,200</div>
-                      </div>
-                      <div>
-                        <div className="text-sm text-whisper">Standard</div>
-                        <div className="font-display text-2xl text-paper">From £5,400 <span className="text-base text-whisper">/month</span></div>
-                      </div>
-                      <div>
-                        <div className="text-sm text-whisper">Pilot</div>
-                        <div className="font-display text-2xl text-paper">£2,700 <span className="text-base text-whisper">/month</span></div>
-                      </div>
+                    <div className="font-display text-2xl text-paper leading-tight mb-4">
+                      Custom per deployment.
                     </div>
+                    <p className="text-sm text-whisper leading-relaxed">
+                      Every Vault is scoped to your estate, users, integrations, and compliance boundary. We quote each engagement individually after a short discovery call.
+                    </p>
                   </div>
-                  <p className="text-xs text-whisper-dim mt-8">Custom deployment. Contact for scoping.</p>
+                  <p className="text-xs text-whisper-dim mt-8">No templated tiers. No per-seat padding.</p>
                 </div>
               </div>
             </article>
