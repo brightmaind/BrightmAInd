@@ -1,23 +1,17 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
-import Footer from './components/Footer';
-import Home from './pages/Home';
-import Products from './pages/Products';
-import Vault from './pages/Vault';
-import Scribe from './pages/Scribe';
+import AIAutomation from './pages/AIAutomation';
 import Contact from './pages/Contact';
+import Footer from './components/Footer';
 
 function App() {
   return (
     <Router>
-      <div className="min-h-screen bg-ink font-sans flex flex-col">
+      <div className="min-h-screen bg-charcoal font-inter">
         <Navbar />
-        <main className="flex-1">
+        <main>
           <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/products" element={<Products />} />
-            <Route path="/vault" element={<Vault />} />
-            <Route path="/scribe" element={<Scribe />} />
+            <Route path="/" element={<AIAutomation />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>
         </main>
