@@ -1,8 +1,6 @@
-import React, { useState } from 'react';
-import { Mail, Send } from 'lucide-react';
-import ScrollAnimation from '../components/ScrollAnimation';
+import { useState } from 'react';
+import { Mail, MapPin, Send, Check } from 'lucide-react';
 import SEOHead from '../components/SEOHead';
-import Breadcrumb from '../components/Breadcrumb';
 
 const Contact: React.FC = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -19,14 +17,10 @@ const Contact: React.FC = () => {
       const response = await fetch('/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: new URLSearchParams(formData as any).toString()
+        body: new URLSearchParams(formData as unknown as Record<string, string>).toString(),
       });
-
-      if (response.ok) {
-        setIsSubmitted(true);
-      } else {
-        throw new Error('Form submission failed');
-      }
+      if (response.ok) setIsSubmitted(true);
+      else throw new Error('Form submission failed');
     } catch (error) {
       console.error('Error submitting form:', error);
       setIsSubmitted(true);
@@ -36,197 +30,177 @@ const Contact: React.FC = () => {
   };
 
   return (
-    <div className="pt-36">
+    <div>
       <SEOHead
-        title="Contact BrightMaind | Enquire About BrightBox On-Premise AI"
-        description="Get in touch to learn how BrightBox can bring secure, air-gapped AI to your facility. Private AI appliance — your data never leaves your building."
+        title="Contact — BrightMaind"
+        description="Talk to BrightMaind about on-premise AI for your organisation. Based near Ayr, Scotland. UK and Europe."
         canonical="/contact"
-        structuredData={[
-          {
-            "@context": "https://schema.org",
-            "@type": "ContactPage",
-            "name": "Contact BrightMaind",
-            "description": "Enquire about BrightBox on-premise AI appliances for industrial operations",
-            "url": "https://www.brightmaind.com/contact",
-            "mainEntity": {
-              "@type": "Organization",
-              "name": "BrightMaind",
-              "email": "enquiries@brightmaind.com",
-              "url": "https://www.brightmaind.com"
-            }
-          }
-        ]}
       />
 
-      <Breadcrumb items={[{ name: 'Contact', url: '/contact' }]} />
+      <section className="pt-40 pb-16 md:pt-48 md:pb-20 px-6 lg:px-10 border-b border-border/60">
+        <div className="max-w-6xl mx-auto">
+          <div className="eyebrow mb-6">Contact</div>
+          <h1 className="font-display text-5xl md:text-6xl lg:text-7xl font-semibold text-paper tracking-tightest leading-[1.05] max-w-4xl">
+            Tell us what you need to keep on-site.
+          </h1>
+          <p className="mt-8 text-lg text-whisper leading-relaxed max-w-2xl">
+            Short form, short reply. We'll come back within one working day — usually sooner.
+          </p>
+        </div>
+      </section>
 
-      <ScrollAnimation>
-        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50">
-          <div className="max-w-7xl mx-auto text-center">
-            <h1 className="text-5xl md:text-6xl font-bold text-charcoal mb-8">
-              Let's Talk About <span className="text-orange">BrightBox</span>
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-              Tell us about your facility and we'll show you how on-premise AI can work for your operation.
-            </p>
-          </div>
-        </section>
-      </ScrollAnimation>
+      <section className="px-6 lg:px-10 py-20 md:py-28">
+        <div className="max-w-6xl mx-auto grid lg:grid-cols-12 gap-12 lg:gap-20">
+          <aside className="lg:col-span-5 space-y-10">
+            <div>
+              <div className="text-xs font-mono uppercase tracking-[0.2em] text-whisper-dim mb-3">Email</div>
+              <a
+                href="mailto:enquiries@brightmaind.com"
+                className="inline-flex items-center gap-2.5 text-paper hover:text-accent transition-colors"
+              >
+                <Mail className="w-4 h-4" />
+                enquiries@brightmaind.com
+              </a>
+            </div>
 
-      <ScrollAnimation>
-        <section className="py-24">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-20">
-              <div>
-                <h2 className="text-3xl md:text-4xl font-bold text-charcoal mb-8">
-                  Bring AI to your operation
-                </h2>
-                <p className="text-lg text-gray-600 mb-12 leading-relaxed">
-                  BrightBox is a custom-built, air-gapped AI appliance designed for industrial environments across the UK — manufacturing plants, paper mills, wind farms, refineries, water treatment facilities, and more. Tell us about your processes, documentation, and challenges, and we'll show you what's possible — without your data ever leaving your building.
-                </p>
-
-                <div className="space-y-8">
-                  <div className="flex items-start space-x-4">
-                    <div className="w-12 h-12 bg-orange rounded-lg flex items-center justify-center flex-shrink-0">
-                      <Mail size={24} className="text-white" />
-                    </div>
-                    <div>
-                      <h3 className="text-xl font-semibold text-charcoal mb-2">Email Us</h3>
-                      <a href="mailto:enquiries@brightmaind.com" className="text-orange hover:text-charcoal transition-colors block mb-1">
-                        enquiries@brightmaind.com
-                      </a>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="mt-12 p-6 bg-gray-50 rounded-2xl">
-                  <h3 className="text-xl font-semibold text-charcoal mb-4">Response Time</h3>
-                  <p className="text-gray-600">
-                    We respond to all enquiries within 4 hours during business days.
-                    Initial consultations typically include a review of your current documentation and processes.
-                  </p>
-                </div>
+            <div>
+              <div className="text-xs font-mono uppercase tracking-[0.2em] text-whisper-dim mb-3">Location</div>
+              <div className="inline-flex items-center gap-2.5 text-paper">
+                <MapPin className="w-4 h-4" />
+                Near Ayr, Scotland
               </div>
+              <p className="text-sm text-whisper mt-2 max-w-sm leading-relaxed">
+                BrightMaind Ltd is a Scotland-registered company. We work with clients across the UK and Europe.
+              </p>
+            </div>
 
-              <div className="bg-white rounded-2xl shadow-xl p-8 lg:p-12 card-hover">
-                {!isSubmitted ? (
-                  <form
-                    name="contact"
-                    method="POST"
-                    netlify
-                    data-netlify="true"
-                    data-netlify-honeypot="bot-field"
-                    onSubmit={handleSubmit}
-                    className="space-y-6"
+            <div className="pt-6 border-t border-border/60">
+              <div className="text-xs font-mono uppercase tracking-[0.2em] text-whisper-dim mb-3">What to expect</div>
+              <ul className="space-y-3 text-sm text-whisper">
+                <li className="flex items-start gap-3">
+                  <Check className="w-4 h-4 text-accent mt-0.5 flex-shrink-0" />
+                  <span>A reply within one working day</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <Check className="w-4 h-4 text-accent mt-0.5 flex-shrink-0" />
+                  <span>A 30-minute discovery call, no slideware</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <Check className="w-4 h-4 text-accent mt-0.5 flex-shrink-0" />
+                  <span>A clear recommendation: Vault, Scribe, or neither — honestly</span>
+                </li>
+              </ul>
+            </div>
+          </aside>
+
+          <div className="lg:col-span-7">
+            <div className="rounded-xl border border-border-soft bg-ink p-6 md:p-10">
+              {!isSubmitted ? (
+                <form
+                  name="contact"
+                  method="POST"
+                  data-netlify="true"
+                  data-netlify-honeypot="bot-field"
+                  onSubmit={handleSubmit}
+                  className="space-y-6"
+                >
+                  <input type="hidden" name="form-name" value="contact" />
+                  <div style={{ display: 'none' }}>
+                    <label>
+                      Don't fill this out if you're human: <input name="bot-field" />
+                    </label>
+                  </div>
+
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+                    <Field label="Name" name="name" required />
+                    <Field label="Email" name="email" type="email" required />
+                  </div>
+
+                  <Field label="Company / organisation" name="company" />
+
+                  <div>
+                    <label htmlFor="interest" className="block text-xs font-mono uppercase tracking-[0.2em] text-whisper-dim mb-2">
+                      Interest
+                    </label>
+                    <select
+                      id="interest"
+                      name="interest"
+                      className="w-full bg-abyss border border-border-soft rounded-md px-4 py-3 text-paper focus:border-accent focus:outline-none transition-colors"
+                    >
+                      <option>Vault — on-premise AI appliance</option>
+                      <option>Scribe — private meeting transcription</option>
+                      <option>Not sure yet</option>
+                    </select>
+                  </div>
+
+                  <div>
+                    <label htmlFor="message" className="block text-xs font-mono uppercase tracking-[0.2em] text-whisper-dim mb-2">
+                      What are you trying to keep on-site?
+                    </label>
+                    <textarea
+                      id="message"
+                      name="message"
+                      required
+                      rows={5}
+                      className="w-full bg-abyss border border-border-soft rounded-md px-4 py-3 text-paper placeholder:text-whisper-dim focus:border-accent focus:outline-none transition-colors resize-none"
+                      placeholder="A sentence or two on your industry, the workflow you'd like to automate, and any regulatory or confidentiality constraints."
+                    />
+                  </div>
+
+                  <button
+                    type="submit"
+                    disabled={isSubmitting}
+                    className="inline-flex items-center justify-center gap-2 bg-paper text-ink hover:bg-mist transition-colors px-6 py-3 rounded-md font-medium disabled:opacity-60"
                   >
-                    <input type="hidden" name="form-name" value="contact" />
-                    <div style={{ display: 'none' }}>
-                      <label>
-                        Don't fill this out if you're human: <input name="bot-field" />
-                      </label>
-                    </div>
-
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                      <div>
-                        <label htmlFor="name" className="block text-sm font-medium text-charcoal mb-2">
-                          Name *
-                        </label>
-                        <input
-                          type="text"
-                          id="name"
-                          name="name"
-                          required
-                          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange focus:border-transparent transition-colors text-charcoal"
-                          placeholder="Your full name"
-                        />
-                      </div>
-
-                      <div>
-                        <label htmlFor="email" className="block text-sm font-medium text-charcoal mb-2">
-                          Email *
-                        </label>
-                        <input
-                          type="email"
-                          id="email"
-                          name="email"
-                          required
-                          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange focus:border-transparent transition-colors text-charcoal"
-                          placeholder="your.email@company.com"
-                        />
-                      </div>
-                    </div>
-
-                    <div>
-                      <label htmlFor="company" className="block text-sm font-medium text-charcoal mb-2">
-                        Company / Facility
-                      </label>
-                      <input
-                        type="text"
-                        id="company"
-                        name="company"
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange focus:border-transparent transition-colors text-charcoal"
-                        placeholder="Your company or facility name"
-                      />
-                    </div>
-
-                    <div>
-                      <label htmlFor="message" className="block text-sm font-medium text-charcoal mb-2">
-                        Message *
-                      </label>
-                      <textarea
-                        id="message"
-                        name="message"
-                        required
-                        rows={6}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange focus:border-transparent transition-colors resize-none text-charcoal"
-                        placeholder="Tell us about your facility, the challenges your team faces, and what kind of documentation or processes you'd like AI to assist with."
-                      />
-                    </div>
-
-                    <button
-                      type="submit"
-                      disabled={isSubmitting}
-                      className="w-full bg-orange text-white px-8 py-4 rounded-lg font-semibold text-lg btn-hover flex items-center justify-center space-x-2 disabled:opacity-50 disabled:cursor-not-allowed"
-                    >
-                      <span>{isSubmitting ? 'Sending...' : 'Send Message'}</span>
-                      <Send size={20} />
-                    </button>
-                  </form>
-                ) : (
-                  <div className="text-center py-12">
-                    <div className="w-20 h-20 bg-orange rounded-full flex items-center justify-center mx-auto mb-6">
-                      <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                      </svg>
-                    </div>
-                    <h3 className="text-2xl font-bold text-charcoal mb-4">Message Sent Successfully!</h3>
-                    <p className="text-gray-600 mb-6 leading-relaxed">
-                      Thank you for reaching out. We've received your message and will respond within 4 hours during business days.
-                    </p>
-                    <p className="text-gray-600 mb-8">
-                      We look forward to discussing how BrightBox can work for your facility.
-                    </p>
-                    <button
-                      onClick={() => setIsSubmitted(false)}
-                      className="bg-orange text-white px-6 py-3 rounded-lg font-semibold hover:bg-orange/90 transition-colors"
-                    >
-                      Send Another Message
-                    </button>
+                    {isSubmitting ? 'Sending…' : 'Send message'}
+                    <Send className="w-4 h-4" />
+                  </button>
+                </form>
+              ) : (
+                <div className="py-10 text-center">
+                  <div className="inline-flex w-12 h-12 rounded-full border border-accent/40 bg-accent/10 items-center justify-center mb-6">
+                    <Check className="w-5 h-5 text-accent" />
                   </div>
-                )}
-              </div>
-
-              <div className="mt-6 text-center">
-                <p className="text-gray-600 text-sm">
-                  We work with a limited number of facilities at a time to ensure quality delivery.
-                </p>
-              </div>
+                  <h2 className="font-display text-2xl font-semibold text-paper mb-3">Message received.</h2>
+                  <p className="text-whisper text-sm max-w-md mx-auto leading-relaxed">
+                    Thank you. We'll be in touch within one working day.
+                  </p>
+                  <button
+                    onClick={() => setIsSubmitted(false)}
+                    className="mt-8 text-sm text-accent hover:text-accent-soft transition-colors"
+                  >
+                    Send another message
+                  </button>
+                </div>
+              )}
             </div>
           </div>
-        </section>
-      </ScrollAnimation>
+        </div>
+      </section>
     </div>
   );
 };
+
+interface FieldProps {
+  label: string;
+  name: string;
+  type?: string;
+  required?: boolean;
+}
+
+const Field: React.FC<FieldProps> = ({ label, name, type = 'text', required }) => (
+  <div>
+    <label htmlFor={name} className="block text-xs font-mono uppercase tracking-[0.2em] text-whisper-dim mb-2">
+      {label}{required && <span className="text-accent"> *</span>}
+    </label>
+    <input
+      id={name}
+      name={name}
+      type={type}
+      required={required}
+      className="w-full bg-abyss border border-border-soft rounded-md px-4 py-3 text-paper placeholder:text-whisper-dim focus:border-accent focus:outline-none transition-colors"
+    />
+  </div>
+);
 
 export default Contact;

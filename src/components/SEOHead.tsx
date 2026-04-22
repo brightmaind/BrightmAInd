@@ -24,14 +24,14 @@ const SEOHead: React.FC<SEOHeadProps> = ({ title, description, canonical, struct
       <meta property="og:type" content="website" />
       <meta property="og:url" content={fullCanonical} />
       <meta property="og:image" content={`${siteUrl}/og-image.jpg`} />
-      <meta property="og:image:alt" content="BrightBox — on-premise AI appliance for industrial operations by BrightMaind" />
+      <meta property="og:image:alt" content="BrightMaind — private, on-premise AI for confidential industries" />
       <meta property="og:locale" content="en_GB" />
 
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={`${siteUrl}/og-image.jpg`} />
-      <meta name="twitter:image:alt" content="BrightBox — on-premise AI appliance for industrial operations by BrightMaind" />
+      <meta name="twitter:image:alt" content="BrightMaind — private, on-premise AI for confidential industries" />
 
       {structuredData && structuredData.map((data, index) => (
         <script key={index} type="application/ld+json">

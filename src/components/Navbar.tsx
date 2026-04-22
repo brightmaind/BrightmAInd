@@ -1,129 +1,107 @@
-import React, { useState } from 'react';
-import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { Menu, X, Calendar } from 'lucide-react';
+import { useEffect, useState } from 'react';
+import { Link, NavLink, useLocation } from 'react-router-dom';
+import { Menu, X } from 'lucide-react';
 import { Button } from './ui/button';
 
-declare global {
-  interface Window {
-    Calendly: any;
-  }
-}
+const navigation = [
+  { name: 'Home', href: '/' },
+  { name: 'Products', href: '/products' },
+  { name: 'Contact', href: '/contact' },
+];
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
-  const navigate = useNavigate();
 
-  const navigation = [
-    { name: 'BrightBox', href: '/' },
-    { name: 'Contact', href: '/contact' },
-  ];
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 8);
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
 
-  const handleBookConsultation = () => {
-    const calendlyUrl = import.meta.env.VITE_CALENDLY_URL;
-    if (calendlyUrl) {
-      window.open(calendlyUrl, '_blank', 'noopener,noreferrer');
-      return;
-    }
-    if (window.Calendly) {
-      window.Calendly.initPopupWidget({
-        url: 'https://calendly.com/enquiries-brightmaind/30min?a1=BrightBox%20Consultation',
-        parentElement: document.body
-      });
-    } else {
-      navigate('/contact');
-      window.scrollTo(0, 0);
-    }
-  };
-
-  const handleNavigation = (href: string) => {
-    navigate(href);
-    window.scrollTo(0, 0);
+  useEffect(() => {
     setIsOpen(false);
-  };
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-40 bg-black navbar-blur border-b border-slate/20 overflow-hidden">
-      <div className="max-w-7xl mx-auto px-6 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center py-2">
-          <Link to="/" className="flex items-center shrink-0">
-            <img
-              src="/bright-maind-logo-main.png"
-              alt="BrightMaind - On-Premise AI Solutions for Industry"
-              width="200"
-              height="200"
-              className="h-24 w-auto object-cover object-center rounded-lg scale-150 lg:scale-[1.75]"
-            />
+    <header
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        scrolled
+          ? 'bg-ink/80 backdrop-blur-md border-b border-border/60'
+          : 'bg-transparent border-b border-transparent'
+      }`}
+    >
+      <div className="max-w-7xl mx-auto px-6 lg:px-10">
+        <div className="flex items-center justify-between h-16">
+          <Link to="/" className="flex items-center gap-2.5 group">
+            <span className="inline-flex items-center justify-center w-7 h-7 rounded-[6px] border border-accent/50 bg-accent/10">
+              <span className="w-2 h-2 rounded-sm bg-accent" />
+            </span>
+            <span className="font-display text-base font-semibold tracking-tight text-paper">
+              BrightMaind
+            </span>
           </Link>
 
-          <div className="hidden lg:flex items-center space-x-8">
-            {navigation.map((item, index) => (
-              <React.Fragment key={item.name}>
-                <button
-                  onClick={() => handleNavigation(item.href)}
-                  className={`text-sm font-medium transition-all duration-300 hover:scale-105 focus-visible ${
-                    location.pathname === item.href
-                      ? 'text-orange'
-                      : 'text-off-white hover:text-orange'
-                  }`}
-                >
-                  {item.name}
-                </button>
-                {index < navigation.length - 1 && (
-                  <span className="text-off-white/40 text-sm">|</span>
-                )}
-              </React.Fragment>
+          <nav className="hidden md:flex items-center gap-8">
+            {navigation.map((item) => (
+              <NavLink
+                key={item.name}
+                to={item.href}
+                end={item.href === '/'}
+                className={({ isActive }) =>
+                  `text-sm transition-colors ${
+                    isActive ? 'text-paper' : 'text-whisper hover:text-paper'
+                  }`
+                }
+              >
+                {item.name}
+              </NavLink>
             ))}
+          </nav>
 
-            <Button
-              onClick={handleBookConsultation}
-              size="sm"
-              className="ml-4"
-              aria-label="Book a consultation"
-            >
-              <Calendar className="w-4 h-4 mr-2" />
-              Book a Consultation
-            </Button>
+          <div className="hidden md:flex">
+            <Link to="/contact">
+              <Button variant="outline" size="sm">Book a demo</Button>
+            </Link>
           </div>
 
           <button
-            onClick={() => setIsOpen(!isOpen)}
-            className="lg:hidden p-2 text-off-white hover:text-orange transition-colors"
+            onClick={() => setIsOpen((v) => !v)}
+            className="md:hidden p-2 text-whisper hover:text-paper transition-colors"
+            aria-label="Toggle menu"
           >
-            {isOpen ? <X size={24} /> : <Menu size={24} />}
+            {isOpen ? <X size={20} /> : <Menu size={20} />}
           </button>
         </div>
 
         {isOpen && (
-          <div className="lg:hidden pb-4 border-t border-slate/20 mt-4 pt-4">
-            <div className="space-y-4">
+          <div className="md:hidden pb-6 pt-2 border-t border-border/60 mt-0">
+            <nav className="flex flex-col gap-1">
               {navigation.map((item) => (
-                <button
+                <NavLink
                   key={item.name}
-                  onClick={() => handleNavigation(item.href)}
-                  className={`block text-sm font-medium transition-all duration-300 hover:scale-105 focus-visible px-4 py-2 rounded-full ${
-                    location.pathname === item.href
-                      ? 'bg-orange/20 text-orange border border-orange/30'
-                      : 'bg-slate/20 text-off-white hover:text-orange hover:bg-slate/30 border border-slate/30'
-                  }`}
+                  to={item.href}
+                  end={item.href === '/'}
+                  className={({ isActive }) =>
+                    `px-3 py-3 rounded-md text-sm ${
+                      isActive ? 'text-paper bg-surface/80' : 'text-whisper hover:text-paper hover:bg-surface/50'
+                    }`
+                  }
                 >
                   {item.name}
-                </button>
+                </NavLink>
               ))}
-              <Button
-                onClick={handleBookConsultation}
-                size="sm"
-                className="mt-4"
-                aria-label="Book a consultation"
-              >
-                <Calendar className="w-4 h-4 mr-2" />
-                Book a Consultation
-              </Button>
-            </div>
+              <Link to="/contact" className="mt-3">
+                <Button variant="outline" size="sm" className="w-full">Book a demo</Button>
+              </Link>
+            </nav>
           </div>
         )}
       </div>
-    </nav>
+    </header>
   );
 };
 
