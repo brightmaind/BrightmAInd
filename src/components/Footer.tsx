@@ -11,7 +11,7 @@ const Footer: React.FC = () => {
               <img
                 src="/ChatGPT_Image_Apr_22,_2026,_03_41_23_PM.png"
                 alt="BrightMaind"
-                className="h-11 w-auto object-contain"
+                className="h-[88px] w-auto object-contain"
               />
             </Link>
             <p className="text-sm text-whisper leading-relaxed max-w-sm">
