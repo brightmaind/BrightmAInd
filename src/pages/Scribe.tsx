@@ -228,7 +228,7 @@ const Scribe: React.FC = () => {
               A limited pilot cohort, on honest terms.
             </h2>
             <p className="text-lg text-whisper-soft leading-relaxed max-w-2xl mb-14">
-              First three Scottish legal firms: setup cost waived in exchange for a testimonial. Limited pilot cohort — book a demo to discuss.
+              First two Scottish legal firms: setup cost waived in exchange for a testimonial. Limited pilot cohort — book a demo to discuss.
             </p>
 
             <div className="grid md:grid-cols-3 gap-px bg-border/60 border border-border/60 rounded-lg overflow-hidden">
