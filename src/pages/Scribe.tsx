@@ -251,7 +251,7 @@ const Scribe: React.FC = () => {
               <div className="bg-ink p-8 md:p-10">
                 <div className="text-xs font-mono uppercase tracking-[0.2em] text-whisper-dim mb-4">Setup</div>
                 <div className="font-display text-4xl font-semibold text-paper mb-1">£3,000</div>
-                <div className="text-sm text-accent mb-6">Waived for first three Scottish legal firms</div>
+                <div className="text-sm text-accent mb-6">Waived for first two Scottish legal firms</div>
                 <p className="text-sm text-whisper leading-relaxed">
                   In exchange for a testimonial. Limited slots.
                 </p>
