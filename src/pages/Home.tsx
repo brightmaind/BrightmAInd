@@ -201,11 +201,9 @@ const Home: React.FC = () => {
             </div>
             <div className="md:col-span-7 space-y-5 text-whisper text-base md:text-lg leading-relaxed">
               <p>
-                BrightMaind was founded by an engineer with thirteen years of manufacturing floor experience — shift work, root-cause investigations, SOPs, audits, downtime, the lot.
+                BrightMaind was founded by an engineer with thirteen years on a manufacturing floor. The products are built with that operational reality in mind — designed to survive bad signal, strict retention policies, and sceptical end users.
               </p>
-              <p>
-                That matters because industrial and professional environments don't tolerate demo-ware. They reward tools that survive the real day: bad signal, awkward workflows, sceptical operators, strict retention policies, no patience for anything that breaks.
-              </p>
+              
               <p className="text-paper">
                 BrightMaind is built for real operational environments, not boardroom theory.
               </p>
