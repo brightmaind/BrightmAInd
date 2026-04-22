@@ -8,11 +8,13 @@ const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12">
           <div className="md:col-span-5">
             <Link to="/" className="flex items-center mb-5" aria-label="BrightMaind">
-              <img
-                src="/bright-maind-logo-main.png"
-                alt="BrightMaind"
-                className="h-20 w-auto rounded-xl"
-              />
+              <div className="overflow-hidden rounded-xl h-12">
+                <img
+                  src="/bright-maind-logo-main.png"
+                  alt="BrightMaind"
+                  className="h-20 w-auto -translate-y-[20%]"
+                />
+              </div>
             </Link>
             <p className="text-sm text-whisper leading-relaxed max-w-sm">
               On-premise AI appliances for businesses that handle confidential information. No cloud. No compromise.
