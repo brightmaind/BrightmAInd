@@ -7,13 +7,12 @@ const Footer: React.FC = () => {
       <div className="max-w-7xl mx-auto px-6 lg:px-10 py-16">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12">
           <div className="md:col-span-5">
-            <Link to="/" className="flex items-center gap-2.5 mb-5">
-              <span className="inline-flex items-center justify-center w-7 h-7 rounded-[6px] border border-accent/50 bg-accent/10">
-                <span className="w-2 h-2 rounded-sm bg-accent" />
-              </span>
-              <span className="font-display text-base font-semibold tracking-tight text-paper">
-                BrightMaind
-              </span>
+            <Link to="/" className="flex items-center mb-5" aria-label="BrightMaind home">
+              <img
+                src="/ChatGPT_Image_Apr_22,_2026,_03_41_23_PM.png"
+                alt="BrightMaind"
+                className="h-11 w-auto object-contain"
+              />
             </Link>
             <p className="text-sm text-whisper leading-relaxed max-w-sm">
               On-premise AI appliances for businesses that handle confidential information. No cloud. No compromise.
