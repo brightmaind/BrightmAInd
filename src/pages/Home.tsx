@@ -228,7 +228,7 @@ const Home: React.FC = () => {
                 Private large-model AI for your entire operation.
               </h3>
               <p className="text-sm text-whisper leading-relaxed">
-                A DGX Spark-based appliance running large models on your premises. Document Q&amp;A, private knowledge, verified answers.
+                A local AI appliance running large models on your premises. Document Q&amp;A, private knowledge, verified answers.
               </p>
             </Link>
             <Link
