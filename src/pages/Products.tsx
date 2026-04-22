@@ -160,7 +160,7 @@ const Products: React.FC = () => {
                   <img
                     src="/Gemini_Generated_Image_mp3e5smp3e5smp3e.png"
                     alt="Keepwell app on Android — private on-device wellness journaling"
-                    className="w-full max-w-[240px] h-auto object-contain drop-shadow-2xl"
+                    className="w-full max-w-[240px] h-auto object-contain rounded-2xl drop-shadow-2xl"
                     loading="lazy"
                   />
                 </div>
