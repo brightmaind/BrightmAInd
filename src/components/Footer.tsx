@@ -1,70 +1,63 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
-import { Mail } from 'lucide-react';
+import { Mail, MapPin } from 'lucide-react';
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-black text-off-white border-t border-slate/20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
-          <div className="md:col-span-2">
-            <div className="mb-4">
-              <img
-                src="/bright-maind-logo-main.png"
-                alt="BrightMaind — on-premise AI and air-gapped AI solutions for UK industry"
-                width="120"
-                height="120"
-                className="h-20 w-auto object-contain rounded-lg"
-                loading="lazy"
-              />
-            </div>
-            <p className="text-off-white/70 mb-6 max-w-md">
-              Custom-built, air-gapped AI appliances for UK industry. BrightBox sits on your network, trained on your processes. Your data never leaves your building.
+    <footer className="bg-abyss border-t border-border/60">
+      <div className="max-w-7xl mx-auto px-6 lg:px-10 py-16">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-12">
+          <div className="md:col-span-5">
+            <Link to="/" className="flex items-center gap-2.5 mb-5">
+              <span className="inline-flex items-center justify-center w-7 h-7 rounded-[6px] border border-accent/50 bg-accent/10">
+                <span className="w-2 h-2 rounded-sm bg-accent" />
+              </span>
+              <span className="font-display text-base font-semibold tracking-tight text-paper">
+                BrightMaind
+              </span>
+            </Link>
+            <p className="text-sm text-whisper leading-relaxed max-w-sm">
+              On-premise AI appliances for businesses that handle confidential information. No cloud. No compromise.
             </p>
-            <div className="space-y-3">
-              <div className="flex items-center space-x-3">
-                <Mail size={18} className="text-orange" />
-                <a
-                  href="mailto:enquiries@brightmaind.com"
-                  className="text-off-white/80 hover:text-orange transition-colors"
-                >
-                  enquiries@brightmaind.com
-                </a>
-              </div>
-            </div>
           </div>
 
-          <div>
-            <h4 className="text-lg font-semibold font-rajdhani mb-6">Quick Links</h4>
-            <ul className="space-y-3">
-              <li><Link to="/" onClick={() => window.scrollTo(0, 0)} className="text-off-white/70 hover:text-orange transition-colors">BrightBox On-Premise AI</Link></li>
-              <li><Link to="/contact" onClick={() => window.scrollTo(0, 0)} className="text-off-white/70 hover:text-orange transition-colors">Contact Us</Link></li>
+          <div className="md:col-span-3">
+            <h4 className="text-xs font-mono uppercase tracking-[0.2em] text-whisper-dim mb-4">
+              Products
+            </h4>
+            <ul className="space-y-2.5 text-sm">
+              <li><Link to="/vault" className="text-whisper hover:text-paper transition-colors">Vault</Link></li>
+              <li><Link to="/scribe" className="text-whisper hover:text-paper transition-colors">Scribe</Link></li>
+              <li><Link to="/products" className="text-whisper hover:text-paper transition-colors">All products</Link></li>
+            </ul>
+          </div>
+
+          <div className="md:col-span-4">
+            <h4 className="text-xs font-mono uppercase tracking-[0.2em] text-whisper-dim mb-4">
+              Company
+            </h4>
+            <ul className="space-y-2.5 text-sm">
+              <li>
+                <a href="mailto:enquiries@brightmaind.com" className="inline-flex items-center gap-2 text-whisper hover:text-paper transition-colors">
+                  <Mail className="w-3.5 h-3.5" />
+                  enquiries@brightmaind.com
+                </a>
+              </li>
+              <li className="inline-flex items-center gap-2 text-whisper">
+                <MapPin className="w-3.5 h-3.5" />
+                Near Ayr, Scotland, United Kingdom
+              </li>
+              <li><Link to="/contact" className="text-whisper hover:text-paper transition-colors">Get in touch</Link></li>
             </ul>
           </div>
         </div>
 
-        <div className="border-t border-slate/20 mt-12 pt-8">
-          <div className="text-center mb-6">
-            <p className="text-off-white/70 text-sm leading-relaxed">
-              On-Premise AI for Industry | Mon-Fri 9-5 |
-              <a
-                href="mailto:enquiries@brightmaind.com"
-                className="text-orange hover:text-orange/80 transition-colors ml-1"
-              >
-                enquiries@brightmaind.com
-              </a>
-            </p>
-          </div>
-
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-off-white/60 text-sm">
-              &copy; {new Date().getFullYear()} BrightMaind. All rights reserved.
-            </p>
-            <div className="flex space-x-6 mt-4 md:mt-0">
-              <a href="#" className="text-off-white/60 hover:text-orange text-sm transition-colors">Privacy Policy</a>
-              <a href="#" className="text-off-white/60 hover:text-orange text-sm transition-colors">Terms of Service</a>
-            </div>
-          </div>
+        <div className="mt-16 pt-6 border-t border-border/60 flex flex-col md:flex-row items-start md:items-center justify-between gap-3">
+          <p className="text-xs text-whisper-dim">
+            &copy; {new Date().getFullYear()} BrightMaind Ltd. Registered in Scotland.
+          </p>
+          <p className="text-xs text-whisper-dim font-mono tracking-wider">
+            PRIVATE AI, ON YOUR PREMISES.
+          </p>
         </div>
       </div>
     </footer>
