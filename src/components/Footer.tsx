@@ -11,7 +11,7 @@ const Footer: React.FC = () => {
               <img
                 src="/bright-maind-logo-main.png"
                 alt="BrightMaind"
-                className="h-8 w-auto"
+                className="h-14 w-auto"
               />
             </Link>
             <p className="text-sm text-whisper leading-relaxed max-w-sm">
