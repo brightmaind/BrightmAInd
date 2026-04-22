@@ -35,12 +35,12 @@ const Navbar: React.FC = () => {
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
-        <div className="flex items-center justify-between h-24">
-          <Link to="/" className="flex items-center group" aria-label="BrightMaind home">
+        <div className="flex items-center justify-between h-28">
+          <Link to="/" className="flex items-center group -my-6" aria-label="BrightMaind home">
             <img
               src="/ChatGPT_Image_Apr_22,_2026,_03_41_23_PM.png"
               alt="BrightMaind"
-              className="h-20 md:h-[88px] w-auto object-contain"
+              className="h-44 md:h-56 w-auto object-contain"
             />
           </Link>
 
