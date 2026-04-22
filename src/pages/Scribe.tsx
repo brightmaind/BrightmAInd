@@ -223,34 +223,21 @@ const Scribe: React.FC = () => {
       <ScrollAnimation>
         <section className="px-6 lg:px-10 py-24 md:py-32">
           <div className="max-w-6xl mx-auto">
-            <div className="eyebrow mb-4">Pricing</div>
-            <h2 className="font-display text-3xl md:text-5xl font-semibold text-paper tracking-tightest leading-[1.05] mb-14 max-w-2xl">
-              Simple, honest, pilot-friendly.
+            <div className="eyebrow mb-4">Pilot offer</div>
+            <h2 className="font-display text-3xl md:text-5xl font-semibold text-paper tracking-tightest leading-[1.05] mb-10 max-w-2xl">
+              A limited pilot cohort, on honest terms.
             </h2>
 
-            <div className="grid md:grid-cols-3 gap-px bg-border/60 border border-border/60 rounded-lg overflow-hidden">
-              <div className="bg-ink p-8 md:p-10">
-                <div className="text-xs font-mono uppercase tracking-[0.2em] text-accent mb-4">Pilot — first 2 months</div>
-                <div className="font-display text-4xl font-semibold text-paper mb-1">£150</div>
-                <div className="text-sm text-whisper mb-6">per month</div>
-                <p className="text-sm text-whisper leading-relaxed">
-                  Fixed pilot rate for your first two months on the appliance.
+            <div className="rounded-xl border border-border-soft bg-ink/60 p-8 md:p-12 max-w-3xl">
+              <div className="space-y-5 text-lg text-whisper-soft leading-relaxed">
+                <p>
+                  <span className="text-paper font-medium">Pilot partners:</span> £150/month for the first two months, £250/month thereafter. Setup £3,000.
                 </p>
-              </div>
-              <div className="bg-ink p-8 md:p-10">
-                <div className="text-xs font-mono uppercase tracking-[0.2em] text-whisper-dim mb-4">Thereafter</div>
-                <div className="font-display text-4xl font-semibold text-paper mb-1">£250</div>
-                <div className="text-sm text-whisper mb-6">per month</div>
-                <p className="text-sm text-whisper leading-relaxed">
-                  Standard monthly service after the pilot period.
+                <p>
+                  <span className="text-accent">First three Scottish legal firms:</span> setup cost waived in exchange for a testimonial.
                 </p>
-              </div>
-              <div className="bg-ink p-8 md:p-10">
-                <div className="text-xs font-mono uppercase tracking-[0.2em] text-whisper-dim mb-4">Setup</div>
-                <div className="font-display text-4xl font-semibold text-paper mb-1">£2,000</div>
-                <div className="text-sm text-accent mb-6">Waived for first pilot customers</div>
-                <p className="text-sm text-whisper leading-relaxed">
-                  In exchange for a testimonial or case study. Limited slots.
+                <p className="text-sm text-whisper-dim pt-2">
+                  Limited pilot cohort — book a demo to discuss.
                 </p>
               </div>
             </div>
