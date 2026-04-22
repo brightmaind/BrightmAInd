@@ -99,7 +99,7 @@ const Vault: React.FC = () => {
                 <div className="absolute bottom-0 left-0 right-0 p-5 flex items-end justify-between bg-gradient-to-t from-abyss/90 to-transparent">
                   <div>
                     <div className="text-xs font-mono text-whisper-dim">VLT-01</div>
-                    <div className="text-sm text-paper font-medium mt-0.5">DGX Spark · on-premise</div>
+                    <div className="text-sm text-paper font-medium mt-0.5">AI Appliance · on-premise</div>
                   </div>
                   <div className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse" />
                 </div>
@@ -145,7 +145,7 @@ const Vault: React.FC = () => {
 
             <ol className="space-y-px bg-border/60 border border-border/60 rounded-lg overflow-hidden">
               {[
-                ['01', 'DGX Spark on your premises', 'The appliance is installed in your server room or comms cabinet. You own the box; it does not phone home.'],
+                ['01', 'AI Appliance on your premises', 'The appliance is installed in your server room or comms cabinet. You own the box; it does not phone home.'],
                 ['02', 'Large models running locally', 'Frontier-class open-weight models run directly on the appliance. All inference is local.'],
                 ['03', 'Connected to your documents and workflows', 'File stores, intranets, line-of-business apps, MES / ERP where it fits. Access rules are honoured.'],
                 ['04', 'Air-gap where required', 'For defence, pharma, or any environment that needs it, Vault operates fully air-gapped with no external connectivity.'],
