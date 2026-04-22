@@ -37,13 +37,11 @@ const Navbar: React.FC = () => {
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
         <div className="flex items-center justify-between h-24 md:h-28">
           <Link to="/" className="flex items-center group" aria-label="BrightMaind">
-            <div className="overflow-hidden rounded-xl h-12 md:h-14">
-              <img
-                src="/bright-maind-logo-main.png"
-                alt="BrightMaind"
-                className="h-20 md:h-[5.833rem] w-auto -translate-y-[20%]"
-              />
-            </div>
+            <img
+              src="/bright-maind-logo-main.png"
+              alt="BrightMaind"
+              className="h-20 md:h-24 w-auto rounded-xl"
+            />
           </Link>
 
           <nav className="hidden md:flex items-center gap-8">
