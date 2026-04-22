@@ -55,7 +55,7 @@ const Vault: React.FC = () => {
         canonical="/vault"
       />
 
-      <section className="pt-40 pb-16 md:pt-48 md:pb-24 px-6 lg:px-10 border-b border-border-soft relative overflow-hidden">
+      <section className="pt-40 pb-16 md:pt-48 md:pb-24 px-6 lg:px-10 border-b border-border/60 relative overflow-hidden">
         <div className="absolute inset-0 grid-bg opacity-40 pointer-events-none" />
         <div className="relative max-w-6xl mx-auto">
           <div className="text-xs font-mono text-whisper-dim mb-5">
@@ -121,7 +121,7 @@ const Vault: React.FC = () => {
       </section>
 
       <ScrollAnimation>
-        <section className="px-6 lg:px-10 py-24 md:py-32 border-b border-border-soft">
+        <section className="px-6 lg:px-10 py-24 md:py-32 border-b border-border/60">
           <div className="max-w-6xl mx-auto grid md:grid-cols-12 gap-10 md:gap-16">
             <div className="md:col-span-4">
               <div className="eyebrow mb-4">The problem</div>
@@ -145,7 +145,7 @@ const Vault: React.FC = () => {
       </ScrollAnimation>
 
       <ScrollAnimation>
-        <section className="px-6 lg:px-10 py-24 md:py-32 bg-deep/40 border-b border-border-soft">
+        <section className="px-6 lg:px-10 py-24 md:py-32 bg-deep/40 border-b border-border/60">
           <div className="max-w-6xl mx-auto">
             <div className="max-w-2xl mb-16">
               <div className="eyebrow mb-4">How it works</div>
@@ -154,7 +154,7 @@ const Vault: React.FC = () => {
               </h2>
             </div>
 
-            <ol className="space-y-px bg-border-soft border border-border-soft rounded-lg overflow-hidden">
+            <ol className="space-y-px bg-border/60 border border-border/60 rounded-lg overflow-hidden">
               {[
                 ['01', 'DGX Spark on your premises', 'The appliance is installed in your server room or comms cabinet. You own the box; it does not phone home.'],
                 ['02', 'Large models running locally', 'Frontier-class open-weight models run directly on the appliance. All inference is local.'],
@@ -175,7 +175,7 @@ const Vault: React.FC = () => {
       </ScrollAnimation>
 
       <ScrollAnimation>
-        <section id="capabilities" className="px-6 lg:px-10 py-24 md:py-32 border-b border-border-soft">
+        <section id="capabilities" className="px-6 lg:px-10 py-24 md:py-32 border-b border-border/60">
           <div className="max-w-6xl mx-auto">
             <div className="mb-16 max-w-2xl">
               <div className="eyebrow mb-4">Capabilities</div>
@@ -184,7 +184,7 @@ const Vault: React.FC = () => {
               </h2>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-px bg-border-soft border border-border-soft rounded-lg overflow-hidden">
+            <div className="grid md:grid-cols-2 gap-px bg-border/60 border border-border/60 rounded-lg overflow-hidden">
               {capabilities.map(({ icon: Icon, title, body }) => (
                 <div key={title} className="bg-ink p-8 md:p-10">
                   <Icon className="w-5 h-5 text-accent mb-5" strokeWidth={1.5} />
@@ -198,7 +198,7 @@ const Vault: React.FC = () => {
       </ScrollAnimation>
 
       <ScrollAnimation>
-        <section className="px-6 lg:px-10 py-24 md:py-32 border-b border-border-soft">
+        <section className="px-6 lg:px-10 py-24 md:py-32 border-b border-border/60">
           <div className="max-w-6xl mx-auto">
             <div className="eyebrow mb-4">Industry benchmark</div>
             <h2 className="font-display text-3xl md:text-5xl font-semibold text-paper tracking-tightest leading-[1.05] mb-12 max-w-3xl">
@@ -208,7 +208,7 @@ const Vault: React.FC = () => {
               <blockquote className="font-display text-2xl md:text-3xl lg:text-4xl leading-[1.2] text-paper tracking-tightest max-w-4xl">
                 Manufacturing clients have seen up to <span className="text-accent">30% downtime reduction</span> and <span className="text-accent">10% OEE improvement</span> with on-premise AI copilot deployments.
               </blockquote>
-              <div className="mt-8 pt-8 border-t border-border-soft flex flex-col md:flex-row md:items-center md:justify-between gap-3">
+              <div className="mt-8 pt-8 border-t border-border/60 flex flex-col md:flex-row md:items-center md:justify-between gap-3">
                 <div className="text-sm text-whisper">
                   Industry benchmark (Georgia-Pacific-class deployment pattern)
                 </div>
@@ -222,7 +222,7 @@ const Vault: React.FC = () => {
       </ScrollAnimation>
 
       <ScrollAnimation>
-        <section className="px-6 lg:px-10 py-24 md:py-32 border-b border-border-soft">
+        <section className="px-6 lg:px-10 py-24 md:py-32 border-b border-border/60">
           <div className="max-w-6xl mx-auto">
             <div className="grid md:grid-cols-12 gap-8 md:gap-12">
               <div className="md:col-span-5">
@@ -232,7 +232,7 @@ const Vault: React.FC = () => {
                 </h2>
               </div>
               <div className="md:col-span-7">
-                <div className="grid grid-cols-2 sm:grid-cols-3 gap-px bg-border-soft border border-border-soft rounded-lg overflow-hidden">
+                <div className="grid grid-cols-2 sm:grid-cols-3 gap-px bg-border/60 border border-border/60 rounded-lg overflow-hidden">
                   {industries.map((name) => (
                     <div key={name} className="bg-ink p-5 text-sm text-paper">
                       {name}
@@ -253,7 +253,7 @@ const Vault: React.FC = () => {
               Custom deployment. Honest numbers.
             </h2>
 
-            <div className="grid md:grid-cols-3 gap-px bg-border-soft border border-border-soft rounded-lg overflow-hidden">
+            <div className="grid md:grid-cols-3 gap-px bg-border/60 border border-border/60 rounded-lg overflow-hidden">
               <div className="bg-ink p-8 md:p-10">
                 <div className="text-xs font-mono uppercase tracking-[0.2em] text-whisper-dim mb-4">Setup</div>
                 <div className="font-display text-4xl font-semibold text-paper mb-1">From £10,200</div>

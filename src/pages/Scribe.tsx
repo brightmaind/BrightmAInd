@@ -56,7 +56,7 @@ const Scribe: React.FC = () => {
         canonical="/scribe"
       />
 
-      <section className="pt-40 pb-16 md:pt-48 md:pb-24 px-6 lg:px-10 border-b border-border-soft relative overflow-hidden">
+      <section className="pt-40 pb-16 md:pt-48 md:pb-24 px-6 lg:px-10 border-b border-border/60 relative overflow-hidden">
         <div className="absolute inset-0 grid-bg opacity-40 pointer-events-none" />
         <div className="relative max-w-6xl mx-auto">
           <div className="text-xs font-mono text-whisper-dim mb-5">
@@ -119,7 +119,7 @@ const Scribe: React.FC = () => {
       </section>
 
       <ScrollAnimation>
-        <section className="px-6 lg:px-10 py-24 md:py-32 border-b border-border-soft">
+        <section className="px-6 lg:px-10 py-24 md:py-32 border-b border-border/60">
           <div className="max-w-6xl mx-auto grid md:grid-cols-12 gap-10 md:gap-16">
             <div className="md:col-span-4">
               <div className="eyebrow mb-4">The problem</div>
@@ -143,7 +143,7 @@ const Scribe: React.FC = () => {
       </ScrollAnimation>
 
       <ScrollAnimation>
-        <section id="how-it-works" className="px-6 lg:px-10 py-24 md:py-32 bg-deep/40 border-b border-border-soft">
+        <section id="how-it-works" className="px-6 lg:px-10 py-24 md:py-32 bg-deep/40 border-b border-border/60">
           <div className="max-w-6xl mx-auto">
             <div className="max-w-2xl mb-16">
               <div className="eyebrow mb-4">How it works</div>
@@ -152,7 +152,7 @@ const Scribe: React.FC = () => {
               </h2>
             </div>
 
-            <ol className="space-y-px bg-border-soft border border-border-soft rounded-lg overflow-hidden">
+            <ol className="space-y-px bg-border/60 border border-border/60 rounded-lg overflow-hidden">
               {[
                 ['01', 'Capture', 'The appliance captures audio from meetings — in-person, over your phone system, or uploaded from existing recordings.'],
                 ['02', 'Transcribe', 'Transcription runs on the appliance itself. No audio, no transcript, no metadata is sent outside your network.'],
@@ -173,7 +173,7 @@ const Scribe: React.FC = () => {
       </ScrollAnimation>
 
       <ScrollAnimation>
-        <section className="px-6 lg:px-10 py-24 md:py-32 border-b border-border-soft">
+        <section className="px-6 lg:px-10 py-24 md:py-32 border-b border-border/60">
           <div className="max-w-6xl mx-auto">
             <div className="mb-16 max-w-2xl">
               <div className="eyebrow mb-4">Capabilities</div>
@@ -182,7 +182,7 @@ const Scribe: React.FC = () => {
               </h2>
             </div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-px bg-border-soft border border-border-soft rounded-lg overflow-hidden">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-px bg-border/60 border border-border/60 rounded-lg overflow-hidden">
               {features.map(({ icon: Icon, title, body }) => (
                 <div key={title} className="bg-ink p-8">
                   <Icon className="w-5 h-5 text-accent mb-5" strokeWidth={1.5} />
@@ -196,7 +196,7 @@ const Scribe: React.FC = () => {
       </ScrollAnimation>
 
       <ScrollAnimation>
-        <section className="px-6 lg:px-10 py-24 md:py-32 border-b border-border-soft">
+        <section className="px-6 lg:px-10 py-24 md:py-32 border-b border-border/60">
           <div className="max-w-6xl mx-auto grid md:grid-cols-12 gap-12">
             <div className="md:col-span-5">
               <div className="eyebrow mb-4">Who it's for</div>
@@ -228,7 +228,7 @@ const Scribe: React.FC = () => {
               Simple, honest, pilot-friendly.
             </h2>
 
-            <div className="grid md:grid-cols-3 gap-px bg-border-soft border border-border-soft rounded-lg overflow-hidden">
+            <div className="grid md:grid-cols-3 gap-px bg-border/60 border border-border/60 rounded-lg overflow-hidden">
               <div className="bg-ink p-8 md:p-10">
                 <div className="text-xs font-mono uppercase tracking-[0.2em] text-accent mb-4">Pilot — first 2 months</div>
                 <div className="font-display text-4xl font-semibold text-paper mb-1">£150</div>

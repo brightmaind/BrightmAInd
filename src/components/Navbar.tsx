@@ -30,18 +30,19 @@ const Navbar: React.FC = () => {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? 'bg-ink/80 backdrop-blur-md border-b border-border-soft'
-          : 'bg-transparent border-b border-border-soft/70'
+          ? 'bg-ink/80 backdrop-blur-md border-b border-border/60'
+          : 'bg-transparent border-b border-transparent'
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
-        <div className="flex items-center justify-between h-24 md:h-28">
-          <Link to="/" className="flex items-center group" aria-label="BrightMaind">
-            <img
-              src="/bright-maind-logo-main.png"
-              alt="BrightMaind"
-              className="h-20 md:h-24 w-auto rounded-xl"
-            />
+        <div className="flex items-center justify-between h-16">
+          <Link to="/" className="flex items-center gap-2.5 group">
+            <span className="inline-flex items-center justify-center w-7 h-7 rounded-[6px] border border-accent/50 bg-accent/10">
+              <span className="w-2 h-2 rounded-sm bg-accent" />
+            </span>
+            <span className="font-display text-base font-semibold tracking-tight text-paper">
+              BrightMaind
+            </span>
           </Link>
 
           <nav className="hidden md:flex items-center gap-8">
