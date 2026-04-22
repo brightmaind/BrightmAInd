@@ -56,7 +56,7 @@ const Scribe: React.FC = () => {
         canonical="/scribe"
       />
 
-      <section className="pt-40 pb-16 md:pt-48 md:pb-24 px-6 lg:px-10 border-b border-border/60 relative overflow-hidden bg-ink">
+      <section className="pt-40 pb-16 md:pt-48 md:pb-24 px-6 lg:px-10 border-b border-border/60 relative overflow-hidden">
         <div className="absolute inset-0 grid-bg opacity-40 pointer-events-none" />
         <div className="relative max-w-6xl mx-auto">
           <div className="text-xs font-mono text-whisper-dim mb-5">
@@ -68,7 +68,7 @@ const Scribe: React.FC = () => {
           <div className="grid md:grid-cols-12 gap-10 md:gap-14 items-center">
             <div className="md:col-span-7">
               <div className="flex items-center gap-2 mb-6">
-                <Mic className="w-5 h-5 text-paper" strokeWidth={1.5} />
+                <Mic className="w-5 h-5 text-accent" strokeWidth={1.5} />
                 <span className="eyebrow">Scribe</span>
               </div>
               <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-semibold text-paper tracking-tightest leading-[1.05]">
@@ -99,7 +99,7 @@ const Scribe: React.FC = () => {
                 />
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div className="text-center px-8">
-                    <Mic className="w-10 h-10 text-whisper mx-auto mb-4" strokeWidth={1.25} />
+                    <Mic className="w-10 h-10 text-accent/60 mx-auto mb-4" strokeWidth={1.25} />
                     <div className="text-xs font-mono text-whisper-dim uppercase tracking-[0.2em]">
                       scribe-hero.png
                     </div>
@@ -110,7 +110,7 @@ const Scribe: React.FC = () => {
                     <div className="text-xs font-mono text-whisper-dim">SCR-01</div>
                     <div className="text-sm text-paper font-medium mt-0.5">On-premise transcription</div>
                   </div>
-                  <div className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse" aria-hidden="true" />
+                  <div className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse" />
                 </div>
               </div>
             </div>
@@ -119,7 +119,7 @@ const Scribe: React.FC = () => {
       </section>
 
       <ScrollAnimation>
-        <section className="section-light px-6 lg:px-10 py-24 md:py-32">
+        <section className="px-6 lg:px-10 py-24 md:py-32 border-b border-border/60">
           <div className="max-w-6xl mx-auto grid md:grid-cols-12 gap-10 md:gap-16">
             <div className="md:col-span-4">
               <div className="eyebrow mb-4">The problem</div>
@@ -143,7 +143,7 @@ const Scribe: React.FC = () => {
       </ScrollAnimation>
 
       <ScrollAnimation>
-        <section id="how-it-works" className="px-6 lg:px-10 py-24 md:py-32 bg-ink border-y border-border/60">
+        <section id="how-it-works" className="px-6 lg:px-10 py-24 md:py-32 bg-deep/40 border-b border-border/60">
           <div className="max-w-6xl mx-auto">
             <div className="max-w-2xl mb-16">
               <div className="eyebrow mb-4">How it works</div>
@@ -160,7 +160,7 @@ const Scribe: React.FC = () => {
                 ['04', 'Retrieve', 'Your team searches from a companion app over your LAN. Click any word to jump back to the original audio.'],
               ].map(([n, title, body]) => (
                 <li key={n} className="bg-ink p-8 md:p-10 grid md:grid-cols-12 gap-6 items-start">
-                  <div className="md:col-span-2 font-mono text-sm text-whisper-soft">{n}</div>
+                  <div className="md:col-span-2 font-mono text-sm text-accent">{n}</div>
                   <div className="md:col-span-3">
                     <div className="font-display text-xl font-semibold text-paper">{title}</div>
                   </div>
@@ -173,7 +173,7 @@ const Scribe: React.FC = () => {
       </ScrollAnimation>
 
       <ScrollAnimation>
-        <section className="section-light px-6 lg:px-10 py-24 md:py-32">
+        <section className="px-6 lg:px-10 py-24 md:py-32 border-b border-border/60">
           <div className="max-w-6xl mx-auto">
             <div className="mb-16 max-w-2xl">
               <div className="eyebrow mb-4">Capabilities</div>
@@ -185,7 +185,7 @@ const Scribe: React.FC = () => {
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-px bg-border/60 border border-border/60 rounded-lg overflow-hidden">
               {features.map(({ icon: Icon, title, body }) => (
                 <div key={title} className="bg-ink p-8">
-                  <Icon className="w-5 h-5 text-charcoal-soft mb-5" strokeWidth={1.5} />
+                  <Icon className="w-5 h-5 text-accent mb-5" strokeWidth={1.5} />
                   <h3 className="font-display text-lg font-semibold text-paper mb-2">{title}</h3>
                   <p className="text-sm text-whisper leading-relaxed">{body}</p>
                 </div>
@@ -196,7 +196,7 @@ const Scribe: React.FC = () => {
       </ScrollAnimation>
 
       <ScrollAnimation>
-        <section className="px-6 lg:px-10 py-24 md:py-32 bg-ink border-y border-border/60">
+        <section className="px-6 lg:px-10 py-24 md:py-32 border-b border-border/60">
           <div className="max-w-6xl mx-auto grid md:grid-cols-12 gap-12">
             <div className="md:col-span-5">
               <div className="eyebrow mb-4">Who it's for</div>
@@ -221,7 +221,7 @@ const Scribe: React.FC = () => {
       </ScrollAnimation>
 
       <ScrollAnimation>
-        <section className="section-light px-6 lg:px-10 py-24 md:py-32">
+        <section className="px-6 lg:px-10 py-24 md:py-32">
           <div className="max-w-6xl mx-auto">
             <div className="eyebrow mb-4">Pricing</div>
             <h2 className="font-display text-3xl md:text-5xl font-semibold text-paper tracking-tightest leading-[1.05] mb-14 max-w-2xl">

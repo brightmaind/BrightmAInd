@@ -48,9 +48,9 @@ const Home: React.FC = () => {
         ]}
       />
 
-      <section className="relative pt-36 pb-28 md:pt-48 md:pb-40 px-6 lg:px-10 overflow-hidden bg-ink">
+      <section className="relative pt-36 pb-28 md:pt-48 md:pb-40 px-6 lg:px-10 overflow-hidden">
         <div className="absolute inset-0 grid-bg opacity-60 pointer-events-none" />
-        <div className="absolute inset-x-0 top-0 h-[520px] bg-gradient-to-b from-paper/[0.02] to-transparent pointer-events-none" />
+        <div className="absolute inset-x-0 top-0 h-[520px] bg-gradient-to-b from-accent/[0.04] to-transparent pointer-events-none" />
         <div className="relative max-w-6xl mx-auto">
           <div className="eyebrow mb-6">Private AI, on your premises</div>
           <h1 className="font-display text-[2.6rem] leading-[1.05] md:text-6xl lg:text-7xl font-semibold text-paper tracking-tightest max-w-4xl">
@@ -90,7 +90,7 @@ const Home: React.FC = () => {
       </section>
 
       <ScrollAnimation>
-        <section className="section-light px-6 lg:px-10 py-24 md:py-32">
+        <section className="px-6 lg:px-10 py-24 md:py-32 border-t border-border/60">
           <div className="max-w-6xl mx-auto grid md:grid-cols-12 gap-12 md:gap-16">
             <div className="md:col-span-4">
               <div className="eyebrow mb-4">The problem</div>
@@ -114,7 +114,7 @@ const Home: React.FC = () => {
       </ScrollAnimation>
 
       <ScrollAnimation>
-        <section className="px-6 lg:px-10 py-24 md:py-32 bg-ink border-y border-border/60">
+        <section className="px-6 lg:px-10 py-24 md:py-32 bg-deep/40 border-y border-border/60">
           <div className="max-w-6xl mx-auto">
             <div className="max-w-2xl mb-16">
               <div className="eyebrow mb-4">The approach</div>
@@ -145,7 +145,7 @@ const Home: React.FC = () => {
                 },
               ].map(({ icon: Icon, title, body }) => (
                 <div key={title} className="bg-ink p-8 md:p-10">
-                  <Icon className="w-6 h-6 text-paper mb-6" strokeWidth={1.5} />
+                  <Icon className="w-6 h-6 text-accent mb-6" strokeWidth={1.5} />
                   <h3 className="font-display text-xl font-semibold text-paper mb-3">{title}</h3>
                   <p className="text-sm text-whisper leading-relaxed">{body}</p>
                 </div>
@@ -156,7 +156,7 @@ const Home: React.FC = () => {
       </ScrollAnimation>
 
       <ScrollAnimation>
-        <section className="section-light px-6 lg:px-10 py-24 md:py-32">
+        <section className="px-6 lg:px-10 py-24 md:py-32">
           <div className="max-w-6xl mx-auto">
             <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-14">
               <div className="max-w-2xl">
@@ -176,7 +176,7 @@ const Home: React.FC = () => {
                   key={name}
                   className="bg-ink p-6 md:p-8 flex flex-col items-start gap-4 hover:bg-surface transition-colors"
                 >
-                  <Icon className="w-5 h-5 text-paper" strokeWidth={1.5} />
+                  <Icon className="w-5 h-5 text-accent" strokeWidth={1.5} />
                   <div className="text-sm text-paper font-medium">{name}</div>
                 </div>
               ))}
@@ -215,15 +215,15 @@ const Home: React.FC = () => {
       </ScrollAnimation>
 
       <ScrollAnimation>
-        <section className="section-light px-6 lg:px-10 py-20 md:py-24">
+        <section className="px-6 lg:px-10 py-16 border-t border-border/60">
           <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8">
             <Link
               to="/vault"
-              className="dark-card group relative rounded-lg border border-border-soft hover:border-accent/60 bg-ink p-8 transition-colors"
+              className="group relative rounded-lg border border-border-soft hover:border-accent/60 bg-ink p-8 transition-colors"
             >
               <div className="flex items-start justify-between mb-6">
-                <CircuitBoard className="w-6 h-6 text-paper" strokeWidth={1.5} />
-                <ArrowUpRight className="w-4 h-4 text-whisper group-hover:text-paper transition-colors" />
+                <CircuitBoard className="w-6 h-6 text-accent" strokeWidth={1.5} />
+                <ArrowUpRight className="w-4 h-4 text-whisper group-hover:text-accent transition-colors" />
               </div>
               <div className="eyebrow mb-2">Vault</div>
               <h3 className="font-display text-2xl font-semibold text-paper mb-3">
@@ -235,11 +235,11 @@ const Home: React.FC = () => {
             </Link>
             <Link
               to="/scribe"
-              className="dark-card group relative rounded-lg border border-border-soft hover:border-accent/60 bg-ink p-8 transition-colors"
+              className="group relative rounded-lg border border-border-soft hover:border-accent/60 bg-ink p-8 transition-colors"
             >
               <div className="flex items-start justify-between mb-6">
-                <Lock className="w-6 h-6 text-paper" strokeWidth={1.5} />
-                <ArrowUpRight className="w-4 h-4 text-whisper group-hover:text-paper transition-colors" />
+                <Lock className="w-6 h-6 text-accent" strokeWidth={1.5} />
+                <ArrowUpRight className="w-4 h-4 text-whisper group-hover:text-accent transition-colors" />
               </div>
               <div className="eyebrow mb-2">Scribe</div>
               <h3 className="font-display text-2xl font-semibold text-paper mb-3">
