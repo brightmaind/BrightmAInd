@@ -143,11 +143,9 @@ const Products: React.FC = () => {
                   <h2 className="font-display text-2xl md:text-3xl font-semibold text-paper tracking-tightest mb-3">
                     Keepwell
                   </h2>
-                  <p className="text-sm md:text-base text-whisper leading-relaxed max-w-xl">
+                  <p className="text-sm md:text-base text-whisper leading-relaxed max-w-xl mb-6">
                     An on-device wellness journaling app for Android. The same on-device philosophy as our B2B appliances, made personal: your journal lives on your phone, and nowhere else.
                   </p>
-                </div>
-                <div className="md:col-span-4 border-t md:border-t-0 md:border-l border-border/60 p-8 md:p-10 flex items-center">
                   <a
                     href="https://play.google.com/store"
                     target="_blank"
@@ -157,6 +155,14 @@ const Products: React.FC = () => {
                     Get it on Google Play
                     <ExternalLink className="w-4 h-4" />
                   </a>
+                </div>
+                <div className="md:col-span-4 border-t md:border-t-0 md:border-l border-border/60 flex items-center justify-center p-6 md:p-8 bg-gradient-to-br from-ink to-surface">
+                  <img
+                    src="/Gemini_Generated_Image_mp3e5smp3e5smp3e.png"
+                    alt="Keepwell app on Android — private on-device wellness journaling"
+                    className="w-full max-w-[240px] h-auto object-contain drop-shadow-2xl"
+                    loading="lazy"
+                  />
                 </div>
               </div>
             </article>
