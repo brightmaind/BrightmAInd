@@ -92,21 +92,10 @@ const Vault: React.FC = () => {
             <div className="md:col-span-5">
               <div className="relative rounded-xl border border-border-soft bg-ink/80 overflow-hidden aspect-square">
                 <img
-                  src="/images/vault-hero.png"
-                  alt="Vault — DGX Spark-based on-premise AI appliance"
+                  src="/ChatGPT_Image_Apr_22,_2026,_03_49_53_PM.png"
+                  alt="Vault — on-premise AI appliance"
                   className="w-full h-full object-cover"
-                  onError={(e) => {
-                    (e.target as HTMLImageElement).style.display = 'none';
-                  }}
                 />
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="text-center px-8">
-                    <CircuitBoard className="w-10 h-10 text-accent/60 mx-auto mb-4" strokeWidth={1.25} />
-                    <div className="text-xs font-mono text-whisper-dim uppercase tracking-[0.2em]">
-                      vault-hero.png
-                    </div>
-                  </div>
-                </div>
                 <div className="absolute bottom-0 left-0 right-0 p-5 flex items-end justify-between bg-gradient-to-t from-abyss/90 to-transparent">
                   <div>
                     <div className="text-xs font-mono text-whisper-dim">VLT-01</div>
