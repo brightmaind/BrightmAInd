@@ -120,13 +120,13 @@ const Vault: React.FC = () => {
             </div>
             <div className="md:col-span-8 space-y-5 text-whisper text-base md:text-lg leading-relaxed">
               <p>
-                The most productive use of AI for most operations — plugging it into your real documents, your real process data, your real client work — is exactly the use that is forbidden under cloud terms of service, client agreements, or regulators' rules.
+                The most productive use of AI for most operations — plugging it into your real documents, your real process data, your real client work — is exactly the use that's restricted, audited, or flat-out prohibited under cloud terms, client agreements, and regulators' rules.
               </p>
               <p>
-                Paying a cloud provider to train on your proprietary data is not a feature. It's a liability with a subscription fee attached.
+                The problem isn't that cloud providers are training on your data. The problem is that your data has to leave your building at all — crossing jurisdictions, sitting on someone else's servers, exposed to subpoena, breach, and third-party access you can't see or control.
               </p>
               <p className="text-paper">
-                Vault puts the same capability inside your building, where your compliance team, your clients, and your legal obligations can all live with it.
+                Vault puts the same capability inside your building. Draft from privileged correspondence. Query your entire matter archive. Analyse client data you'd never put through a cloud API. Your compliance team, your clients, and your legal obligations can all live with it.
               </p>
             </div>
           </div>
