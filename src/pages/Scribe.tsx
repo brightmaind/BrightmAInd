@@ -129,13 +129,13 @@ const Scribe: React.FC = () => {
             </div>
             <div className="md:col-span-8 space-y-5 text-whisper text-base md:text-lg leading-relaxed">
               <p>
-                Meeting notes are the single biggest source of lost institutional knowledge in professional services. The senior who remembers is the senior who leaves. The detail a junior needed sat in a call last June that nobody can produce.
+                In professional services, the senior who remembers is the senior who leaves — and the detail a junior needs is always in a call nobody can produce.
               </p>
               <p>
-                The obvious solution — cloud transcription — is the wrong tool for privileged work. Sending client calls, case strategy, or financial advisory discussions to a third-party model is a compliance problem and a confidentiality problem, regardless of what the terms of service promise.
+                Cloud transcription would fix that, but not for work under client confidentiality. Privileged conversations can't go to third-party models, whatever the terms say.
               </p>
               <p className="text-paper">
-                Scribe keeps the knowledge, without creating the risk.
+                Scribe keeps the knowledge without the risk.
               </p>
             </div>
           </div>
