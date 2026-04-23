@@ -178,7 +178,7 @@ const Products: React.FC = () => {
                 </div>
                 <div className="md:col-span-4 border-t md:border-t-0 md:border-l border-border/60 flex items-center justify-center p-6 md:p-8 bg-gradient-to-br from-ink to-surface">
                   <img
-                    src="/Gemini_Generated_Image_mp3e5smp3e5smp3e.png"
+                    src="/ChatGPT_Image_Apr_23,_2026,_04_45_31_PM.png"
                     alt="Keepwell app on Android — private on-device wellness journaling"
                     className="w-full max-w-[240px] h-auto object-contain rounded-2xl drop-shadow-2xl"
                     loading="lazy"
