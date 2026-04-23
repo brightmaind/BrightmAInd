@@ -139,14 +139,17 @@ const Scribe: React.FC = () => {
               <h2 className="font-display text-3xl md:text-5xl font-semibold text-paper tracking-tightest leading-[1.05]">
                 Four stages, all inside your building.
               </h2>
+              <p className="mt-6 text-base md:text-lg text-whisper leading-relaxed">
+                Your private meeting intelligence, built on-premise. Every conversation your firm has ever had — searchable, verifiable, and never leaving your network.
+              </p>
             </div>
 
             <ol className="space-y-px bg-border/60 border border-border/60 rounded-lg overflow-hidden">
               {[
-                ['01', 'Capture', 'The appliance captures audio from meetings — in-person, over your phone system, or uploaded from existing recordings.'],
-                ['02', 'Transcribe', 'Transcription runs on the appliance itself. No audio, no transcript, no metadata is sent outside your network.'],
-                ['03', 'Index', 'Transcripts become a searchable corpus — linked to matters, clients, or meeting types however you organise.'],
-                ['04', 'Retrieve', 'Your team searches from a companion app over your LAN. Click any word to jump back to the original audio.'],
+                ['01', 'Capture', 'The appliance records meetings in the room, or ingests existing audio files you upload. Consent is captured at the start of each session — who was present, how they were informed, and what they agreed to — and stored as part of the permanent record.'],
+                ['02', 'Transcribe', 'Transcription runs entirely on the appliance. Meeting audio, transcripts, and metadata never leave your network.'],
+                ['03', 'Index', 'Transcripts become a searchable corpus, organised by matter, client, or meeting type — however your firm already works.'],
+                ['04', 'Retrieve', 'Your team searches from a companion app over your LAN. Click any word in a transcript to jump straight to that moment in the original audio.'],
               ].map(([n, title, body]) => (
                 <li key={n} className="bg-ink p-8 md:p-10 grid md:grid-cols-12 gap-6 items-start">
                   <div className="md:col-span-2 font-mono text-sm text-accent">{n}</div>
