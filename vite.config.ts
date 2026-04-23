@@ -6,6 +6,6 @@ export default defineConfig({
   plugins: [react()],
   publicDir: 'static',
   optimizeDeps: {
-    exclude: ['lucide-react'],
+    include: ['lucide-react'],
   },
 });
