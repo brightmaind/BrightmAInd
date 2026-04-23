@@ -83,7 +83,7 @@ const Home: React.FC = () => {
           <div className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-y-8 gap-x-6 border-t border-border/60 pt-10">
             {[
               ['Air-gap capable', 'No external dependencies'],
-              ['On your hardware', 'Installed on-site'],
+              ['On-premise hardware', 'Installed on-site'],
               ['UK built', 'Supported from Scotland'],
               ['No data egress', 'Nothing leaves the premises'],
             ].map(([title, desc]) => (
@@ -138,7 +138,7 @@ const Home: React.FC = () => {
                 {
                   icon: ServerCog,
                   title: 'On-premise hardware',
-                  body: 'The appliance sits in your server room or comms cabinet. You own the box. Nothing is rented, nothing phones home.',
+                  body: 'The appliance sits in your server room or comms cabinet. Nothing phones home.',
                 },
                 {
                   icon: Shield,
