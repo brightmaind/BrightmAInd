@@ -164,7 +164,7 @@ const Products: React.FC = () => {
                     Keepwell
                   </h2>
                   <p className="text-sm md:text-base text-whisper leading-relaxed max-w-xl mb-6">
-                    An on-device wellness journaling app for Android. The same on-device philosophy as our B2B appliances, made personal: your journal lives on your phone, and nowhere else.
+                    An on-device AI journaling app for Android. The same on-device philosophy as our B2B appliances, made personal: your journal lives on your phone, and nowhere else.
                   </p>
                   <a
                     href="https://play.google.com/store"
