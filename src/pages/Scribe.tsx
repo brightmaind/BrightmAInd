@@ -28,12 +28,12 @@ const features = [
   {
     icon: Clock,
     title: 'Async transcription',
-    body: 'Drop a recording in, carry on with your day. Transcription runs on the appliance, not a cloud service.',
+    body: "Drop a recording in, carry on with your day. Long meetings process in the background — you'll know when a transcript is ready to review.",
   },
   {
     icon: ShieldCheck,
     title: 'Consent & compliance capture',
-    body: 'Configurable consent prompts and audit trails for the way your profession records.',
+    body: 'Configurable consent prompts and audit trails — recorded, timestamped, and attached to every session.',
   },
   {
     icon: Calendar,
@@ -43,7 +43,7 @@ const features = [
   {
     icon: Smartphone,
     title: 'Companion app on your LAN',
-    body: 'A companion app for phones and laptops that speaks to the appliance over your local network. No external services.',
+    body: 'A companion app for phones and laptops, connecting to the appliance over your local network. No external services, no internet dependency.',
   },
 ];
 
