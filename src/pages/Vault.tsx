@@ -92,7 +92,7 @@ const Vault: React.FC = () => {
             <div className="md:col-span-5">
               <div className="relative rounded-2xl border border-border-soft bg-ink/80 overflow-hidden aspect-square">
                 <img
-                  src="/ChatGPT_Image_Apr_22,_2026,_03_49_53_PM.png"
+                  src="/ChatGPT_Image_Apr_23,_2026,_04_33_38_PM.png"
                   alt="Vault — on-premise AI appliance"
                   className="w-full h-full object-contain"
                 />
