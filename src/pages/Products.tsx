@@ -59,17 +59,27 @@ const Products: React.FC = () => {
                     <ArrowUpRight className="w-4 h-4" />
                   </Link>
                 </div>
-                <div className="md:col-span-5 border-t md:border-t-0 md:border-l border-border/60 p-8 md:p-12 flex flex-col justify-between bg-ink/60">
-                  <div>
-                    <div className="text-xs font-mono uppercase tracking-[0.2em] text-whisper-dim mb-4">Pricing</div>
-                    <div className="font-display text-2xl text-paper leading-tight mb-4">
-                      Custom per deployment.
-                    </div>
-                    <p className="text-sm text-whisper leading-relaxed">
-                      Every Vault is scoped to your estate, users, integrations, and compliance boundary. We quote each engagement individually after a short discovery call.
-                    </p>
+                <div className="md:col-span-5 border-t md:border-t-0 md:border-l border-border/60 flex flex-col bg-ink/60">
+                  <div className="relative aspect-[4/3] overflow-hidden border-b border-border/60 bg-abyss">
+                    <img
+                      src="/ChatGPT_Image_Apr_23,_2026,_04_33_38_PM.png"
+                      alt="Vault AI appliance"
+                      className="w-full h-full object-cover"
+                      loading="lazy"
+                    />
                   </div>
-                  <p className="text-xs text-whisper-dim mt-8">No templated tiers. No per-seat padding.</p>
+                  <div className="p-8 md:p-10 flex flex-col justify-between flex-1">
+                    <div>
+                      <div className="text-xs font-mono uppercase tracking-[0.2em] text-whisper-dim mb-4">Pricing</div>
+                      <div className="font-display text-2xl text-paper leading-tight mb-4">
+                        Custom per deployment.
+                      </div>
+                      <p className="text-sm text-whisper leading-relaxed">
+                        Every Vault is scoped to your estate, users, integrations, and compliance boundary. We quote each engagement individually after a short discovery call.
+                      </p>
+                    </div>
+                    <p className="text-xs text-whisper-dim mt-8">No templated tiers. No per-seat padding.</p>
+                  </div>
                 </div>
               </div>
             </article>
@@ -107,26 +117,36 @@ const Products: React.FC = () => {
                     <ArrowUpRight className="w-4 h-4" />
                   </Link>
                 </div>
-                <div className="md:col-span-5 border-t md:border-t-0 md:border-l border-border/60 p-8 md:p-12 flex flex-col justify-between bg-ink/60">
-                  <div>
-                    <div className="text-xs font-mono uppercase tracking-[0.2em] text-whisper-dim mb-4">Pilot offer</div>
-                    <div className="space-y-5">
-                      <div>
-                        <div className="text-sm text-whisper">Pilot (first 2 months)</div>
-                        <div className="font-display text-2xl text-paper">£150 <span className="text-base text-whisper">/month</span></div>
-                      </div>
-                      <div>
-                        <div className="text-sm text-whisper">Thereafter</div>
-                        <div className="font-display text-2xl text-paper">£250 <span className="text-base text-whisper">/month</span></div>
-                      </div>
-                      <div>
-                        <div className="text-sm text-whisper">Setup</div>
-                        <div className="font-display text-2xl text-paper">£3,000</div>
-                        <div className="text-xs text-accent mt-1">Waived for first two Scottish legal firms</div>
+                <div className="md:col-span-5 border-t md:border-t-0 md:border-l border-border/60 flex flex-col bg-ink/60">
+                  <div className="relative aspect-[4/3] overflow-hidden border-b border-border/60 bg-abyss">
+                    <img
+                      src="/ChatGPT_Image_Apr_23,_2026,_04_39_05_PM.png"
+                      alt="Scribe transcription appliance"
+                      className="w-full h-full object-cover"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div className="p-8 md:p-10 flex flex-col justify-between flex-1">
+                    <div>
+                      <div className="text-xs font-mono uppercase tracking-[0.2em] text-whisper-dim mb-4">Pilot offer</div>
+                      <div className="space-y-5">
+                        <div>
+                          <div className="text-sm text-whisper">Pilot (first 2 months)</div>
+                          <div className="font-display text-2xl text-paper">£150 <span className="text-base text-whisper">/month</span></div>
+                        </div>
+                        <div>
+                          <div className="text-sm text-whisper">Thereafter</div>
+                          <div className="font-display text-2xl text-paper">£250 <span className="text-base text-whisper">/month</span></div>
+                        </div>
+                        <div>
+                          <div className="text-sm text-whisper">Setup</div>
+                          <div className="font-display text-2xl text-paper">£3,000</div>
+                          <div className="text-xs text-accent mt-1">Waived for first two Scottish legal firms</div>
+                        </div>
                       </div>
                     </div>
+                    <p className="text-xs text-whisper-dim mt-8">Limited pilot cohort — book a demo to discuss.</p>
                   </div>
-                  <p className="text-xs text-whisper-dim mt-8">Limited pilot cohort — book a demo to discuss.</p>
                 </div>
               </div>
             </article>

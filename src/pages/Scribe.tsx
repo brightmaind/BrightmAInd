@@ -90,21 +90,10 @@ const Scribe: React.FC = () => {
             <div className="md:col-span-5">
               <div className="relative rounded-xl border border-border-soft bg-ink/80 overflow-hidden aspect-[4/5] md:aspect-[4/5]">
                 <img
-                  src="/images/scribe-hero.png"
+                  src="/ChatGPT_Image_Apr_23,_2026,_04_39_05_PM.png"
                   alt="Scribe — private on-premise meeting transcription appliance"
-                  className="w-full h-full object-cover"
-                  onError={(e) => {
-                    (e.target as HTMLImageElement).style.display = 'none';
-                  }}
+                  className="w-full h-full object-contain"
                 />
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="text-center px-8">
-                    <Mic className="w-10 h-10 text-accent/60 mx-auto mb-4" strokeWidth={1.25} />
-                    <div className="text-xs font-mono text-whisper-dim uppercase tracking-[0.2em]">
-                      scribe-hero.png
-                    </div>
-                  </div>
-                </div>
                 <div className="absolute bottom-0 left-0 right-0 p-5 flex items-end justify-between bg-gradient-to-t from-abyss/90 to-transparent">
                   <div>
                     <div className="text-xs font-mono text-whisper-dim">SCR-01</div>
