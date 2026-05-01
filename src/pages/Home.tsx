@@ -61,7 +61,7 @@ const Home: React.FC = () => {
         <div className="relative max-w-6xl mx-auto">
           <div className="eyebrow mb-6">Private AI, on your premises</div>
           <h1 className="font-display text-[2.6rem] leading-[1.05] md:text-6xl lg:text-7xl font-semibold text-paper tracking-tightest max-w-4xl">
-            AI for industries that cannot send data to the cloud.
+            AI for industries that can not send data to the cloud.
           </h1>
           <p className="mt-8 text-lg md:text-xl text-whisper leading-relaxed max-w-2xl">
             BrightMaind builds dedicated, on-premise AI appliances for legal, manufacturing, healthcare, finance and other confidentiality-bound industries. Your documents, your clients, your IP — the data never leaves the building.
