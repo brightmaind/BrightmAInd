@@ -15,18 +15,18 @@ const Footer: React.FC = () => {
               />
             </Link>
             <p className="text-sm text-whisper leading-relaxed max-w-sm">
-              On-premise AI appliances for businesses that handle confidential information. No cloud. No compromise.
+              Custom-built, private AI hardware for businesses that take data privacy seriously. No cloud. No compromise.
             </p>
           </div>
 
           <div className="md:col-span-3">
             <h4 className="text-xs font-mono uppercase tracking-[0.2em] text-whisper-dim mb-4">
-              Products
+              Navigate
             </h4>
             <ul className="space-y-2.5 text-sm">
-              <li><Link to="/vault" className="text-whisper hover:text-paper transition-colors">Vault</Link></li>
-              <li><Link to="/scribe" className="text-whisper hover:text-paper transition-colors">Scribe</Link></li>
-              <li><Link to="/products" className="text-whisper hover:text-paper transition-colors">All products</Link></li>
+              <li><Link to="/" className="text-whisper hover:text-paper transition-colors">Home</Link></li>
+              <li><Link to="/solutions" className="text-whisper hover:text-paper transition-colors">Solutions</Link></li>
+              <li><Link to="/contact" className="text-whisper hover:text-paper transition-colors">Contact</Link></li>
             </ul>
           </div>
 

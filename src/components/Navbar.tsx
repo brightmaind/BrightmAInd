@@ -5,7 +5,7 @@ import { Button } from './ui/button';
 
 const navigation = [
   { name: 'Home', href: '/' },
-  { name: 'Products', href: '/products' },
+  { name: 'Solutions', href: '/solutions' },
   { name: 'Contact', href: '/contact' },
 ];
 
@@ -63,7 +63,7 @@ const Navbar: React.FC = () => {
 
           <div className="hidden md:flex">
             <Link to="/contact">
-              <Button variant="outline" size="sm">Book a demo</Button>
+              <Button variant="outline" size="sm">Book a consultation</Button>
             </Link>
           </div>
 
@@ -94,7 +94,7 @@ const Navbar: React.FC = () => {
                 </NavLink>
               ))}
               <Link to="/contact" className="mt-3">
-                <Button variant="outline" size="sm" className="w-full">Book a demo</Button>
+                <Button variant="outline" size="sm" className="w-full">Book a consultation</Button>
               </Link>
             </nav>
           </div>

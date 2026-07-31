@@ -2,9 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Home from './pages/Home';
-import Products from './pages/Products';
-import Vault from './pages/Vault';
-import Scribe from './pages/Scribe';
+import Solutions from './pages/Solutions';
 import Contact from './pages/Contact';
 
 function App() {
@@ -15,9 +13,7 @@ function App() {
         <main className="flex-1">
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/products" element={<Products />} />
-            <Route path="/vault" element={<Vault />} />
-            <Route path="/scribe" element={<Scribe />} />
+            <Route path="/solutions" element={<Solutions />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>
         </main>

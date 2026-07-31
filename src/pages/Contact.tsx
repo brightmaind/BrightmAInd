@@ -21,8 +21,7 @@ const Contact: React.FC = () => {
       });
       if (response.ok) setIsSubmitted(true);
       else throw new Error('Form submission failed');
-    } catch (error) {
-      console.error('Error submitting form:', error);
+    } catch {
       setIsSubmitted(true);
     } finally {
       setIsSubmitting(false);
@@ -33,7 +32,7 @@ const Contact: React.FC = () => {
     <div>
       <SEOHead
         title="Contact — BrightMaind"
-        description="Talk to BrightMaind about on-premise AI for your organisation. Office 1481, 3 Fitzroy Place, 1/1, Sauchiehall Street, Glasgow Central, G3 7RH. UK and Europe."
+        description="Talk to BrightMaind about a custom-built, private AI system for your organisation. Based in Glasgow, Scotland. UK and Europe."
         canonical="/contact"
       />
 
@@ -41,7 +40,7 @@ const Contact: React.FC = () => {
         <div className="max-w-6xl mx-auto">
           <div className="eyebrow mb-6">Contact</div>
           <h1 className="font-display text-5xl md:text-6xl lg:text-7xl font-semibold text-paper tracking-tightest leading-[1.05] max-w-4xl">
-            Tell us what you need to keep on-site.
+            Tell us what you need to keep private.
           </h1>
           <p className="mt-8 text-lg text-whisper leading-relaxed max-w-2xl">
             Short form, short reply. We'll come back within one working day — usually sooner.
@@ -87,7 +86,7 @@ const Contact: React.FC = () => {
                 </li>
                 <li className="flex items-start gap-3">
                   <Check className="w-4 h-4 text-accent mt-0.5 flex-shrink-0" />
-                  <span>A clear recommendation: Vault, Scribe, or neither — honestly</span>
+                  <span>An honest recommendation on whether we are the right fit</span>
                 </li>
               </ul>
             </div>
@@ -127,15 +126,15 @@ const Contact: React.FC = () => {
                       name="interest"
                       className="w-full bg-abyss border border-border-soft rounded-md px-4 py-3 text-paper focus:border-accent focus:outline-none transition-colors"
                     >
-                      <option>Vault — on-premise AI appliance</option>
-                      <option>Scribe — private meeting transcription</option>
-                      <option>Not sure yet</option>
+                      <option>Custom AI hardware deployment</option>
+                      <option>Private on-premise AI system</option>
+                      <option>Consultation &mdash; not sure yet</option>
                     </select>
                   </div>
 
                   <div>
                     <label htmlFor="message" className="block text-xs font-mono uppercase tracking-[0.2em] text-whisper-dim mb-2">
-                      What are you trying to keep on-site?
+                      Tell us about your needs
                     </label>
                     <textarea
                       id="message"
@@ -143,7 +142,7 @@ const Contact: React.FC = () => {
                       required
                       rows={5}
                       className="w-full bg-abyss border border-border-soft rounded-md px-4 py-3 text-paper placeholder:text-whisper-dim focus:border-accent focus:outline-none transition-colors resize-none"
-                      placeholder="A sentence or two on your industry, the workflow you'd like to automate, and any regulatory or confidentiality constraints."
+                      placeholder="A sentence or two on your industry, the workflows you'd like AI to handle, and any privacy or compliance constraints."
                     />
                   </div>
 
@@ -152,7 +151,7 @@ const Contact: React.FC = () => {
                     disabled={isSubmitting}
                     className="inline-flex items-center justify-center gap-2 bg-paper text-ink hover:bg-mist transition-colors px-6 py-3 rounded-md font-medium disabled:opacity-60"
                   >
-                    {isSubmitting ? 'Sending…' : 'Send message'}
+                    {isSubmitting ? 'Sending...' : 'Send message'}
                     <Send className="w-4 h-4" />
                   </button>
                 </form>
