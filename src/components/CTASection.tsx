@@ -16,7 +16,7 @@ const CTASection: React.FC<CTASectionProps> = ({
   eyebrow = 'Get in touch',
   title,
   description,
-  primaryLabel = 'Book a demo',
+  primaryLabel = 'Discuss a Project',
   primaryHref = '/contact',
   secondaryLabel,
   secondaryHref,

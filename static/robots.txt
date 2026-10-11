@@ -1,5 +1,4 @@
 User-agent: *
 Allow: /
-Disallow: /dashboard
 
 Sitemap: https://www.brightmaind.com/sitemap.xml

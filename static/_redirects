@@ -2,9 +2,12 @@
 /automation   /   301
 /marketing    /   301
 /process      /   301
-/services     /   301
 /business-sites  /  301
 /clinic-growth   /  301
 /pet-growth-pro  /  301
+/solutions    /services   301
+/products     /services   301
+/vault        /services   301
+/scribe       /services   301
 
 /* /index.html 200
