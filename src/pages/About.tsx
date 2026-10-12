@@ -14,7 +14,7 @@ const About: React.FC = () => {
     <div>
       <SEOHead
         title="About Bright mAInd | AI Hardware Field Services, Scotland"
-        description="Bright mAInd is a Scotland-based technical business focused on installing and supporting physical AI computing infrastructure, founded on a background in manufacturing operations and engineering."
+        description="Bright mAInd is a Scotland-based technical business focused on installing and supporting physical AI computing infrastructure, built on a background in industrial manufacturing operations and technical systems."
         canonical="/about"
         structuredData={[breadcrumbSchema([{ name: 'About', path: '/about' }])]}
       />
@@ -38,15 +38,15 @@ const About: React.FC = () => {
         <section className="px-6 lg:px-10 py-24 md:py-32">
           <div className="max-w-6xl mx-auto grid md:grid-cols-12 gap-12 md:gap-16">
             <div className="md:col-span-5">
-              <div className="eyebrow mb-4">Founder background</div>
+              <div className="eyebrow mb-4">Our background</div>
               <h2 className="font-display text-3xl md:text-4xl font-semibold text-paper tracking-tightest leading-[1.1]">
-                Grounded in Operations, Engineering and Technical Systems.
+                Grounded in Industrial Operations and Technical Systems.
               </h2>
             </div>
             <div className="md:col-span-7 space-y-5 text-whisper text-base md:text-lg leading-relaxed">
-              <p>Bright mAInd was founded by someone with thirteen years of experience in industrial manufacturing operations: an environment where equipment has to work, downtime has a cost and problems have to be traced methodically to their cause.</p>
-              <p>That operational background is combined with STEM studies focused on mechatronics, and significant hands-on experience with software, automation and technical systems.</p>
-              <p className="text-paper">The move into AI hardware services builds on that foundation. It is a new specialism for the business, and we approach it with the care that implies.</p>
+              <p>Bright mAInd brings thirteen years of experience from industrial manufacturing operations: environments where equipment has to work, downtime has a cost and problems have to be traced methodically to their cause.</p>
+              <p>That operational grounding is combined with significant hands-on experience of software, automation and technical systems.</p>
+              <p className="text-paper">Our move into AI hardware services builds on that foundation. It is a new specialism for the business, and we approach it with the care that implies.</p>
             </div>
           </div>
         </section>
@@ -62,12 +62,12 @@ const About: React.FC = () => {
                 {
                   icon: Factory,
                   title: 'Manufacturing operations',
-                  body: 'Thirteen years in industrial environments, working to procedures, safety requirements and production pressure.',
+                  body: 'Thirteen years of industrial experience behind the business, working to procedures, safety requirements and production pressure.',
                 },
                 {
                   icon: Cog,
-                  title: 'Mechatronics studies',
-                  body: 'STEM study combining mechanical, electrical and control systems: the physical side of technology.',
+                  title: 'Methodical fault-finding',
+                  body: 'A structured approach to diagnosing problems: observe, isolate, verify and record before replacing anything.',
                 },
                 {
                   icon: Code2,

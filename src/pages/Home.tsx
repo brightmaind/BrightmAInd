@@ -305,7 +305,7 @@ const Home: React.FC = () => {
               </Link>
             </div>
             <div className="md:col-span-7 space-y-5 text-whisper text-base md:text-lg leading-relaxed">
-              <p>Bright mAInd was founded in Scotland with a background spanning industrial manufacturing operations, engineering studies and practical technology systems.</p>
+              <p>Bright mAInd was founded in Scotland with a background spanning industrial manufacturing operations and practical technology systems.</p>
               <p>Our approach is grounded in the realities of physical equipment, operational reliability and technical problem-solving.</p>
               <p>We are building a focused field-services business specialising in the installation and support of AI computing infrastructure.</p>
               <p className="text-paper">We believe dependable deployment requires more than software knowledge — it requires practical understanding of the hardware, its operating environment and the responsibility involved in maintaining it.</p>
