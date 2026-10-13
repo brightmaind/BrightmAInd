@@ -13,8 +13,8 @@ const About: React.FC = () => {
   return (
     <div>
       <SEOHead
-        title="About Bright mAInd | Industrial Technology Built on Factory Experience"
-        description="Bright mAInd is a Scottish industrial technology business built on 13 years of manufacturing experience, combined with computing, software development and automation."
+        title="About Bright mAInd | AI & IT Infrastructure Engineering, Scotland"
+        description="Bright mAInd is a Scotland-based AI and IT infrastructure engineering business, combining computing, software and automation expertise with 13 years of manufacturing experience."
         canonical="/about"
         structuredData={[breadcrumbSchema([{ name: 'About', path: '/about' }])]}
       />
@@ -24,8 +24,8 @@ const About: React.FC = () => {
         title="Manufacturing Knowledge Meets Modern Computing."
         lead={
           <>
-            <p>Bright mAInd was founded on the belief that industrial technology should solve real operational problems.</p>
-            <p>We are a Scottish business helping manufacturers make better use of existing equipment, while developing the infrastructure needed for future AI applications.</p>
+            <p>Bright mAInd was founded on the belief that infrastructure should be installed carefully, documented clearly and built to solve real operational problems.</p>
+            <p>We are a Scotland-based infrastructure engineering business working across enterprise IT, AI computing and industrial edge technology.</p>
           </>
         }
         image={{
@@ -40,14 +40,14 @@ const About: React.FC = () => {
             <div className="md:col-span-5">
               <div className="eyebrow mb-4">Our background</div>
               <h2 className="font-display text-3xl md:text-4xl font-semibold text-paper tracking-tightest leading-[1.1]">
-                13 years on the factory floor. A different perspective on industrial technology.
+                Technical systems expertise, grounded in 13 years on the factory floor.
               </h2>
             </div>
             <div className="md:col-span-7 space-y-5 text-whisper text-base md:text-lg leading-relaxed">
               <p>Bright mAInd is built on 13 years of hands-on experience in manufacturing operations, particularly within the paper industry. That experience brings a practical understanding of production environments: equipment stoppages, operational pressure, and why reliability and minimal disruption matter.</p>
               <p>It is combined with a technical foundation that includes an HNC in Computing, along with experience developing software, AI automation systems and technical integrations.</p>
-              <p>Professional development is ongoing in enterprise IT infrastructure and NVIDIA AI technologies, alongside work to build the physical hardware installation and industrial integration capabilities the business needs.</p>
-              <p className="text-paper">The result is an approach shaped by the realities of the factory, not just the technology.</p>
+              <p>Professional development is ongoing in enterprise IT infrastructure and NVIDIA AI technologies, alongside building the hands-on hardware installation, commissioning and maintenance capabilities behind our field services and AI infrastructure work.</p>
+              <p className="text-paper">The result is an approach shaped by real operating environments, not just the technology.</p>
             </div>
           </div>
         </section>
@@ -83,7 +83,7 @@ const About: React.FC = () => {
                 {
                   icon: Scale,
                   title: 'Engineering judgement',
-                  body: 'Recommending the simplest solution that works, whether that is monitoring, automation or, where justified, AI.',
+                  body: 'Recommending the simplest solution that works, from a straightforward installation to monitoring, automation or, where justified, AI.',
                 },
                 {
                   icon: FileCheck2,
@@ -106,16 +106,19 @@ const About: React.FC = () => {
               </h2>
             </div>
             <div className="md:col-span-7 space-y-5 text-whisper text-base md:text-lg leading-relaxed">
-              <p>Our long-term aim is to become a leading Scottish provider of industrial AI infrastructure installation, integration and maintenance, helping manufacturers modernise existing equipment without necessarily replacing expensive machinery.</p>
-              <p>We are developing this specialisation step by step. Our services pages set out clearly what is available now, what is offered as a pilot and what is still being built.</p>
+              <p>Our long-term aim is to become a trusted Scottish provider of AI and IT infrastructure installation, integration and maintenance, from enterprise server rooms to AI computing hardware and the factory floor.</p>
+              <p>We are building towards this step by step, starting with IT infrastructure field services. Our services pages set out clearly what is available now, what is in development and what requires a specialist.</p>
               <p>We work across {SITE.serviceArea}, with wider Scottish coverage by arrangement. Our Glasgow address is a registered office and is not open to visitors.</p>
               <div className="pt-4 flex flex-wrap gap-3">
-                <Link to="/industrial-solutions">
-                  <Button variant="outline">Industrial Solutions</Button>
-                </Link>
                 <Link to="/field-services">
+                  <Button variant="outline">Field Services</Button>
+                </Link>
+                <Link to="/ai-infrastructure">
+                  <Button variant="ghost">AI Infrastructure</Button>
+                </Link>
+                <Link to="/edge-ai">
                   <Button variant="ghost">
-                    Field Services
+                    Industrial Edge AI
                     <ArrowUpRight className="w-4 h-4 ml-2" />
                   </Button>
                 </Link>
@@ -128,7 +131,7 @@ const About: React.FC = () => {
       <CTASection
         eyebrow="Get in touch"
         title="Let's discuss what you're working on."
-        description="Whether it's a factory challenge or an infrastructure project, tell us about it. We'll discuss the requirements and whether Bright mAInd is an appropriate fit."
+        description="Whether it's an installation, an AI hardware deployment or a factory challenge, tell us about it. We'll discuss the requirements and whether Bright mAInd is an appropriate fit."
         primaryLabel="Get in Touch"
       />
     </div>

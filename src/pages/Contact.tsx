@@ -5,10 +5,10 @@ import SEOHead from '../components/SEOHead';
 import { SITE, breadcrumbSchema } from '../lib/site';
 
 const enquiryTypes = {
-  monitoring: 'Industrial Data & Monitoring',
-  edge: 'Edge Computing & AI',
-  installation: 'IT Infrastructure Installation',
-  subcontracting: 'Field Services / Subcontracting',
+  installation: 'IT Infrastructure & Field Services',
+  subcontracting: 'Subcontracting / Partnership',
+  ai: 'AI Infrastructure',
+  edge: 'Industrial Edge AI',
   general: 'General Enquiry',
 } as const;
 
@@ -46,8 +46,8 @@ const Contact: React.FC = () => {
   return (
     <div>
       <SEOHead
-        title="Contact Bright mAInd | Industrial AI & Field Services Scotland"
-        description="Discuss industrial monitoring, edge computing or IT infrastructure field services in Scotland with Bright mAInd. Email enquiries@brightmaind.com."
+        title="Contact Bright mAInd | AI & IT Infrastructure Engineering Scotland"
+        description="Discuss IT infrastructure field services, subcontracting, AI infrastructure or industrial edge AI in Scotland with Bright mAInd. Email enquiries@brightmaind.com."
         canonical="/contact"
         structuredData={[breadcrumbSchema([{ name: 'Contact', path: '/contact' }])]}
       />
@@ -59,7 +59,7 @@ const Contact: React.FC = () => {
             Let's discuss your infrastructure challenge.
           </h1>
           <div className="mt-8 text-lg text-whisper leading-relaxed max-w-2xl space-y-4">
-            <p>Whether you're exploring industrial monitoring, considering an edge computing project or looking for Scottish field-service support, tell us what you're working on.</p>
+            <p>Whether you need on-site installation capacity, are planning an AI hardware deployment or want to explore data and edge AI on the factory floor, tell us what you're working on.</p>
             <p>We'll discuss the requirements and whether Bright mAInd is an appropriate fit.</p>
           </div>
         </div>

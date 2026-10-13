@@ -68,7 +68,7 @@ const Navbar: React.FC = () => {
 
           <div className="hidden lg:flex">
             <Link to="/contact">
-              <Button variant="outline" size="sm">Discuss Your Factory</Button>
+              <Button variant="outline" size="sm">Discuss Your Project</Button>
             </Link>
           </div>
 
@@ -100,7 +100,7 @@ const Navbar: React.FC = () => {
                 </NavLink>
               ))}
               <Link to="/contact" className="mt-3">
-                <Button variant="outline" size="sm" className="w-full">Discuss Your Factory</Button>
+                <Button variant="outline" size="sm" className="w-full">Discuss Your Project</Button>
               </Link>
             </nav>
           </div>

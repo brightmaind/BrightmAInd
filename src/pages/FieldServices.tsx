@@ -5,9 +5,11 @@ import {
   ClipboardCheck,
   Settings2,
   Search,
-  FileText,
+  Wrench,
   MapPinned,
   Check,
+  Users,
+  AlertCircle,
 } from 'lucide-react';
 import SEOHead from '../components/SEOHead';
 import ScrollAnimation from '../components/ScrollAnimation';
@@ -17,18 +19,36 @@ import SectionIntro from '../components/SectionIntro';
 import FeatureGrid from '../components/FeatureGrid';
 import CapabilityStatus from '../components/CapabilityStatus';
 import ScopeNote from '../components/ScopeNote';
+import RelatedService from '../components/RelatedService';
 import { Button } from '../components/ui/button';
 import { SITE, breadcrumbSchema, serviceSchema } from '../lib/site';
 
 const path = '/field-services';
 const description =
-  'IT infrastructure installation and field services in Scotland. Server installation, rack-mounted equipment, hardware commissioning and on-site support for IT providers and integrators.';
+  'IT infrastructure installation, commissioning, hardware maintenance and field services across Ayrshire, Glasgow and the Central Belt. Local subcontracting capacity for IT providers and integrators.';
+
+const audiences = [
+  'Businesses installing or upgrading on-site server infrastructure',
+  'IT teams that need extra hands for a deployment or refresh',
+  'Technology providers delivering projects to customers in Scotland',
+  'Organisations needing methodical hardware fault-finding on site',
+];
+
+const challenges = [
+  'No local engineer available for a Scottish site visit',
+  'Deployments delayed waiting for installation capacity',
+  'Hardware delivered but not yet inspected, racked or commissioned',
+  'Intermittent hardware faults that need careful on-site diagnosis',
+  'Installations left without clear records or handover notes',
+];
 
 const partnerTypes = [
-  'IT service providers and MSPs',
-  'Industrial systems integrators',
-  'Infrastructure and engineering contractors',
-  'Hardware deployment providers',
+  'IT service providers',
+  'Managed service providers',
+  'Enterprise hardware vendors',
+  'Systems integrators',
+  'Infrastructure deployment contractors',
+  'AI infrastructure providers',
 ];
 
 const workingPrinciples = [
@@ -56,8 +76,8 @@ const FieldServices: React.FC = () => {
         title="IT Infrastructure & Field Services — Scotland"
         lead={
           <>
-            <p>Bright mAInd is expanding its technical field-service capabilities to support enterprise hardware deployment, infrastructure installation and maintenance projects across Scotland.</p>
-            <p>We welcome conversations with established IT service providers, systems integrators and infrastructure contractors seeking additional local delivery capacity.</p>
+            <p>Our primary service. Bright mAInd provides hands-on infrastructure installation, commissioning, maintenance and technical field support across Ayrshire, Glasgow and the Central Belt, with wider Scottish coverage by arrangement.</p>
+            <p>We welcome conversations with technology providers seeking dependable local delivery capacity in Scotland.</p>
           </>
         }
         image={{
@@ -81,8 +101,43 @@ const FieldServices: React.FC = () => {
 
       <ScrollAnimation>
         <section className="px-6 lg:px-10 py-24 md:py-32">
+          <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-6">
+            <div className="rounded-xl border border-border-soft bg-ink p-8 md:p-10">
+              <div className="flex items-center gap-3 mb-6">
+                <Users className="w-5 h-5 text-accent" strokeWidth={1.5} />
+                <h2 className="font-display text-2xl font-semibold text-paper">Who it's for</h2>
+              </div>
+              <ul className="space-y-3">
+                {audiences.map((item) => (
+                  <li key={item} className="flex items-start gap-3 text-whisper-soft leading-relaxed">
+                    <Check className="w-4 h-4 text-accent mt-1 flex-shrink-0" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className="rounded-xl border border-border-soft bg-ink p-8 md:p-10">
+              <div className="flex items-center gap-3 mb-6">
+                <AlertCircle className="w-5 h-5 text-accent" strokeWidth={1.5} />
+                <h2 className="font-display text-2xl font-semibold text-paper">Problems it solves</h2>
+              </div>
+              <ul className="space-y-3">
+                {challenges.map((item) => (
+                  <li key={item} className="flex items-start gap-3 text-whisper-soft leading-relaxed">
+                    <span className="w-1.5 h-1.5 rounded-full bg-accent mt-2.5 flex-shrink-0" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </section>
+      </ScrollAnimation>
+
+      <ScrollAnimation>
+        <section className="px-6 lg:px-10 py-24 md:py-32 bg-deep/40 border-y border-border/60">
           <div className="max-w-6xl mx-auto">
-            <SectionIntro eyebrow="Areas of focus" title="Hands-On Infrastructure Work." />
+            <SectionIntro eyebrow="Capabilities" title="Hands-On Infrastructure Work." />
             <FeatureGrid
               columns={3}
               items={[
@@ -94,27 +149,27 @@ const FieldServices: React.FC = () => {
                 {
                   icon: ClipboardCheck,
                   title: 'Inspection & commissioning',
-                  body: 'Unboxing and inspection for transit damage, checks against the delivery specification and initial power-on verification.',
+                  body: 'Unboxing and inspection for transit damage, checks against the delivery specification, power-on verification and clear handover records.',
                 },
                 {
                   icon: Settings2,
-                  title: 'Basic server configuration',
+                  title: 'Server configuration',
                   body: 'Initial setup tasks as specified by the supplier or customer, such as firmware settings, storage arrays and network details.',
                 },
                 {
                   icon: Search,
-                  title: 'Technical troubleshooting',
+                  title: 'Troubleshooting & diagnostics',
                   body: 'Methodical diagnosis of hardware and connectivity faults: observe, isolate, verify and record.',
                 },
                 {
-                  icon: FileText,
-                  title: 'Infrastructure documentation',
-                  body: 'Cable labelling, equipment records, photographs and handover notes to your required format.',
+                  icon: Wrench,
+                  title: 'Hardware maintenance',
+                  body: 'Component replacement, health checks and routine maintenance tasks to the supplier or customer procedure, outside manufacturer-authorised repair work.',
                 },
                 {
                   icon: MapPinned,
-                  title: 'On-site engineering support',
-                  body: `Local attendance across ${SITE.serviceArea}, with wider Scottish coverage by arrangement.`,
+                  title: 'Field services & subcontracting',
+                  body: `On-site attendance across ${SITE.serviceArea} on behalf of IT providers and contractors, with wider Scottish coverage by arrangement.`,
                 },
               ]}
             />
@@ -123,7 +178,7 @@ const FieldServices: React.FC = () => {
       </ScrollAnimation>
 
       <ScrollAnimation>
-        <section className="px-6 lg:px-10 py-24 md:py-32 bg-deep/40 border-y border-border/60">
+        <section className="px-6 lg:px-10 py-24 md:py-32">
           <div className="max-w-6xl mx-auto">
             <SectionIntro eyebrow="Current capabilities" title="Precise About What We Can Deliver." />
             <CapabilityStatus
@@ -135,8 +190,9 @@ const FieldServices: React.FC = () => {
                   items: [
                     'Hardware unboxing, inspection and preparation',
                     'Rack-and-stack and physical server installation',
-                    'Basic server configuration to a provided specification',
+                    'Server configuration to a provided specification',
                     'Technical troubleshooting and diagnostics',
+                    'Routine hardware maintenance and component replacement',
                     'Installation documentation and handover records',
                   ],
                 },
@@ -170,7 +226,7 @@ const FieldServices: React.FC = () => {
       </ScrollAnimation>
 
       <ScrollAnimation>
-        <section id="partnerships" className="scroll-mt-28 px-6 lg:px-10 py-24 md:py-32">
+        <section id="partnerships" className="scroll-mt-28 px-6 lg:px-10 py-24 md:py-32 bg-deep/40 border-y border-border/60">
           <div className="max-w-6xl mx-auto grid lg:grid-cols-12 gap-12 lg:gap-16 items-start">
             <div className="lg:col-span-6">
               <div className="eyebrow mb-4">Partnerships</div>
@@ -178,8 +234,7 @@ const FieldServices: React.FC = () => {
                 Subcontracting &amp; Partnership Enquiries
               </h2>
               <div className="mt-8 space-y-5 text-whisper text-base md:text-lg leading-relaxed">
-                <p>If you deliver infrastructure projects to customers in Scotland and need reliable local capacity, we'd like to hear from you.</p>
-                <p>We are happy to start with well-defined, appropriately scoped assignments and build from there.</p>
+                <p>If you deliver infrastructure projects to customers in Scotland and need reliable local capacity, we'd like to hear from you. We welcome enquiries from:</p>
               </div>
               <ul className="mt-8 grid sm:grid-cols-2 gap-3">
                 {partnerTypes.map((type) => (
@@ -188,6 +243,9 @@ const FieldServices: React.FC = () => {
                   </li>
                 ))}
               </ul>
+              <p className="mt-8 text-whisper leading-relaxed">
+                Based in Scotland and focused on Ayrshire, Glasgow and the Central Belt, we are keen to build long-term local partnerships, starting with well-defined, appropriately scoped assignments.
+              </p>
             </div>
             <div className="lg:col-span-6 rounded-xl border border-accent/30 bg-gradient-to-br from-surface to-deep p-8 md:p-10 relative overflow-hidden">
               <div className="absolute inset-0 grid-bg opacity-30 pointer-events-none" />
@@ -212,6 +270,16 @@ const FieldServices: React.FC = () => {
           </div>
         </section>
       </ScrollAnimation>
+
+      <section className="px-6 lg:px-10 py-16">
+        <div className="max-w-6xl mx-auto">
+          <RelatedService
+            title="AI Infrastructure Services"
+            body="Installation and commissioning support for GPU servers and high-density AI computing hardware, a capability we are actively developing."
+            href="/ai-infrastructure"
+          />
+        </div>
+      </section>
 
       <CTASection
         eyebrow="Get in touch"

@@ -9,9 +9,9 @@ export const SITE = {
 };
 
 export const serviceLinks = [
-  { name: 'Industrial Solutions', href: '/industrial-solutions' },
-  { name: 'Edge AI', href: '/edge-ai' },
   { name: 'Field Services', href: '/field-services' },
+  { name: 'AI Infrastructure', href: '/ai-infrastructure' },
+  { name: 'Industrial Edge AI', href: '/edge-ai' },
 ];
 
 export const breadcrumbSchema = (items: { name: string; path: string }[]) => ({

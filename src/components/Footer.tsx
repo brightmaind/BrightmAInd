@@ -14,7 +14,7 @@ const Footer: React.FC = () => {
               <img src={SITE.logo} alt={`${SITE.name} logo`} loading="lazy" className="h-52 w-auto object-contain" />
             </Link>
             <p className="text-sm text-whisper leading-relaxed max-w-sm">
-              Industrial data infrastructure, machine monitoring and practical edge AI for Scottish manufacturers, with IT infrastructure field services across Scotland.
+              AI &amp; IT infrastructure engineering in Scotland. Installing, integrating and maintaining the infrastructure behind modern computing and industrial AI.
             </p>
           </div>
 
@@ -30,7 +30,7 @@ const Footer: React.FC = () => {
           <div className="md:col-span-2">
             <h2 className="text-xs font-mono uppercase tracking-[0.2em] text-whisper-dim mb-4">Company</h2>
             <ul className="space-y-2.5 text-sm">
-              <li><Link to="/field-services#partnerships" className={linkClass}>Subcontracting</Link></li>
+              <li><Link to="/field-services#partnerships" className={linkClass}>Subcontracting &amp; Partners</Link></li>
               <li><Link to="/about" className={linkClass}>About</Link></li>
               <li><Link to="/contact" className={linkClass}>Contact</Link></li>
             </ul>
@@ -62,7 +62,7 @@ const Footer: React.FC = () => {
             &copy; {new Date().getFullYear()} {SITE.legalName}. Registered in Scotland.
           </p>
           <p className="text-xs text-whisper-dim font-mono tracking-wider">
-            INDUSTRIAL AI INFRASTRUCTURE &amp; EDGE COMPUTING | SCOTLAND
+            AI &amp; IT INFRASTRUCTURE ENGINEERING | SCOTLAND
           </p>
         </div>
       </div>
