@@ -9,7 +9,7 @@ interface SEOHeadProps {
   structuredData?: Record<string, unknown>[];
 }
 
-const ogImageAlt = 'Bright mAInd — AI hardware installation and field services in Scotland';
+const ogImageAlt = 'Bright mAInd: industrial AI infrastructure and edge computing in Scotland';
 
 const SEOHead: React.FC<SEOHeadProps> = ({ title, description, canonical, structuredData }) => {
   const fullCanonical = `${SITE.url}${canonical}`;

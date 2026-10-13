@@ -9,8 +9,9 @@ export const SITE = {
 };
 
 export const serviceLinks = [
-  { name: 'AI Hardware Installation', href: '/services/ai-hardware-installation' },
-  { name: 'Server & Workstation Support', href: '/services/server-and-workstation-support' },
+  { name: 'Industrial Solutions', href: '/industrial-solutions' },
+  { name: 'Edge AI', href: '/edge-ai' },
+  { name: 'Field Services', href: '/field-services' },
 ];
 
 export const breadcrumbSchema = (items: { name: string; path: string }[]) => ({
@@ -36,5 +37,6 @@ export const serviceSchema = (name: string, description: string, path: string) =
     { '@type': 'AdministrativeArea', name: 'Ayrshire' },
     { '@type': 'City', name: 'Glasgow' },
     { '@type': 'AdministrativeArea', name: 'Central Scotland' },
+    { '@type': 'AdministrativeArea', name: 'Scotland' },
   ],
 });

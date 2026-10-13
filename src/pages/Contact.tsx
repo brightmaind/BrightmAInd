@@ -5,10 +5,10 @@ import SEOHead from '../components/SEOHead';
 import { SITE, breadcrumbSchema } from '../lib/site';
 
 const enquiryTypes = {
-  installation: 'AI Hardware Installation',
-  support: 'Server / Workstation Support',
-  partnership: 'Field Service Partnership',
-  maintenance: 'Hardware Maintenance',
+  monitoring: 'Industrial Data & Monitoring',
+  edge: 'Edge Computing & AI',
+  installation: 'IT Infrastructure Installation',
+  subcontracting: 'Field Services / Subcontracting',
   general: 'General Enquiry',
 } as const;
 
@@ -46,8 +46,8 @@ const Contact: React.FC = () => {
   return (
     <div>
       <SEOHead
-        title="Contact | AI Hardware Installation Enquiries | Bright mAInd"
-        description="Discuss AI server, GPU workstation or enterprise hardware installation and support in Ayrshire, Glasgow and Central Scotland. Email enquiries@brightmaind.com."
+        title="Contact Bright mAInd | Industrial AI & Field Services Scotland"
+        description="Discuss industrial monitoring, edge computing or IT infrastructure field services in Scotland with Bright mAInd. Email enquiries@brightmaind.com."
         canonical="/contact"
         structuredData={[breadcrumbSchema([{ name: 'Contact', path: '/contact' }])]}
       />
@@ -56,11 +56,11 @@ const Contact: React.FC = () => {
         <div className="max-w-6xl mx-auto">
           <div className="eyebrow mb-6">Contact</div>
           <h1 className="font-display text-4xl md:text-6xl font-semibold text-paper tracking-tightest leading-[1.08] max-w-4xl">
-            Discuss Your Hardware Installation Requirements.
+            Let's discuss your infrastructure challenge.
           </h1>
           <div className="mt-8 text-lg text-whisper leading-relaxed max-w-2xl space-y-4">
-            <p>Tell us what equipment you need installed or supported, where the work is located and the type of assistance required.</p>
-            <p>We'll review the enquiry and discuss the next steps.</p>
+            <p>Whether you're exploring industrial monitoring, considering an edge computing project or looking for Scottish field-service support, tell us what you're working on.</p>
+            <p>We'll discuss the requirements and whether Bright mAInd is an appropriate fit.</p>
           </div>
         </div>
       </section>
@@ -86,7 +86,7 @@ const Contact: React.FC = () => {
                 <span>{SITE.serviceArea}</span>
               </div>
               <p className="text-sm text-whisper mt-2 max-w-sm leading-relaxed">
-                Wider Scottish coverage by arrangement. All work is carried out at the customer's site.
+                Wider Scottish coverage by arrangement. Project work is carried out at the customer's site.
               </p>
             </div>
 
@@ -105,10 +105,10 @@ const Contact: React.FC = () => {
               <h2 className="text-xs font-mono uppercase tracking-[0.2em] text-whisper-dim mb-3">Helpful to include</h2>
               <ul className="space-y-3 text-sm text-whisper">
                 {[
-                  'Equipment type, make and quantity',
-                  'Site location and access arrangements',
-                  'Expected delivery or installation date',
-                  'Who supplied the hardware and who owns it',
+                  'The equipment or machinery involved',
+                  'The problem you want to solve or the work required',
+                  'Site location and any access or safety requirements',
+                  'Expected timescales',
                 ].map((item) => (
                   <li key={item} className="flex items-start gap-3">
                     <Check className="w-4 h-4 text-accent mt-0.5 flex-shrink-0" />
@@ -144,7 +144,7 @@ const Contact: React.FC = () => {
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                     <Field label="Company / organisation" name="company" autoComplete="organization" />
-                    <Field label="Location of work" name="location" placeholder="e.g. Kilmarnock, Glasgow" />
+                    <Field label="Site location" name="location" placeholder="e.g. Kilmarnock, Glasgow" />
                   </div>
 
                   <div>
@@ -164,7 +164,7 @@ const Contact: React.FC = () => {
 
                   <div>
                     <label htmlFor="message" className={labelClass}>
-                      Equipment and assistance required<span className="text-accent"> *</span>
+                      What are you working on?<span className="text-accent"> *</span>
                     </label>
                     <textarea
                       id="message"
@@ -172,7 +172,7 @@ const Contact: React.FC = () => {
                       required
                       rows={5}
                       className={`${inputClass} resize-none`}
-                      placeholder="What hardware is involved, what needs doing, and any timing or site constraints."
+                      placeholder="Tell us about the equipment, the challenge or the project, and any timing or site constraints."
                     />
                   </div>
 

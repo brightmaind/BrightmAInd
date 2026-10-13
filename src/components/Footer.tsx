@@ -14,7 +14,7 @@ const Footer: React.FC = () => {
               <img src={SITE.logo} alt={`${SITE.name} logo`} loading="lazy" className="h-52 w-auto object-contain" />
             </Link>
             <p className="text-sm text-whisper leading-relaxed max-w-sm">
-              AI hardware installation, commissioning assistance and on-site field support for AI servers, GPU workstations and enterprise computing equipment in Scotland.
+              Industrial data infrastructure, machine monitoring and practical edge AI for Scottish manufacturers, with IT infrastructure field services across Scotland.
             </p>
           </div>
 
@@ -24,14 +24,13 @@ const Footer: React.FC = () => {
               {serviceLinks.map((link) => (
                 <li key={link.href}><Link to={link.href} className={linkClass}>{link.name}</Link></li>
               ))}
-              <li><Link to="/services" className={linkClass}>All services</Link></li>
             </ul>
           </div>
 
           <div className="md:col-span-2">
             <h2 className="text-xs font-mono uppercase tracking-[0.2em] text-whisper-dim mb-4">Company</h2>
             <ul className="space-y-2.5 text-sm">
-              <li><Link to="/partners" className={linkClass}>Partners</Link></li>
+              <li><Link to="/field-services#partnerships" className={linkClass}>Subcontracting</Link></li>
               <li><Link to="/about" className={linkClass}>About</Link></li>
               <li><Link to="/contact" className={linkClass}>Contact</Link></li>
             </ul>
@@ -48,7 +47,7 @@ const Footer: React.FC = () => {
               </li>
               <li className="flex items-start gap-2 text-whisper">
                 <MapPin className="w-3.5 h-3.5 mt-0.5 flex-shrink-0" />
-                <span>On-site services across {SITE.serviceArea}. Wider Scotland by arrangement.</span>
+                <span>Based in Scotland, working across {SITE.serviceArea}. Wider Scotland by arrangement.</span>
               </li>
               <li className="flex items-start gap-2 text-whisper-dim">
                 <Building2 className="w-3.5 h-3.5 mt-0.5 flex-shrink-0" />
@@ -63,7 +62,7 @@ const Footer: React.FC = () => {
             &copy; {new Date().getFullYear()} {SITE.legalName}. Registered in Scotland.
           </p>
           <p className="text-xs text-whisper-dim font-mono tracking-wider">
-            AI HARDWARE INSTALLATION &amp; FIELD SERVICES | SCOTLAND
+            INDUSTRIAL AI INFRASTRUCTURE &amp; EDGE COMPUTING | SCOTLAND
           </p>
         </div>
       </div>

@@ -1,19 +1,15 @@
 import { useEffect, useState } from 'react';
 import { Link, NavLink, useLocation } from 'react-router-dom';
-import { ChevronDown, Menu, X } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { Button } from './ui/button';
 import { SITE, serviceLinks } from '../lib/site';
 
 const navigation = [
   { name: 'Home', href: '/' },
-  { name: 'Services', href: '/services', children: serviceLinks },
-  { name: 'Partners', href: '/partners' },
+  ...serviceLinks,
   { name: 'About', href: '/about' },
   { name: 'Contact', href: '/contact' },
 ];
-
-const linkClass = ({ isActive }: { isActive: boolean }) =>
-  `text-sm transition-colors ${isActive ? 'text-paper' : 'text-whisper hover:text-paper'}`;
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -29,10 +25,15 @@ const Navbar: React.FC = () => {
 
   useEffect(() => {
     setIsOpen(false);
-    window.scrollTo(0, 0);
-  }, [location.pathname]);
-
-  const servicesActive = location.pathname.startsWith('/services');
+    if (!location.hash) {
+      window.scrollTo(0, 0);
+      return;
+    }
+    const frame = requestAnimationFrame(() => {
+      document.getElementById(location.hash.slice(1))?.scrollIntoView({ behavior: 'smooth' });
+    });
+    return () => cancelAnimationFrame(frame);
+  }, [location.pathname, location.hash]);
 
   return (
     <header
@@ -48,49 +49,26 @@ const Navbar: React.FC = () => {
             <img src={SITE.logo} alt={`${SITE.name} logo`} className="h-44 md:h-56 w-auto object-contain" />
           </Link>
 
-          <nav className="hidden lg:flex items-center gap-8" aria-label="Main">
-            {navigation.map((item) =>
-              item.children ? (
-                <div key={item.name} className="relative group/services">
-                  <NavLink
-                    to={item.href}
-                    aria-haspopup="true"
-                    className={`inline-flex items-center gap-1.5 text-sm transition-colors ${
-                      servicesActive ? 'text-paper' : 'text-whisper hover:text-paper'
-                    }`}
-                  >
-                    {item.name}
-                    <ChevronDown className="w-3.5 h-3.5 transition-transform duration-200 group-hover/services:rotate-180 group-focus-within/services:rotate-180" />
-                  </NavLink>
-                  <div className="absolute left-1/2 -translate-x-1/2 top-full pt-4 transition-all duration-200 opacity-0 invisible -translate-y-1 group-hover/services:opacity-100 group-hover/services:visible group-hover/services:translate-y-0 group-focus-within/services:opacity-100 group-focus-within/services:visible group-focus-within/services:translate-y-0">
-                    <div className="w-72 rounded-lg border border-border-soft bg-deep/95 backdrop-blur-md p-2 shadow-2xl shadow-abyss/60">
-                      {item.children.map((child) => (
-                        <NavLink
-                          key={child.href}
-                          to={child.href}
-                          className={({ isActive }) =>
-                            `block px-4 py-3 rounded-md text-sm transition-colors ${
-                              isActive ? 'text-accent bg-surface/60' : 'text-whisper hover:text-paper hover:bg-surface'
-                            }`
-                          }
-                        >
-                          {child.name}
-                        </NavLink>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              ) : (
-                <NavLink key={item.name} to={item.href} end={item.href === '/'} className={linkClass}>
-                  {item.name}
-                </NavLink>
-              )
-            )}
+          <nav className="hidden lg:flex items-center gap-7 xl:gap-8" aria-label="Main">
+            {navigation.map((item) => (
+              <NavLink
+                key={item.href}
+                to={item.href}
+                end={item.href === '/'}
+                className={({ isActive }) =>
+                  `relative text-sm py-2 transition-colors after:absolute after:left-0 after:right-0 after:-bottom-0.5 after:h-px after:bg-accent after:transition-transform after:duration-300 ${
+                    isActive ? 'text-paper after:scale-x-100' : 'text-whisper hover:text-paper after:scale-x-0'
+                  }`
+                }
+              >
+                {item.name}
+              </NavLink>
+            ))}
           </nav>
 
           <div className="hidden lg:flex">
             <Link to="/contact">
-              <Button variant="outline" size="sm">Discuss a Project</Button>
+              <Button variant="outline" size="sm">Discuss Your Factory</Button>
             </Link>
           </div>
 
@@ -108,39 +86,21 @@ const Navbar: React.FC = () => {
           <div className="lg:hidden pb-6 pt-2 border-t border-border/60">
             <nav className="flex flex-col gap-1" aria-label="Mobile">
               {navigation.map((item) => (
-                <div key={item.name}>
-                  <NavLink
-                    to={item.href}
-                    end
-                    className={({ isActive }) =>
-                      `block px-3 py-3 rounded-md text-sm ${
-                        isActive ? 'text-paper bg-surface/80' : 'text-whisper hover:text-paper hover:bg-surface/50'
-                      }`
-                    }
-                  >
-                    {item.name}
-                  </NavLink>
-                  {item.children && (
-                    <div className="ml-3 pl-3 border-l border-border-soft flex flex-col">
-                      {item.children.map((child) => (
-                        <NavLink
-                          key={child.href}
-                          to={child.href}
-                          className={({ isActive }) =>
-                            `px-3 py-2.5 rounded-md text-sm ${
-                              isActive ? 'text-accent' : 'text-whisper-dim hover:text-paper'
-                            }`
-                          }
-                        >
-                          {child.name}
-                        </NavLink>
-                      ))}
-                    </div>
-                  )}
-                </div>
+                <NavLink
+                  key={item.href}
+                  to={item.href}
+                  end
+                  className={({ isActive }) =>
+                    `block px-3 py-3 rounded-md text-sm ${
+                      isActive ? 'text-paper bg-surface/80' : 'text-whisper hover:text-paper hover:bg-surface/50'
+                    }`
+                  }
+                >
+                  {item.name}
+                </NavLink>
               ))}
               <Link to="/contact" className="mt-3">
-                <Button variant="outline" size="sm" className="w-full">Discuss a Project</Button>
+                <Button variant="outline" size="sm" className="w-full">Discuss Your Factory</Button>
               </Link>
             </nav>
           </div>
